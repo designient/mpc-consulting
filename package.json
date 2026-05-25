@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npx vite",
     "build": "npx vite build",
+    "deploy:pages": "npm run build && npx wrangler pages deploy dist --project-name=mpc-consulting",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "npx vite preview"
   },
