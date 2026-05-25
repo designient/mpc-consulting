@@ -17,6 +17,7 @@ import { CTABand } from '../components/sections/CTABand';
 import { Heading } from '../components/ui/Heading';
 import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { buildBreadcrumbSchema } from '../components/sections/Breadcrumb';
+import { GeometricPatternOverlay } from '../components/ui/GeometricPatternOverlay';
 
 const BREADCRUMB = [{ label: 'Careers' }];
 
@@ -555,8 +556,9 @@ export function Careers() {
         </section>
 
         {/* Tech Hub spotlight */}
-        <section className="w-full bg-primary text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
-          <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <section className="relative w-full overflow-hidden bg-primary text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
+          <GeometricPatternOverlay />
+          <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
                 Innovation

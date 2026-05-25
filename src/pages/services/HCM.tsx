@@ -1,9 +1,9 @@
 import React from 'react';
-import { Users, Activity, Workflow } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Users, Activity, Workflow, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO } from '../../components/seo/SEO';
-import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
 import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
 import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
@@ -19,7 +19,10 @@ import {
   buildFAQSchema } from
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
-import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  Breadcrumb,
+  buildBreadcrumbSchema
+} from '../../components/sections/Breadcrumb';
 import { ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 const FAQS = [
 {
@@ -81,6 +84,9 @@ const BREADCRUMB = [
 {
   label: 'HCM'
 }];
+
+const HERO_BG =
+  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=2400&q=80';
 
 const MODULE_CHIPS = [
 'Core HR',
@@ -265,17 +271,60 @@ export function HCM() {
       <StickyNav />
 
       <main className="flex-grow w-full">
-        <ServiceHero
-          eyebrow="Oracle HCM Cloud"
-          headline="Oracle HCM Cloud — Transform Your Workforce"
-          subhead="End-to-end Oracle HCM implementation, managed support, and innovation — for enterprises that need HR technology that actually works for their people."
-          primaryCtaText="Schedule an HCM Discovery Call"
-          primaryCtaTo="/contact/"
-          secondaryCtaText="See HCM Case Study"
-          secondaryCtaTo="#case-study"
-          imageSrc="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop"
-          imageAlt="Enterprise HR team collaborating on workforce strategy"
-          breadcrumb={BREADCRUMB} />
+        <section className="relative w-full min-h-[min(50svh,520px)] max-h-[520px] overflow-hidden flex items-center">
+          <img
+            src={HERO_BG}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover object-center lg:object-[70%_center]"
+          />
+          <div className="absolute inset-0 bg-primary/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.97] via-primary/80 via-[40%] to-primary/25 to-[100%]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent" />
+
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+            <Breadcrumb
+              items={BREADCRUMB}
+              variant="dark"
+              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
+            />
+
+            <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+              <span className="inline-flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.2em] font-semibold text-divider-bright mb-4 md:mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
+                Oracle Cloud · HCM
+              </span>
+
+              <h1 className="font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em]">
+                <span className="block">Transform your workforce</span>
+                <span className="block text-stat font-medium mt-1 md:mt-2">
+                  with Oracle HCM Cloud
+                </span>
+              </h1>
+
+              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
+                End-to-end Oracle HCM implementation, managed support, and
+                innovation — for enterprises that need HR technology that
+                actually works for their people.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-6 md:mt-8">
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
+                  Schedule an HCM Discovery Call
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+                <a
+                  href="#case-study"
+                  className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-white border border-white/30 rounded-full font-body text-[15px] font-medium hover:border-white/60 hover:bg-white/10 transition-colors">
+                  See HCM Case Study
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         
 
         <QuickAnswerCard
