@@ -74,7 +74,7 @@ export function CTABand({
           {titleAccent &&
           <>
               <br />
-              <span className="font-serif italic font-normal opacity-95">
+              <span className="font-body italic font-normal opacity-95">
                 {titleAccent}
               </span>
             </>

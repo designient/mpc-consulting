@@ -24,7 +24,7 @@ export function LogoCloud({ caption, logos, bg = 'soft' }: LogoCloudProps) {
         {logos.map((logo, i) =>
         <div
           key={i}
-          className="font-serif italic text-[22px] md:text-[24px] text-text-primary opacity-50 hover:opacity-80 transition-opacity select-none">
+          className="font-body italic text-[22px] md:text-[24px] text-text-primary opacity-50 hover:opacity-80 transition-opacity select-none">
           
             {logo}
           </div>

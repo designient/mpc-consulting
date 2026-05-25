@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Users,
   Database,
-  Code2,
-  Cloud,
-  Workflow,
-  Activity,
-  UserCheck,
   Sparkles,
+  Cloud,
+  BarChart3,
+  Shield,
+  Landmark,
   ArrowRight,
   Star,
   Banknote,
@@ -17,7 +15,6 @@ import {
   Building2,
   Zap,
   Radio,
-  Landmark,
   Briefcase } from
 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
@@ -26,7 +23,6 @@ import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO
 import { Heading } from '../components/ui/Heading';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { StatCalloutGrid } from '../components/sections/StatCalloutGrid';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
@@ -36,55 +32,48 @@ import {
 import { CTABand } from '../components/sections/CTABand';
 import { NewsletterInline } from '../components/sections/NewsletterInline';
 import { LogoCloud } from '../components/sections/LogoCloud';
+
+const HERO_BG =
+  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
+
 const SERVICES = [
-{
-  icon: Users,
-  title: 'HCM',
-  desc: 'Transform your workforce with Oracle HCM Cloud — HR, Talent, Payroll, and Oracle ME.',
-  to: '/services/hcm/'
-},
-{
-  icon: Database,
-  title: 'ERP (Oracle Cloud)',
-  desc: 'Modernise finance, procurement, and compliance with Oracle Fusion and EBS.',
-  to: '/services/erp-oracle-cloud/'
-},
-{
-  icon: Code2,
-  title: 'Java Technologies',
-  desc: 'Enterprise Java development — Spring Boot, microservices, APIs, and full-stack cloud apps.',
-  to: '/services/java-technologies/'
-},
-{
-  icon: Cloud,
-  title: 'DevOps Services',
-  desc: 'CI/CD pipelines, Kubernetes, multi-cloud infrastructure, and continuous delivery.',
-  to: '/services/devops/'
-},
-{
-  icon: Workflow,
-  title: 'Business Process Consulting',
-  desc: 'Optimise operations across Finance, HR, Supply Chain, and Sales before you transform.',
-  to: '/services/business-process-consulting/'
-},
-{
-  icon: Activity,
-  title: 'HCaaS',
-  desc: 'Health Check as a Service — comprehensive Oracle audit with a prioritised remediation roadmap.',
-  to: '/services/health-check-as-a-service/'
-},
-{
-  icon: UserCheck,
-  title: 'AaaS',
-  desc: 'Adoption as a Service — maximise ROI through change management, training, and enablement.',
-  to: '/services/adoption-as-a-service/'
-},
-{
-  icon: Sparkles,
-  title: 'MPC Tech Hub',
-  desc: 'AI agents, custom Oracle extensions, and innovation accelerators for the AI era.',
-  to: '/services/mpc-tech-hub/'
-}];
+  {
+    icon: Database,
+    title: 'Oracle (Fusion & EBS)',
+    desc: 'HCM, ERP, SCM, Unifier, EPM, and technology services across Fusion and EBS.',
+    to: '/services/'
+  },
+  {
+    icon: Sparkles,
+    title: 'AI CoE',
+    desc: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise.',
+    to: '/services/mpc-tech-hub/'
+  },
+  {
+    icon: Cloud,
+    title: 'Cloud & Database',
+    desc: 'Application development, database migration, and cloud management at scale.',
+    to: '/services/devops/'
+  },
+  {
+    icon: BarChart3,
+    title: 'CX & Analytics',
+    desc: 'Power BI, Salesforce, and ServiceNow for customer experience and insight.',
+    to: '/services/'
+  },
+  {
+    icon: Shield,
+    title: 'Security & Zero Trust',
+    desc: 'Cybersecurity strategy, application and cloud security, and managed operations.',
+    to: '/services/'
+  },
+  {
+    icon: Landmark,
+    title: 'Treasury Management',
+    desc: 'IBS Fintech and end-to-end treasury management capabilities.',
+    to: '/services/'
+  }
+];
 
 const INDUSTRIES = [
 {
@@ -221,128 +210,69 @@ export function Home() {
       <StickyNav />
 
       <main className="flex-grow w-full">
-        {/* HERO — Editorial flagship */}
-        <section className="relative w-full bg-white overflow-hidden">
-          {/* Soft ambient gradient blobs */}
+        {/* HERO — Compact display typography */}
+        <section className="relative w-full min-h-[min(50svh,520px)] max-h-[520px] overflow-hidden flex items-center">
+          <img
+            src={HERO_BG}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/20" />
           <div
             aria-hidden
-            className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full opacity-[0.08] blur-3xl"
-            style={{
-              background:
-              'radial-gradient(circle, #0369A1 0%, transparent 70%)'
-            }} />
-          
-          <div
-            aria-hidden
-            className="absolute -top-20 right-0 w-[420px] h-[420px] rounded-full opacity-[0.06] blur-3xl"
-            style={{
-              background:
-              'radial-gradient(circle, #0955B4 0%, transparent 70%)'
-            }} />
-          
+            className="absolute inset-0 bg-primary/20 backdrop-blur-[2px] supports-[backdrop-filter]:bg-primary/10"
+          />
 
-          <div className="relative w-full px-4 pt-16 md:px-10 md:pt-24 lg:px-[60px] lg:pt-[120px]">
-            <div className="max-w-[960px] mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 font-body text-[11px] md:text-[12px] uppercase tracking-[2px] font-semibold text-divider mb-7">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider" />
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+            <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start">
+              <span className="inline-flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.2em] font-semibold text-divider-bright mb-4 md:mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
                 Oracle Cloud · AI Transformation
               </span>
 
-              <h1 className="font-heading font-medium text-[44px] md:text-[64px] lg:text-[80px] leading-[1.02] tracking-[-0.6px] text-text-primary">
+              <h1 className="font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em]">
                 From Cloud First to{' '}
-                <span className="font-serif italic font-normal text-divider">
+                <span className="font-body italic font-normal text-stat">
                   AI-First
                 </span>
               </h1>
 
-              <p className="font-body text-[17px] md:text-[20px] leading-[1.6] text-text-primary/75 mt-7 max-w-[680px]">
+              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 We help enterprises transform their operations with Oracle
                 Cloud, AI solutions, and deep domain expertise — across India,
                 UAE, Australia, and the UK.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 mt-10">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-6 md:mt-8">
                 <Link
                   to="/services/"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white rounded-full font-body text-[14px] font-medium hover:bg-primary/90 transition-colors group">
-                  
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
                   Explore Our Services
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   to="/contact/"
-                  className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-text-primary border border-text-primary/15 rounded-full font-body text-[14px] font-medium hover:border-text-primary/40 hover:bg-bg-light transition-colors">
-                  
+                  className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-white border border-white/30 rounded-full font-body text-[15px] font-medium hover:border-white/60 hover:bg-white/10 transition-colors">
                   Talk to an Expert
                 </Link>
               </div>
-
-              <div className="flex items-center gap-3 mt-10 text-[13px] font-medium text-text-primary/70">
-                <div className="flex text-divider">
-                  {[0, 1, 2, 3, 4].map((i) =>
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                  )}
-                </div>
-                <span>Trusted by 65+ enterprises across 4 countries</span>
-              </div>
             </div>
-          </div>
 
-          {/* 3-image triptych */}
-          <div className="relative w-full px-4 md:px-10 lg:px-[60px] pt-16 md:pt-24 pb-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-[1320px] mx-auto">
-              {/* Left card — overlay quote */}
-              <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-card bg-primary group">
-                <img
-                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
-                  alt="MPC consultants working with clients"
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/95" />
-                <div className="absolute inset-0 p-6 md:p-7 flex flex-col justify-between text-white">
-                  <span className="inline-flex w-fit items-center gap-2 text-[10px] uppercase tracking-[1.5px] font-semibold text-divider-bright">
-                    <span className="w-1 h-1 rounded-full bg-divider-bright" />
-                    Our Approach
-                  </span>
-                  <p className="font-heading font-medium text-[18px] md:text-[20px] leading-snug">
-                    At MPC, we don't just consult — we build alongside ambitious
-                    teams.
-                  </p>
-                </div>
+            <div className="flex items-center justify-center lg:justify-start gap-3 mt-6 lg:mt-8 pb-2 text-[13px] md:text-[14px] font-medium text-text-inverse/80 w-full max-w-[1100px] mx-auto lg:mx-0">
+              <div className="flex text-stat">
+                {[0, 1, 2, 3, 4].map((i) =>
+                <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                )}
               </div>
-
-              {/* Middle card — clean portrait */}
-              <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-card bg-bg-light group">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
-                  alt="MPC consultant portrait"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-              </div>
-
-              {/* Right card — abstract tech with stat overlay */}
-              <div className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-card bg-primary group">
-                <img
-                  src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80"
-                  alt="Oracle Cloud and AI abstract"
-                  className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/80 via-primary/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7 text-white">
-                  <div className="font-heading font-semibold text-stat text-[40px] md:text-[52px] leading-none mb-1">
-                    700+
-                  </div>
-                  <div className="font-body text-[12px] uppercase tracking-[1.2px] font-medium opacity-90">
-                    Oracle specialists, one team
-                  </div>
-                </div>
-              </div>
+              <span>Trusted by 65+ enterprises across 4 countries</span>
             </div>
           </div>
         </section>
 
         {/* CREDENTIAL BAR */}
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
+        <section className="w-full bg-white px-4 py-8 md:px-10 md:py-10 lg:px-[60px]">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-[1200px] mx-auto">
             {[
             {
@@ -411,17 +341,19 @@ export function Home() {
               <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
                 Services
               </p>
-              <Heading level={2}>End-to-End Cloud Services</Heading>
+              <Heading level={2}>
+                <span className="text-stat">AI Powered</span>{' '}
+                MPC Digital Transformation Services
+              </Heading>
             </div>
             <Link
               to="/services/"
-              className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta hover:text-accent transition-colors group">
-              
+              className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta hover:text-accent transition-colors group shrink-0">
               View all services{' '}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-[1200px] mx-auto">
             {SERVICES.map((s) => {
               const Icon = s.icon;
               return (
@@ -429,8 +361,7 @@ export function Home() {
                   key={s.to}
                   to={s.to}
                   className="group flex flex-col rounded-card border border-black/8 bg-white hover:border-divider hover:shadow-subtle transition-all p-6">
-                  
-                  <div className="w-11 h-11 rounded-md bg-divider/10 flex items-center justify-center text-divider mb-4">
+                  <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="font-heading font-medium text-[20px] leading-tight tracking-tight text-text-primary mb-2 group-hover:text-divider transition-colors">
@@ -443,14 +374,14 @@ export function Home() {
                     Learn more{' '}
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
-                </Link>);
-
+                </Link>
+              );
             })}
           </div>
         </section>
 
         {/* INDUSTRIES STRIP */}
-        <section className="w-full bg-primary text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+        <section className="w-full bg-[#1B0739] text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10">
             <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
               Industries We Serve
@@ -467,9 +398,9 @@ export function Home() {
               return (
                 <div
                   key={ind.name}
-                  className="flex flex-col items-center text-center p-5 rounded-card bg-white/5 border border-white/10 hover:border-divider-bright transition-colors">
+                  className="flex flex-col items-center text-center p-5 rounded-card bg-white/5 border border-white/10 hover:border-stat/50 transition-colors">
                   
-                  <Icon className="w-7 h-7 text-divider-bright mb-3" />
+                  <Icon className="w-7 h-7 text-stat mb-3" />
                   <p className="font-body text-[14px] font-medium">
                     {ind.name}
                   </p>
@@ -479,7 +410,10 @@ export function Home() {
           </div>
           <div className="text-center">
             <Link to="/industries/">
-              <Button variant="tertiary" size="md">
+              <Button
+                variant="tertiary"
+                size="md"
+                className="border-white/40 hover:!bg-cta hover:!text-text-inverse">
                 Explore All Industries
               </Button>
             </Link>

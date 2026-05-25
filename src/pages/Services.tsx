@@ -359,7 +359,7 @@ export function Services() {
             {TECH_STACK.map((t) =>
             <div
               key={t}
-              className="font-serif italic text-[18px] md:text-[20px] text-text-primary opacity-50 hover:opacity-80 transition-opacity select-none">
+              className="font-body italic text-[18px] md:text-[20px] text-text-primary opacity-50 hover:opacity-80 transition-opacity select-none">
               
                 {t}
               </div>

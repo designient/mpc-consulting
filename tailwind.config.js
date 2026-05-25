@@ -26,9 +26,9 @@ export default {content: [
         'bg-minimal': '#F4F4F4',
       },
       fontFamily: {
-        heading: ['Syne', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', 'sans-serif'],
-        serif: ['"Cormorant Garamond"', 'serif']
+        heading: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Inter', 'system-ui', 'sans-serif']
       },
       boxShadow: {
         subtle: '0 2px 8px rgba(0, 0, 0, 0.08)',

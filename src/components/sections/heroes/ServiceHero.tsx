@@ -61,7 +61,7 @@ export function ServiceHero({
             {headlineAccent &&
             <>
                 <br />
-                <span className="font-serif italic font-normal text-divider">
+                <span className="font-body italic font-normal text-divider">
                   {headlineAccent}
                 </span>
               </>

@@ -78,7 +78,7 @@ export function StickyNav() {
             to="/"
             aria-label="MPC Cloud Consulting — Home"
             className="flex items-center shrink-0">
-            <Logo tone="ocean" height={30} />
+            <Logo height={36} />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
