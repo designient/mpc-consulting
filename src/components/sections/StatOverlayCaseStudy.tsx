@@ -56,7 +56,7 @@ export function StatOverlayCaseStudy({
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="w-full aspect-video object-cover rounded-none shadow-subtle-dark" />
+            className="w-full aspect-video object-cover rounded-card shadow-subtle-dark" />
           
           {/* Stat card — overlaps on desktop, sits below on mobile */}
           <div

@@ -93,7 +93,7 @@ export function FAQAccordion({
           </div>
         </div> :
 
-      <div className="max-w-[820px] mx-auto">
+      <div className="max-w-[1200px] mx-auto w-full">
           <div className="text-center mb-10">
             {eyebrow &&
           <span className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">

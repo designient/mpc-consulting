@@ -28,7 +28,6 @@ import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStud
 import {
   statAccentCardClass,
   statAccentLabelClass,
-  statAccentNumberClass
 } from '../components/ui/StatCallout';
 import {
   FAQAccordion,
@@ -80,14 +79,46 @@ const SERVICES = [
 ];
 
 const INDUSTRIES = [
-  { icon: Banknote, name: 'BFSI' },
-  { icon: Factory, name: 'Manufacturing' },
-  { icon: Plane, name: 'Travel & Hospitality' },
-  { icon: Building2, name: 'Real Estate' },
-  { icon: Zap, name: 'Energy & Utilities' },
-  { icon: Radio, name: 'Telecommunications' },
-  { icon: Landmark, name: 'Public Sector' },
-  { icon: Briefcase, name: 'Professional Services' },
+  {
+    icon: Banknote,
+    name: 'BFSI',
+    desc: 'Oracle Cloud for banks and insurers — audit-ready, regulator-aligned, and built for scale across every region we operate in.',
+  },
+  {
+    icon: Factory,
+    name: 'Manufacturing',
+    desc: 'Connect ERP, HCM, and operations data so finance, supply chain, and workforce decisions run from one source of truth.',
+  },
+  {
+    icon: Plane,
+    name: 'Travel & Hospitality',
+    desc: 'Consolidate HR, finance, and operations on Oracle Cloud so you can flex with demand without breaking margins.',
+  },
+  {
+    icon: Building2,
+    name: 'Real Estate',
+    desc: 'Unify project finance, leasing, and HR across complex portfolios with the reporting agility boards expect.',
+  },
+  {
+    icon: Zap,
+    name: 'Energy & Utilities',
+    desc: 'Modernise on Oracle Cloud with the safety, asset, and regulatory rigour the sector demands.',
+  },
+  {
+    icon: Radio,
+    name: 'Telecommunications',
+    desc: 'HR and finance modernisation with deep understanding of how Oracle sits alongside B/OSS and billing systems.',
+  },
+  {
+    icon: Landmark,
+    name: 'Public Sector',
+    desc: 'Modernise HR and finance while staying inside procurement, security, and accessibility frameworks.',
+  },
+  {
+    icon: Briefcase,
+    name: 'Professional Services',
+    desc: 'Put project finance, utilisation, and HR on Oracle Cloud so growth does not cost margin visibility.',
+  },
 ];
 
 const PILLARS = [
@@ -299,23 +330,32 @@ export function Home() {
         </section>
 
         {/* INDUSTRIES */}
-        <section className="w-full bg-[#1B0739] text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+        <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow-inverse mb-3">Industries We Serve</p>
-            <Heading level={2} color="text-inverse">
-              Serving Sectors That Power the World
-            </Heading>
+            <p className="section-eyebrow mb-3">Industries We Serve</p>
+            <Heading level={2}>Serving Sectors That Power the World</Heading>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-[1280px] mx-auto">
             {INDUSTRIES.map((ind) => {
               const Icon = ind.icon;
               return (
                 <Link
                   key={ind.name}
                   to="/industries/"
-                  className="flex flex-col items-center text-center p-5 rounded-card bg-white/5 border border-white/10 hover:border-stat/50 transition-colors">
-                  <Icon className="w-7 h-7 text-stat mb-3" />
-                  <p className="font-body text-[14px] font-medium">{ind.name}</p>
+                  className="group flex flex-col rounded-card border border-black/8 bg-white hover:border-divider hover:shadow-subtle transition-all p-6">
+                  <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="type-h3 text-[20px] text-text-primary mb-2 group-hover:text-divider transition-colors">
+                    {ind.name}
+                  </h3>
+                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-grow">
+                    {ind.desc}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold text-cta mt-auto">
+                    Learn more{' '}
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </Link>
               );
             })}
@@ -368,17 +408,26 @@ export function Home() {
                 n: 'Oracle + AI',
                 l: 'Focus'
               }].
-              map((s) =>
+              map((s) => {
+              const isCompactStat = s.n === 'Oracle + AI';
+              return (
               <div
                 key={s.l}
-                className={`${statAccentCardClass} p-6 md:p-7`}>
+                className={`${statAccentCardClass} p-5 md:p-6 min-w-0`}>
                 <div
-                  className={`${statAccentNumberClass} text-[32px] md:text-[40px] mb-1`}>
+                  className={`font-heading font-semibold text-white leading-tight mb-1 ${
+                    isCompactStat
+                      ? 'text-[20px] sm:text-[22px] md:text-[24px] whitespace-nowrap'
+                      : 'text-[26px] sm:text-[28px] md:text-[32px]'
+                  }`}>
                   {s.n}
                 </div>
-                <div className={`${statAccentLabelClass} !mt-2`}>{s.l}</div>
+                <div className={`${statAccentLabelClass} !mt-1.5 text-[13px]`}>
+                  {s.l}
+                </div>
               </div>
-              )}
+              );
+              })}
             </div>
           </div>
         </section>
@@ -451,15 +500,14 @@ export function Home() {
           ctaTo="/resources/case-studies/"
           bg="soft" />
         
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
         {/* FAQ */}
         <FAQAccordion
           eyebrow="FAQ"
           title="Frequently Asked Questions"
           items={FAQS}
           layout="full"
-          bg="soft" />
+          bg="white"
+        />
 
         {/* CREDENTIAL BAR */}
         <section className="w-full bg-white px-4 py-10 md:px-10 md:py-12 lg:px-[60px]">
