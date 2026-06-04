@@ -28,7 +28,7 @@ export function NewsletterInline({
       
       <div className="max-w-[1100px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-10">
         <div className="flex-1">
-          <h3 className="font-heading font-medium text-[24px] md:text-[28px] leading-tight tracking-tight mb-2">
+          <h3 className="type-h3 mb-2">
             {title}
           </h3>
           <p className="font-body text-[16px] leading-[1.6] opacity-90 max-w-[560px]">

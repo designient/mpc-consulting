@@ -6,29 +6,28 @@ export interface StatCalloutProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;
 }
 
+/** Shared accent stat card: #0369a1 bg, white labels and values */
+export const statAccentCardClass =
+  'bg-[#0369a1] text-white rounded-callout shadow-subtle p-8';
+export const statAccentNumberClass =
+  'font-heading font-semibold text-[48px] md:text-[64px] leading-tight text-white';
+export const statAccentLabelClass =
+  'type-caption font-medium uppercase tracking-[0.8px] text-white';
+export const statAccentEyebrowClass =
+  'type-caption font-medium uppercase tracking-[0.8px] text-white';
+
 export function StatCallout({
-  variant = 'light',
   number,
   label,
   className = '',
   ...props
 }: StatCalloutProps) {
-  const isDark = variant === 'dark';
-  const containerClasses = isDark
-    ? 'bg-primary rounded-callout shadow-subtle p-8'
-    : 'bg-bg-light rounded-card shadow-subtle p-8';
-
   return (
     <div
-      className={`flex flex-col justify-center ${containerClasses} ${className}`}
+      className={`flex flex-col justify-center ${statAccentCardClass} ${className}`}
       {...props}>
-      <div className="font-body font-semibold text-[48px] md:text-[64px] leading-tight text-stat">
-        {number}
-      </div>
-      <div
-        className={`font-body font-medium text-[12px] md:text-[13px] uppercase tracking-[0.8px] mt-2 ${isDark ? 'text-text-inverse opacity-80' : 'text-text-primary'}`}>
-        {label}
-      </div>
+      <div className={statAccentNumberClass}>{number}</div>
+      <div className={`${statAccentLabelClass} mt-2`}>{label}</div>
     </div>
   );
 }

@@ -34,7 +34,7 @@ const BREADCRUMB = [
   label: 'Contact'
 }];
 
-const COUNTRIES = ['India', 'UAE', 'Australia', 'UK', 'Other'];
+const COUNTRIES = ['India', 'UAE', 'Singapore', 'Australia', 'UK', 'Other'];
 const SERVICES = [
 'HCM',
 'ERP (Oracle Cloud)',
@@ -100,8 +100,8 @@ const FAQS = [
   a: 'Yes. We work at every stage — new implementations, upgrades, managed support, and health checks on existing Oracle environments.'
 },
 {
-  q: 'Can MPC work with clients outside India, UAE, Australia, and the UK?',
-  a: 'Yes. While our physical offices are in these four countries, we deliver projects globally. Our consultants are experienced with remote and hybrid delivery models.'
+  q: 'Can MPC work with clients outside India, UAE, Singapore, Australia, and the UK?',
+  a: 'Yes. While our physical offices are in India, UAE, Singapore, Australia, and the UK, we deliver projects globally. Our consultants are experienced with remote and hybrid delivery models.'
 }];
 
 export function Contact() {
@@ -165,7 +165,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
             {/* Form */}
             <div className="lg:col-span-7">
-              <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+              <p className="section-eyebrow mb-3">
                 Enquiry
               </p>
               <Heading level={2} className="mb-8">
@@ -174,7 +174,7 @@ export function Contact() {
 
               {submitted ?
               <div className="bg-divider/10 border border-divider rounded-card p-8">
-                  <h3 className="font-heading font-medium text-[22px] text-text-primary mb-2">
+                  <h3 className="font-heading font-semibold text-[22px] text-text-primary mb-2">
                     Thanks — we've received your message.
                   </h3>
                   <p className="font-body text-[16px] text-text-primary opacity-80">
@@ -221,7 +221,7 @@ export function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="font-body font-medium text-[12px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
+                      <label className="font-body font-medium text-[14px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
                         Country
                       </label>
                       <select
@@ -236,7 +236,7 @@ export function Contact() {
                       </select>
                     </div>
                     <div>
-                      <label className="font-body font-medium text-[12px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
+                      <label className="font-body font-medium text-[14px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
                         Service Interest
                       </label>
                       <select
@@ -253,7 +253,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="font-body font-medium text-[12px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
+                    <label className="font-body font-medium text-[14px] uppercase tracking-[0.8px] text-text-primary mb-2 block">
                       Message
                     </label>
                     <textarea
@@ -282,7 +282,7 @@ export function Contact() {
             {/* Info rail */}
             <div className="lg:col-span-5">
               <div className="bg-bg-light rounded-card p-6 md:p-7 mb-5">
-                <h3 className="font-heading font-medium text-[20px] text-text-primary mb-4">
+                <h3 className="font-heading font-semibold text-[20px] text-text-primary mb-4">
                   Or reach us directly
                 </h3>
                 <a
@@ -305,20 +305,20 @@ export function Contact() {
               <div className="bg-primary text-text-inverse rounded-card p-6 md:p-7 mb-5">
                 <div className="flex items-center gap-2 mb-3">
                   <Clock className="w-4 h-4 text-divider" />
-                  <span className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider">
+                  <span className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider">
                     Response SLA
                   </span>
                 </div>
-                <p className="font-heading font-medium text-[20px] mb-2">
+                <p className="font-heading font-semibold text-[20px] mb-2">
                   We reply within 1 business day
                 </p>
                 <p className="font-body text-[14px] opacity-80">
-                  Across all 4 regions. Urgent? Mark it in your message.
+                  Across all 5 regions. Urgent? Mark it in your message.
                 </p>
               </div>
 
               <div className="border border-black/10 rounded-card p-6 md:p-7">
-                <h3 className="font-heading font-medium text-[18px] text-text-primary mb-4">
+                <h3 className="font-heading font-semibold text-[18px] text-text-primary mb-4">
                   Quick Actions
                 </h3>
                 <ul className="space-y-2.5">
@@ -356,7 +356,7 @@ export function Contact() {
         {/* Offices */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Global Offices
             </p>
             <Heading level={2}>Our offices</Heading>
@@ -372,10 +372,10 @@ export function Contact() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-baseline gap-3 mb-1">
-                    <h3 className="font-heading font-medium text-[20px] text-text-primary">
+                    <h3 className="font-heading font-semibold text-[20px] text-text-primary">
                       {o.city}
                     </h3>
-                    <span className="font-body text-[11px] uppercase tracking-[0.8px] font-medium text-divider">
+                    <span className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider">
                       {o.country} · {o.locale}
                     </span>
                   </div>

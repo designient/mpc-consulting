@@ -15,3 +15,42 @@
     @apply bg-white text-text-primary font-body;
   }
 }
+
+@layer components {
+  /* H1 — page & hero titles */
+  .type-h1 {
+    @apply font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em];
+  }
+
+  /* H2 — section titles */
+  .type-h2 {
+    @apply font-heading font-semibold text-[32px] md:text-[40px] lg:text-[44px] leading-[1.12] tracking-[-0.02em];
+  }
+
+  /* H3 — card & block titles */
+  .type-h3 {
+    @apply font-heading font-semibold text-[22px] md:text-[24px] leading-[1.25] tracking-[-0.01em];
+  }
+
+  /* Paragraph — body copy */
+  .type-paragraph {
+    @apply font-body text-[16px] md:text-[17px] leading-[1.65] text-text-primary;
+  }
+
+  /* Caption — labels, meta, eyebrows (minimum 14px) */
+  .type-caption {
+    @apply font-body text-[14px] leading-[1.5] text-text-primary;
+  }
+
+  .type-caption-muted {
+    @apply type-caption text-text-primary/70;
+  }
+
+  .section-eyebrow {
+    @apply type-caption font-semibold uppercase tracking-[0.8px] text-divider;
+  }
+
+  .section-eyebrow-inverse {
+    @apply type-caption font-semibold uppercase tracking-[0.8px] text-divider-bright;
+  }
+}

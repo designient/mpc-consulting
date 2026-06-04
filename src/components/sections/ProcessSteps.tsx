@@ -38,7 +38,7 @@ export function ProcessSteps({
         <div className="mb-12 text-center md:text-left">
           {eyebrow &&
           <p
-            className={`font-body text-[12px] uppercase tracking-[0.8px] font-medium mb-3 ${isDark ? 'text-divider-bright' : 'text-divider'}`}>
+            className={`font-body text-[14px] uppercase tracking-[0.8px] font-medium mb-3 ${isDark ? 'text-divider-bright' : 'text-divider'}`}>
             
               {eyebrow}
             </p>
@@ -71,14 +71,14 @@ export function ProcessSteps({
             
               <div className="absolute left-0 top-0 w-[48px] md:w-[80px] flex justify-start">
                 <span
-                className={`font-heading font-medium text-[40px] md:text-[64px] leading-none opacity-90 select-none ${isDark ? 'text-divider-bright' : 'text-divider'}`}
+                className={`font-heading font-semibold text-[40px] md:text-[64px] leading-none opacity-90 select-none ${isDark ? 'text-divider-bright' : 'text-divider'}`}
                 aria-hidden>
                 
                   {step.number}
                 </span>
               </div>
               <h3
-              className={`font-heading font-medium text-[20px] md:text-[24px] leading-tight mb-2 ${isDark ? 'text-text-inverse' : 'text-text-primary'}`}>
+              className={`font-heading font-semibold text-[20px] md:text-[24px] leading-tight mb-2 ${isDark ? 'text-text-inverse' : 'text-text-primary'}`}>
               
                 {step.title}
               </h3>

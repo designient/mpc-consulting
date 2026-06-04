@@ -26,7 +26,7 @@ export function ContentGrid3Col({ sectionTitle, items }: ContentGrid3ColProps) {
             <Heading level={3} className="mb-4">
               {item.title}
             </Heading>
-            <p className="font-body text-[16px] leading-[1.6] text-text-primary mb-6 flex-grow">
+            <p className="type-paragraph mb-6 flex-grow">
               {item.description}
             </p>
             {item.ctaText &&

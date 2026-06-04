@@ -25,13 +25,13 @@ const HERO_BG =
   'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=2400&q=80';
 
 const MISSION_INTRO =
-  'Join a team of 700+ Oracle Cloud specialists working across India, UAE, Australia, and the UK. We build the kind of place where senior people stay because the work is meaningful, the people are sharp, and the path forward is visible.';
+  'Join a team of 700+ Oracle Cloud specialists working across India, UAE, Singapore, Australia, and the UK. We build the kind of place where senior people stay because the work is meaningful, the people are sharp, and the path forward is visible.';
 
 const WHY_BULLETS = [
   'Meaningful work on complex enterprise transformations — not slide decks',
   'Real ownership and direct exposure to client leadership early in your career',
   'Deep Oracle Cloud specialisation as a long-term, durable career bet',
-  'Global teams collaborating across four regions, one operating model',
+  'Global teams collaborating across five regions, one operating model',
   'Structured growth paths from consultant to partner — with promotions you can see coming'
 ];
 
@@ -48,7 +48,7 @@ const CAREER_PATHWAYS = [
   },
   {
     title: 'Operations & growth',
-    desc: 'Shape how we scale — engagement management, sales, and people operations across four regions.',
+    desc: 'Shape how we scale — engagement management, sales, and people operations across five regions.',
     filterId: 'operations'
   }
 ];
@@ -343,7 +343,7 @@ export function Careers() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Careers at MPC | MPC Cloud Consulting"
-        description="Join a team of 700+ Oracle Cloud specialists across India, UAE, Australia, and the UK. Meaningful work, real ownership, structured growth."
+        description="Join a team of 700+ Oracle Cloud specialists across India, UAE, Singapore, Australia, and the UK. Meaningful work, real ownership, structured growth."
         canonicalPath="/careers/"
         schema={[
           ORGANIZATION_SCHEMA,
@@ -369,12 +369,12 @@ export function Careers() {
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex items-center text-text-inverse">
             <div className="w-full lg:max-w-[58%] xl:max-w-[52%] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="inline-flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.2em] font-semibold text-divider-bright mb-4 md:mb-5">
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
                 Careers
               </span>
 
-              <h1 className="font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em]">
+              <h1 className="type-h1 text-text-inverse">
                 <span className="block">MPC Careers</span>
                 <span className="block text-stat font-medium mt-1 md:mt-2">
                   is where we begin.
@@ -382,7 +382,7 @@ export function Careers() {
               </h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[520px]">
-                700+ specialists. 4 regions. One unified team building the kind
+                700+ specialists. 5 regions. One unified team building the kind
                 of consultancy senior people choose to stay at.
               </p>
 
@@ -406,7 +406,7 @@ export function Careers() {
         {/* Mission */}
         <section className="w-full bg-white px-4 py-16 md:px-10 md:py-20 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[800px] mx-auto text-center">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-4">
+            <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider mb-4">
               Careers at MPC
             </p>
             <Heading level={2} className="mb-6">
@@ -427,7 +427,7 @@ export function Careers() {
                 type="button"
                 onClick={() => goToRolesWithFilter(path.filterId)}
                 className="group flex flex-col text-left rounded-card border border-black/8 bg-white hover:border-divider hover:shadow-subtle transition-all p-6 md:p-7">
-                <h3 className="font-heading font-medium text-[20px] leading-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
+                <h3 className="type-h3 text-[20px] leading-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
                   {path.title}
                 </h3>
                 <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-grow">
@@ -445,7 +445,7 @@ export function Careers() {
         {/* Culture */}
         <section className="w-full bg-white px-4 pt-14 md:px-10 lg:px-[60px]">
           <div className="max-w-[1280px] mx-auto text-center md:text-left">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Culture & values
             </p>
           </div>
@@ -455,7 +455,7 @@ export function Careers() {
         {/* Find your team */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Teams
             </p>
             <Heading level={2} className="mb-4 max-w-2xl">
@@ -472,7 +472,7 @@ export function Careers() {
                   type="button"
                   onClick={() => goToRolesWithFilter(team.id)}
                   className="group text-left rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6">
-                  <h3 className="font-heading font-medium text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
+                  <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
                     {team.title}
                   </h3>
                   <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4">
@@ -493,7 +493,7 @@ export function Careers() {
           id="roles"
           className="w-full bg-bg-light pt-16 md:pt-20 pb-16 md:pb-20 scroll-mt-24">
           <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-[60px] mb-8">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Open roles
             </p>
             <Heading level={2}>Explore career opportunities</Heading>
@@ -529,10 +529,10 @@ export function Careers() {
                     key={role.id}
                     href={`mailto:careers@mpccloudconsulting.com?subject=Application: ${encodeURIComponent(role.title)}`}
                     className="group bg-white rounded-card p-6 md:p-7 shadow-subtle hover:shadow-medium transition-all hover:-translate-y-0.5 flex flex-col">
-                    <p className="font-body text-[11px] uppercase tracking-[1.2px] text-divider font-medium mb-2">
+                    <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider font-medium mb-2">
                       {role.team}
                     </p>
-                    <h3 className="font-heading font-medium text-[20px] md:text-[22px] leading-tight text-primary mb-3 group-hover:text-stat transition-colors">
+                    <h3 className="type-h3 text-[20px] md:text-[22px] leading-tight text-primary mb-3 group-hover:text-stat transition-colors">
                       {role.title}
                     </h3>
                     <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-1">
@@ -560,7 +560,7 @@ export function Careers() {
           <GeometricPatternOverlay />
           <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
+              <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
                 Innovation
               </p>
               <Heading level={2} color="text-inverse" className="mb-5">
@@ -596,7 +596,7 @@ export function Careers() {
           <StatCalloutGrid
             stats={[
               { number: '700+', label: 'Team members' },
-              { number: '4', label: 'Regions, one team' },
+              { number: '5', label: 'Regions, one team' },
               { number: '92%', label: 'Annual retention' },
               { number: '15+', label: 'Yrs avg senior tenure' }
             ]}
@@ -606,7 +606,7 @@ export function Careers() {
         {/* Life gallery */}
         <section className="w-full bg-bg-light px-4 py-16 md:px-10 md:py-20 lg:px-[60px]">
           <div className="max-w-[1280px] mx-auto">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Life at MPC
             </p>
             <Heading level={2} className="mb-10 max-w-2xl">
@@ -670,7 +670,7 @@ export function Careers() {
         {/* Discover more */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Next steps
             </p>
             <Heading level={2} className="mb-10">
@@ -683,7 +683,7 @@ export function Careers() {
                     key={item.title}
                     to={item.to}
                     className="group flex flex-col rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6 md:p-7">
-                    <h3 className="font-heading font-medium text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
+                    <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
                       {item.title}
                     </h3>
                     <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4 flex-grow">
@@ -699,7 +699,7 @@ export function Careers() {
                     key={item.title}
                     href={item.to}
                     className="group flex flex-col rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6 md:p-7">
-                    <h3 className="font-heading font-medium text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
+                    <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
                       {item.title}
                     </h3>
                     <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4 flex-grow">

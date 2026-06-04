@@ -55,7 +55,7 @@ export function StickyNav() {
         <div className="w-full bg-bg-minimal border-b border-black/5">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 h-9 flex items-center justify-between gap-4">
             <p className="font-body text-[12px] md:text-[13px] text-text-primary/70 truncate">
-              Oracle Cloud &amp; AI partner · India · UAE · UK · Australia
+              Oracle Cloud &amp; AI partner · India · UAE · Singapore · UK · Australia
             </p>
             <button
               type="button"
@@ -78,7 +78,7 @@ export function StickyNav() {
             to="/"
             aria-label="MPC Cloud Consulting — Home"
             className="flex items-center shrink-0">
-            <Logo height={36} />
+            <Logo height={44} />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -96,7 +96,7 @@ export function StickyNav() {
               </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all pointer-events-none group-hover:pointer-events-auto">
                 <div className="bg-white rounded-2xl shadow-medium border border-black/8 p-4 w-[440px]">
-                  <p className="font-body text-[11px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
+                  <p className="font-body text-[14px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
                     Services
                   </p>
                   <div className="grid grid-cols-2 gap-0.5">
@@ -127,7 +127,7 @@ export function StickyNav() {
               </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all pointer-events-none group-hover:pointer-events-auto">
                 <div className="bg-white rounded-2xl shadow-medium border border-black/8 p-4 w-[240px]">
-                  <p className="font-body text-[11px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
+                  <p className="font-body text-[14px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
                     Insights
                   </p>
                   {RESOURCES.map((r) => (
@@ -150,16 +150,11 @@ export function StickyNav() {
             </NavLink>
           </div>
 
-          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
+          <div className="hidden lg:flex items-center shrink-0">
             <Link
               to="/contact/"
-              className="inline-flex items-center justify-center px-5 py-2.5 border border-primary/20 text-primary rounded-full font-body text-[13px] font-medium hover:border-primary/40 hover:bg-bg-minimal transition-colors">
+              className="inline-flex items-center justify-center px-5 py-2.5 bg-cta text-white rounded-full font-body text-[13px] font-medium hover:opacity-90 transition-opacity shadow-subtle">
               Contact
-            </Link>
-            <Link
-              to="/contact/"
-              className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white rounded-full font-body text-[13px] font-medium hover:bg-primary/90 transition-colors shadow-subtle">
-              Book a Call
             </Link>
           </div>
 
@@ -186,7 +181,7 @@ export function StickyNav() {
                 className="px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-medium">
                 Home
               </Link>
-              <p className="px-3 pt-4 pb-1 text-[11px] uppercase tracking-[0.12em] text-text-primary/45">
+              <p className="px-3 pt-4 pb-1 text-[14px] uppercase tracking-[0.12em] text-text-primary/45">
                 Services
               </p>
               {SERVICES.map((s) => (
@@ -204,7 +199,7 @@ export function StickyNav() {
                 className="px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-medium mt-2">
                 Industries
               </Link>
-              <p className="px-3 pt-4 pb-1 text-[11px] uppercase tracking-[0.12em] text-text-primary/45">
+              <p className="px-3 pt-4 pb-1 text-[14px] uppercase tracking-[0.12em] text-text-primary/45">
                 Insights
               </p>
               {RESOURCES.map((r) => (
@@ -228,18 +223,12 @@ export function StickyNav() {
                 className="px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-medium">
                 Careers
               </Link>
-              <div className="mt-5 flex flex-col gap-2.5 px-3">
+              <div className="mt-5 px-3">
                 <Link
                   to="/contact/"
                   onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center justify-center px-5 py-3 border border-primary/20 text-primary rounded-full font-medium">
+                  className="inline-flex w-full items-center justify-center px-5 py-3 bg-cta text-white rounded-full font-medium hover:opacity-90 transition-opacity shadow-subtle">
                   Contact
-                </Link>
-                <Link
-                  to="/contact/"
-                  onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center justify-center px-5 py-3 bg-primary text-white rounded-full font-medium">
-                  Book a Call
                 </Link>
               </div>
             </div>

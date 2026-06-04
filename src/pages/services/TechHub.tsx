@@ -150,7 +150,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'UAE', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Custom AI agents, Oracle extensions, and innovation accelerators built for enterprise Oracle Cloud environments.',
   url: 'https://www.mpccloudconsulting.com/services/mpc-tech-hub/'
@@ -201,7 +201,7 @@ export function TechHub() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               AI CoE
             </p>
             <Heading level={2}>Agentic AI for Enterprise Oracle</Heading>
@@ -222,7 +222,7 @@ export function TechHub() {
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Focus Areas
             </p>
             <Heading level={2}>What we optimise</Heading>
@@ -245,7 +245,7 @@ export function TechHub() {
         </section>
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+          <p className="section-eyebrow mb-3">
             Oracle Extensions
           </p>
           <Heading level={2} className="mb-6">

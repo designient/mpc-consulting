@@ -139,7 +139,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'UAE', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Change management, training, communications, super-user programmes and ongoing enablement to maximise Oracle Cloud ROI.',
   url: 'https://www.mpccloudconsulting.com/services/adoption-as-a-service/'
@@ -177,7 +177,7 @@ export function AaaS() {
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
           <div className="max-w-[820px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               The Challenge
             </p>
             <Heading level={2} className="mb-5">
@@ -202,7 +202,7 @@ export function AaaS() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               The Framework
             </p>
             <Heading level={2}>The AaaS framework</Heading>
@@ -223,7 +223,7 @@ export function AaaS() {
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
           <div className="max-w-[820px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               AI-First Adoption
             </p>
             <Heading level={2} className="mb-5">
@@ -240,7 +240,7 @@ export function AaaS() {
 
         <section className="w-full bg-primary text-text-inverse px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
           <div className="mb-6">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               ROI of Adoption
             </p>
             <Heading level={2} color="text-inverse">

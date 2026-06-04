@@ -43,7 +43,7 @@ export function PageStub({
           <p className="font-body text-[18px] leading-[1.6] text-text-inverse opacity-80 mt-6 max-w-[700px]">
             {description}
           </p>
-          <div className="mt-10 inline-flex items-center gap-2 px-4 py-2 rounded-button border border-divider text-divider font-body text-[12px] uppercase tracking-[0.8px]">
+          <div className="mt-10 inline-flex items-center gap-2 px-4 py-2 rounded-button border border-divider text-divider font-body text-[14px] uppercase tracking-[0.8px]">
             <span className="w-2 h-2 rounded-full bg-divider animate-pulse" />
             Coming soon
           </div>

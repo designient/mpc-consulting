@@ -23,7 +23,7 @@ export function Breadcrumb({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={`font-body text-[12px] uppercase tracking-[0.8px] font-medium ${baseColor} ${className}`}>
+      className={`font-body text-[14px] uppercase tracking-[0.8px] font-medium ${baseColor} ${className}`}>
       
       <ol className="flex flex-wrap items-center gap-2">
         <li>

@@ -23,7 +23,7 @@ export function IndustryTabSwitcher({ industries, eyebrow, title }: Props) {
     <section className="w-full bg-white py-16 md:py-24 px-4 md:px-10 lg:px-[60px]">
       <div className="max-w-[1280px] mx-auto">
         {eyebrow &&
-        <p className="font-body text-[12px] uppercase tracking-[1.2px] text-divider mb-3">
+        <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider mb-3">
             {eyebrow}
           </p>
         }

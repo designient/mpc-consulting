@@ -216,7 +216,7 @@ const COMPARISON = [
   criterion: 'Regional coverage',
   values: [
   'Single region',
-  'India, UAE, Australia, UK with local compliance']
+  'India, UAE, Singapore, Australia, and the UK with local compliance']
 
 }];
 
@@ -241,7 +241,7 @@ export function Services() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Cloud Consulting Services | Oracle HCM, ERP, DevOps & AI | MPC"
-        description="MPC delivers Oracle HCM, ERP, DevOps, Java, AI and business process consulting services across India, UAE, UK and Australia."
+        description="MPC delivers Oracle HCM, ERP, DevOps, Java, AI and business process consulting services across India, UAE, Singapore, the UK, and Australia."
         canonicalPath="/services/"
         schema={[
           ORGANIZATION_SCHEMA,
@@ -269,7 +269,7 @@ export function Services() {
           </p>
           <div className="mt-8">
             <Link to="/contact/">
-              <button className="bg-cta hover:bg-accent transition-colors text-text-inverse rounded-button px-9 py-4 font-body font-semibold text-[16px] shadow-subtle">
+              <button className="bg-[#0369a1] hover:opacity-90 transition-opacity text-text-inverse rounded-button px-9 py-4 font-body font-semibold text-[16px] shadow-subtle">
                 Talk to a Specialist
               </button>
             </Link>
@@ -278,13 +278,13 @@ export function Services() {
 
         <QuickAnswerCard
           question="What does MPC Cloud Consulting do?"
-          answer="MPC is an Oracle Cloud and AI transformation partner delivering HCM, ERP, DevOps, Java, business process consulting, health checks, adoption services, and AI innovation — with 700+ specialists across India, UAE, Australia, and the UK."
+          answer="MPC is an Oracle Cloud and AI transformation partner delivering HCM, ERP, DevOps, Java, business process consulting, health checks, adoption services, and AI innovation — with 700+ specialists across India, UAE, Singapore, Australia, and the UK."
         />
 
         {/* Services hub grid */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10 max-w-[700px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               What We Offer
             </p>
             <Heading level={2}>Eight services. Deep expertise in each.</Heading>
@@ -301,7 +301,7 @@ export function Services() {
                   <div className="w-11 h-11 rounded-md bg-divider/10 flex items-center justify-center text-divider mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-heading font-medium text-[20px] leading-tight text-text-primary mb-2 group-hover:text-divider transition-colors">
+                  <h3 className="font-heading font-semibold text-[20px] leading-tight text-text-primary mb-2 group-hover:text-divider transition-colors">
                     {s.title}
                   </h3>
                   <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-grow">
@@ -320,7 +320,7 @@ export function Services() {
         {/* Portfolio Tabs */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-8 max-w-[700px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Solutions Portfolio
             </p>
             <Heading level={2}>The full stack we work with</Heading>
@@ -330,7 +330,7 @@ export function Services() {
             <button
               key={k}
               onClick={() => setTab(k)}
-              className={`px-4 py-2 rounded-full font-body text-[14px] font-medium transition-colors ${tab === k ? 'bg-primary text-text-inverse' : 'bg-white text-text-primary border border-black/10 hover:border-divider'}`}>
+              className={`px-4 py-2 rounded-full font-body text-[14px] font-medium transition-colors ${tab === k ? 'bg-[#0369a1] text-text-inverse' : 'bg-white text-text-primary border border-black/10 hover:border-divider'}`}>
               
                 {k}
               </button>
@@ -352,7 +352,7 @@ export function Services() {
 
         {/* Tech Stack */}
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <p className="text-center font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-6">
+          <p className="text-center font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider mb-6">
             Platforms We Work With
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-5 max-w-[1000px] mx-auto items-center justify-items-center">
@@ -370,7 +370,7 @@ export function Services() {
         {/* Why MPC */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Why MPC
             </p>
             <Heading level={2}>Why enterprises choose MPC</Heading>
@@ -410,7 +410,7 @@ export function Services() {
           tag="Global BFSI · 2024"
           headline="$48M saved across an Oracle consolidation programme"
           description="A multinational BFSI institution operating across three countries consolidated four legacy HR systems and modernised their Oracle ERP with MPC."
-          metadata="BFSI · India, UAE, UK · HCM + ERP"
+          metadata="BFSI · India, UAE, Singapore, UK · HCM + ERP"
           imageSrc="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop"
           stat="$48M"
           statLabel="Delivered savings"

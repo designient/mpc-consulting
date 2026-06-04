@@ -152,7 +152,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'UAE', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Map, redesign and optimise Finance, HR, Supply Chain and Sales operations for cloud-ready enterprises.',
   url: 'https://www.mpccloudconsulting.com/services/business-process-consulting/'
@@ -189,7 +189,7 @@ export function BPC() {
         
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+          <p className="section-eyebrow mb-3">
             The Principle
           </p>
           <Heading level={2} className="mb-5">
@@ -210,7 +210,7 @@ export function BPC() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Functional Areas
             </p>
             <Heading level={2}>Areas we cover</Heading>
@@ -239,7 +239,7 @@ export function BPC() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[900px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               AI Enablement
             </p>
             <Heading level={2} className="mb-5">

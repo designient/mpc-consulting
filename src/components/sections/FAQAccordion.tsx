@@ -39,12 +39,12 @@ export function FAQAccordion({
             aria-expanded={isOpen}>
             
               <span
-              className={`font-heading font-medium text-[17px] md:text-[18px] leading-snug transition-colors ${isOpen ? 'text-primary' : 'text-text-primary group-hover:text-primary'}`}>
+              className={`font-heading font-semibold text-[17px] md:text-[18px] leading-snug transition-colors ${isOpen ? 'text-primary' : 'text-text-primary group-hover:text-primary'}`}>
               
                 {item.q}
               </span>
               <span
-              className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-primary text-white rotate-45' : 'bg-bg-light text-text-primary'}`}>
+              className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#0369a1] text-white rotate-45' : 'bg-bg-light text-text-primary'}`}>
               
                 <Plus className="w-4 h-4" />
               </span>
@@ -81,12 +81,12 @@ export function FAQAccordion({
         }
           <div>
             {eyebrow &&
-          <span className="inline-flex items-center gap-2 font-body text-[11px] uppercase tracking-[2px] font-semibold text-divider mb-4">
+          <span className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-divider" />
                 {eyebrow}
               </span>
           }
-            <h2 className="font-heading font-medium text-[32px] md:text-[40px] leading-[1.15] tracking-[-0.3px] text-text-primary mb-8">
+            <h2 className="type-h2 text-text-primary mb-8">
               {title}
             </h2>
             {accordion}
@@ -96,12 +96,12 @@ export function FAQAccordion({
       <div className="max-w-[820px] mx-auto">
           <div className="text-center mb-10">
             {eyebrow &&
-          <span className="inline-flex items-center gap-2 font-body text-[11px] uppercase tracking-[2px] font-semibold text-divider mb-4">
+          <span className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-divider" />
                 {eyebrow}
               </span>
           }
-            <h2 className="font-heading font-medium text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.3px] text-text-primary">
+            <h2 className="type-h2 text-text-primary">
               {title}
             </h2>
           </div>

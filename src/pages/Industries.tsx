@@ -257,7 +257,7 @@ const FAQS = [
 },
 {
   q: 'How do you handle regulatory differences across regions?',
-  a: 'Our delivery teams operate inside the regulatory frameworks of each region we serve — India, UAE, Australia, and the UK — and configure Oracle Cloud accordingly.'
+  a: 'Our delivery teams operate inside the regulatory frameworks of each region we serve — India, UAE, Singapore, Australia, and the UK — and configure Oracle Cloud accordingly.'
 },
 {
   q: 'What’s the smallest engagement you take on?',

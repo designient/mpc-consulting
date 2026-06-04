@@ -7,7 +7,6 @@ import { ServiceHero } from '../components/sections/heroes/ServiceHero';
 import { ContentGrid3Col } from '../components/sections/ContentGrid3Col';
 import { FilterBar } from '../components/sections/FilterBar';
 import { ResourceCard } from '../components/sections/ResourceCard';
-import { NewsletterInline } from '../components/sections/NewsletterInline';
 import { CTABand } from '../components/sections/CTABand';
 import { Heading } from '../components/ui/Heading';
 import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO';
@@ -28,7 +27,7 @@ const FORMAT_ITEMS = [
   'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=900&q=80',
   title: 'Case Studies',
   description:
-  'Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from 87+ engagements across four regions.',
+  'Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from 87+ engagements across five regions.',
   ctaText: 'Explore case studies'
 },
 {
@@ -252,7 +251,7 @@ export function Resources() {
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <p className="font-body text-[12px] uppercase tracking-[1.2px] text-divider mb-3 font-medium">
+              <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider mb-3 font-medium">
                 Featured this month
               </p>
               <Heading level={2}>The pieces our team is recommending</Heading>
@@ -329,15 +328,6 @@ export function Resources() {
           }
         </div>
       </section>
-
-      <div id="newsletter">
-        <NewsletterInline
-          title="Get our monthly Oracle Cloud digest"
-          subhead="One email a month. Real insights, written by the consultants doing the work. Unsubscribe anytime."
-          variant="ocean"
-          buttonText="Subscribe" />
-        
-      </div>
 
       <CTABand
         title="Need answers faster? Talk to a consultant."

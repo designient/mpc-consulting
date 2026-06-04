@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import {
   Award,
   ShieldCheck,
+  Shield,
+  Database,
   Cloud,
   ArrowRight,
   MapPin,
@@ -20,10 +22,12 @@ import { FooterDark } from '../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { Heading } from '../components/ui/Heading';
 import { Card } from '../components/ui/Card';
+import { PillarCards } from '../components/sections/PillarCards';
 import { Button } from '../components/ui/Button';
 import { StatCalloutGrid } from '../components/sections/StatCalloutGrid';
 import { CTABand } from '../components/sections/CTABand';
 import { LogoCloud } from '../components/sections/LogoCloud';
+import { ALL_CLIENT_LOGOS } from '../data/clientLogos';
 import {
   Breadcrumb,
   buildBreadcrumbSchema } from
@@ -85,11 +89,11 @@ const STATS = [
   label: 'Successful Engagements'
 },
 {
-  number: '7',
+  number: '8',
   label: 'Global Offices'
 },
 {
-  number: '4',
+  number: '5',
   label: 'Countries'
 },
 {
@@ -102,18 +106,31 @@ const STATS = [
 }];
 
 const PILLARS = [
-{
-  title: 'Deep Industry Understanding',
-  body: 'We operate at the intersection of technology and business. Every engagement begins with a thorough understanding of your industry, your processes, and your competitive pressures — not with a product pitch.'
-},
-{
-  title: 'Domain Specialisation',
-  body: 'Oracle is not a sideline for us. It is our core. Every consultant on our team is Oracle-focused, Oracle-certified, and committed to mastering one platform rather than spreading across many.'
-},
-{
-  title: 'Strong Competencies',
-  body: "From advisory and design to implementation, managed support, and innovation — we deliver the full lifecycle. You don't need five partners. You need one that can do the work from start to finish."
-}];
+  {
+    icon: Landmark,
+    title: 'Deep Industry Understanding',
+    body: 'We operate at the intersection of technology and business. Every engagement begins with a thorough understanding of your industry, your processes, and your competitive pressures — not with a product pitch.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Industry and business context for Oracle Cloud delivery'
+  },
+  {
+    icon: Database,
+    title: 'Domain Specialisation',
+    body: 'Oracle is not a sideline for us. It is our core. Every consultant on our team is Oracle-focused, Oracle-certified, and committed to mastering one platform rather than spreading across many.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Oracle domain specialists collaborating'
+  },
+  {
+    icon: Shield,
+    title: 'Strong Competencies',
+    body: "From advisory and design to implementation, managed support, and innovation — we deliver the full lifecycle. You don't need five partners. You need one that can do the work from start to finish.",
+    imageSrc:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'End-to-end Oracle Cloud delivery team'
+  }
+];
 
 const OFFICES = [
 {
@@ -233,7 +250,7 @@ export function About() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="About MPC Cloud Consulting | Oracle & AI Transformation Partner"
-        description="Founded in 2019, MPC Cloud Consulting has 65+ clients across India, UAE, UK & Australia. 700+ consultants. Deep Oracle Cloud & AI expertise."
+        description="Founded in 2019, MPC Cloud Consulting has 65+ clients across India, UAE, Singapore, UK & Australia. 700+ consultants. Deep Oracle Cloud & AI expertise."
         canonicalPath="/about/"
         schema={[ORGANIZATION_SCHEMA, buildBreadcrumbSchema(BREADCRUMB)]} />
       
@@ -258,7 +275,7 @@ export function About() {
         {/* Our Story */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[820px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Our Story
             </p>
             <Heading level={2} className="mb-6">
@@ -271,8 +288,8 @@ export function About() {
               the people who use the systems we build.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mb-5">
-              In six years, we've grown to 700+ consultants across 7 offices in
-              4 countries. We've completed 87+ engagements for 65+ organisations
+              In six years, we've grown to 700+ consultants across 8 global offices in
+              5 countries. We've completed 87+ engagements for 65+ organisations
               — from BFSI giants to manufacturing leaders and energy companies.
               And we've done it by staying focused on Oracle Cloud, refusing to
               be generalists in a space that rewards depth.
@@ -288,7 +305,7 @@ export function About() {
 
         {/* Timeline */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+          <p className="section-eyebrow mb-3">
             Milestones
           </p>
           <Heading level={2} className="mb-10">
@@ -333,35 +350,25 @@ export function About() {
         </section>
 
         {/* Three Pillars */}
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10 max-w-[700px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               What Sets Us Apart
             </p>
             <Heading level={2}>Three pillars of excellence</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {PILLARS.map((p, i) =>
-            <Card key={i} bg="bg-light">
-                <div className="w-10 h-1 bg-divider mb-5" />
-                <Heading level={3} className="mb-3">
-                  {p.title}
-                </Heading>
-                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
-                  {p.body}
-                </p>
-              </Card>
-            )}
+          <div className="max-w-[1280px] mx-auto">
+            <PillarCards items={PILLARS} />
           </div>
         </section>
 
         {/* Global Presence */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Global Presence
             </p>
-            <Heading level={2}>7 offices. One connected team.</Heading>
+            <Heading level={2}>8 offices. One connected team.</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {OFFICES.map((o) =>
@@ -371,11 +378,11 @@ export function About() {
               
                 <div className="flex items-center gap-2 mb-3">
                   <MapPin className="w-4 h-4 text-divider" />
-                  <span className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider">
+                  <span className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider">
                     {o.country}
                   </span>
                 </div>
-                <h3 className="font-heading font-medium text-[20px] text-text-primary mb-2">
+                <h3 className="font-heading font-semibold text-[20px] text-text-primary mb-2">
                   {o.city}
                 </h3>
                 <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75">
@@ -389,7 +396,7 @@ export function About() {
         {/* Industries */}
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Industries
             </p>
             <Heading level={2}>Industries we understand</Heading>
@@ -416,7 +423,7 @@ export function About() {
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
             <div>
-              <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+              <p className="section-eyebrow mb-3">
                 Leadership
               </p>
               <Heading level={2}>Leaders behind the work</Heading>
@@ -441,10 +448,10 @@ export function About() {
                 className="w-full aspect-[4/3] object-cover" />
               
                 <div className="p-6">
-                  <h3 className="font-heading font-medium text-[20px] text-text-primary">
+                  <h3 className="font-heading font-semibold text-[20px] text-text-primary">
                     {l.name}
                   </h3>
-                  <p className="font-body text-[13px] uppercase tracking-[0.8px] font-medium text-divider mt-1 mb-3">
+                  <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider mt-1 mb-3">
                     {l.title}
                   </p>
                   <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-80">
@@ -459,7 +466,7 @@ export function About() {
         {/* Awards & Certifications */}
         <section className="w-full bg-primary text-text-inverse px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Awards & Certifications
             </p>
             <Heading level={2} color="text-inverse">
@@ -475,7 +482,7 @@ export function About() {
                   className="bg-white/5 border border-white/10 rounded-card p-6">
                   
                   <Icon className="w-7 h-7 text-divider mb-4" />
-                  <h3 className="font-heading font-medium text-[18px] mb-2">
+                  <h3 className="font-heading font-semibold text-[18px] mb-2">
                     {c.title}
                   </h3>
                   <p className="font-body text-[14px] leading-[1.6] opacity-80">
@@ -489,15 +496,10 @@ export function About() {
 
         <LogoCloud
           caption="65+ organisations trust MPC"
-          logos={[
-          'Aegis',
-          'NovaBank',
-          'Helios',
-          'Verdant',
-          'Atria',
-          'Sterling']
-          }
-          bg="soft" />
+          items={ALL_CLIENT_LOGOS}
+          bg="soft"
+          scrollable
+        />
         
 
         <CTABand

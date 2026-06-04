@@ -1,9 +1,8 @@
 import React from 'react';
 
 export interface LogoProps {
-  /** @deprecated Full-color logo ignores tone; kept for API compatibility. */
   tone?: 'ocean' | 'white';
-  /** Height in px. Width scales proportionally. Defaults to 36. */
+  /** Height in px. Width scales proportionally. Defaults to 44. */
   height?: number;
   className?: string;
   /** Accessible label for the logo. */
@@ -13,16 +12,22 @@ export interface LogoProps {
 const LOGO_SRC = '/main-mpccc-logo.png';
 
 export function Logo({
-  height = 36,
+  tone = 'ocean',
+  height = 44,
   className = '',
   label = 'MPC Cloud Consulting'
 }: LogoProps) {
+  const toneClass =
+    tone === 'white' ?
+      'brightness-0 invert'
+    : '';
+
   return (
     <img
       src={LOGO_SRC}
       alt={label}
-      className={`inline-block align-middle object-contain object-left ${className}`}
-      style={{ height, width: 'auto', maxWidth: 'min(280px, 55vw)' }}
+      className={`inline-block align-middle object-contain object-left ${toneClass} ${className}`}
+      style={{ height, width: 'auto', maxWidth: 'min(300px, 55vw)' }}
     />
   );
 }

@@ -15,11 +15,11 @@ export function QuickAnswerCard({
       <div className="max-w-[900px] mx-auto bg-bg-light rounded-card shadow-subtle p-8 md:p-10">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-4 h-4 text-divider" />
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider">
+          <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider">
             {eyebrow}
           </p>
         </div>
-        <h2 className="font-heading font-medium text-[24px] md:text-[28px] leading-tight tracking-tight text-text-primary mb-4">
+        <h2 className="type-h3 text-text-primary mb-4">
           {question}
         </h2>
         <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85">

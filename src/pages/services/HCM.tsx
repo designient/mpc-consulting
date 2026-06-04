@@ -39,7 +39,7 @@ const FAQS = [
 },
 {
   q: 'Do you support Global Payroll outside India?',
-  a: "Yes. We've implemented Oracle Global Payroll across UAE, Australia, and the UK — with full local compliance configuration."
+  a: "Yes. We've implemented Oracle Global Payroll across UAE, Singapore, Australia, and the UK — with full local compliance configuration."
 }];
 
 const TOC = [
@@ -248,7 +248,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'United Arab Emirates', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'End-to-end Oracle HCM Cloud implementation, managed support, and innovation — HR, Talent, Workforce Management, Global Payroll, and Oracle ME.',
   url: 'https://www.mpccloudconsulting.com/services/hcm/'
@@ -290,12 +290,12 @@ export function HCM() {
             />
 
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="inline-flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.2em] font-semibold text-divider-bright mb-4 md:mb-5">
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
                 Oracle Cloud · HCM
               </span>
 
-              <h1 className="font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em]">
+              <h1 className="type-h1 text-text-inverse">
                 <span className="block">Transform your workforce</span>
                 <span className="block text-stat font-medium mt-1 md:mt-2">
                   with Oracle HCM Cloud
@@ -330,7 +330,7 @@ export function HCM() {
         <QuickAnswerCard
           eyebrow="AI Overview-ready"
           question="What is Oracle HCM Cloud?"
-          answer="Oracle HCM Cloud is Oracle's complete enterprise HR platform — covering Core HR, Talent Management, Workforce Management, Global Payroll, and Oracle ME for employee experience. MPC delivers Oracle HCM end-to-end: design, implementation, managed support, and AI-augmented adoption — across 65+ enterprise clients in India, UAE, Australia, and the UK." />
+          answer="Oracle HCM Cloud is Oracle's complete enterprise HR platform — covering Core HR, Talent Management, Workforce Management, Global Payroll, and Oracle ME for employee experience. MPC delivers Oracle HCM end-to-end: design, implementation, managed support, and AI-augmented adoption — across 65+ enterprise clients in India, UAE, Singapore, Australia, and the UK." />
         
 
         {/* 2-col layout: content + sticky TOC */}
@@ -339,7 +339,7 @@ export function HCM() {
             <div className="lg:col-span-9 lg:col-start-1">
               {/* Overview */}
               <section id="overview" className="scroll-mt-24 mb-14">
-                <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+                <p className="section-eyebrow mb-3">
                   Overview
                 </p>
                 <Heading level={2} className="mb-6">
@@ -386,7 +386,7 @@ export function HCM() {
           className="scroll-mt-24 w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Capabilities
             </p>
             <Heading level={2}>Our HCM Capabilities</Heading>
@@ -408,7 +408,7 @@ export function HCM() {
         {/* Modules deep dive */}
         <section id="modules" className="scroll-mt-24">
           <div className="w-full bg-white px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Modules
             </p>
             <Heading level={2} className="mb-2">
@@ -457,7 +457,7 @@ export function HCM() {
             <p>
                 Oracle Payroll configured for your country, your rules, your
                 people — with full compliance and audit capability across India,
-                UAE, Australia, and the UK. We run parallel payrolls before
+                UAE, Singapore, Australia, and the UK. We run parallel payrolls before
                 go-live so day-1 is uneventful.
               </p>
             } />
@@ -480,7 +480,7 @@ export function HCM() {
           className="scroll-mt-24 w-full bg-bg-light px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
           
           <div className="mb-6">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Why MPC
             </p>
             <Heading level={2}>Why MPC for Oracle HCM?</Heading>
@@ -516,7 +516,7 @@ export function HCM() {
           tag="BFSI · 2024"
           headline="Global BFSI consolidates HR onto one system"
           description="A leading BFSI institution operating across three countries needed to consolidate four legacy HR systems into Oracle HCM Cloud — without disrupting payroll cycles or compliance reporting. MPC delivered a phased Core HR → Talent → Payroll implementation with a custom integration layer to legacy systems."
-          metadata="Industry: BFSI · Geography: India, UAE, UK · Modules: Core HR, Talent, Payroll"
+          metadata="Industry: BFSI · Geography: India, UAE, Singapore, UK · Modules: Core HR, Talent, Payroll"
           imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Corporate finance and HR setting"
           stat="40%"

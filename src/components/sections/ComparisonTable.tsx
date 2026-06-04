@@ -34,7 +34,7 @@ export function ComparisonTable({
       <div className="max-w-[1100px] mx-auto">
         <div className="mb-10">
           {eyebrow &&
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-medium text-divider mb-3">
+          <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider mb-3">
               {eyebrow}
             </p>
           }
@@ -56,7 +56,7 @@ export function ComparisonTable({
                   return (
                     <th
                       key={i}
-                      className={`text-left p-5 font-heading font-medium text-[15px] md:text-[16px] border-b-2 ${isHighlight ? 'bg-divider/8 border-divider text-text-primary' : 'border-black/10 text-text-primary opacity-80'} ${isFirst ? 'sticky left-0 bg-inherit' : ''}`}
+                      className={`text-left p-5 font-heading font-semibold text-[15px] md:text-[16px] border-b-2 ${isHighlight ? 'bg-divider/8 border-divider text-text-primary' : 'border-black/10 text-text-primary opacity-80'} ${isFirst ? 'sticky left-0 bg-inherit' : ''}`}
                       style={
                       isFirst ?
                       {

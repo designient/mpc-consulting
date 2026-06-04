@@ -169,7 +169,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'UAE', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Enterprise Java development — Spring Boot, microservices, REST/GraphQL APIs, full-stack, and legacy modernisation.',
   url: 'https://www.mpccloudconsulting.com/services/java-technologies/'
@@ -230,7 +230,7 @@ export function Java() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Capabilities
             </p>
             <Heading level={2}>What we build</Heading>

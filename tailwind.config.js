@@ -14,7 +14,7 @@ export default {content: [
     extend: {
       colors: {
         primary: '#072D39',
-        cta: '#0955B4',
+        cta: '#0369A1',
         'cta-bright': '#60A5FA',
         accent: '#6366F1',
         stat: '#c43573',
@@ -41,7 +41,16 @@ export default {content: [
         card: '12px',
         callout: '16px',
         image: '0px',
-      }
+      },
+      keyframes: {
+        'logo-marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        'logo-marquee': 'logo-marquee 45s linear infinite',
+      },
     }
   }
 }

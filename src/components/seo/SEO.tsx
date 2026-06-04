@@ -116,7 +116,7 @@ export const WEB_SITE_SCHEMA = {
   name: 'MPC Cloud Consulting',
   url: ORIGIN,
   description:
-    'Oracle Cloud and AI transformation partner across India, UAE, Australia, and the UK.',
+    'Oracle Cloud and AI transformation partner across India, UAE, Singapore, Australia, and the UK.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -165,7 +165,7 @@ export const ORGANIZATION_SCHEMA = {
   url: ORIGIN,
   logo: `${ORIGIN}/logo.png`,
   description:
-    'Oracle Cloud and AI transformation partner across India, UAE, Australia, and the UK.',
+    'Oracle Cloud and AI transformation partner across India, UAE, Singapore, Australia, and the UK.',
   foundingDate: '2019',
   sameAs: [
     'https://www.linkedin.com/company/mpccloudconsulting',
@@ -175,7 +175,7 @@ export const ORGANIZATION_SCHEMA = {
     '@type': 'ContactPoint',
     email: 'hello@mpccloudconsulting.com',
     contactType: 'Customer Service',
-    areaServed: ['IN', 'AE', 'AU', 'GB'],
+    areaServed: ['IN', 'AE', 'SG', 'AU', 'GB'],
     availableLanguage: ['English']
   }
 };

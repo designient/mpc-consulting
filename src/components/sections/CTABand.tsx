@@ -60,7 +60,7 @@ export function CTABand({
                   </div>
             }
                 {avatarRole &&
-            <div className="font-body text-[12px] opacity-75">
+            <div className="type-caption opacity-75">
                     {avatarRole}
                   </div>
             }
@@ -69,7 +69,7 @@ export function CTABand({
           </div>
         }
 
-        <h2 className="font-heading font-medium text-[36px] md:text-[52px] lg:text-[64px] leading-[1.05] tracking-[-0.5px] max-w-[900px] mx-auto">
+        <h2 className="type-h2 text-white max-w-[900px] mx-auto">
           {title}
           {titleAccent &&
           <>

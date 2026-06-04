@@ -15,8 +15,8 @@ import {
   Building2,
   Zap,
   Radio,
-  Briefcase } from
-'lucide-react';
+  Briefcase,
+} from 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO';
@@ -26,12 +26,16 @@ import { Card } from '../components/ui/Card';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
+  statAccentCardClass,
+  statAccentLabelClass,
+  statAccentNumberClass
+} from '../components/ui/StatCallout';
+import {
   FAQAccordion,
   buildFAQSchema } from
 '../components/sections/FAQAccordion';
-import { CTABand } from '../components/sections/CTABand';
-import { NewsletterInline } from '../components/sections/NewsletterInline';
 import { LogoCloud } from '../components/sections/LogoCloud';
+import { ERP_CLIENT_LOGOS, HCM_CLIENT_LOGOS } from '../data/clientLogos';
 
 const HERO_BG =
   'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
@@ -41,87 +45,65 @@ const SERVICES = [
     icon: Database,
     title: 'Oracle (Fusion & EBS)',
     desc: 'HCM, ERP, SCM, Unifier, EPM, and technology services across Fusion and EBS.',
-    to: '/services/'
+    to: '/services/',
   },
   {
     icon: Sparkles,
     title: 'AI CoE',
     desc: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise.',
-    to: '/services/mpc-tech-hub/'
+    to: '/services/mpc-tech-hub/',
   },
   {
     icon: Cloud,
     title: 'Cloud & Database',
     desc: 'Application development, database migration, and cloud management at scale.',
-    to: '/services/devops/'
+    to: '/services/devops/',
   },
   {
     icon: BarChart3,
     title: 'CX & Analytics',
     desc: 'Power BI, Salesforce, and ServiceNow for customer experience and insight.',
-    to: '/services/'
+    to: '/services/',
   },
   {
     icon: Shield,
     title: 'Security & Zero Trust',
     desc: 'Cybersecurity strategy, application and cloud security, and managed operations.',
-    to: '/services/'
+    to: '/services/',
   },
   {
     icon: Landmark,
     title: 'Treasury Management',
     desc: 'IBS Fintech and end-to-end treasury management capabilities.',
-    to: '/services/'
-  }
+    to: '/services/',
+  },
 ];
 
 const INDUSTRIES = [
-{
-  icon: Banknote,
-  name: 'BFSI'
-},
-{
-  icon: Factory,
-  name: 'Manufacturing'
-},
-{
-  icon: Plane,
-  name: 'Travel & Hospitality'
-},
-{
-  icon: Building2,
-  name: 'Real Estate'
-},
-{
-  icon: Zap,
-  name: 'Energy & Utilities'
-},
-{
-  icon: Radio,
-  name: 'Telecommunications'
-},
-{
-  icon: Landmark,
-  name: 'Public Sector'
-},
-{
-  icon: Briefcase,
-  name: 'Professional Services'
-}];
+  { icon: Banknote, name: 'BFSI' },
+  { icon: Factory, name: 'Manufacturing' },
+  { icon: Plane, name: 'Travel & Hospitality' },
+  { icon: Building2, name: 'Real Estate' },
+  { icon: Zap, name: 'Energy & Utilities' },
+  { icon: Radio, name: 'Telecommunications' },
+  { icon: Landmark, name: 'Public Sector' },
+  { icon: Briefcase, name: 'Professional Services' },
+];
 
 const PILLARS = [
-{
-  title: 'Deep Industry Understanding',
-  body: "We don't just implement technology. We understand the business problems it must solve — across BFSI, manufacturing, energy, and seven other verticals."
-},
-{
-  title: 'Domain Specialisation',
-  body: 'Oracle-certified consultants. Deep product knowledge across HCM, ERP, DevOps, and AI. Not generalists — specialists.'
-},
-{
-  title: 'Strong Competencies',
-  body: 'End-to-end delivery capability: advisory, implementation, managed support, and innovation. One partner for the full journey.'
-}];
+  {
+    title: 'Deep Industry Understanding',
+    body: "We don't just implement technology. We understand the business problems it must solve — across BFSI, manufacturing, energy, and seven other verticals."
+  },
+  {
+    title: 'Domain Specialisation',
+    body: 'Oracle-certified consultants. Deep product knowledge across HCM, ERP, DevOps, and AI. Not generalists — specialists.'
+  },
+  {
+    title: 'Strong Competencies',
+    body: 'End-to-end delivery capability: advisory, implementation, managed support, and innovation. One partner for the full journey.'
+  }
+];
 
 const TESTIMONIALS = [
 {
@@ -164,7 +146,7 @@ const FAQS = [
 },
 {
   q: 'Which countries does MPC operate in?',
-  a: 'We have offices in India (Gurugram, Hyderabad, Bengaluru), UAE (Dubai, Abu Dhabi), Australia (Melbourne), and the UK (London). Our delivery teams support clients globally.'
+  a: 'We have offices in India (Gurugram, Hyderabad, Bengaluru), UAE (Dubai, Abu Dhabi), Singapore, Australia (Melbourne), and the UK (London). Our delivery teams support clients globally.'
 },
 {
   q: 'How long has MPC been delivering Oracle Cloud projects?',
@@ -181,27 +163,12 @@ const FAQS = [
 
 export function Home() {
   const [logoTab, setLogoTab] = useState<'hcm' | 'erp'>('hcm');
-  const hcmLogos = [
-  'Aegis',
-  'NovaBank',
-  'Helios',
-  'Verdant',
-  'Atria',
-  'Sterling'];
-
-  const erpLogos = [
-  'Northwind',
-  'Cyrus',
-  'Pinnacle',
-  'Polaris',
-  'Eversource',
-  'Meridian'];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Oracle Cloud & AI Consulting | MPC Cloud Consulting"
-        description="MPC Cloud Consulting — Oracle Cloud, HCM & ERP transformation across India, UAE, UK & Australia. 65+ clients. 350+ years combined expertise."
+        description="MPC Cloud Consulting — Oracle Cloud, HCM & ERP transformation across India, UAE, Singapore, UK & Australia. 65+ clients. 350+ years combined expertise."
         canonicalPath="/"
         schema={[ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA, buildFAQSchema(FAQS)]}
       />
@@ -211,51 +178,43 @@ export function Home() {
 
       <main className="flex-grow w-full">
         {/* HERO — Compact display typography */}
-        <section className="relative w-full min-h-[min(50svh,520px)] max-h-[520px] overflow-hidden flex items-center">
+        <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
           <img
             src={HERO_BG}
             alt=""
             aria-hidden
             className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/75" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/20" />
           <div
             aria-hidden
-            className="absolute inset-0 bg-primary/20 backdrop-blur-[2px] supports-[backdrop-filter]:bg-primary/10"
+            className="absolute inset-0 bg-cta/55"
           />
 
-          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="inline-flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.2em] font-semibold text-divider-bright mb-4 md:mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
+                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
                 Oracle Cloud · AI Transformation
               </span>
 
-              <h1 className="font-heading font-semibold text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] leading-[0.95] tracking-[-0.03em]">
+              <h1 className="type-h1 text-text-inverse">
                 From Cloud First to{' '}
-                <span className="font-body italic font-normal text-stat">
+                <span className="font-body italic font-normal text-text-inverse">
                   AI-First
                 </span>
               </h1>
 
-              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
+              <p className="type-paragraph text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 We help enterprises transform their operations with Oracle
                 Cloud, AI solutions, and deep domain expertise — across India,
-                UAE, Australia, and the UK.
+                UAE, Singapore, Australia, and the UK.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-6 md:mt-8">
+              <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
                 <Link
                   to="/services/"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
                   Explore Our Services
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  to="/contact/"
-                  className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-white border border-white/30 rounded-full font-body text-[15px] font-medium hover:border-white/60 hover:bg-white/10 transition-colors">
-                  Talk to an Expert
                 </Link>
               </div>
             </div>
@@ -266,48 +225,15 @@ export function Home() {
                 <Star key={i} className="w-3.5 h-3.5 fill-current" />
                 )}
               </div>
-              <span>Trusted by 65+ enterprises across 4 countries</span>
+              <span>Trusted by 65+ enterprises across 5 countries</span>
             </div>
-          </div>
-        </section>
-
-        {/* CREDENTIAL BAR */}
-        <section className="w-full bg-white px-4 py-8 md:px-10 md:py-10 lg:px-[60px]">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-[1200px] mx-auto">
-            {[
-            {
-              n: '65+',
-              l: 'Enterprise Clients'
-            },
-            {
-              n: '700+',
-              l: 'Oracle Consultants'
-            },
-            {
-              n: '350+',
-              l: 'Years Combined Expertise'
-            },
-            {
-              n: '87+',
-              l: 'Successful Engagements'
-            }].
-            map((s) =>
-            <div key={s.l} className="text-center md:text-left">
-                <div className="font-heading font-semibold text-stat text-[44px] md:text-[56px] leading-none mb-2">
-                  {s.n}
-                </div>
-                <div className="font-body text-[12px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-80">
-                  {s.l}
-                </div>
-              </div>
-            )}
           </div>
         </section>
 
         {/* THREE PILLARS */}
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10 max-w-[800px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">
               Why MPC
             </p>
             <Heading level={2} className="mb-4">
@@ -320,8 +246,8 @@ export function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {PILLARS.map((p, i) =>
-            <Card key={i} bg="white">
+            {PILLARS.map((p, i) => (
+              <Card key={i} bg="white">
                 <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {p.title}
@@ -330,41 +256,33 @@ export function Home() {
                   {p.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
         {/* SERVICES TEASER */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
-            <div className="max-w-[700px]">
-              <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
-                Services
-              </p>
-              <Heading level={2}>
-                <span className="text-stat">AI Powered</span>{' '}
-                MPC Digital Transformation Services
-              </Heading>
-            </div>
-            <Link
-              to="/services/"
-              className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta hover:text-accent transition-colors group shrink-0">
-              View all services{' '}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">
+              Services
+            </p>
+            <Heading level={2}>
+              <span className="text-stat">AI Powered</span>{' '}
+              MPC Digital Transformation Services
+            </Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-[1200px] mx-auto">
             {SERVICES.map((s) => {
               const Icon = s.icon;
               return (
                 <Link
-                  key={s.to}
+                  key={s.title}
                   to={s.to}
                   className="group flex flex-col rounded-card border border-black/8 bg-white hover:border-divider hover:shadow-subtle transition-all p-6">
                   <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-heading font-medium text-[20px] leading-tight tracking-tight text-text-primary mb-2 group-hover:text-divider transition-colors">
+                  <h3 className="type-h3 text-[20px] text-text-primary mb-2 group-hover:text-divider transition-colors">
                     {s.title}
                   </h3>
                   <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-grow">
@@ -380,51 +298,35 @@ export function Home() {
           </div>
         </section>
 
-        {/* INDUSTRIES STRIP */}
+        {/* INDUSTRIES */}
         <section className="w-full bg-[#1B0739] text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="text-center mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
-              Industries We Serve
-            </p>
-            <div className="flex justify-center">
-              <Heading level={2} color="text-inverse">
-                Serving Sectors That Power the World
-              </Heading>
-            </div>
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow-inverse mb-3">Industries We Serve</p>
+            <Heading level={2} color="text-inverse">
+              Serving Sectors That Power the World
+            </Heading>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-[1100px] mx-auto mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-[1100px] mx-auto">
             {INDUSTRIES.map((ind) => {
               const Icon = ind.icon;
               return (
-                <div
+                <Link
                   key={ind.name}
+                  to="/industries/"
                   className="flex flex-col items-center text-center p-5 rounded-card bg-white/5 border border-white/10 hover:border-stat/50 transition-colors">
-                  
                   <Icon className="w-7 h-7 text-stat mb-3" />
-                  <p className="font-body text-[14px] font-medium">
-                    {ind.name}
-                  </p>
-                </div>);
-
+                  <p className="font-body text-[14px] font-medium">{ind.name}</p>
+                </Link>
+              );
             })}
-          </div>
-          <div className="text-center">
-            <Link to="/industries/">
-              <Button
-                variant="tertiary"
-                size="md"
-                className="border-white/40 hover:!bg-cta hover:!text-text-inverse">
-                Explore All Industries
-              </Button>
-            </Link>
           </div>
         </section>
 
         {/* ABOUT TEASER + STATS */}
-        <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+              <p className="section-eyebrow mb-3">
                 About MPC
               </p>
               <Heading level={2} className="mb-5">
@@ -432,8 +334,8 @@ export function Home() {
               </Heading>
               <p className="font-body text-[18px] leading-[1.6] text-text-primary opacity-90 mb-5">
                 Founded in 2019, MPC Cloud Consulting has grown into a global
-                Oracle implementation and AI transformation partner — with 7
-                offices across India, UAE, Australia, and the UK.
+                Oracle implementation and AI transformation partner — with 8
+                global offices across India, UAE, Singapore, Australia, and the UK.
               </p>
               <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80 mb-7">
                 We combine Oracle-certified expertise with genuine industry
@@ -455,7 +357,7 @@ export function Home() {
                 l: 'Founded'
               },
               {
-                n: '7',
+                n: '8',
                 l: 'Global Offices'
               },
               {
@@ -469,15 +371,13 @@ export function Home() {
               map((s) =>
               <div
                 key={s.l}
-                className="bg-primary text-text-inverse rounded-callout p-6 md:p-7">
-                
-                  <div className="font-heading font-semibold text-stat text-[32px] md:text-[40px] leading-tight mb-1">
-                    {s.n}
-                  </div>
-                  <div className="font-body text-[12px] uppercase tracking-[0.8px] font-medium opacity-90 mt-2">
-                    {s.l}
-                  </div>
+                className={`${statAccentCardClass} p-6 md:p-7`}>
+                <div
+                  className={`${statAccentNumberClass} text-[32px] md:text-[40px] mb-1`}>
+                  {s.n}
                 </div>
+                <div className={`${statAccentLabelClass} !mt-2`}>{s.l}</div>
+              </div>
               )}
             </div>
           </div>
@@ -486,7 +386,7 @@ export function Home() {
         {/* CLIENT LOGO WALL */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-8">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Our Clients
             </p>
             <div className="flex justify-center">
@@ -508,7 +408,7 @@ export function Home() {
             <button
               key={key}
               onClick={() => setLogoTab(key)}
-              className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${logoTab === key ? 'bg-primary text-text-inverse' : 'bg-bg-light text-text-primary hover:bg-divider/10'}`}>
+              className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${logoTab === key ? 'bg-[#0369a1] text-text-inverse' : 'bg-bg-light text-text-primary hover:bg-divider/10'}`}>
               
                 {label}
               </button>
@@ -516,8 +416,12 @@ export function Home() {
           </div>
 
           <LogoCloud
-            logos={logoTab === 'hcm' ? hcmLogos : erpLogos}
-            bg="transparent" />
+            key={logoTab}
+            items={logoTab === 'hcm' ? HCM_CLIENT_LOGOS : ERP_CLIENT_LOGOS}
+            bg="transparent"
+            scrollable
+            autoScroll
+          />
           
         </section>
 
@@ -527,7 +431,8 @@ export function Home() {
           title="What Our Clients Say"
           items={TESTIMONIALS}
           variant="light"
-          columns={2} />
+          carousel
+        />
         
 
         {/* FEATURED CASE STUDY */}
@@ -536,7 +441,7 @@ export function Home() {
           tag="Global BFSI · 2024"
           headline="$48M saved across an Oracle Cloud consolidation programme"
           description="A leading multinational BFSI institution operating across three countries needed to consolidate four legacy HR systems and modernise their Oracle ERP. MPC delivered phased Core HR → Talent → Payroll alongside an ERP optimisation programme."
-          metadata="BFSI · India, UAE, UK · HCM + ERP"
+          metadata="BFSI · India, UAE, Singapore, UK · HCM + ERP"
           imageSrc="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Enterprise team reviewing transformation outcomes"
           stat="$48M"
@@ -548,15 +453,6 @@ export function Home() {
         
         <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
 
-        {/* CTA BAND */}
-        <CTABand
-          title="Ready to Start Your Transformation?"
-          body="Whether you're at the start of your Oracle journey or looking to accelerate an existing programme — let's talk."
-          ctaText="Schedule a Consultation"
-          ctaTo="/contact/"
-          variant="centered" />
-        
-
         {/* FAQ */}
         <FAQAccordion
           eyebrow="FAQ"
@@ -564,14 +460,27 @@ export function Home() {
           items={FAQS}
           layout="full"
           bg="soft" />
-        
 
-        {/* NEWSLETTER */}
-        <NewsletterInline
-          title="Stay Ahead of Oracle"
-          subhead="Monthly insights on Oracle Cloud, AI, and enterprise technology — direct to your inbox. No fluff."
-          variant="ocean" />
-        
+        {/* CREDENTIAL BAR */}
+        <section className="w-full bg-white px-4 py-10 md:px-10 md:py-12 lg:px-[60px]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-[1200px] mx-auto">
+            {[
+              { n: '65+', l: 'Enterprise Clients' },
+              { n: '700+', l: 'Oracle Consultants' },
+              { n: '350+', l: 'Years Combined Expertise' },
+              { n: '87+', l: 'Successful Engagements' },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="font-heading font-semibold text-stat text-[44px] md:text-[56px] leading-none mb-2">
+                  {s.n}
+                </div>
+                <div className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-80">
+                  {s.l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <FooterDark />

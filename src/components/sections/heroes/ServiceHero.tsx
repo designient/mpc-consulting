@@ -51,12 +51,12 @@ export function ServiceHero({
 
         {/* Centered editorial hero */}
         <div className="max-w-[920px] mx-auto text-center flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 font-body text-[11px] md:text-[12px] uppercase tracking-[2px] font-semibold text-divider mb-6">
+          <span className="section-eyebrow inline-flex items-center gap-2 tracking-[2px] mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-divider" />
             {eyebrow}
           </span>
 
-          <h1 className="font-heading font-medium text-[40px] md:text-[56px] lg:text-[68px] leading-[1.05] tracking-[-0.5px] text-text-primary">
+          <h1 className="type-h1 text-text-primary">
             {headline}
             {headlineAccent &&
             <>
@@ -75,7 +75,7 @@ export function ServiceHero({
           <div className="flex flex-col sm:flex-row items-center gap-3 mt-10">
             <Link
               to={primaryCtaTo}
-              className="inline-flex items-center justify-center px-7 py-3.5 bg-primary text-white rounded-full font-body text-[14px] font-medium hover:bg-primary/90 transition-colors">
+              className="inline-flex items-center justify-center px-7 py-3.5 bg-[#0369a1] text-white rounded-full font-body text-[14px] font-medium hover:opacity-90 transition-opacity">
               
               {primaryCtaText}
             </Link>

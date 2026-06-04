@@ -34,7 +34,7 @@ export function ImageTextBlock({
         <Heading level={2} className="mb-6">
           {heading}
         </Heading>
-        <div className="font-body text-[16px] leading-[1.6] text-text-primary mb-6">
+        <div className="type-paragraph mb-6">
           {body}
         </div>
         {children}

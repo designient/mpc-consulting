@@ -1,9 +1,14 @@
 import React from 'react';
+
 export interface ButtonProps extends
   React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'sm' | 'md' | 'lg';
 }
+
+const filledButtonClass =
+  'bg-[#0369a1] hover:opacity-90 active:opacity-95';
+
 export function Button({
   variant = 'primary',
   size = 'md',
@@ -12,12 +17,12 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-  'inline-flex items-center justify-center font-body font-semibold text-text-inverse rounded-button shadow-subtle transition-all duration-200 ease-in-out hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed border-none';
+    'inline-flex items-center justify-center font-body font-semibold text-text-inverse rounded-button shadow-subtle transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed border-none';
   const variants = {
-    primary: 'bg-cta',
-    secondary: 'bg-divider',
+    primary: filledButtonClass,
+    secondary: filledButtonClass,
     tertiary:
-    'bg-transparent border border-text-inverse hover:border-transparent'
+      'bg-transparent border border-text-inverse text-text-inverse hover:bg-[#0369a1] hover:border-[#0369a1] hover:text-text-inverse'
   };
   const sizes = {
     sm: 'px-[20px] py-[10px] text-[13px]',
@@ -28,8 +33,7 @@ export function Button({
     <button
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}>
-      
       {children}
-    </button>);
-
+    </button>
+  );
 }

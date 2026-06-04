@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Heading } from '../ui/Heading';
+import {
+  statAccentCardClass,
+  statAccentEyebrowClass,
+  statAccentLabelClass,
+  statAccentNumberClass
+} from '../ui/StatCallout';
 export interface StatOverlayCaseStudyProps {
   id?: string;
   eyebrow?: string;
@@ -40,7 +46,7 @@ export function StatOverlayCaseStudy({
       id={id}
       className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]`}>
       
-      <p className="font-body text-[12px] uppercase tracking-[0.8px] font-medium text-divider mb-3">
+      <p className="section-eyebrow mb-3">
         {eyebrow}
       </p>
 
@@ -53,18 +59,16 @@ export function StatOverlayCaseStudy({
             className="w-full aspect-video object-cover rounded-none shadow-subtle-dark" />
           
           {/* Stat card — overlaps on desktop, sits below on mobile */}
-          <div className="lg:absolute lg:right-[-40px] lg:bottom-[-60px] mt-6 lg:mt-0 max-w-[360px] bg-primary text-text-inverse rounded-callout shadow-medium-dark p-7 md:p-8">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-medium text-divider-bright opacity-95 mb-2">
-              Outcome
-            </p>
-            <div className="font-heading font-semibold text-stat text-[56px] md:text-[64px] leading-none">
+          <div
+            className={`lg:absolute lg:right-[-40px] lg:bottom-[-60px] mt-6 lg:mt-0 max-w-[360px] shadow-medium-dark p-7 md:p-8 ${statAccentCardClass}`}>
+            <p className={`${statAccentEyebrowClass} mb-2`}>Outcome</p>
+            <div
+              className={`${statAccentNumberClass} text-[56px] md:text-[64px] leading-none`}>
               {stat}
             </div>
-            <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium mt-2 opacity-90">
-              {statLabel}
-            </p>
+            <p className={`${statAccentLabelClass} mt-2`}>{statLabel}</p>
             {statContext &&
-            <p className="font-body text-[14px] leading-[1.5] opacity-80 mt-3">
+            <p className="font-body text-[14px] leading-[1.5] text-white/80 mt-3">
                 {statContext}
               </p>
             }
@@ -74,7 +78,7 @@ export function StatOverlayCaseStudy({
         {/* Right-side narrative */}
         <div className="lg:col-span-5 lg:pl-4">
           {tag &&
-          <span className="inline-block font-body text-[11px] uppercase tracking-[0.8px] font-medium text-divider border border-divider/40 rounded-full px-3 py-1 mb-4">
+          <span className="inline-block font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider border border-divider/40 rounded-full px-3 py-1 mb-4">
               {tag}
             </span>
           }
@@ -85,7 +89,7 @@ export function StatOverlayCaseStudy({
             {description}
           </p>
           {metadata &&
-          <p className="font-body text-[12px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-60 mb-6">
+          <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-60 mb-6">
               {metadata}
             </p>
           }

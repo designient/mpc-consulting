@@ -54,7 +54,7 @@ export function TableOfContents({
     <>
       {/* Desktop sticky */}
       <aside className="hidden lg:block lg:sticky lg:top-[96px] lg:self-start">
-        <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-text-primary opacity-60 mb-3">
+        <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-text-primary opacity-60 mb-3">
           {title}
         </p>
         <ul className="border-l border-black/10 pl-4 space-y-2.5">

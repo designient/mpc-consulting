@@ -19,7 +19,7 @@ export function Input({
       {label &&
       <label
         htmlFor={inputId}
-        className="font-body font-medium text-[12px] uppercase tracking-[0.8px] text-text-primary mb-2">
+        className="font-body font-medium text-[14px] uppercase tracking-[0.8px] text-text-primary mb-2">
         
           {label}
         </label>

@@ -32,7 +32,7 @@ export function ResourceCard({
         
       </div>
       <div className="p-6 flex flex-col flex-1">
-        <p className="font-body text-[11px] uppercase tracking-[1.2px] text-divider mb-3 font-medium">
+        <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider mb-3 font-medium">
           {category}
         </p>
         <h3 className="font-heading text-[20px] md:text-[22px] leading-[1.25] text-primary mb-3 group-hover:text-divider transition-colors">

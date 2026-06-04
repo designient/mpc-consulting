@@ -177,7 +177,7 @@ const SERVICE_SCHEMA = {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
-  areaServed: ['India', 'UAE', 'Australia', 'United Kingdom'],
+  areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Independent Oracle Cloud audit across performance, configuration, security, data quality, integration health and user adoption.',
   url: 'https://www.mpccloudconsulting.com/services/health-check-as-a-service/'
@@ -215,7 +215,7 @@ export function HCaaS() {
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
           <div className="max-w-[820px]">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Who Needs It
             </p>
             <Heading level={2} className="mb-6">
@@ -236,7 +236,7 @@ export function HCaaS() {
 
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               The Six Dimensions
             </p>
             <Heading level={2}>What we assess</Heading>
@@ -260,7 +260,7 @@ export function HCaaS() {
 
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="mb-10">
-            <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+            <p className="section-eyebrow mb-3">
               Deliverables
             </p>
             <Heading level={2}>What you receive</Heading>

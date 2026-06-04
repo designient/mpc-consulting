@@ -29,7 +29,7 @@ export function App() {
           element={
           <PageStub
             title="Our Leadership Team"
-            description="11 leaders. 700+ Oracle Cloud experts. One unified team across India, UAE, Australia, and the UK."
+            description="11 leaders. 700+ Oracle Cloud experts. One unified team across India, UAE, Singapore, Australia, and the UK."
             canonicalPath="/team/"
             breadcrumb={[
             {
@@ -59,7 +59,7 @@ export function App() {
           element={
           <PageStub
             title="MPC in the News"
-            description="Company announcements, industry recognition, new office openings, and updates from our teams across India, UAE, Australia, and the UK."
+            description="Company announcements, industry recognition, new office openings, and updates from our teams across India, UAE, Singapore, Australia, and the UK."
             canonicalPath="/news/"
             breadcrumb={[
             {

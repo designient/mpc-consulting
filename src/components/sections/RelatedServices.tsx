@@ -29,7 +29,7 @@ export function RelatedServices({
       className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]`}>
       
       <div className="mb-10">
-        <p className="font-body text-[12px] uppercase tracking-[0.8px] font-semibold text-divider mb-3">
+        <p className="section-eyebrow mb-3">
           {eyebrow}
         </p>
         <Heading level={2}>{title}</Heading>
@@ -47,7 +47,7 @@ export function RelatedServices({
               <div className="w-12 h-12 rounded-md bg-divider/10 flex items-center justify-center text-divider mb-5">
                 <Icon className="w-6 h-6" />
               </div>
-              <h3 className="font-heading font-medium text-[20px] md:text-[22px] leading-tight tracking-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
+              <h3 className="font-heading font-semibold text-[20px] md:text-[22px] leading-tight tracking-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
                 {item.title}
               </h3>
               <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-75 mb-6 flex-grow">
