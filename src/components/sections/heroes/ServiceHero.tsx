@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
 export interface ServiceHeroProps {
   eyebrow: string;
@@ -12,12 +12,9 @@ export interface ServiceHeroProps {
   primaryCtaTo: string;
   secondaryCtaText?: string;
   secondaryCtaTo?: string;
-  imageSrc?: string;
+  imageSrc: string;
   imageAlt?: string;
   breadcrumb?: BreadcrumbItem[];
-  /** Optional triptych imagery — if 3 images provided, renders the 3-image grid below the hero */
-  triptych?: string[];
-  trustLine?: string;
 }
 export function ServiceHero({
   eyebrow,
@@ -30,97 +27,63 @@ export function ServiceHero({
   secondaryCtaTo,
   imageSrc,
   imageAlt = '',
-  breadcrumb,
-  triptych,
-  trustLine
+  breadcrumb
 }: ServiceHeroProps) {
-  const triptychImages =
-  triptych && triptych.length === 3 ?
-  triptych :
-  imageSrc ?
-  [imageSrc, imageSrc, imageSrc] :
-  null;
   return (
-    <section className="w-full bg-white">
-      <div className="w-full px-4 pt-10 md:px-10 md:pt-14 lg:px-[60px] lg:pt-20">
-        {breadcrumb &&
-        <div className="max-w-[1200px] mx-auto mb-8">
-            <Breadcrumb items={breadcrumb} variant="light" />
-          </div>
-        }
+    <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        aria-hidden={!imageAlt}
+        className="absolute inset-0 w-full h-full object-cover object-center lg:object-[70%_center]"
+      />
+      <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
-        {/* Centered editorial hero */}
-        <div className="max-w-[920px] mx-auto text-center flex flex-col items-center">
-          <span className="section-eyebrow inline-flex items-center gap-2 tracking-[2px] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-divider" />
+      <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+        {breadcrumb && (
+          <Breadcrumb
+            items={breadcrumb}
+            variant="dark"
+            className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
+          />
+        )}
+
+        <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+          <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
+            <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
             {eyebrow}
           </span>
 
-          <h1 className="type-h1 text-text-primary">
-            {headline}
-            {headlineAccent &&
-            <>
-                <br />
-                <span className="font-body italic font-normal text-divider">
-                  {headlineAccent}
-                </span>
-              </>
-            }
+          <h1 className="type-h1 text-text-inverse">
+            <span className="block">{headline}</span>
+            {headlineAccent && (
+              <span className="block font-body italic font-normal text-text-inverse mt-1 md:mt-2">
+                {headlineAccent}
+              </span>
+            )}
           </h1>
 
-          <p className="font-body text-[17px] md:text-[19px] leading-[1.6] text-text-primary/75 mt-7 max-w-[680px]">
+          <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
             {subhead}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 mt-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-6 md:mt-8">
             <Link
               to={primaryCtaTo}
-              className="inline-flex items-center justify-center px-7 py-3.5 bg-[#0369a1] text-white rounded-full font-body text-[14px] font-medium hover:opacity-90 transition-opacity">
-              
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
               {primaryCtaText}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            {secondaryCtaText && secondaryCtaTo &&
-            <Link
-              to={secondaryCtaTo}
-              className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-text-primary border border-text-primary/15 rounded-full font-body text-[14px] font-medium hover:border-text-primary/40 hover:bg-bg-light transition-colors">
-              
+            {secondaryCtaText && secondaryCtaTo && (
+              <Link
+                to={secondaryCtaTo}
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent text-white border border-white/40 rounded-full font-body text-[14px] font-medium hover:border-white/70 hover:bg-white/10 transition-colors">
                 {secondaryCtaText}
               </Link>
-            }
+            )}
           </div>
-
-          {trustLine &&
-          <div className="flex items-center gap-3 mt-10 text-[13px] font-medium text-text-primary/70">
-              <div className="flex text-divider">
-                {[0, 1, 2, 3, 4].map((i) =>
-              <Star key={i} className="w-3.5 h-3.5 fill-current" />
-              )}
-              </div>
-              <span>{trustLine}</span>
-            </div>
-          }
         </div>
       </div>
-
-      {/* Image triptych */}
-      {triptychImages &&
-      <div className="w-full px-4 md:px-10 lg:px-[60px] pt-14 md:pt-20 pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-[1320px] mx-auto">
-            {triptychImages.map((src, i) =>
-          <div
-            key={i}
-            className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-card bg-bg-light">
-            
-                <img
-              src={src}
-              alt={i === 0 ? imageAlt : ''}
-              className="w-full h-full object-cover" />
-            
-              </div>
-          )}
-          </div>
-        </div>
-      }
-    </section>);
-
+    </section>
+  );
 }

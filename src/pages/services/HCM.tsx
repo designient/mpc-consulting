@@ -4,13 +4,10 @@ import { Users, Activity, Workflow, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO } from '../../components/seo/SEO';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
 import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
-import { ImageTextBlock } from '../../components/sections/ImageTextBlock';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
-import { StatCalloutGrid } from '../../components/sections/StatCalloutGrid';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
 import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
 import { RelatedServices } from '../../components/sections/RelatedServices';
@@ -58,10 +55,6 @@ const TOC = [
 {
   label: 'Process',
   hash: 'process'
-},
-{
-  label: 'Why MPC',
-  hash: 'why-mpc'
 },
 {
   label: 'Comparison',
@@ -124,6 +117,30 @@ const CAPABILITIES = [
   body: 'End-to-end Oracle Global Payroll delivery — implementation, managed run, and ongoing compliance management.'
 }];
 
+const MODULES = [
+  {
+    title: 'HR Core',
+    desc: 'Employee records, organisational structure, positions, and HR self-service. The backbone of every Oracle HCM environment — designed for the way your organisation actually operates today and built to flex as you grow.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'HR team reviewing core records',
+  },
+  {
+    title: 'Talent Management',
+    desc: 'Goal setting, performance reviews, succession planning, and career development. We configure Oracle Talent to connect individual performance to business outcomes — not to generate reports nobody reads.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Performance review workshop',
+  },
+  {
+    title: 'Global Payroll',
+    desc: 'Oracle Payroll configured for your country, your rules, your people — with full compliance and audit capability across India, UAE, Singapore, Australia, and the UK. We run parallel payrolls before go-live so day-1 is uneventful.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Payroll specialist reviewing global compliance',
+  },
+];
+
 const PROCESS_STEPS = [
 {
   number: '01',
@@ -162,23 +179,8 @@ const PROCESS_STEPS = [
   'Dedicated post-go-live support window. Issue resolution, user enablement, and transition to managed service.'
 }];
 
-const STATS = [
-{
-  number: '65+',
-  label: 'HCM Clients Globally'
-},
-{
-  number: '350+',
-  label: 'Years Combined HCM Expertise'
-},
-{
-  number: '8',
-  label: 'Industries Served'
-},
-{
-  number: '4',
-  label: 'Global Delivery Locations'
-}];
+const HCM_OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80';
 
 const COMPARISON_ROWS = [
 {
@@ -271,18 +273,16 @@ export function HCM() {
       <StickyNav />
 
       <main className="flex-grow w-full">
-        <section className="relative w-full min-h-[min(50svh,520px)] max-h-[520px] overflow-hidden flex items-center">
+        <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
           <img
             src={HERO_BG}
             alt=""
             aria-hidden
             className="absolute inset-0 w-full h-full object-cover object-center lg:object-[70%_center]"
           />
-          <div className="absolute inset-0 bg-primary/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.97] via-primary/80 via-[40%] to-primary/25 to-[100%]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent" />
+          <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
-          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
             <Breadcrumb
               items={BREADCRUMB}
               variant="dark"
@@ -290,14 +290,14 @@ export function HCM() {
             />
 
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
+                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
                 Oracle Cloud · HCM
               </span>
 
               <h1 className="type-h1 text-text-inverse">
                 <span className="block">Transform your workforce</span>
-                <span className="block text-stat font-medium mt-1 md:mt-2">
+                <span className="block font-body italic font-normal text-text-inverse mt-1 md:mt-2">
                   with Oracle HCM Cloud
                 </span>
               </h1>
@@ -308,210 +308,180 @@ export function HCM() {
                 actually works for their people.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-6 md:mt-8">
+              <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
                 <Link
                   to="/contact/"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
                   Schedule an HCM Discovery Call
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
-                <a
-                  href="#case-study"
-                  className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-white border border-white/30 rounded-full font-body text-[15px] font-medium hover:border-white/60 hover:bg-white/10 transition-colors">
-                  See HCM Case Study
-                </a>
               </div>
             </div>
           </div>
         </section>
 
-        
-
-        <QuickAnswerCard
-          eyebrow="AI Overview-ready"
-          question="What is Oracle HCM Cloud?"
-          answer="Oracle HCM Cloud is Oracle's complete enterprise HR platform — covering Core HR, Talent Management, Workforce Management, Global Payroll, and Oracle ME for employee experience. MPC delivers Oracle HCM end-to-end: design, implementation, managed support, and AI-augmented adoption — across 65+ enterprise clients in India, UAE, Singapore, Australia, and the UK." />
-        
-
-        {/* 2-col layout: content + sticky TOC */}
-        <div className="w-full bg-white">
-          <div className="w-full px-4 md:px-10 lg:px-[60px] py-8 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <div className="lg:col-span-9 lg:col-start-1">
-              {/* Overview */}
-              <section id="overview" className="scroll-mt-24 mb-14">
-                <p className="section-eyebrow mb-3">
-                  Overview
-                </p>
-                <Heading level={2} className="mb-6">
-                  Oracle HCM Cloud with MPC
-                </Heading>
-                <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-5">
-                  Oracle HCM Cloud is the most comprehensive HR platform in the
-                  enterprise market. But technology without expertise is just
-                  software. MPC brings both — Oracle-certified HCM consultants
-                  with real-world implementation experience across every major
-                  module and every major industry.
-                </p>
-                <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-6">
-                  We've delivered Oracle HCM for 65+ organisations — from
-                  initial design and implementation to post-go-live managed
-                  support, payroll configuration, and custom Oracle ME builds.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {MODULE_CHIPS.map((chip) =>
-                  <span
-                    key={chip}
-                    className="inline-block px-3.5 py-1.5 rounded-full border border-divider/30 bg-divider/5 font-body text-[13px] font-medium text-text-primary">
-                    
-                      {chip}
-                    </span>
-                  )}
-                </div>
-              </section>
+        {/* What is Oracle HCM Cloud */}
+        <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
+            <div className="flex flex-col items-start">
+              <p className="section-eyebrow mb-3">AI Overview-ready</p>
+              <Heading level={2} className="mb-5">
+                What is Oracle HCM Cloud?
+              </Heading>
+              <p className="font-body text-[17px] md:text-[18px] leading-[1.75] text-text-primary opacity-85">
+                Oracle HCM Cloud is Oracle&apos;s complete enterprise HR platform —
+                covering Core HR, Talent Management, Workforce Management, Global
+                Payroll, and Oracle ME for employee experience. MPC delivers
+                Oracle HCM end-to-end: design, implementation, managed support,
+                and AI-augmented adoption — across 65+ enterprise clients in
+                India, UAE, Singapore, Australia, and the UK.
+              </p>
             </div>
-            <div className="hidden lg:block lg:col-span-3">
-              <TableOfContents items={TOC} />
+            <div className="w-full">
+              <img
+                src={HCM_OVERVIEW_IMAGE}
+                alt="HR professionals collaborating with Oracle HCM Cloud"
+                className="w-full aspect-[4/3] object-cover rounded-card shadow-subtle"
+              />
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Mobile TOC */}
-        <div className="lg:hidden">
-          <TableOfContents items={TOC} />
-        </div>
+        <TableOfContents items={TOC} variant="inline" />
+
+        {/* Overview */}
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+            <div className="mb-10">
+              <p className="section-eyebrow mb-3">Overview</p>
+              <Heading level={2} className="mb-4">
+                Oracle HCM Cloud with MPC
+              </Heading>
+            </div>
+            <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-5 max-w-[900px]">
+              Oracle HCM Cloud is the most comprehensive HR platform in the
+              enterprise market. But technology without expertise is just
+              software. MPC brings both — Oracle-certified HCM consultants with
+              real-world implementation experience across every major module and
+              every major industry.
+            </p>
+            <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-6 max-w-[900px]">
+              We&apos;ve delivered Oracle HCM for 65+ organisations — from initial
+              design and implementation to post-go-live managed support, payroll
+              configuration, and custom Oracle ME builds.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {MODULE_CHIPS.map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-block px-3.5 py-1.5 rounded-full border border-divider/30 bg-divider/5 font-body text-[13px] font-medium text-text-primary">
+                  {chip}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Capabilities */}
         <section
           id="capabilities"
-          className="scroll-mt-24 w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Capabilities
-            </p>
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>Our HCM Capabilities</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {CAPABILITIES.map((cap, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {CAPABILITIES.map((cap, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {cap.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {cap.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        {/* Modules deep dive */}
-        <section id="modules" className="scroll-mt-24">
-          <div className="w-full bg-white px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
-            <p className="section-eyebrow mb-3">
-              Modules
-            </p>
-            <Heading level={2} className="mb-2">
+        {/* Modules */}
+        <section
+          id="modules"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Modules</p>
+            <Heading level={2} className="mb-4">
               Modules we implement
             </Heading>
-            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 max-w-[700px]">
+            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               Three core areas where MPC delivers measurable transformation —
               backed by certified specialists in every module.
             </p>
           </div>
 
-          <ImageTextBlock
-            orientation="image-left"
-            imageSrc="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"
-            imageAlt="HR team reviewing core records"
-            heading="HR Core"
-            body={
-            <p>
-                Employee records, organisational structure, positions, and HR
-                self-service. The backbone of every Oracle HCM environment —
-                designed for the way your organisation actually operates today
-                and built to flex as you grow.
-              </p>
-            } />
-          
-          <ImageTextBlock
-            orientation="image-right"
-            imageSrc="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop"
-            imageAlt="Performance review workshop"
-            heading="Talent Management"
-            body={
-            <p>
-                Goal setting, performance reviews, succession planning, and
-                career development. We configure Oracle Talent to connect
-                individual performance to business outcomes — not to generate
-                reports nobody reads.
-              </p>
-            } />
-          
-          <ImageTextBlock
-            orientation="image-left"
-            imageSrc="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop"
-            imageAlt="Payroll specialist reviewing global compliance"
-            heading="Global Payroll"
-            body={
-            <p>
-                Oracle Payroll configured for your country, your rules, your
-                people — with full compliance and audit capability across India,
-                UAE, Singapore, Australia, and the UK. We run parallel payrolls before
-                go-live so day-1 is uneventful.
-              </p>
-            } />
-          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {MODULES.map((mod) => (
+              <article
+                key={mod.title}
+                className="flex flex-col h-full rounded-card border border-[#0369a1] bg-white p-5 md:p-6">
+                <img
+                  src={mod.imageSrc}
+                  alt={mod.imageAlt}
+                  className="w-full aspect-[4/3] object-cover rounded-[10px] md:rounded-[12px] mb-5 md:mb-6"
+                />
+                <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
+                  {mod.title}
+                </h3>
+                <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow mb-6">
+                  {mod.desc}
+                </p>
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-[#0369a1] border-b-2 border-[#0369a1] pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  Explore
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden />
+                </Link>
+              </article>
+            ))}
+          </div>
         </section>
 
         {/* Process */}
-        <ProcessSteps
-          id="process"
-          eyebrow="Delivery"
-          title="Our HCM delivery process"
-          intro="A six-stage methodology refined across 65+ enterprise Oracle HCM engagements. Every project tracks against this framework — adapted to your scale and complexity."
-          steps={PROCESS_STEPS}
-          variant="light" />
-        
-
-        {/* Why MPC */}
-        <section
-          id="why-mpc"
-          className="scroll-mt-24 w-full bg-bg-light px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
-          
-          <div className="mb-6">
-            <p className="section-eyebrow mb-3">
-              Why MPC
-            </p>
-            <Heading level={2}>Why MPC for Oracle HCM?</Heading>
-            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mt-4 max-w-[760px]">
-              Our HCM practice is built exclusively around Oracle. We've seen
-              every implementation challenge, every configuration trap, and
-              every go-live risk — and we know how to navigate them.
-            </p>
-          </div>
-          <StatCalloutGrid
-            stats={STATS}
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Delivery"
+            title="Our HCM delivery process"
+            intro="A six-stage methodology refined across 65+ enterprise Oracle HCM engagements. Every project tracks against this framework — adapted to your scale and complexity."
+            steps={PROCESS_STEPS}
             variant="light"
-            className="!px-0 !py-0 pb-12 md:pb-16 lg:pb-[40px]" />
-          
-        </section>
+            centerHeader
+            accentStepTitles
+          />
+        </div>
 
         {/* Comparison */}
         <ComparisonTable
           id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Doing HCM yourself vs. with MPC"
           intro="What enterprises typically encounter when comparing in-house or generic SI delivery against an Oracle specialist."
           headers={['Criterion', 'DIY / Generic SI', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white" />
+          bg="white"
+          centerHeader
+        />
         
 
         {/* Case Study */}
         <StatOverlayCaseStudy
           id="case-study"
+          className="scroll-mt-[140px]"
           eyebrow="Featured Case Study"
           tag="BFSI · 2024"
           headline="Global BFSI consolidates HR onto one system"
@@ -536,25 +506,31 @@ export function HCM() {
           eyebrow="Related Services"
           title="Continue exploring"
           items={RELATED}
-          bg="white" />
+          bg="white"
+          centerHeader
+        />
         
 
         {/* FAQ */}
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="Oracle HCM — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="Oracle HCM — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
         
 
         {/* CTA */}
         <CTABand
-          title="Schedule an HCM Discovery Call"
+          title="Schedule an HCM"
+          titleAccent="Discovery Call"
           body="Tell us about your Oracle HCM environment. We'll give you an honest assessment and a clear path forward."
           ctaText="Book a Call"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split" />
         
       </main>
 

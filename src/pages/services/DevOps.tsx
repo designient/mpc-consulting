@@ -4,7 +4,9 @@ import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
+import { LifecyclePath } from '../../components/sections/LifecyclePath';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
@@ -16,6 +18,17 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Process', hash: 'process' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -184,21 +197,31 @@ export function DevOps() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="DevOps Services"
-          headline="Accelerate Delivery with Enterprise-Grade DevOps"
+          eyebrow="Oracle Cloud · DevOps"
+          headline="Accelerate Delivery"
+          headlineAccent="with Enterprise-Grade DevOps"
           subhead="CI/CD pipelines, Kubernetes orchestration, and multi-cloud infrastructure — built to accelerate your software delivery and reduce operational risk."
           primaryCtaText="Talk to Our DevOps Team"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Modern data centre infrastructure"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What does enterprise DevOps look like?"
-          answer="DevOps is not a toolset — it is an operating model. MPC helps enterprises build the practices, pipelines, and platforms that allow development and operations to work as one — shipping faster, failing less, and recovering quicker. We deliver CI/CD, containers, multi-cloud infra, IaC, DR, and DevSecOps." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
+        <ServiceWhatIs
+          title="What does enterprise DevOps look like?"
+          body="DevOps is not a toolset — it is an operating model. MPC helps enterprises build the practices, pipelines, and platforms that allow development and operations to work as one — shipping faster, failing less, and recovering quicker. We deliver CI/CD, containers, multi-cloud infra, IaC, DR, and DevSecOps."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Modern data centre infrastructure"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10">
+          <p className="section-eyebrow mb-3">Overview</p>
           <Heading level={2} className="mb-5">
             DevOps as a transformation enabler
           </Heading>
@@ -207,74 +230,85 @@ export function DevOps() {
             enterprises build the practices, pipelines, and platforms that allow
             development and operations to work as one.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-[900px]">
-            {LIFECYCLE.map((stage, i) =>
-            <div
-              key={stage}
-              className="rounded-card border border-divider/20 bg-divider/5 p-4 text-center">
-              
-                <div className="font-heading font-semibold text-cta text-[14px] uppercase tracking-[0.8px] mb-1">
-                  0{i + 1}
-                </div>
-                <div className="font-body text-[14px] font-medium text-text-primary">
-                  {stage}
-                </div>
-              </div>
-            )}
+          <LifecyclePath stages={LIFECYCLE} />
+          </div>
           </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Capabilities
-            </p>
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>What we deliver</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {CAPABILITIES.map((cap, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {CAPABILITIES.map((cap, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {cap.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {cap.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <ProcessSteps
-          eyebrow="Delivery"
-          title="Our DevOps engagement model"
-          steps={PROCESS_STEPS}
-          variant="light" />
-        
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Delivery"
+            title="Our DevOps engagement model"
+            intro="A four-stage engagement model refined across enterprise cloud and platform transformations."
+            steps={PROCESS_STEPS}
+            variant="light"
+            centerHeader
+            accentStepTitles
+          />
+        </div>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Generic cloud vendor vs. MPC DevOps"
+          intro="What enterprises typically encounter when comparing generic cloud vendors against MPC's Oracle-aware DevOps practice."
           headers={['Criterion', 'Generic cloud vendor', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="soft" />
-        
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="DevOps — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="DevOps — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Start your DevOps journey"
+          title="Start your DevOps"
+          titleAccent="Journey"
           body="Whether you're starting fresh or modernising an existing platform — we'll architect the right path."
           ctaText="Talk to Our DevOps Team"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

@@ -14,13 +14,15 @@ export interface RelatedServicesProps {
   items: RelatedServiceItem[];
   id?: string;
   bg?: 'white' | 'soft';
+  centerHeader?: boolean;
 }
 export function RelatedServices({
   eyebrow = 'Related Services',
   title = 'Continue exploring',
   items,
   id,
-  bg = 'white'
+  bg = 'white',
+  centerHeader = false,
 }: RelatedServicesProps) {
   const bgClass = bg === 'soft' ? 'bg-bg-light' : 'bg-white';
   return (
@@ -28,10 +30,9 @@ export function RelatedServices({
       id={id}
       className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]`}>
       
-      <div className="mb-10">
-        <p className="section-eyebrow mb-3">
-          {eyebrow}
-        </p>
+      <div
+        className={`mb-10 ${centerHeader ? 'text-center max-w-[800px] mx-auto' : ''}`}>
+        <p className="section-eyebrow mb-3">{eyebrow}</p>
         <Heading level={2}>{title}</Heading>
       </div>
 
@@ -44,8 +45,8 @@ export function RelatedServices({
               to={item.to}
               className="group flex flex-col rounded-card shadow-subtle bg-white border border-transparent hover:border-divider transition-all p-6 md:p-7">
               
-              <div className="w-12 h-12 rounded-md bg-divider/10 flex items-center justify-center text-divider mb-5">
-                <Icon className="w-6 h-6" />
+              <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
+                <Icon className="w-5 h-5" />
               </div>
               <h3 className="font-heading font-semibold text-[20px] md:text-[22px] leading-tight tracking-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
                 {item.title}

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Users, Workflow, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Users, Workflow, Database, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
@@ -15,6 +17,17 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Focus Areas', hash: 'focus' },
+  { label: 'Extensions', hash: 'extensions' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -47,22 +60,35 @@ const AI_COE = [
 }];
 
 const FOCUS = [
-{
-  title: 'Delivery Efficiency',
-  body: 'AI tools that accelerate implementation timelines, automate testing, and reduce manual configuration effort.'
-},
-{
-  title: 'Margin Improvement',
-  body: 'Intelligent process automation that reduces operational costs and eliminates low-value manual work.'
-},
-{
-  title: 'Talent Sustainability',
-  body: 'AI-powered tools that reduce the Oracle expertise bottleneck — enabling less experienced users to operate complex configurations confidently.'
-},
-{
-  title: 'Revenue Dimension',
-  body: 'AI capabilities that create new value — predictive analytics, customer intelligence, and opportunity identification within Oracle data.'
-}];
+  {
+    title: 'Delivery Efficiency',
+    desc: 'AI tools that accelerate implementation timelines, automate testing, and reduce manual configuration effort.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Team optimising delivery workflows with AI analytics',
+  },
+  {
+    title: 'Margin Improvement',
+    desc: 'Intelligent process automation that reduces operational costs and eliminates low-value manual work.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Financial performance dashboard on laptop',
+  },
+  {
+    title: 'Talent Sustainability',
+    desc: 'AI-powered tools that reduce the Oracle expertise bottleneck — enabling less experienced users to operate complex configurations confidently.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Team collaborating on Oracle skills development',
+  },
+  {
+    title: 'Revenue Dimension',
+    desc: 'AI capabilities that create new value — predictive analytics, customer intelligence, and opportunity identification within Oracle data.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Business team reviewing revenue growth insights',
+  },
+];
 
 const EXTENSIONS = [
 'Oracle APEX',
@@ -171,120 +197,172 @@ export function TechHub() {
       
       <StickyNav />
       <main className="flex-grow w-full">
-        {/* Hero with radial Ocean Blue glow */}
-        <section className="relative w-full bg-primary text-text-inverse overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-50 pointer-events-none"
-            style={{
-              background:
-              'radial-gradient(circle at 30% 40%, rgba(3, 105, 161, 0.4), transparent 60%)'
-            }} />
-          
-          <div className="relative">
-            <ServiceHero
-              eyebrow="MPC Tech Hub"
-              headline="Where Innovation Meets Enterprise Cloud"
-              subhead="MPC Tech Hub is our AI innovation centre — building custom AI agents, Oracle extensions, and next-generation accelerators that turn your Oracle investment into a competitive advantage."
-              primaryCtaText="Start the Conversation"
-              primaryCtaTo="/contact/"
-              imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
-              imageAlt="Futuristic AI and data visualisation"
-              breadcrumb={BREADCRUMB} />
-            
-          </div>
-        </section>
+        <ServiceHero
+          eyebrow="Oracle Cloud · Tech Hub"
+          headline="Where Innovation Meets"
+          headlineAccent="Enterprise Cloud"
+          subhead="MPC Tech Hub is our AI innovation centre — building custom AI agents, Oracle extensions, and next-generation accelerators that turn your Oracle investment into a competitive advantage."
+          primaryCtaText="Start the Conversation"
+          primaryCtaTo="/contact/"
+          imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
+          imageAlt="Futuristic AI and data visualisation"
+          breadcrumb={BREADCRUMB}
+        />
 
-        <QuickAnswerCard
-          question="What is MPC Tech Hub?"
-          answer="MPC Tech Hub is a production-grade AI innovation capability embedded within MPC's Oracle consulting practice. We build custom AI agents, Oracle extensions, and automation accelerators that extend Oracle Cloud — to enterprise standards: documented, supported, and scalable." />
-        
+        <ServiceWhatIs
+          title="What is MPC Tech Hub?"
+          body="MPC Tech Hub is a production-grade AI innovation capability embedded within MPC's Oracle consulting practice. We build custom AI agents, Oracle extensions, and automation accelerators that extend Oracle Cloud — to enterprise standards: documented, supported, and scalable."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Futuristic AI and data visualisation"
+        />
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              AI CoE
-            </p>
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>Agentic AI for Enterprise Oracle</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {AI_COE.map((c, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {AI_COE.map((c, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {c.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {c.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Focus Areas
+        <section
+          id="focus"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Focus Areas</p>
+            <Heading level={2} className="mb-4">
+              What we optimise
+            </Heading>
+            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
+              Four dimensions where MPC Tech Hub delivers measurable impact —
+              from faster delivery to new revenue opportunities inside Oracle.
             </p>
-            <Heading level={2}>What we optimise</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            {FOCUS.map((f, i) =>
-            <Card key={i} bg="bg-light">
-                <div className="font-heading font-semibold text-cta text-[14px] mb-2">
-                  0{i + 1}
-                </div>
-                <Heading level={3} className="mb-3">
-                  {f.title}
-                </Heading>
-                <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-80">
-                  {f.body}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {FOCUS.map((item) => (
+              <article
+                key={item.title}
+                className="flex flex-col h-full rounded-card border border-[#0369a1] bg-white p-5 md:p-6">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  className="w-full aspect-[4/3] object-cover rounded-[10px] md:rounded-[12px] mb-5 md:mb-6"
+                />
+                <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow mb-6">
+                  {item.desc}
                 </p>
-              </Card>
-            )}
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-[#0369a1] border-b-2 border-[#0369a1] pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  Explore
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden />
+                </Link>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <p className="section-eyebrow mb-3">
-            Oracle Extensions
-          </p>
-          <Heading level={2} className="mb-6">
-            Custom Oracle extensions we build
-          </Heading>
-          <div className="flex flex-wrap gap-2">
-            {EXTENSIONS.map((e) =>
-            <span
-              key={e}
-              className="px-4 py-2 rounded-full border border-divider/30 bg-white font-body text-[14px] font-medium">
-              
-                {e}
-              </span>
-            )}
+        <section
+          id="extensions"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="w-full">
+            <div className="relative overflow-hidden rounded-2xl md:rounded-[24px] border border-[#0369A1] bg-white min-h-[300px] md:min-h-[360px]">
+              <img
+                src="/pattern-bg.png"
+                alt=""
+                aria-hidden
+                className="absolute inset-0 w-full h-full object-cover object-right"
+              />
+
+              <div className="relative z-10 flex flex-col justify-center px-8 py-10 md:px-12 md:py-14 lg:px-16 lg:py-16 max-w-[920px]">
+                <p className="section-eyebrow mb-3">Oracle Extensions</p>
+                <h2 className="type-h2 text-text-primary mb-4 md:mb-5 md:whitespace-nowrap">
+                  Custom Oracle extensions we build
+                </h2>
+                <p className="font-body text-[16px] md:text-[17px] leading-[1.65] text-text-primary opacity-85 mb-6 md:mb-8">
+                  From Oracle APEX and PaaS integrations to OCI deployments —
+                  extensions engineered to enterprise standards within your
+                  Oracle ecosystem.
+                </p>
+                <div className="flex flex-wrap gap-2.5 mb-8">
+                  {EXTENSIONS.map((e) => (
+                    <span
+                      key={e}
+                      className="inline-block px-3.5 py-1.5 rounded-full border border-divider/30 bg-divider/5 font-body text-[13px] md:text-[14px] font-medium text-text-primary">
+                      {e}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0369A1] text-white rounded-full font-body text-[15px] font-medium hover:opacity-90 transition-opacity w-fit group">
+                  Start a Conversation
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Generic AI vendor vs. MPC Tech Hub"
+          intro="What enterprises typically encounter when comparing generic AI vendors against MPC's Oracle-native Tech Hub capability."
           headers={['Criterion', 'Generic AI vendor', 'With MPC Tech Hub']}
           highlightIndex={2}
-          rows={COMPARISON_ROWS} />
-        
+          rows={COMPARISON_ROWS}
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="MPC Tech Hub — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="MPC Tech Hub — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Explore an innovation partnership"
+          title="Explore an innovation"
+          titleAccent="Partnership"
           body="Tell us your biggest Oracle constraint. We'll show you how AI and custom engineering can remove it."
           ctaText="Start the Conversation"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

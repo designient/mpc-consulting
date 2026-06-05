@@ -4,7 +4,8 @@ import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
@@ -16,6 +17,17 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Process', hash: 'process' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -174,21 +186,30 @@ export function BPC() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="Business Process Consulting"
-          headline="Optimise Operations. Enable Growth."
+          eyebrow="Oracle Cloud · BPC"
+          headline="Optimise Operations."
+          headlineAccent="Enable Growth."
           subhead="Before you transform your technology, you need to understand your processes. MPC BPC helps you map, redesign, and optimise operations — so your Oracle implementation succeeds on a solid foundation."
           primaryCtaText="Book a Process Assessment"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Strategy session with whiteboard process maps"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What is Business Process Consulting?"
-          answer="BPC is the discipline of mapping, redesigning, and optimising business operations — Finance, HR, Supply Chain, Sales — so your Oracle Cloud implementation succeeds on a solid process foundation. MPC's BPC practice runs assessments, designs future-state processes aligned to Oracle Cloud capabilities, and identifies AI augmentation opportunities." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
+        <ServiceWhatIs
+          title="What is Business Process Consulting?"
+          body="BPC is the discipline of mapping, redesigning, and optimising business operations — Finance, HR, Supply Chain, Sales — so your Oracle Cloud implementation succeeds on a solid process foundation. MPC's BPC practice runs assessments, designs future-state processes aligned to Oracle Cloud capabilities, and identifies AI augmentation opportunities."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Strategy session with whiteboard process maps"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10">
           <p className="section-eyebrow mb-3">
             The Principle
           </p>
@@ -206,75 +227,84 @@ export function BPC() {
             operations before implementation begins — and continues to optimise
             after go-live.
           </p>
+          </div>
+          </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Functional Areas
-            </p>
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>Areas we cover</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {AREAS.map((area, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {AREAS.map((area, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {area.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {area.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <ProcessSteps
-          eyebrow="Our Approach"
-          title="The MPC BPC method"
-          intro="A four-stage methodology refined across enterprise transformations."
-          steps={PROCESS_STEPS}
-          variant="light" />
-        
-
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[900px]">
-            <p className="section-eyebrow mb-3">
-              AI Enablement
-            </p>
-            <Heading level={2} className="mb-5">
-              AI-augmented process consulting
-            </Heading>
-            <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85 mb-6">
-              MPC's AI CoE works alongside our BPC practice to identify where
-              intelligent automation, AI agents, and predictive analytics can
-              transform your processes — not just streamline them.
-            </p>
-          </div>
-        </section>
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Our Approach"
+            title="The MPC BPC method"
+            intro="A four-stage methodology refined across enterprise transformations."
+            steps={PROCESS_STEPS}
+            variant="light"
+            centerHeader
+            accentStepTitles
+          />
+        </div>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Workshop-only BPC vs. MPC's approach"
+          intro="What enterprises typically encounter when comparing workshop-only consulting against MPC's Oracle-aligned BPC practice."
           headers={['Criterion', 'Workshop-only consulting', 'With MPC']}
           highlightIndex={2}
-          rows={COMPARISON_ROWS} />
-        
+          rows={COMPARISON_ROWS}
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="BPC — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="BPC — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Book a Process Assessment"
+          title="Book a Process"
+          titleAccent="Assessment"
           body="Tell us where your processes feel friction. We'll diagnose root causes and design a path forward."
           ctaText="Talk to MPC"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

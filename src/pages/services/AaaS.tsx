@@ -4,10 +4,10 @@ import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
-import { StatCalloutGrid } from '../../components/sections/StatCalloutGrid';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
 import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
@@ -16,6 +16,16 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -45,24 +55,6 @@ const FRAMEWORK = [
 {
   title: 'Ongoing Enablement',
   body: 'Post-go-live support, new joiner onboarding, quarterly refreshers, and adoption analytics monitoring.'
-}];
-
-const STATS = [
-{
-  number: '70%',
-  label: 'Transformations Fall Short'
-},
-{
-  number: '3x',
-  label: 'ROI With Structured Adoption'
-},
-{
-  number: '45%',
-  label: 'Reduction in Support Tickets'
-},
-{
-  number: '90d',
-  label: 'Time to Steady-State'
 }];
 
 const COMPARISON_ROWS = [
@@ -161,22 +153,30 @@ export function AaaS() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="AaaS"
-          headline="Turn Deployment Into True Adoption"
+          eyebrow="Oracle Cloud · AaaS"
+          headline="Turn Deployment Into"
+          headlineAccent="True Adoption"
           subhead="Going live is not the finish line. The ROI of Oracle Cloud only arrives when your people actually use it — confidently, correctly, and consistently."
           primaryCtaText="Book a Conversation"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Training workshop with engaged participants"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What is Adoption as a Service?"
-          answer="AaaS is MPC's structured user-enablement service for Oracle Cloud — covering change management, training, communications, super-user programmes, and ongoing enablement. It exists because implementation isn't enough: 70% of technology transformations fail to deliver intended benefits, and the cause is almost always human, not technical." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <div className="max-w-[820px]">
+        <ServiceWhatIs
+          title="What is Adoption as a Service?"
+          body="AaaS is MPC's structured user-enablement service for Oracle Cloud — covering change management, training, communications, super-user programmes, and ongoing enablement. It exists because implementation isn't enough: 70% of technology transformations fail to deliver intended benefits, and the cause is almost always human, not technical."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Training workshop with engaged participants"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10 max-w-[820px]">
             <p className="section-eyebrow mb-3">
               The Challenge
             </p>
@@ -198,84 +198,71 @@ export function AaaS() {
               is not enough.
             </p>
           </div>
+          </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              The Framework
-            </p>
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>The AaaS framework</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {FRAMEWORK.map((f, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {FRAMEWORK.map((f, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {f.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {f.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
-        </section>
-
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <div className="max-w-[820px]">
-            <p className="section-eyebrow mb-3">
-              AI-First Adoption
-            </p>
-            <Heading level={2} className="mb-5">
-              Train people. Train people to use AI.
-            </Heading>
-            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-85">
-              MPC's AI CoE designs AI adoption programmes alongside standard
-              Oracle enablement — so your teams don't just learn the system,
-              they learn to use AI tools that make them faster and more
-              effective within it.
-            </p>
-          </div>
-        </section>
-
-        <section className="w-full bg-primary text-text-inverse px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
-          <div className="mb-6">
-            <p className="section-eyebrow mb-3">
-              ROI of Adoption
-            </p>
-            <Heading level={2} color="text-inverse">
-              The cost of low adoption is measurable
-            </Heading>
-          </div>
-          <StatCalloutGrid
-            stats={STATS}
-            variant="dark"
-            className="!px-0 !py-0 pb-12 md:pb-16 lg:pb-[40px]" />
-          
         </section>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Training-only vs. MPC AaaS"
+          intro="What enterprises typically encounter when comparing training-only vendors against MPC's structured AaaS programme."
           headers={['Criterion', 'Training-only vendor', 'With MPC AaaS']}
           highlightIndex={2}
-          rows={COMPARISON_ROWS} />
-        
+          rows={COMPARISON_ROWS}
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="AaaS — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="AaaS — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Discuss your adoption programme"
+          title="Discuss your adoption"
+          titleAccent="Programme"
           body="Tell us about your Oracle environment and your adoption challenges. We'll design a programme that fits."
           ctaText="Book a Conversation"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

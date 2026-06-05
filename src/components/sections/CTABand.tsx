@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 export interface CTABandProps {
   title: string;
-  /** Optional italic-serif phrase appended on a new line */
+  /** Optional phrase appended on a new line */
   titleAccent?: string;
   body?: string;
   ctaText: string;
   ctaTo: string;
   secondaryCtaText?: string;
   secondaryCtaTo?: string;
-  /** @deprecated — kept for backwards compatibility */
   variant?: 'centered' | 'split';
   bgImage?: string;
   /** Optional small avatar shown above the title */
@@ -19,6 +18,8 @@ export interface CTABandProps {
 }
 const DEFAULT_BG =
 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2400&q=80';
+const CTA_CLASSES =
+'inline-flex items-center justify-center px-7 py-3.5 bg-white text-primary rounded-full font-body text-[14px] font-medium hover:bg-white/90 transition-colors';
 export function CTABand({
   title,
   titleAccent,
@@ -27,11 +28,46 @@ export function CTABand({
   ctaTo,
   secondaryCtaText,
   secondaryCtaTo,
+  variant = 'centered',
   bgImage,
   avatarSrc,
   avatarName,
   avatarRole
 }: CTABandProps) {
+  if (variant === 'split') {
+    return (
+      <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
+        <div className="max-w-[1280px] mx-auto rounded-2xl md:rounded-[28px] bg-stat px-8 py-10 md:px-12 md:py-12 lg:px-14 lg:py-14 xl:px-16 xl:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+            <h2 className="font-heading font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.08] tracking-[-0.02em] text-white text-left">
+              {title}
+              {titleAccent && (
+                <>
+                  <br />
+                  {titleAccent}
+                </>
+              )}
+            </h2>
+
+            <div className="flex flex-col justify-between gap-8 lg:gap-10">
+              {body && (
+                <p className="font-body text-[15px] md:text-[16px] lg:text-[17px] leading-[1.65] text-white/90 text-left lg:max-w-[420px] lg:ml-auto">
+                  {body}
+                </p>
+              )}
+
+              <div className="flex justify-start lg:justify-end mt-auto">
+                <Link to={ctaTo} className={CTA_CLASSES}>
+                  {ctaText}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const bg = bgImage || DEFAULT_BG;
   return (
     <section className="relative w-full overflow-hidden">
@@ -88,10 +124,7 @@ export function CTABand({
         }
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
-          <Link
-            to={ctaTo}
-            className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-primary rounded-full font-body text-[14px] font-medium hover:bg-white/90 transition-colors">
-            
+          <Link to={ctaTo} className={CTA_CLASSES}>
             {ctaText}
           </Link>
           {secondaryCtaText && secondaryCtaTo &&

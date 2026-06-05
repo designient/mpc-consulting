@@ -14,6 +14,8 @@ export interface ComparisonTableProps {
   highlightIndex?: number;
   rows: ComparisonRow[];
   bg?: 'white' | 'soft';
+  className?: string;
+  centerHeader?: boolean;
 }
 export function ComparisonTable({
   id,
@@ -23,24 +25,29 @@ export function ComparisonTable({
   headers,
   highlightIndex = headers.length - 1,
   rows,
-  bg = 'white'
+  bg = 'white',
+  className = '',
+  centerHeader = false,
 }: ComparisonTableProps) {
   const bgClass = bg === 'soft' ? 'bg-bg-light' : 'bg-white';
   return (
     <section
       id={id}
-      className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]`}>
+      className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px] ${className}`}>
       
       <div className="max-w-[1100px] mx-auto">
-        <div className="mb-10">
+        <div
+          className={`mb-10 ${centerHeader ? 'text-center max-w-[800px] mx-auto' : ''}`}>
           {eyebrow &&
-          <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider mb-3">
+          <p
+            className={`${centerHeader ? 'section-eyebrow' : 'font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider'} mb-3`}>
               {eyebrow}
             </p>
           }
           <Heading level={2}>{title}</Heading>
           {intro &&
-          <p className="font-body text-[18px] leading-[1.6] mt-5 max-w-[700px] text-text-primary opacity-80">
+          <p
+            className={`font-body text-[18px] leading-[1.6] mt-5 max-w-[700px] text-text-primary opacity-80 ${centerHeader ? 'mx-auto' : ''}`}>
               {intro}
             </p>
           }

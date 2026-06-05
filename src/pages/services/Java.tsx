@@ -4,7 +4,8 @@ import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
@@ -16,6 +17,17 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Process', hash: 'process' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -191,21 +203,31 @@ export function Java() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="Java Technologies"
-          headline="Enterprise Java Development for the Cloud Era"
+          eyebrow="Oracle Cloud · Java"
+          headline="Enterprise Java Development"
+          headlineAccent="for the Cloud Era"
           subhead="Custom Java applications, microservices architecture, and full-stack development — built to integrate with Oracle Cloud and scale with your business."
           primaryCtaText="Discuss Your Build"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Software engineering team at work"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What does MPC's Java practice deliver?"
-          answer="MPC builds production-grade enterprise Java applications using Spring Boot, microservices patterns, and API-first architectures — designed to integrate cleanly with Oracle Cloud and other enterprise platforms. We deliver full-stack development, REST and GraphQL APIs, legacy modernisation, and database engineering." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
+        <ServiceWhatIs
+          title="What does MPC's Java practice deliver?"
+          body="MPC builds production-grade enterprise Java applications using Spring Boot, microservices patterns, and API-first architectures — designed to integrate cleanly with Oracle Cloud and other enterprise platforms. We deliver full-stack development, REST and GraphQL APIs, legacy modernisation, and database engineering."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Software engineering team at work"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10">
+          <p className="section-eyebrow mb-3">Overview</p>
           <Heading level={2} className="mb-5">
             Java development at enterprise scale
           </Heading>
@@ -226,59 +248,84 @@ export function Java() {
               </span>
             )}
           </div>
+          </div>
+          </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Capabilities
-            </p>
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>What we build</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {CAPABILITIES.map((cap, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {CAPABILITIES.map((cap, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {cap.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {cap.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <ProcessSteps
-          eyebrow="Delivery"
-          title="How a Java engagement runs"
-          steps={PROCESS_STEPS}
-          variant="light" />
-        
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Delivery"
+            title="How a Java engagement runs"
+            intro="A four-stage delivery model for enterprise Java builds — from architecture through production deployment."
+            steps={PROCESS_STEPS}
+            variant="light"
+            centerHeader
+            accentStepTitles
+          />
+        </div>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Generic dev shop vs. MPC's Java practice"
+          intro="What enterprises typically encounter when comparing generic development shops against MPC's Oracle-integrated Java practice."
           headers={['Criterion', 'Generic dev shop', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="soft" />
-        
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="Java — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="Java — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Discuss your development requirements"
+          title="Discuss your development"
+          titleAccent="Requirements"
           body="Tell us about your build, your stack, and your timeline. We'll design a Java engagement that fits."
           ctaText="Get in Touch"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

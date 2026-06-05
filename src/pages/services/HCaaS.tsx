@@ -1,10 +1,12 @@
 import React from 'react';
-import { UserCheck, Workflow, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { UserCheck, Workflow, Users, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
@@ -17,6 +19,17 @@ import {
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import { CheckCircle } from 'lucide-react';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Process', hash: 'process' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -59,22 +72,35 @@ const DIMENSIONS = [
 }];
 
 const DELIVERABLES = [
-{
-  title: 'Executive Summary',
-  body: 'Board-ready summary of findings, risk rating, and strategic recommendations.'
-},
-{
-  title: 'Detailed Technical Report',
-  body: 'Module-by-module assessment with evidence, root cause analysis, and fix instructions.'
-},
-{
-  title: 'Risk Register',
-  body: 'Prioritised list of risks (Critical / High / Medium / Low) with owner recommendations.'
-},
-{
-  title: 'Remediation Roadmap',
-  body: 'Sequenced action plan — quick wins first, strategic improvements second.'
-}];
+  {
+    title: 'Executive Summary',
+    desc: 'Board-ready summary of findings, risk rating, and strategic recommendations.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Executive team reviewing health check findings',
+  },
+  {
+    title: 'Detailed Technical Report',
+    desc: 'Module-by-module assessment with evidence, root cause analysis, and fix instructions.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Technical consultant reviewing Oracle system report',
+  },
+  {
+    title: 'Risk Register',
+    desc: 'Prioritised list of risks (Critical / High / Medium / Low) with owner recommendations.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Risk assessment dashboard on screen',
+  },
+  {
+    title: 'Remediation Roadmap',
+    desc: 'Sequenced action plan — quick wins first, strategic improvements second.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Team planning remediation roadmap on whiteboard',
+  },
+];
 
 const TIMELINE_STEPS = [
 {
@@ -91,15 +117,9 @@ const TIMELINE_STEPS = [
 },
 {
   number: 'WK4',
-  title: 'Report',
+  title: 'Report & Recommend',
   description:
-  'Draft findings, review workshop with your team, and refinement of recommendations.'
-},
-{
-  number: 'WK4',
-  title: 'Recommend',
-  description:
-  'Final report delivered with risk register and prioritised remediation roadmap.'
+  'Draft findings, review workshop with your team, and refinement of recommendations. Final report delivered with risk register and prioritised remediation roadmap.'
 }];
 
 const COMPARISON_ROWS = [
@@ -199,22 +219,30 @@ export function HCaaS() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="HCaaS"
-          headline="Know Exactly Where Your Oracle System Stands"
+          eyebrow="Oracle Cloud · HCaaS"
+          headline="Know Exactly Where"
+          headlineAccent="Your Oracle System Stands"
           subhead="An independent, expert review of your Oracle Cloud environment — with a clear, prioritised roadmap to fix what's wrong and optimise what's underperforming."
           primaryCtaText="Request a Health Check"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Analytics dashboards under review"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What is Health Check as a Service?"
-          answer="HCaaS is MPC's structured 4-week Oracle Cloud audit. Senior consultants review your Oracle environment across six dimensions — performance, configuration, security, data quality, integration health, and user adoption — and deliver an executive summary, technical report, risk register, and prioritised remediation roadmap." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
-          <div className="max-w-[820px]">
+        <ServiceWhatIs
+          title="What is Health Check as a Service?"
+          body="HCaaS is MPC's structured 4-week Oracle Cloud audit. Senior consultants review your Oracle environment across six dimensions — performance, configuration, security, data quality, integration health, and user adoption — and deliver an executive summary, technical report, risk register, and prioritised remediation roadmap."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Analytics dashboards under review"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10 max-w-[820px]">
             <p className="section-eyebrow mb-3">
               Who Needs It
             </p>
@@ -232,83 +260,125 @@ export function HCaaS() {
               )}
             </ul>
           </div>
+          </div>
         </section>
 
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              The Six Dimensions
-            </p>
+        <section
+          id="capabilities"
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>What we assess</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {DIMENSIONS.map((d, i) =>
-            <Card key={i} bg="white">
-                <div className="font-heading font-semibold text-cta text-[14px] mb-2">
-                  0{i + 1}
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {DIMENSIONS.map((d, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {d.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {d.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Deliverables
+        <section
+          id="deliverables"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Deliverables</p>
+            <Heading level={2} className="mb-4">
+              What you receive
+            </Heading>
+            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
+              Four structured outputs from every HCaaS engagement — designed for
+              board visibility, technical clarity, and a prioritised path to
+              remediation.
             </p>
-            <Heading level={2}>What you receive</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            {DELIVERABLES.map((d, i) =>
-            <Card key={i} bg="bg-light">
-                <Heading level={3} className="mb-3">
-                  {d.title}
-                </Heading>
-                <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-80">
-                  {d.body}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {DELIVERABLES.map((item) => (
+              <article
+                key={item.title}
+                className="flex flex-col h-full rounded-card border border-[#0369a1] bg-white p-5 md:p-6">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  className="w-full aspect-[4/3] object-cover rounded-[10px] md:rounded-[12px] mb-5 md:mb-6"
+                />
+                <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow mb-6">
+                  {item.desc}
                 </p>
-              </Card>
-            )}
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-[#0369a1] border-b-2 border-[#0369a1] pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  Explore
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden />
+                </Link>
+              </article>
+            ))}
           </div>
         </section>
 
-        <ProcessSteps
-          eyebrow="Engagement Timeline"
-          title="From kick-off to roadmap in 4 weeks"
-          steps={TIMELINE_STEPS}
-          variant="light" />
-        
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Engagement Timeline"
+            title="From kick-off to roadmap in 4 weeks"
+            intro="A fixed four-week engagement timeline — from access provisioning through to a prioritised remediation roadmap."
+            steps={TIMELINE_STEPS}
+            variant="light"
+            centerHeader
+            accentStepTitles
+          />
+        </div>
 
         <ComparisonTable
+          id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="Vendor self-audit vs. MPC HCaaS"
+          intro="What enterprises typically encounter when comparing vendor self-audits against MPC's independent HCaaS engagement."
           headers={['Criterion', 'Vendor self-audit', 'With MPC HCaaS']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="soft" />
-        
+          bg="white"
+          centerHeader
+        />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="HCaaS — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="HCaaS — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Request your Oracle Health Check"
+          title="Request your Oracle"
+          titleAccent="Health Check"
           body="We'll tell you exactly what's working, what isn't, and what to do about it — in four weeks."
           ctaText="Request a Health Check"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

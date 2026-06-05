@@ -23,6 +23,8 @@ export interface StatOverlayCaseStudyProps {
   ctaText?: string;
   ctaTo?: string;
   bg?: 'white' | 'soft';
+  className?: string;
+  centerHeader?: boolean;
 }
 export function StatOverlayCaseStudy({
   id,
@@ -38,15 +40,18 @@ export function StatOverlayCaseStudy({
   statContext,
   ctaText = 'Read case study',
   ctaTo = '/resources/case-studies/',
-  bg = 'soft'
+  bg = 'soft',
+  className = '',
+  centerHeader = false,
 }: StatOverlayCaseStudyProps) {
   const bgClass = bg === 'soft' ? 'bg-bg-light' : 'bg-white';
   return (
     <section
       id={id}
-      className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]`}>
+      className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px] ${className}`}>
       
-      <p className="section-eyebrow mb-3">
+      <p
+        className={`section-eyebrow mb-3 ${centerHeader ? 'text-center' : ''}`}>
         {eyebrow}
       </p>
 

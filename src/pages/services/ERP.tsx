@@ -4,7 +4,8 @@ import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
-import { QuickAnswerCard } from '../../components/sections/QuickAnswerCard';
+import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
+import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
@@ -18,6 +19,18 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+const TOC = [
+  { label: 'Overview', hash: 'overview' },
+  { label: 'Capabilities', hash: 'capabilities' },
+  { label: 'Process', hash: 'process' },
+  { label: 'Comparison', hash: 'comparison' },
+  { label: 'Case Study', hash: 'case-study' },
+  { label: 'FAQ', hash: 'faq' }
+];
+
+const OVERVIEW_IMAGE =
+  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop';
+
 const BREADCRUMB = [
 {
   label: 'Services',
@@ -226,8 +239,9 @@ export function ERP() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="Oracle ERP Cloud"
-          headline="Oracle ERP Cloud — Finance, Projects & Compliance at Scale"
+          eyebrow="Oracle Cloud · ERP"
+          headline="Oracle ERP Cloud"
+          headlineAccent="Finance, Projects & Compliance at Scale"
           subhead="Oracle Fusion and EBS implementation, migration, and managed service — for enterprises that need ERP that performs at the pace of their business."
           primaryCtaText="Talk to Our ERP Team"
           primaryCtaTo="/contact/"
@@ -236,13 +250,21 @@ export function ERP() {
           imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Finance team reviewing ERP dashboards"
           breadcrumb={BREADCRUMB} />
-        
-        <QuickAnswerCard
-          question="What is Oracle ERP Cloud?"
-          answer="Oracle ERP Cloud — comprising Oracle Fusion Financials and Oracle E-Business Suite — is the financial backbone of enterprise operations, covering Financials, Projects, Procurement, Risk & Compliance, Treasury, and Performance Management. MPC delivers Oracle ERP across both platforms — implementation, EBS→Fusion migration, APEX extensions, and managed service." />
-        
 
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px]">
+        <ServiceWhatIs
+          title="What is Oracle ERP Cloud?"
+          body="Oracle ERP Cloud — comprising Oracle Fusion Financials and Oracle E-Business Suite — is the financial backbone of enterprise operations, covering Financials, Projects, Procurement, Risk & Compliance, Treasury, and Performance Management. MPC delivers Oracle ERP across both platforms — implementation, EBS→Fusion migration, APEX extensions, and managed service."
+          imageSrc={OVERVIEW_IMAGE}
+          imageAlt="Finance team reviewing ERP dashboards"
+        />
+
+        <TableOfContents items={TOC} variant="inline" />
+
+        <section
+          id="overview"
+          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+          <div className="mb-10">
           <p className="section-eyebrow mb-3">
             Overview
           </p>
@@ -271,38 +293,43 @@ export function ERP() {
               </span>
             )}
           </div>
+          </div>
+          </div>
         </section>
 
         <section
           id="capabilities"
-          className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Capabilities
-            </p>
+          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Capabilities</p>
             <Heading level={2}>Our ERP Capabilities</Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {CAPABILITIES.map((cap, i) =>
-            <Card key={i} bg="white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {CAPABILITIES.map((cap, i) => (
+              <Card key={i} bg="white">
+                <div className="w-10 h-1 bg-divider mb-5" />
                 <Heading level={3} className="mb-3">
                   {cap.title}
                 </Heading>
-                <p className="font-body text-[16px] leading-[1.65] text-text-primary opacity-80">
+                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
                   {cap.body}
                 </p>
               </Card>
-            )}
+            ))}
           </div>
         </section>
 
-        <ProcessSteps
-          eyebrow="Delivery"
-          title="Our ERP delivery process"
-          intro="A six-stage Oracle ERP methodology proven across Fusion implementations and EBS→Fusion migrations."
-          steps={PROCESS_STEPS}
-          variant="light" />
+        <div id="process" className="scroll-mt-[140px]">
+          <ProcessSteps
+            eyebrow="Delivery"
+            title="Our ERP delivery process"
+            intro="A six-stage Oracle ERP methodology proven across Fusion implementations and EBS→Fusion migrations."
+            steps={PROCESS_STEPS}
+            variant="light"
+            centerHeader
+            accentStepTitles
+          />
+        </div>
         
 
         <section className="w-full bg-bg-light px-4 pt-12 md:px-10 md:pt-16 lg:px-[60px] lg:pt-[80px]">
@@ -321,41 +348,64 @@ export function ERP() {
 
         <ComparisonTable
           id="comparison"
+          className="scroll-mt-[140px]"
           eyebrow="Comparison"
           title="In-house / generic SI vs. MPC"
+          intro="What enterprises typically encounter when comparing in-house or generic SI delivery against an Oracle ERP specialist."
           headers={['Criterion', 'DIY / Generic SI', 'With MPC']}
           highlightIndex={2}
-          rows={COMPARISON_ROWS} />
-        
+          rows={COMPARISON_ROWS}
+          bg="white"
+          centerHeader
+        />
 
         <StatOverlayCaseStudy
+          id="case-study"
+          className="scroll-mt-[140px]"
+          eyebrow="Featured Case Study"
           tag="Manufacturing · 2024"
           headline="Manufacturer migrates EBS R12 → Fusion with zero close disruption"
           description="A global manufacturing client needed to migrate from Oracle EBS R12 to Oracle Fusion Cloud with zero disruption to month-end financial close. MPC delivered a phased migration with parallel close cycles."
           metadata="Manufacturing · Global · EBS → Fusion"
           imageSrc="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2000&auto=format&fit=crop"
+          imageAlt="Manufacturing facility operations"
           stat="8d → 3d"
           statLabel="Financial close cycle"
           statContext="Full GL reconciliation automated. Zero disruption to month-end during cutover."
+          ctaText="Read the full case study"
           ctaTo="/resources/case-studies/"
-          bg="soft" />
-        
+          bg="soft"
+        />
+
         <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
 
-        <RelatedServices items={RELATED} />
-        <FAQAccordion
-          eyebrow="FAQs"
-          title="Oracle ERP — Frequently Asked Questions"
-          items={FAQS}
-          layout="full"
-          bg="soft" />
-        
+        <RelatedServices
+          id="related"
+          eyebrow="Related Services"
+          title="Continue exploring"
+          items={RELATED}
+          bg="white"
+          centerHeader
+        />
+
+        <div id="faq" className="scroll-mt-[140px]">
+          <FAQAccordion
+            eyebrow="FAQs"
+            title="Oracle ERP — Frequently Asked Questions"
+            items={FAQS}
+            layout="full"
+            bg="soft"
+          />
+        </div>
+
         <CTABand
-          title="Talk to Our ERP Team"
+          title="Talk to Our"
+          titleAccent="ERP Team"
           body="Tell us about your current Oracle setup and your goals. We'll tell you exactly where we can help."
           ctaText="Get in Touch"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split"
+        />
         
       </main>
       <FooterDark />

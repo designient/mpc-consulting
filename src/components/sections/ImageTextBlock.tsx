@@ -7,26 +7,40 @@ export interface ImageTextBlockProps {
   heading: string;
   body: React.ReactNode;
   children?: React.ReactNode;
+  /** Rounded corners + thin #0369a1 border on the image */
+  borderedImage?: boolean;
 }
+
 export function ImageTextBlock({
   imageSrc,
   imageAlt = '',
   orientation = 'image-left',
   heading,
   body,
-  children
+  children,
+  borderedImage = false,
 }: ImageTextBlockProps) {
   const isImageLeft = orientation === 'image-left';
+
   return (
     <section className="w-full bg-bg-light px-4 py-4 md:px-10 md:py-10 lg:px-[60px] lg:py-[60px] flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-10">
       <div
         className={`w-full md:w-[45%] ${isImageLeft ? 'md:order-1' : 'md:order-2'}`}>
-        
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-full h-full object-cover aspect-video rounded-none shadow-subtle-dark" />
-        
+        {borderedImage ? (
+          <div className="rounded-card border border-[#0369a1] bg-white p-3 md:p-4 shadow-subtle">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="w-full aspect-video object-cover rounded-[10px] md:rounded-[12px]"
+            />
+          </div>
+        ) : (
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-cover aspect-video rounded-none shadow-subtle-dark"
+          />
+        )}
       </div>
       <div
         className={`w-full md:w-[55%] flex flex-col items-start ${isImageLeft ? 'md:order-2' : 'md:order-1'}`}>
