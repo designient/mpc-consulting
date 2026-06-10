@@ -398,7 +398,7 @@ export function About() {
                 </p>
                 <div className="mt-5">
                   <Link
-                    to="/team/"
+                    to="/leadership/"
                     className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-primary rounded-button font-body text-[14px] font-semibold hover:bg-white/90 transition-colors shadow-subtle">
                     View our leadership team
                   </Link>

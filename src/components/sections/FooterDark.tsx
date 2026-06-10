@@ -16,7 +16,7 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { label: 'About Us', to: '/about/' },
-  { label: 'Leadership Team', to: '/team/' },
+  { label: 'Leadership Team', to: '/leadership/' },
   { label: 'Partners', to: '/partners/' },
   { label: 'Careers', to: '/careers/' },
   { label: 'News', to: '/news/' },

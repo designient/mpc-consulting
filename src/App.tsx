@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
@@ -15,6 +15,7 @@ import { TechHub } from './pages/services/TechHub';
 import { Industries } from './pages/Industries';
 import { Resources } from './pages/Resources';
 import { Careers } from './pages/Careers';
+import { Leadership } from './pages/Leadership';
 import { PageStub } from './components/layout/PageStub';
 export function App() {
   return (
@@ -24,20 +25,8 @@ export function App() {
 
         {/* Company */}
         <Route path="/about/" element={<About />} />
-        <Route
-          path="/team/"
-          element={
-          <PageStub
-            title="Our Leadership Team"
-            description="11 leaders. 700+ Oracle Cloud experts. One unified team across India, UAE, Singapore, Australia, and the UK."
-            canonicalPath="/team/"
-            breadcrumb={[
-            {
-              label: 'Team'
-            }]
-            } />
-
-          } />
+        <Route path="/leadership/" element={<Leadership />} />
+        <Route path="/team/" element={<Navigate to="/leadership/" replace />} />
         
         <Route
           path="/partners/"
