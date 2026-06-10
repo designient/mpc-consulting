@@ -3,39 +3,27 @@ import { Link } from 'react-router-dom';
 import {
   Award,
   ShieldCheck,
-  Shield,
-  Database,
   Cloud,
   ArrowRight,
-  MapPin,
-  Banknote,
-  Factory,
-  Plane,
-  Building2,
-  Zap,
-  Radio,
-  Landmark,
-  Briefcase } from
+  MapPin } from
 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { Heading } from '../components/ui/Heading';
 import { Card } from '../components/ui/Card';
-import { PillarCards } from '../components/sections/PillarCards';
 import { Button } from '../components/ui/Button';
 import { StatCalloutGrid } from '../components/sections/StatCalloutGrid';
 import { CTABand } from '../components/sections/CTABand';
-import { LogoCloud } from '../components/sections/LogoCloud';
-import { ALL_CLIENT_LOGOS } from '../data/clientLogos';
+import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
   Breadcrumb,
   buildBreadcrumbSchema } from
 '../components/sections/Breadcrumb';
-const BREADCRUMB = [
-{
-  label: 'About'
-}];
+const BREADCRUMB = [{ label: 'About' }];
+
+const HERO_BG =
+  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
 
 const TIMELINE = [
 {
@@ -107,7 +95,6 @@ const STATS = [
 
 const PILLARS = [
   {
-    icon: Landmark,
     title: 'Deep Industry Understanding',
     body: 'We operate at the intersection of technology and business. Every engagement begins with a thorough understanding of your industry, your processes, and your competitive pressures — not with a product pitch.',
     imageSrc:
@@ -115,7 +102,6 @@ const PILLARS = [
     imageAlt: 'Industry and business context for Oracle Cloud delivery'
   },
   {
-    icon: Database,
     title: 'Domain Specialisation',
     body: 'Oracle is not a sideline for us. It is our core. Every consultant on our team is Oracle-focused, Oracle-certified, and committed to mastering one platform rather than spreading across many.',
     imageSrc:
@@ -123,7 +109,6 @@ const PILLARS = [
     imageAlt: 'Oracle domain specialists collaborating'
   },
   {
-    icon: Shield,
     title: 'Strong Competencies',
     body: "From advisory and design to implementation, managed support, and innovation — we deliver the full lifecycle. You don't need five partners. You need one that can do the work from start to finish.",
     imageSrc:
@@ -149,6 +134,11 @@ const OFFICES = [
   addr: '4th Floor, Hanto Virgo Centre, 185/A, 22nd Cross Rd, HSR Layout'
 },
 {
+  city: 'Singapore',
+  country: 'Singapore',
+  addr: '12 Marina View, Asia Square Tower 2, Level 18, Singapore 018961'
+},
+{
   city: 'Dubai',
   country: 'UAE',
   addr: '25th Floor, The Citadel Tower, Marasi Drive, Business Bay'
@@ -169,59 +159,8 @@ const OFFICES = [
   addr: '7 Benton Mews, Aylesbury'
 }];
 
-const INDUSTRIES = [
-{
-  icon: Banknote,
-  name: 'BFSI'
-},
-{
-  icon: Factory,
-  name: 'Manufacturing'
-},
-{
-  icon: Plane,
-  name: 'Travel & Hospitality'
-},
-{
-  icon: Building2,
-  name: 'Real Estate'
-},
-{
-  icon: Zap,
-  name: 'Energy & Utilities'
-},
-{
-  icon: Radio,
-  name: 'Telecommunications'
-},
-{
-  icon: Landmark,
-  name: 'Public Sector'
-},
-{
-  icon: Briefcase,
-  name: 'Professional Services'
-}];
-
-const LEADERS = [
-{
-  name: 'Amit Garg',
-  title: 'Chief Executive Officer',
-  bio: '20+ years of Oracle and enterprise technology leadership. Founder and strategic vision behind MPC.',
-  img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop'
-},
-{
-  name: 'Kishore Nerella',
-  title: 'Chief Operating Officer',
-  bio: "Drives delivery excellence and operational efficiency across MPC's global consulting operations.",
-  img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop'
-},
-{
-  name: 'Siva Prakya',
-  title: 'Chief Technology Officer',
-  bio: "Leads MPC's technology strategy, AI innovation, and Oracle platform architecture.",
-  img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop'
-}];
+const LEADERSHIP_IMG =
+  'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop';
 
 const CERTS = [
 {
@@ -257,30 +196,51 @@ export function About() {
       <StickyNav />
       <main className="flex-grow w-full">
         {/* Hero */}
-        <section className="w-full bg-primary text-text-inverse px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-6">
-            <Breadcrumb items={BREADCRUMB} variant="dark" />
+        <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
+          <img
+            src={HERO_BG}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div aria-hidden className="absolute inset-0 bg-cta/55" />
+
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+            <Breadcrumb
+              items={BREADCRUMB}
+              variant="dark"
+              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
+            />
+
+            <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
+                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
+                About MPC
+              </span>
+
+              <h1 className="type-h1 text-text-inverse">
+                About MPC Cloud Consulting
+              </h1>
+
+              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
+                We are a global Oracle Cloud and AI transformation partner —
+                built on deep expertise, industry understanding, and a
+                commitment to measurable outcomes.
+              </p>
+            </div>
           </div>
-          <div className="w-[60px] h-[3px] bg-divider mb-6" />
-          <Heading level={1} color="text-inverse">
-            About MPC Cloud Consulting
-          </Heading>
-          <p className="font-body text-[18px] md:text-[20px] leading-[1.6] text-text-inverse opacity-90 mt-6 max-w-[760px]">
-            We are a global Oracle Cloud and AI transformation partner — built
-            on deep expertise, industry understanding, and a commitment to
-            measurable outcomes.
-          </p>
         </section>
 
         {/* Our Story */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[820px]">
-            <p className="section-eyebrow mb-3">
-              Our Story
-            </p>
-            <Heading level={2} className="mb-6">
+          <div className="max-w-[1040px] mx-auto">
+          <div className="text-center mb-10">
+            <p className="section-eyebrow mb-3">Our Story</p>
+            <Heading level={2} className="mb-4">
               From Cloud First to AI-First
             </Heading>
+          </div>
+          <div className="text-center">
             <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85 mb-5">
               MPC Cloud Consulting was founded in 2019 with a single conviction:
               that enterprise transformation must begin with genuine
@@ -288,11 +248,11 @@ export function About() {
               the people who use the systems we build.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mb-5">
-              In six years, we've grown to 700+ consultants across 8 global offices in
-              5 countries. We've completed 87+ engagements for 65+ organisations
-              — from BFSI giants to manufacturing leaders and energy companies.
-              And we've done it by staying focused on Oracle Cloud, refusing to
-              be generalists in a space that rewards depth.
+              In six years, we've grown to 700+ consultants across 8 global
+              offices in 5 countries. We've completed 87+ engagements for 65+
+              organisations — from BFSI giants to manufacturing leaders and
+              energy companies. And we've done it by staying focused on Oracle
+              Cloud, refusing to be generalists in a space that rewards depth.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               Today, with the rise of AI, we're leading a new chapter. MPC Tech
@@ -301,16 +261,15 @@ export function About() {
               from Cloud First to AI-First.
             </p>
           </div>
+          </div>
         </section>
 
-        {/* Timeline */}
+        {/* Milestones & stats */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <p className="section-eyebrow mb-3">
-            Milestones
-          </p>
-          <Heading level={2} className="mb-10">
-            Seven years of growth
-          </Heading>
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Milestones</p>
+            <Heading level={2}>Seven years of growth</Heading>
+          </div>
           <div className="relative overflow-x-auto pb-4">
             <div className="absolute left-0 right-0 top-[26px] h-[2px] bg-divider/30" />
             <ol className="flex gap-6 md:gap-8 min-w-max relative">
@@ -319,7 +278,7 @@ export function About() {
                 key={t.y}
                 className="flex flex-col items-start min-w-[140px]">
                 
-                  <div className="w-3.5 h-3.5 rounded-full bg-divider border-4 border-bg-light z-10 mt-4" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-stat border-4 border-bg-light z-10 mt-4" />
                   <div className="font-heading font-semibold text-cta text-[22px] mt-3">
                     {t.y}
                   </div>
@@ -330,45 +289,67 @@ export function About() {
               )}
             </ol>
           </div>
-        </section>
 
-        {/* Credentials */}
-        <section className="w-full bg-bg-light px-4 pt-0 md:px-10 lg:px-[60px]">
-          <Heading level={2} className="mb-8">
-            MPC by the numbers
-          </Heading>
-          <StatCalloutGrid
-            stats={STATS.slice(0, 4)}
-            variant="light"
-            className="!px-0 !py-0 mb-6" />
-          
-          <StatCalloutGrid
-            stats={STATS.slice(4, 8)}
-            variant="light"
-            className="!px-0 !py-0 pb-12 md:pb-16 lg:pb-[40px]" />
-          
+          <div className="mt-12 md:mt-16 lg:mt-20">
+            <StatCalloutGrid
+              stats={STATS.slice(0, 4)}
+              variant="light"
+              className="!px-0 !py-0 mb-6" />
+            <StatCalloutGrid
+              stats={STATS.slice(4, 8)}
+              variant="light"
+              className="!px-0 !py-0" />
+          </div>
         </section>
 
         {/* Three Pillars */}
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10 max-w-[700px]">
-            <p className="section-eyebrow mb-3">
-              What Sets Us Apart
+        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">What Sets Us Apart</p>
+            <Heading level={2} className="mb-4">
+              Three pillars of excellence
+            </Heading>
+            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
+              MPC&apos;s approach combines industry understanding with Oracle
+              specialisation and cross-functional competencies — built to deliver
+              real outcomes, not just implementations.
             </p>
-            <Heading level={2}>Three pillars of excellence</Heading>
           </div>
-          <div className="max-w-[1280px] mx-auto">
-            <PillarCards items={PILLARS} />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {PILLARS.map((pillar) => (
+              <article
+                key={pillar.title}
+                className="flex flex-col h-full rounded-card border border-cta bg-white p-5 md:p-6">
+                <img
+                  src={pillar.imageSrc}
+                  alt={pillar.imageAlt}
+                  className="w-full aspect-[4/3] object-cover rounded-[10px] md:rounded-[12px] mb-5 md:mb-6"
+                />
+                <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
+                  {pillar.title}
+                </h3>
+                <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow mb-6">
+                  {pillar.body}
+                </p>
+                <Link
+                  to="/contact/"
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-cta border-b-2 border-cta pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  Explore
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden />
+                </Link>
+              </article>
+            ))}
           </div>
         </section>
 
         {/* Global Presence */}
         <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Global Presence
-            </p>
-            <Heading level={2}>8 offices. One connected team.</Heading>
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Global Presence</p>
+            <Heading level={2}>
+              <span className="text-stat">8 offices.</span> One connected team.
+            </Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {OFFICES.map((o) =>
@@ -393,121 +374,90 @@ export function About() {
           </div>
         </section>
 
-        {/* Industries */}
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Industries
-            </p>
-            <Heading level={2}>Industries we understand</Heading>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-            {INDUSTRIES.map((ind) => {
-              const Icon = ind.icon;
-              return (
-                <div
-                  key={ind.name}
-                  className="flex flex-col items-start p-5 rounded-card bg-bg-light border border-transparent hover:border-divider transition-colors">
-                  
-                  <Icon className="w-6 h-6 text-divider mb-3" />
-                  <p className="font-body text-[14px] font-medium text-text-primary">
-                    {ind.name}
-                  </p>
-                </div>);
-
-            })}
-          </div>
-        </section>
-
-        {/* Leadership snapshot */}
-        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
-            <div>
-              <p className="section-eyebrow mb-3">
-                Leadership
-              </p>
-              <Heading level={2}>Leaders behind the work</Heading>
-            </div>
-            <Link
-              to="/team/"
-              className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta hover:text-accent group">
-              
-              Meet the full team{' '}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {LEADERS.map((l) =>
-            <div
-              key={l.name}
-              className="bg-white rounded-card shadow-subtle overflow-hidden flex flex-col">
-              
+        {/* Leadership */}
+        <section className="w-full bg-cta text-text-inverse px-4 py-8 md:px-10 md:py-10 lg:px-[60px] lg:py-12">
+          <div className="max-w-[1280px] mx-auto flex justify-center">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-center">
+              <div className="flex shrink-0">
                 <img
-                src={l.img}
-                alt={l.name}
-                className="w-full aspect-[4/3] object-cover" />
-              
-                <div className="p-6">
-                  <h3 className="font-heading font-semibold text-[20px] text-text-primary">
-                    {l.name}
-                  </h3>
-                  <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider mt-1 mb-3">
-                    {l.title}
-                  </p>
-                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-80">
-                    {l.bio}
-                  </p>
+                  src={LEADERSHIP_IMG}
+                  alt="MPC leadership"
+                  className="w-[200px] h-[208px] md:w-[220px] md:h-[228px] lg:w-[232px] lg:h-[240px] object-cover"
+                />
+                <div className="w-3 flex-shrink-0 bg-stat" aria-hidden />
+              </div>
+
+              <div className="flex flex-col items-start text-left max-w-[480px]">
+                <h2 className="font-heading font-semibold text-[28px] md:text-[32px] lg:text-[36px] leading-[1.1] tracking-[-0.02em] text-text-inverse">
+                  MPC Leadership
+                </h2>
+                <p className="font-body text-[15px] md:text-[16px] leading-[1.6] text-text-inverse/90 mt-3 max-w-[440px]">
+                  We believe success is achieved through a clear playbook that
+                  emphasizes leading by example, embodying our core values, and
+                  pursuing excellence every day.
+                </p>
+                <div className="mt-5">
+                  <Link
+                    to="/team/"
+                    className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-primary rounded-button font-body text-[14px] font-semibold hover:bg-white/90 transition-colors shadow-subtle">
+                    View our leadership team
+                  </Link>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </section>
 
         {/* Awards & Certifications */}
-        <section className="w-full bg-primary text-text-inverse px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="mb-10">
-            <p className="section-eyebrow mb-3">
-              Awards & Certifications
-            </p>
-            <Heading level={2} color="text-inverse">
+        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Awards & Certifications</p>
+            <Heading level={2}>
               Trusted by partners, certified by standards
             </Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {CERTS.map((c, i) => {
               const Icon = c.icon;
               return (
                 <div
                   key={i}
-                  className="bg-white/5 border border-white/10 rounded-card p-6">
-                  
-                  <Icon className="w-7 h-7 text-divider mb-4" />
-                  <h3 className="font-heading font-semibold text-[18px] mb-2">
+                  className="bg-bg-light rounded-card p-6 border border-transparent hover:border-divider/20 transition-colors">
+                  <Icon className="w-7 h-7 text-cta mb-4" />
+                  <h3 className="font-heading font-semibold text-[18px] text-text-primary mb-2">
                     {c.title}
                   </h3>
-                  <p className="font-body text-[14px] leading-[1.6] opacity-80">
+                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-80">
                     {c.body}
                   </p>
-                </div>);
-
+                </div>
+              );
             })}
           </div>
         </section>
 
-        <LogoCloud
-          caption="65+ organisations trust MPC"
-          items={ALL_CLIENT_LOGOS}
+        <StatOverlayCaseStudy
+          eyebrow="Careers"
+          headline="Where Trust Meets Innovation"
+          description="We believe security empowers possibility. It creates the foundation for a more inclusive, connected, and empowered world. By helping our customers anticipate challenges, protect what matters most, and simplify their business experience, we unlock the potential for innovation. Through your talent, expertise, and insight, today's ideas become tomorrow's breakthroughs, transforming the way people live, work, and connect."
+          imageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80"
+          imageAlt="MPC team collaborating in the office"
+          showStatOverlay={false}
+          imagePosition="right"
+          ctaText="Explore careers"
+          ctaTo="/careers/"
+          ctaVariant="button"
+          headerInContent
           bg="soft"
-          scrollable
         />
-        
 
         <CTABand
-          title="Ready to work with us?"
+          title="Ready to work"
+          titleAccent="with us?"
           body="Wherever you are in your Oracle journey — let's talk."
           ctaText="Contact Our Team"
           ctaTo="/contact/"
-          variant="centered" />
+          variant="split" />
         
       </main>
       <FooterDark />

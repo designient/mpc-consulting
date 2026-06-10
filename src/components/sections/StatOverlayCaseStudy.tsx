@@ -17,14 +17,18 @@ export interface StatOverlayCaseStudyProps {
   metadata?: string;
   imageSrc: string;
   imageAlt?: string;
-  stat: string;
-  statLabel: string;
+  stat?: string;
+  statLabel?: string;
   statContext?: string;
   ctaText?: string;
   ctaTo?: string;
+  ctaVariant?: 'link' | 'button';
+  showStatOverlay?: boolean;
+  imagePosition?: 'left' | 'right';
   bg?: 'white' | 'soft';
   className?: string;
   centerHeader?: boolean;
+  headerInContent?: boolean;
 }
 export function StatOverlayCaseStudy({
   id,
@@ -40,75 +44,118 @@ export function StatOverlayCaseStudy({
   statContext,
   ctaText = 'Read case study',
   ctaTo = '/resources/case-studies/',
+  ctaVariant = 'link',
+  showStatOverlay = true,
+  imagePosition = 'left',
   bg = 'soft',
   className = '',
   centerHeader = false,
+  headerInContent = false,
 }: StatOverlayCaseStudyProps) {
   const bgClass = bg === 'soft' ? 'bg-bg-light' : 'bg-white';
+  const imageFirst = imagePosition === 'left';
+
+  const imageBlock = (
+    <div
+      className={`relative lg:col-span-7 ${imageFirst ? 'lg:order-1' : 'lg:order-2'}`}>
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className="w-full aspect-video object-cover rounded-card shadow-subtle-dark"
+      />
+      {showStatOverlay && stat && statLabel && (
+        <div
+          className={`lg:absolute lg:right-[-40px] lg:bottom-[-60px] mt-6 lg:mt-0 max-w-[360px] shadow-medium-dark p-7 md:p-8 ${statAccentCardClass}`}>
+          <p className={`${statAccentEyebrowClass} mb-2`}>Outcome</p>
+          <div
+            className={`${statAccentNumberClass} text-[56px] md:text-[64px] leading-none`}>
+            {stat}
+          </div>
+          <p className={`${statAccentLabelClass} mt-2`}>{statLabel}</p>
+          {statContext && (
+            <p className="font-body text-[14px] leading-[1.5] text-white/80 mt-3">
+              {statContext}
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
+  const textBlock = (
+    <div
+      className={`lg:col-span-5 flex flex-col items-start ${imageFirst ? 'lg:pl-4 lg:order-2' : 'lg:pr-4 lg:order-1'}`}>
+      {tag && (
+        <span className="inline-block font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider border border-divider/40 rounded-full px-3 py-1 mb-4">
+          {tag}
+        </span>
+      )}
+      {headerInContent ? (
+        <div className="mb-5">
+          {eyebrow && <p className="section-eyebrow mb-3">{eyebrow}</p>}
+          <Heading level={2}>{headline}</Heading>
+        </div>
+      ) : (
+        !centerHeader && (
+          <Heading level={imageFirst ? 3 : 2} className="mb-4">
+            {headline}
+          </Heading>
+        )
+      )}
+      <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80 mb-5">
+        {description}
+      </p>
+      {metadata && (
+        <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-60 mb-6">
+          {metadata}
+        </p>
+      )}
+      {ctaText && ctaTo &&
+        (ctaVariant === 'button' ? (
+          <Link
+            to={ctaTo}
+            className="inline-flex items-center justify-center px-7 py-3.5 bg-cta text-white rounded-button font-body text-[14px] font-semibold hover:opacity-90 transition-opacity shadow-subtle">
+            {ctaText}
+          </Link>
+        ) : (
+          <Link
+            to={ctaTo}
+            className="inline-flex items-center gap-2 font-body text-[15px] font-semibold text-cta hover:text-accent transition-colors group">
+            {ctaText}
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        ))}
+    </div>
+  );
+
   return (
     <section
       id={id}
       className={`w-full ${bgClass} px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px] ${className}`}>
-      
-      <p
-        className={`section-eyebrow mb-3 ${centerHeader ? 'text-center' : ''}`}>
-        {eyebrow}
-      </p>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        {/* Image + overlapping stat card */}
-        <div className="relative lg:col-span-7">
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full aspect-video object-cover rounded-card shadow-subtle-dark" />
-          
-          {/* Stat card — overlaps on desktop, sits below on mobile */}
-          <div
-            className={`lg:absolute lg:right-[-40px] lg:bottom-[-60px] mt-6 lg:mt-0 max-w-[360px] shadow-medium-dark p-7 md:p-8 ${statAccentCardClass}`}>
-            <p className={`${statAccentEyebrowClass} mb-2`}>Outcome</p>
-            <div
-              className={`${statAccentNumberClass} text-[56px] md:text-[64px] leading-none`}>
-              {stat}
-            </div>
-            <p className={`${statAccentLabelClass} mt-2`}>{statLabel}</p>
-            {statContext &&
-            <p className="font-body text-[14px] leading-[1.5] text-white/80 mt-3">
-                {statContext}
-              </p>
-            }
-          </div>
+      {centerHeader ? (
+        <div className="text-center mb-10 max-w-[800px] mx-auto">
+          {eyebrow && <p className="section-eyebrow mb-3">{eyebrow}</p>}
+          <Heading level={2}>{headline}</Heading>
         </div>
+      ) : (
+        !headerInContent && eyebrow && (
+          <p className="section-eyebrow mb-3">{eyebrow}</p>
+        )
+      )}
 
-        {/* Right-side narrative */}
-        <div className="lg:col-span-5 lg:pl-4">
-          {tag &&
-          <span className="inline-block font-body text-[14px] uppercase tracking-[0.8px] font-medium text-divider border border-divider/40 rounded-full px-3 py-1 mb-4">
-              {tag}
-            </span>
-          }
-          <Heading level={3} className="mb-4">
-            {headline}
-          </Heading>
-          <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80 mb-5">
-            {description}
-          </p>
-          {metadata &&
-          <p className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-60 mb-6">
-              {metadata}
-            </p>
-          }
-          {ctaText && ctaTo &&
-          <Link
-            to={ctaTo}
-            className="inline-flex items-center gap-2 font-body text-[15px] font-semibold text-cta hover:text-accent transition-colors group">
-            
-              {ctaText}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          }
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {imageFirst ? (
+          <>
+            {imageBlock}
+            {textBlock}
+          </>
+        ) : (
+          <>
+            {textBlock}
+            {imageBlock}
+          </>
+        )}
       </div>
-    </section>);
-
+    </section>
+  );
 }
