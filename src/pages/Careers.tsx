@@ -445,9 +445,11 @@ export function Careers() {
         {/* Culture */}
         <section className="w-full bg-white px-4 pt-14 md:px-10 lg:px-[60px]">
           <div className="max-w-[1280px] mx-auto text-center md:text-left">
-            <p className="section-eyebrow mb-3">
-              Culture & values
-            </p>
+            <Link
+              to="/values/"
+              className="section-eyebrow mb-3 inline-block hover:text-cta transition-colors">
+              Culture &amp; values
+            </Link>
           </div>
         </section>
         <ContentGrid3Col sectionTitle="Our culture" items={CULTURE_ITEMS} />

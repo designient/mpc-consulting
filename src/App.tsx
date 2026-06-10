@@ -16,6 +16,7 @@ import { Industries } from './pages/Industries';
 import { Resources } from './pages/Resources';
 import { Careers } from './pages/Careers';
 import { Leadership } from './pages/Leadership';
+import { Values } from './pages/Values';
 import { PageStub } from './components/layout/PageStub';
 export function App() {
   return (
@@ -26,6 +27,7 @@ export function App() {
         {/* Company */}
         <Route path="/about/" element={<About />} />
         <Route path="/leadership/" element={<Leadership />} />
+        <Route path="/values/" element={<Values />} />
         <Route path="/team/" element={<Navigate to="/leadership/" replace />} />
         
         <Route
