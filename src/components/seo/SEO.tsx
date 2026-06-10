@@ -163,7 +163,7 @@ export const ORGANIZATION_SCHEMA = {
   '@type': 'Organization',
   name: 'MPC Cloud Consulting',
   url: ORIGIN,
-  logo: `${ORIGIN}/logo.png`,
+  logo: `${ORIGIN}/mpc-main-logo.svg`,
   description:
     'Oracle Cloud and AI transformation partner across India, UAE, Singapore, Australia, and the UK.',
   foundingDate: '2019',
