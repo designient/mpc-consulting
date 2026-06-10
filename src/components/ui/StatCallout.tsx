@@ -6,9 +6,9 @@ export interface StatCalloutProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;
 }
 
-/** Shared accent stat card: #0369a1 bg, white labels and values */
+/** Shared accent stat card: brand blue bg, white labels and values */
 export const statAccentCardClass =
-  'bg-[#0369a1] text-white rounded-callout shadow-subtle p-8';
+  'bg-cta text-white rounded-callout shadow-subtle p-8';
 export const statAccentNumberClass =
   'font-heading font-semibold text-[48px] md:text-[64px] leading-tight text-white';
 export const statAccentLabelClass =

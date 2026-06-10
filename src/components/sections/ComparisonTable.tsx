@@ -67,7 +67,7 @@ export function ComparisonTable({
                       style={
                       isFirst ?
                       {
-                        background: bg === 'soft' ? '#F1F1F1' : '#FFFFFF'
+                        background: bg === 'soft' ? '#f1f1f1' : '#ffffff'
                       } :
                       undefined
                       }>
@@ -84,7 +84,7 @@ export function ComparisonTable({
                   <td
                   className="p-5 font-body text-[15px] text-text-primary font-medium sticky left-0"
                   style={{
-                    background: bg === 'soft' ? '#F1F1F1' : '#FFFFFF'
+                    background: bg === 'soft' ? '#f1f1f1' : '#ffffff'
                   }}>
                   
                     {row.criterion}

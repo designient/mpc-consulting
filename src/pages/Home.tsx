@@ -457,7 +457,7 @@ export function Home() {
             <button
               key={key}
               onClick={() => setLogoTab(key)}
-              className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${logoTab === key ? 'bg-[#0369a1] text-text-inverse' : 'bg-bg-light text-text-primary hover:bg-divider/10'}`}>
+              className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${logoTab === key ? 'bg-cta text-text-inverse' : 'bg-bg-light text-text-primary hover:bg-divider/10'}`}>
               
                 {label}
               </button>

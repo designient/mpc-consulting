@@ -7,7 +7,7 @@ export interface ImageTextBlockProps {
   heading: string;
   body: React.ReactNode;
   children?: React.ReactNode;
-  /** Rounded corners + thin #0369a1 border on the image */
+  /** Rounded corners + thin brand-blue border on the image */
   borderedImage?: boolean;
 }
 
@@ -27,7 +27,7 @@ export function ImageTextBlock({
       <div
         className={`w-full md:w-[45%] ${isImageLeft ? 'md:order-1' : 'md:order-2'}`}>
         {borderedImage ? (
-          <div className="rounded-card border border-[#0369a1] bg-white p-3 md:p-4 shadow-subtle">
+          <div className="rounded-card border border-cta bg-white p-3 md:p-4 shadow-subtle">
             <img
               src={imageSrc}
               alt={imageAlt}

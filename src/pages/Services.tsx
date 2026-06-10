@@ -269,7 +269,7 @@ export function Services() {
           </p>
           <div className="mt-8">
             <Link to="/contact/">
-              <button className="bg-[#0369a1] hover:opacity-90 transition-opacity text-text-inverse rounded-button px-9 py-4 font-body font-semibold text-[16px] shadow-subtle">
+              <button className="bg-cta hover:opacity-90 transition-opacity text-text-inverse rounded-button px-9 py-4 font-body font-semibold text-[16px] shadow-subtle">
                 Talk to a Specialist
               </button>
             </Link>
@@ -330,7 +330,7 @@ export function Services() {
             <button
               key={k}
               onClick={() => setTab(k)}
-              className={`px-4 py-2 rounded-full font-body text-[14px] font-medium transition-colors ${tab === k ? 'bg-[#0369a1] text-text-inverse' : 'bg-white text-text-primary border border-black/10 hover:border-divider'}`}>
+              className={`px-4 py-2 rounded-full font-body text-[14px] font-medium transition-colors ${tab === k ? 'bg-cta text-text-inverse' : 'bg-white text-text-primary border border-black/10 hover:border-divider'}`}>
               
                 {k}
               </button>

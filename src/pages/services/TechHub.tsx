@@ -258,7 +258,7 @@ export function TechHub() {
             {FOCUS.map((item) => (
               <article
                 key={item.title}
-                className="flex flex-col h-full rounded-card border border-[#0369a1] bg-white p-5 md:p-6">
+                className="flex flex-col h-full rounded-card border border-cta bg-white p-5 md:p-6">
                 <img
                   src={item.imageSrc}
                   alt={item.imageAlt}
@@ -272,7 +272,7 @@ export function TechHub() {
                 </p>
                 <Link
                   to="/contact/"
-                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-[#0369a1] border-b-2 border-[#0369a1] pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-cta border-b-2 border-cta pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
                   Explore
                   <ArrowRight className="w-3.5 h-3.5" aria-hidden />
                 </Link>
@@ -285,7 +285,7 @@ export function TechHub() {
           id="extensions"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="w-full">
-            <div className="relative overflow-hidden rounded-2xl md:rounded-[24px] border border-[#0369A1] bg-white min-h-[300px] md:min-h-[360px]">
+            <div className="relative overflow-hidden rounded-2xl md:rounded-[24px] border border-cta bg-white min-h-[300px] md:min-h-[360px]">
               <img
                 src="/pattern-bg.png"
                 alt=""
@@ -314,7 +314,7 @@ export function TechHub() {
                 </div>
                 <Link
                   to="/contact/"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0369A1] text-white rounded-full font-body text-[15px] font-medium hover:opacity-90 transition-opacity w-fit group">
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-cta text-white rounded-full font-body text-[15px] font-medium hover:opacity-90 transition-opacity w-fit group">
                   Start a Conversation
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>

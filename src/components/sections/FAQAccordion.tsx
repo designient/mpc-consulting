@@ -44,7 +44,7 @@ export function FAQAccordion({
                 {item.q}
               </span>
               <span
-              className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#0369a1] text-white rotate-45' : 'bg-bg-light text-text-primary'}`}>
+              className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-cta text-white rotate-45' : 'bg-bg-light text-text-primary'}`}>
               
                 <Plus className="w-4 h-4" />
               </span>

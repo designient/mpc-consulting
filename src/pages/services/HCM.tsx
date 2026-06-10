@@ -427,7 +427,7 @@ export function HCM() {
             {MODULES.map((mod) => (
               <article
                 key={mod.title}
-                className="flex flex-col h-full rounded-card border border-[#0369a1] bg-white p-5 md:p-6">
+                className="flex flex-col h-full rounded-card border border-cta bg-white p-5 md:p-6">
                 <img
                   src={mod.imageSrc}
                   alt={mod.imageAlt}
@@ -441,7 +441,7 @@ export function HCM() {
                 </p>
                 <Link
                   to="/contact/"
-                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-[#0369a1] border-b-2 border-[#0369a1] pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
+                  className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-cta border-b-2 border-cta pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
                   Explore
                   <ArrowRight className="w-3.5 h-3.5" aria-hidden />
                 </Link>

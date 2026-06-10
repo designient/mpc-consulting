@@ -154,7 +154,7 @@ export function LogoCloud({
 
           <div
             ref={trackRef}
-            className="overflow-x-auto scroll-smooth overscroll-x-contain px-2 md:px-12 pb-2 [scrollbar-width:thin] [scrollbar-color:#0369a1_#e8e8e8]"
+            className="overflow-x-auto scroll-smooth overscroll-x-contain px-2 md:px-12 pb-2 [scrollbar-width:thin] [scrollbar-color:#0955B4_#f1f1f1]"
             aria-label="Client logos"
             tabIndex={0}>
             <div className="flex items-center gap-10 md:gap-14 w-max min-w-full py-2">

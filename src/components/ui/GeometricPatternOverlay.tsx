@@ -14,7 +14,7 @@ export function GeometricPatternOverlay({
         className="absolute inset-0 opacity-70"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 85% 50%, rgba(56, 189, 248, 0.18), transparent 55%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(196, 53, 115, 0.08), transparent 50%)'
+            'radial-gradient(ellipse 80% 60% at 85% 50%, rgba(9, 85, 180, 0.18), transparent 55%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(156, 23, 109, 0.08), transparent 50%)'
         }}
       />
       <svg
@@ -68,11 +68,11 @@ export function GeometricPatternOverlay({
           <circle cx="1040" cy="140" r="3" />
           <circle cx="1180" cy="100" r="3" />
         </g>
-        <g fill="#38BDF8" fillOpacity="0.35">
+        <g fill="#5A9AE8" fillOpacity="0.35">
           <circle cx="1320" cy="180" r="4" />
           <circle cx="1280" cy="320" r="2.5" />
         </g>
-        <g fill="#c43573" fillOpacity="0.25">
+        <g fill="#9c176d" fillOpacity="0.25">
           <circle cx="200" cy="120" r="3" />
           <circle cx="900" cy="80" r="2.5" />
         </g>

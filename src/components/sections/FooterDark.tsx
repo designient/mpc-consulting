@@ -79,7 +79,7 @@ export function FooterDark() {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#0369a1] text-text-inverse">
+    <footer className="relative w-full overflow-hidden bg-cta text-text-inverse">
       <FooterWaveBackground />
 
       <div className="relative z-10">

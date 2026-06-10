@@ -64,9 +64,9 @@ function svgFor(name) {
   const mark = name.charAt(0);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="96" viewBox="0 0 240 96">
   <rect width="240" height="96" fill="#ffffff"/>
-  <circle cx="36" cy="48" r="22" fill="#0369a1" opacity="0.12"/>
-  <text x="36" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0369a1">${mark}</text>
-  <text x="128" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#282828">${name}</text>
+  <circle cx="36" cy="48" r="22" fill="#0955B4" opacity="0.12"/>
+  <text x="36" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0955B4">${mark}</text>
+  <text x="128" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#011c27">${name}</text>
 </svg>`;
 }
 

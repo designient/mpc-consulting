@@ -13,7 +13,7 @@ export interface ProcessStepsProps {
   variant?: 'light' | 'dark';
   id?: string;
   centerHeader?: boolean;
-  /** Color step titles with brand accent (#c43573) */
+  /** Color step titles with brand accent pink */
   accentStepTitles?: boolean;
 }
 export function ProcessSteps({
