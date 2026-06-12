@@ -31,21 +31,6 @@ export function App() {
         <Route path="/team/" element={<Navigate to="/leadership/" replace />} />
         
         <Route
-          path="/partners/"
-          element={
-          <PageStub
-            title="Our Technology Partners"
-            description="MPC partners with Oracle, leading cloud platforms, and specialist technology providers to deliver end-to-end enterprise solutions."
-            canonicalPath="/partners/"
-            breadcrumb={[
-            {
-              label: 'Partners'
-            }]
-            } />
-
-          } />
-        
-        <Route
           path="/news/"
           element={
           <PageStub

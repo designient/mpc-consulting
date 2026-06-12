@@ -1,11 +1,8 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
-import { StatCalloutGrid } from '../components/sections/StatCalloutGrid';
-import { ContentGrid3Col } from '../components/sections/ContentGrid3Col';
-import { ImageTextBlock } from '../components/sections/ImageTextBlock';
 import { ProcessSteps } from '../components/sections/ProcessSteps';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
 import {
@@ -26,32 +23,6 @@ const HERO_BG =
 
 const MISSION_INTRO =
   'Join a team of 700+ Oracle Cloud specialists working across India, UAE, Singapore, Australia, and the UK. We build the kind of place where senior people stay because the work is meaningful, the people are sharp, and the path forward is visible.';
-
-const WHY_BULLETS = [
-  'Meaningful work on complex enterprise transformations — not slide decks',
-  'Real ownership and direct exposure to client leadership early in your career',
-  'Deep Oracle Cloud specialisation as a long-term, durable career bet',
-  'Global teams collaborating across five regions, one operating model',
-  'Structured growth paths from consultant to partner — with promotions you can see coming'
-];
-
-const CAREER_PATHWAYS = [
-  {
-    title: 'Experienced professionals',
-    desc: 'Bring your expertise to MPC and work with global leaders on Oracle Cloud strategy, delivery, and transformation.',
-    filterId: 'consulting'
-  },
-  {
-    title: 'Engineering & AI',
-    desc: 'Build extensions, integrations, and AI solutions on Oracle Cloud — from DevOps to MPC Tech Hub.',
-    filterId: 'engineering'
-  },
-  {
-    title: 'Operations & growth',
-    desc: 'Shape how we scale — engagement management, sales, and people operations across five regions.',
-    filterId: 'operations'
-  }
-];
 
 const CULTURE_ITEMS = [
   {
@@ -77,56 +48,39 @@ const CULTURE_ITEMS = [
   }
 ];
 
-const TEAM_CARDS = [
+const LIFE_AT_MPC = [
   {
-    id: 'consulting',
-    title: 'Consulting',
-    desc: 'Oracle HCM, ERP, and transformation delivery for enterprise clients.'
+    title: 'Our Culture Framework',
+    description:
+      'Our values, leadership principles, and ways of working — the foundation for how we show up for clients and each other.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'MPC team collaborating on culture and values',
   },
   {
-    id: 'engineering',
-    title: 'Engineering',
-    desc: 'Java, DevOps, integrations, and AI engineering on Oracle Cloud.'
+    title: 'Employee Engagement',
+    description:
+      'Fostering an inclusive culture where employees stay, grow, and thrive across five global regions.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'MPC employees engaged in team discussion',
   },
   {
-    id: 'design',
-    title: 'Design',
-    desc: 'Product and experience design for client and internal platforms.'
+    title: 'Career Development',
+    description:
+      'Investing in our people through structured learning, mentorship, and development programmes at every stage.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'MPC team members learning together',
   },
   {
-    id: 'operations',
-    title: 'Operations',
-    desc: 'Engagement management, delivery excellence, and people operations.'
+    title: 'Corporate Social Responsibility',
+    description:
+      'Supporting communities and causes that are meaningful to our team members around the world.',
+    imageSrc:
+      'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'MPC team community initiative',
   },
-  {
-    id: 'sales',
-    title: 'Sales',
-    desc: 'Client relationships and growth across industries and regions.'
-  }
-];
-
-const LIFE_IMAGES = [
-  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80'
-];
-
-const DISCOVER_MORE = [
-  {
-    title: 'Find a role',
-    desc: 'Browse open positions across consulting, engineering, design, and operations.',
-    to: '#roles'
-  },
-  {
-    title: 'Talk to our team',
-    desc: 'Questions about culture, locations, or the hiring process? We’re happy to help.',
-    to: '/contact/'
-  },
-  {
-    title: 'Careers FAQ',
-    desc: 'Remote work, timelines, compensation, relocation, and more.',
-    to: '#faq'
-  }
 ];
 
 const ROLE_FILTERS = [
@@ -321,11 +275,6 @@ export function Careers() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchValue, setSearchValue] = useState('');
 
-  const goToRolesWithFilter = useCallback((filterId: string) => {
-    setActiveFilter(filterId);
-    requestAnimationFrame(() => scrollToRoles());
-  }, []);
-
   const filteredRoles = useMemo(() => {
     return ROLES.filter((r) => {
       const teamMatch = activeFilter === 'all' || r.teamId === activeFilter;
@@ -355,60 +304,94 @@ export function Careers() {
       <StickyNav />
 
       <main>
-        {/* Hero — BCG-style: compact height (matches home), text left, image visible right */}
-        <section className="relative w-full min-h-[min(50svh,520px)] max-h-[520px] overflow-hidden flex items-center">
+        {/* Hero */}
+        <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
           <img
             src={HERO_BG}
             alt=""
             aria-hidden
-            className="absolute inset-0 w-full h-full object-cover object-center lg:object-[75%_center]"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.97] via-primary/80 via-[40%] to-primary/25 to-[100%]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent" />
+          <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
-          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-10 md:py-12 lg:py-14 min-h-[inherit] flex items-center text-text-inverse">
-            <div className="w-full lg:max-w-[58%] xl:max-w-[52%] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider-bright" />
+          <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
+            <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
+                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
                 Careers
               </span>
 
               <h1 className="type-h1 text-text-inverse">
-                <span className="block">MPC Careers</span>
-                <span className="block text-stat font-medium mt-1 md:mt-2">
-                  is where we begin.
+                Build your career at{' '}
+                <span className="font-body italic font-normal text-text-inverse">
+                  MPC
                 </span>
               </h1>
 
-              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[520px]">
-                700+ specialists. 5 regions. One unified team building the kind
-                of consultancy senior people choose to stay at.
+              <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
+                700+ Oracle Cloud specialists across India, UAE, Singapore,
+                Australia, and the UK — doing meaningful work with people you
+                want to learn from.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mt-6 md:mt-8">
+              <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
                 <a
                   href="#roles"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
                   See open roles
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
-                <Link
-                  to="/contact/"
-                  className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-white border border-white/30 rounded-full font-body text-[15px] font-medium hover:border-white/60 hover:bg-white/10 transition-colors">
-                  Talk to our team
-                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mission */}
-        <section className="w-full bg-white px-4 py-16 md:px-10 md:py-20 lg:px-[60px] lg:py-[80px]">
+        {/* Available Jobs */}
+        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="max-w-[1280px] mx-auto">
+            <Heading level={2} className="mb-8 md:mb-10">
+              Available Jobs
+            </Heading>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+              {ROLES.slice(0, 3).map((role) => (
+                <article
+                  key={role.id}
+                  className="flex flex-col h-full rounded-card bg-bg-light p-6 md:p-7 border border-transparent hover:border-divider/20 transition-colors">
+                  <h3 className="type-h3 text-[18px] md:text-[20px] text-text-primary mb-3 leading-snug">
+                    {role.title}
+                  </h3>
+                  <p className="inline-flex items-center gap-1.5 font-body text-[14px] text-stat mb-3">
+                    <MapPin className="w-4 h-4 shrink-0" aria-hidden />
+                    {role.location}
+                  </p>
+                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 flex-grow">
+                    {role.blurb}
+                  </p>
+                  <a
+                    href="#roles"
+                    className="inline-flex items-center justify-center mt-6 px-6 py-3 bg-cta text-white rounded-button font-body text-[14px] font-semibold hover:opacity-90 transition-opacity w-fit">
+                    Apply
+                  </a>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 md:mt-10">
+              <a
+                href="#roles"
+                className="inline-flex items-center gap-2 font-body text-[15px] font-semibold text-cta hover:text-stat transition-colors group">
+                View all jobs
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Careers at MPC */}
+        <section className="w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[800px] mx-auto text-center">
-            <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider mb-4">
-              Careers at MPC
-            </p>
+            <p className="section-eyebrow mb-3">Careers at MPC</p>
             <Heading level={2} className="mb-6">
               Build work that matters
             </Heading>
@@ -418,75 +401,41 @@ export function Careers() {
           </div>
         </section>
 
-        {/* Pathway cards */}
-        <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {CAREER_PATHWAYS.map((path) => (
-              <button
-                key={path.title}
-                type="button"
-                onClick={() => goToRolesWithFilter(path.filterId)}
-                className="group flex flex-col text-left rounded-card border border-black/8 bg-white hover:border-divider hover:shadow-subtle transition-all p-6 md:p-7">
-                <h3 className="type-h3 text-[20px] leading-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
-                  {path.title}
-                </h3>
-                <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-grow">
-                  {path.desc}
-                </p>
-                <span className="inline-flex items-center gap-1.5 font-body text-[14px] font-semibold text-cta mt-auto">
-                  View roles
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* Culture */}
-        <section className="w-full bg-white px-4 pt-14 md:px-10 lg:px-[60px]">
-          <div className="max-w-[1280px] mx-auto text-center md:text-left">
+        {/* Our culture */}
+        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
             <Link
               to="/values/"
               className="section-eyebrow mb-3 inline-block hover:text-cta transition-colors">
-              Culture &amp; values
+              Culture
             </Link>
-          </div>
-        </section>
-        <ContentGrid3Col sectionTitle="Our culture" items={CULTURE_ITEMS} />
-
-        {/* Find your team */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[1280px] mx-auto">
-            <p className="section-eyebrow mb-3">
-              Teams
-            </p>
-            <Heading level={2} className="mb-4 max-w-2xl">
-              Find your team
+            <Heading level={2} className="mb-4">
+              Our culture
             </Heading>
-            <p className="font-body text-[17px] leading-[1.6] max-w-[700px] text-text-primary opacity-80 mb-10">
-              Discover where your skills and ambitions fit best. Select a team
-              to see matching open roles.
+            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
+              Three qualities that define how we work together — and how we
+              show up for clients every day.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-              {TEAM_CARDS.map((team) => (
-                <button
-                  key={team.id}
-                  type="button"
-                  onClick={() => goToRolesWithFilter(team.id)}
-                  className="group text-left rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6">
-                  <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
-                    {team.title}
-                  </h3>
-                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4">
-                    {team.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-body text-[13px] font-semibold text-cta">
-                    Explore roles
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </button>
-              ))}
-            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-[1280px] mx-auto">
+            {CULTURE_ITEMS.map((item) => (
+              <article
+                key={item.title}
+                className="flex flex-col h-full rounded-card border border-cta bg-white p-5 md:p-6">
+                <img
+                  src={item.imageSrc}
+                  alt=""
+                  className="w-full aspect-[4/3] object-cover rounded-[10px] md:rounded-[12px] mb-5 md:mb-6"
+                />
+                <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80">
+                  {item.description}
+                </p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -541,8 +490,8 @@ export function Careers() {
                       {role.blurb}
                     </p>
                     <div className="flex items-center justify-between pt-4 border-t border-text-primary/10">
-                      <span className="inline-flex items-center gap-1.5 font-body text-[13px] text-text-primary opacity-70">
-                        <MapPin className="w-3.5 h-3.5" />
+                      <span className="inline-flex items-center gap-1.5 font-body text-[13px] text-stat">
+                        <MapPin className="w-3.5 h-3.5" aria-hidden />
                         {role.location}
                       </span>
                       <span className="inline-flex items-center gap-1.5 font-body text-[14px] font-medium text-cta">
@@ -590,76 +539,63 @@ export function Careers() {
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px]">
-          <div className="max-w-[1280px] mx-auto text-center mb-8">
-            <Heading level={2}>Life at MPC in numbers</Heading>
+        {/* Life at MPC */}
+        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+          <div className="text-center mb-10 max-w-[800px] mx-auto">
+            <p className="section-eyebrow mb-3">Life at MPC</p>
+            <Heading level={2}>Get a glimpse into life at MPC</Heading>
           </div>
-          <StatCalloutGrid
-            stats={[
-              { number: '700+', label: 'Team members' },
-              { number: '5', label: 'Regions, one team' },
-              { number: '92%', label: 'Annual retention' },
-              { number: '15+', label: 'Yrs avg senior tenure' }
-            ]}
-          />
-        </section>
 
-        {/* Life gallery */}
-        <section className="w-full bg-bg-light px-4 py-16 md:px-10 md:py-20 lg:px-[60px]">
-          <div className="max-w-[1280px] mx-auto">
-            <p className="section-eyebrow mb-3">
-              Life at MPC
-            </p>
-            <Heading level={2} className="mb-10 max-w-2xl">
-              Get a glimpse into life at MPC
-            </Heading>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              {LIFE_IMAGES.map((src, i) => (
-                <div
-                  key={i}
-                  className="w-full aspect-[4/3] overflow-hidden rounded-card">
-                  <img
-                    src={src}
-                    alt={`MPC team moment ${i + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-[1280px] mx-auto">
+            {LIFE_AT_MPC.map((item) => (
+              <article
+                key={item.title}
+                className="flex flex-col rounded-card border border-cta bg-white overflow-hidden">
+                <img
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="p-5 md:p-6 lg:p-7">
+                  <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80">
+                    {item.description}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </article>
+            ))}
           </div>
         </section>
-
-        <ImageTextBlock
-          imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
-          imageAlt="MPC team at work"
-          heading="A consultancy senior people choose to stay at"
-          orientation="image-left"
-          body={
-            <>
-              <p className="mb-5 font-body text-[16px] leading-[1.7] text-text-primary opacity-85">
-                What you can expect from MPC:
-              </p>
-              <ul className="space-y-3">
-                {WHY_BULLETS.map((b, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-stat flex-shrink-0" />
-                    <span className="text-[15px] leading-[1.6] text-text-primary opacity-85">
-                      {b}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          }
-        />
 
         <TestimonialGrid
-          eyebrow="Life at MPC"
           title="In their own words"
           items={TESTIMONIALS}
           variant="light"
+          carousel
         />
+
+        {/* Life at MPC stats */}
+        <section className="w-full bg-white px-4 py-10 md:px-10 md:py-12 lg:px-[60px]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-[1200px] mx-auto">
+            {[
+              { n: '700+', l: 'Team members' },
+              { n: '5', l: 'Regions, one team' },
+              { n: '92%', l: 'Annual retention' },
+              { n: '15+', l: 'Yrs avg senior tenure' },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="font-heading font-semibold text-stat text-[44px] md:text-[56px] leading-none mb-2">
+                  {s.n}
+                </div>
+                <div className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-80">
+                  {s.l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <ProcessSteps
           eyebrow="How we hire"
@@ -668,55 +604,6 @@ export function Careers() {
           steps={PROCESS}
           variant="light"
         />
-
-        {/* Discover more */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[1280px] mx-auto">
-            <p className="section-eyebrow mb-3">
-              Next steps
-            </p>
-            <Heading level={2} className="mb-10">
-              Discover more
-            </Heading>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-              {DISCOVER_MORE.map((item) =>
-                item.to.startsWith('/') ? (
-                  <Link
-                    key={item.title}
-                    to={item.to}
-                    className="group flex flex-col rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6 md:p-7">
-                    <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4 flex-grow">
-                      {item.desc}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold text-cta">
-                      Learn more
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </Link>
-                ) : (
-                  <a
-                    key={item.title}
-                    href={item.to}
-                    className="group flex flex-col rounded-card border border-black/8 bg-bg-light hover:border-divider hover:bg-white hover:shadow-subtle transition-all p-6 md:p-7">
-                    <h3 className="type-h3 text-[18px] text-text-primary mb-2 group-hover:text-stat transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-4 flex-grow">
-                      {item.desc}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold text-cta">
-                      Learn more
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </a>
-                )
-              )}
-            </div>
-          </div>
-        </section>
 
         <div id="faq" className="scroll-mt-24">
           <FAQAccordion
@@ -729,10 +616,12 @@ export function Careers() {
         </div>
 
         <CTABand
-          title="Don’t see a role that fits? We still want to hear from you."
+          title="Don’t see a role that fits?"
+          titleAccent={'We still want to hear from\u00A0you.'}
           body="If you’re excited about Oracle Cloud, AI, or enterprise transformation, send us your CV. We keep great candidates in mind as roles open up."
           ctaText="Send us your CV"
           ctaTo="mailto:careers@mpccloudconsulting.com"
+          variant="split"
         />
       </main>
 

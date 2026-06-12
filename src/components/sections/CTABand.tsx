@@ -38,16 +38,15 @@ export function CTABand({
     return (
       <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
         <div className="max-w-[1280px] mx-auto rounded-2xl md:rounded-[28px] bg-stat px-8 py-10 md:px-12 md:py-12 lg:px-14 lg:py-14 xl:px-16 xl:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
-            <h2 className="font-heading font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.08] tracking-[-0.02em] text-white text-left">
-              {title}
-              {titleAccent && (
-                <>
-                  <br />
-                  {titleAccent}
-                </>
-              )}
-            </h2>
+          <div className="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 xl:gap-16 items-stretch">
+            <div className="min-w-0 xl:min-w-[30rem]">
+              <h2 className="font-heading font-semibold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[38px] xl:text-[38px] 2xl:text-[42px] leading-[1.12] tracking-[-0.02em] text-white text-left">
+                <span className="block xl:whitespace-nowrap">{title}</span>
+                {titleAccent && (
+                  <span className="block xl:whitespace-nowrap">{titleAccent}</span>
+                )}
+              </h2>
+            </div>
 
             <div className="flex flex-col justify-between gap-8 lg:gap-10">
               {body && (
