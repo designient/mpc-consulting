@@ -14,12 +14,12 @@ import { CTABand } from '../components/sections/CTABand';
 import { Heading } from '../components/ui/Heading';
 import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { buildBreadcrumbSchema } from '../components/sections/Breadcrumb';
-import { GeometricPatternOverlay } from '../components/ui/GeometricPatternOverlay';
-
 const BREADCRUMB = [{ label: 'Careers' }];
 
 const HERO_BG =
   'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=2400&q=80';
+
+const CAREER_PATH_BG = '/career-path-bg.png';
 
 const MISSION_INTRO =
   'Join a team of 700+ Oracle Cloud specialists working across India, UAE, Singapore, Australia, and the UK. We build the kind of place where senior people stay because the work is meaningful, the people are sharp, and the path forward is visible.';
@@ -507,35 +507,32 @@ export function Careers() {
         </section>
 
         {/* Tech Hub spotlight */}
-        <section className="relative w-full overflow-hidden bg-primary text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
-          <GeometricPatternOverlay />
-          <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-divider-bright mb-3">
-                Innovation
-              </p>
-              <Heading level={2} color="text-inverse" className="mb-5">
-                Discover career paths in AI and innovation
-              </Heading>
-              <p className="font-body text-[16px] md:text-[17px] leading-[1.7] opacity-90 mb-8 max-w-[540px]">
-                MPC Tech Hub is where we build custom AI agents, Oracle
-                extensions, and accelerators that turn cloud investments into
-                competitive advantage.
-              </p>
-              <Link
-                to="/services/mpc-tech-hub/"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary rounded-full font-body text-[14px] font-medium hover:bg-white/90 transition-colors group">
-                Explore MPC Tech Hub
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </div>
-            <div className="aspect-[16/10] overflow-hidden rounded-card">
-              <img
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80"
-                alt="MPC Tech Hub — AI and innovation"
-                className="w-full h-full object-cover"
-              />
-            </div>
+        <section className="relative w-full overflow-hidden text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
+          <img
+            src={CAREER_PATH_BG}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div aria-hidden className="absolute inset-0 bg-cta/55" />
+          <div className="relative z-10 max-w-[1280px] mx-auto">
+            <p className="font-body text-[14px] uppercase tracking-[0.8px] font-semibold text-text-inverse mb-3">
+              Innovation
+            </p>
+            <Heading level={2} color="text-inverse" className="mb-5">
+              Discover career paths in AI and innovation
+            </Heading>
+            <p className="font-body text-[16px] md:text-[17px] leading-[1.7] opacity-90 mb-8 max-w-[540px]">
+              MPC Tech Hub is where we build custom AI agents, Oracle
+              extensions, and accelerators that turn cloud investments into
+              competitive advantage.
+            </p>
+            <Link
+              to="/services/mpc-tech-hub/"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary rounded-full font-body text-[14px] font-medium hover:bg-white/90 transition-colors group">
+              Explore MPC Tech Hub
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </section>
 
