@@ -140,7 +140,7 @@ const ROLES: Role[] = [
   },
   {
     id: 'r5',
-    title: 'AI Engineer — MPC Tech Hub',
+    title: 'AI Engineer — AI CoE',
     team: 'Engineering',
     teamId: 'engineering',
     location: 'Hyderabad',
@@ -506,7 +506,7 @@ export function Careers() {
           </div>
         </section>
 
-        {/* Tech Hub spotlight */}
+        {/* AI CoE spotlight */}
         <section className="relative w-full overflow-hidden text-text-inverse px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <img
             src={CAREER_PATH_BG}
@@ -523,14 +523,14 @@ export function Careers() {
               Discover career paths in AI and innovation
             </Heading>
             <p className="font-body text-[16px] md:text-[17px] leading-[1.7] opacity-90 mb-8 max-w-[540px]">
-              MPC Tech Hub is where we build custom AI agents, Oracle
-              extensions, and accelerators that turn cloud investments into
-              competitive advantage.
+              MPC's AI CoE is where we deliver AI enablement, custom agents,
+              Oracle extensions, and accelerators that turn cloud investments
+              into competitive advantage.
             </p>
             <Link
-              to="/services/mpc-tech-hub/"
+              to="/services/ai-coe/"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary rounded-full font-body text-[14px] font-medium hover:bg-white/90 transition-colors group">
-              Explore MPC Tech Hub
+              Explore AI CoE
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>

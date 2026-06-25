@@ -28,7 +28,8 @@ const FORMAT_ITEMS = [
   title: 'Case Studies',
   description:
   'Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from 87+ engagements across five regions.',
-  ctaText: 'Explore case studies'
+  ctaText: 'Explore case studies',
+  href: '/resources/case-studies/'
 },
 {
   imageSrc:

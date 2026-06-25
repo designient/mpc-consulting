@@ -44,37 +44,37 @@ const SERVICES = [
     icon: Database,
     title: 'Oracle (Fusion & EBS)',
     desc: 'HCM, ERP, SCM, Unifier, EPM, and technology services across Fusion and EBS.',
-    to: '/services/',
+    to: '/services/oracle-fusion-ebs/',
   },
   {
     icon: Sparkles,
     title: 'AI CoE',
     desc: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise.',
-    to: '/services/mpc-tech-hub/',
+    to: '/services/ai-coe/',
   },
   {
     icon: Cloud,
     title: 'Cloud & Database',
     desc: 'Application development, database migration, and cloud management at scale.',
-    to: '/services/devops/',
+    to: '/services/cloud-database/',
   },
   {
     icon: BarChart3,
     title: 'CX & Analytics',
     desc: 'Power BI, Salesforce, and ServiceNow for customer experience and insight.',
-    to: '/services/',
+    to: '/services/cx-analytics/',
   },
   {
     icon: Shield,
     title: 'Security & Zero Trust',
     desc: 'Cybersecurity strategy, application and cloud security, and managed operations.',
-    to: '/services/',
+    to: '/services/security-zero-trust/',
   },
   {
     icon: Landmark,
     title: 'Treasury Management',
     desc: 'IBS Fintech and end-to-end treasury management capabilities.',
-    to: '/services/',
+    to: '/services/treasury-management/',
   },
 ];
 
@@ -173,7 +173,7 @@ const TESTIMONIALS = [
 const FAQS = [
 {
   q: 'What Oracle Cloud services does MPC specialise in?',
-  a: 'MPC delivers end-to-end Oracle Cloud services including HCM, ERP (Fusion and EBS), Java Technologies, DevOps, Business Process Consulting, Health Check as a Service (HCaaS), and Adoption as a Service (AaaS). We also build custom AI solutions and Oracle extensions through our MPC Tech Hub.'
+  a: 'MPC delivers end-to-end Oracle Cloud services including HCM, ERP (Fusion and EBS), Java Technologies, DevOps, Business Process Consulting, Health Check as a Service (HCaaS), and Adoption as a Service (AaaS). We also deliver AI enablement, custom agents, and generative AI through our AI CoE.'
 },
 {
   q: 'Which countries does MPC operate in?',

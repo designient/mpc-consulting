@@ -4,14 +4,12 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 
 const SERVICES = [
-  { label: 'HCM', to: '/services/hcm/' },
-  { label: 'ERP (Oracle Cloud)', to: '/services/erp-oracle-cloud/' },
-  { label: 'Java Technologies', to: '/services/java-technologies/' },
-  { label: 'DevOps Services', to: '/services/devops/' },
-  { label: 'Business Process Consulting', to: '/services/business-process-consulting/' },
-  { label: 'HCaaS', to: '/services/health-check-as-a-service/' },
-  { label: 'AaaS', to: '/services/adoption-as-a-service/' },
-  { label: 'MPC Tech Hub', to: '/services/mpc-tech-hub/' }
+  { label: 'Oracle (Fusion & EBS)', to: '/services/oracle-fusion-ebs/' },
+  { label: 'AI CoE', to: '/services/ai-coe/' },
+  { label: 'Cloud & Database', to: '/services/cloud-database/' },
+  { label: 'CX & Analytics', to: '/services/cx-analytics/' },
+  { label: 'Security & Zero Trust', to: '/services/security-zero-trust/' },
+  { label: 'Treasury Management', to: '/services/treasury-management/' },
 ];
 
 const RESOURCES = [
@@ -95,7 +93,7 @@ export function StickyNav() {
                 <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
               </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all pointer-events-none group-hover:pointer-events-auto">
-                <div className="bg-white rounded-2xl shadow-medium border border-black/8 p-4 w-[440px]">
+                <div className="bg-white rounded-2xl shadow-medium border border-black/8 p-4 w-[480px]">
                   <p className="font-body text-[14px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
                     Services
                   </p>

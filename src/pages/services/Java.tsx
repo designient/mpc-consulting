@@ -167,10 +167,10 @@ const RELATED = [
 },
 {
   icon: Sparkles,
-  title: 'MPC Tech Hub',
+  title: 'AI CoE',
   description:
   'AI agents and custom Oracle extensions built with Java and APEX.',
-  to: '/services/mpc-tech-hub/'
+  to: '/services/ai-coe/'
 }];
 
 const SERVICE_SCHEMA = {

@@ -79,9 +79,9 @@ const SERVICES = [
 },
 {
   icon: Sparkles,
-  title: 'MPC Tech Hub',
-  desc: 'Custom AI agents, Oracle extensions, and innovation accelerators for the AI era.',
-  to: '/services/mpc-tech-hub/'
+  title: 'AI CoE',
+  desc: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise.',
+  to: '/services/ai-coe/'
 }];
 
 const PORTFOLIO_TABS = {
@@ -210,7 +210,7 @@ const COMPARISON = [
 },
 {
   criterion: 'AI tooling',
-  values: ['Generic plug-ins', 'MPC Tech Hub — purpose-built for Oracle']
+  values: ['Generic plug-ins', 'AI CoE — purpose-built for Oracle']
 },
 {
   criterion: 'Regional coverage',

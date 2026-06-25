@@ -117,10 +117,10 @@ const RELATED = [
 },
 {
   icon: Sparkles,
-  title: 'MPC Tech Hub',
+  title: 'AI CoE',
   description:
   'AI training programmes that future-proof your workforce skills.',
-  to: '/services/mpc-tech-hub/'
+  to: '/services/ai-coe/'
 }];
 
 const SERVICE_SCHEMA = {

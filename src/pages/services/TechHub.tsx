@@ -18,6 +18,7 @@ import {
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 const TOC = [
+  { label: 'Overview', hash: 'overview' },
   { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Focus Areas', hash: 'focus' },
   { label: 'Extensions', hash: 'extensions' },
@@ -34,7 +35,7 @@ const BREADCRUMB = [
   to: '/services/'
 },
 {
-  label: 'MPC Tech Hub'
+  label: 'AI CoE'
 }];
 
 const AI_COE = [
@@ -130,16 +131,16 @@ const COMPARISON_ROWS = [
 
 const FAQS = [
 {
-  q: 'What does MPC Tech Hub deliver?',
-  a: 'Custom AI agents, Oracle extensions, and innovation accelerators — built to enterprise standards. Agentic Studio is our agent framework; we also offer pre-built solutions, custom agents, multi-agent architectures, and AI-powered digital workers.'
+  q: 'What does MPC\'s AI CoE deliver?',
+  a: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise — all built to production standards. Agentic Studio is our agent framework; we also offer pre-built solutions, custom agents, multi-agent architectures, and AI-powered digital workers.'
 },
 {
-  q: 'Is MPC Tech Hub a separate practice or part of consulting?',
-  a: 'Tech Hub is embedded within our Oracle consulting practice. AI agents and extensions are built by people who understand Oracle Cloud, not generalists.'
+  q: 'Is the AI CoE a separate practice or part of consulting?',
+  a: 'The AI CoE is embedded within our Oracle consulting practice. AI agents and extensions are built by practitioners who understand Oracle Cloud — not generalist AI vendors.'
 },
 {
-  q: 'Can MPC Tech Hub work with our existing AI investments?',
-  a: 'Yes. We integrate with major LLM providers and AI platforms, and we connect AI agents to Oracle through OIC and OCI.'
+  q: 'Can the AI CoE work with our existing AI investments?',
+  a: 'Yes. We integrate with major LLM providers and AI platforms, and connect AI agents to Oracle through OIC and OCI.'
 },
 {
   q: 'How quickly can we deploy an AI agent?',
@@ -171,23 +172,23 @@ const RELATED = [
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'MPC Tech Hub — AI Innovation',
+  serviceType: 'AI CoE — Oracle AI Centre of Excellence',
   provider: {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
   },
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-  'Custom AI agents, Oracle extensions, and innovation accelerators built for enterprise Oracle Cloud environments.',
-  url: 'https://www.mpccloudconsulting.com/services/mpc-tech-hub/'
+  'MPC\'s AI CoE delivers AI enablement, predictive AI, custom agents, generative AI, and Oracle extensions — built for enterprise Oracle Cloud environments.',
+  url: 'https://www.mpccloudconsulting.com/services/ai-coe/'
 };
 export function TechHub() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="MPC Tech Hub — AI Innovation, Custom Extensions & Agentic Studio"
-        description="MPC Tech Hub builds custom AI agents, Oracle extensions and innovation accelerators — Agentic Studio to out-of-box AI solutions."
-        canonicalPath="/services/mpc-tech-hub/"
+        title="AI CoE — Oracle AI Agents, Custom Extensions & Agentic Studio | MPC"
+        description="MPC's AI CoE delivers AI enablement, predictive AI, custom agents, and generative AI — from Agentic Studio to out-of-box Oracle solutions."
+        canonicalPath="/services/ai-coe/"
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -198,22 +199,23 @@ export function TechHub() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="Oracle Cloud · Tech Hub"
-          headline="Where Innovation Meets"
-          headlineAccent="Enterprise Cloud"
-          subhead="MPC Tech Hub is our AI innovation centre — building custom AI agents, Oracle extensions, and next-generation accelerators that turn your Oracle investment into a competitive advantage."
+          eyebrow="Oracle Cloud · AI CoE"
+          headline="Centre of Excellence for"
+          headlineAccent="Enterprise AI"
+          subhead="MPC's AI CoE is our dedicated Centre of Excellence for AI — delivering AI enablement, predictive AI, custom agents, and generative AI that turn your Oracle investment into measurable advantage."
           primaryCtaText="Start the Conversation"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
-          imageAlt="Futuristic AI and data visualisation"
+          imageAlt="AI Centre of Excellence — enterprise AI innovation"
           breadcrumb={BREADCRUMB}
         />
 
         <ServiceWhatIs
-          title="What is MPC Tech Hub?"
-          body="MPC Tech Hub is a production-grade AI innovation capability embedded within MPC's Oracle consulting practice. We build custom AI agents, Oracle extensions, and automation accelerators that extend Oracle Cloud — to enterprise standards: documented, supported, and scalable."
+          id="overview"
+          title="What is MPC's AI CoE?"
+          body="MPC's AI CoE (Centre of Excellence) is a production-grade AI capability embedded within our Oracle consulting practice. We deliver AI enablement, predictive AI, custom agents, and generative AI — plus Oracle extensions and automation accelerators — all built to enterprise standards: documented, supported, and scalable."
           imageSrc={OVERVIEW_IMAGE}
-          imageAlt="Futuristic AI and data visualisation"
+          imageAlt="MPC AI CoE — enterprise AI and Oracle innovation"
         />
 
         <TableOfContents items={TOC} variant="inline" />
@@ -223,7 +225,7 @@ export function TechHub() {
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
             <p className="section-eyebrow mb-3">Capabilities</p>
-            <Heading level={2}>Agentic AI for Enterprise Oracle</Heading>
+            <Heading level={2}>AI CoE Capabilities for Oracle</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {AI_COE.map((c, i) => (
@@ -249,7 +251,7 @@ export function TechHub() {
               What we optimise
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              Four dimensions where MPC Tech Hub delivers measurable impact —
+              Four dimensions where MPC's AI CoE delivers measurable impact —
               from faster delivery to new revenue opportunities inside Oracle.
             </p>
           </div>
@@ -327,9 +329,9 @@ export function TechHub() {
           id="comparison"
           className="scroll-mt-[140px]"
           eyebrow="Comparison"
-          title="Generic AI vendor vs. MPC Tech Hub"
-          intro="What enterprises typically encounter when comparing generic AI vendors against MPC's Oracle-native Tech Hub capability."
-          headers={['Criterion', 'Generic AI vendor', 'With MPC Tech Hub']}
+          title="Generic AI vendor vs. MPC AI CoE"
+          intro="What enterprises typically encounter when comparing generic AI vendors against MPC's Oracle-native AI Centre of Excellence."
+          headers={['Criterion', 'Generic AI vendor', 'With MPC AI CoE']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
           bg="white"
@@ -348,7 +350,7 @@ export function TechHub() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="MPC Tech Hub — Frequently Asked Questions"
+            title="AI CoE — Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"
@@ -356,9 +358,9 @@ export function TechHub() {
         </div>
 
         <CTABand
-          title="Explore an innovation"
-          titleAccent="Partnership"
-          body="Tell us your biggest Oracle constraint. We'll show you how AI and custom engineering can remove it."
+          title="Start your AI CoE"
+          titleAccent="Engagement"
+          body="Tell us your biggest Oracle constraint. We'll show you how AI enablement, custom agents, and generative AI can remove it."
           ctaText="Start the Conversation"
           ctaTo="/contact/"
           variant="split"

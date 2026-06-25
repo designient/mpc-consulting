@@ -150,10 +150,10 @@ const RELATED = [
 },
 {
   icon: Sparkles,
-  title: 'MPC Tech Hub',
+  title: 'AI CoE',
   description:
   'AI agents and automation that bring redesigned processes to life.',
-  to: '/services/mpc-tech-hub/'
+  to: '/services/ai-coe/'
 }];
 
 const SERVICE_SCHEMA = {

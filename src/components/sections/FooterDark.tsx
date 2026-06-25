@@ -4,6 +4,12 @@ import { Linkedin, Twitter, Youtube, Mail } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 
 const SERVICES_LINKS = [
+  { label: 'Oracle (Fusion & EBS)', to: '/services/oracle-fusion-ebs/' },
+  { label: 'AI CoE', to: '/services/ai-coe/' },
+  { label: 'Cloud & Database', to: '/services/cloud-database/' },
+  { label: 'CX & Analytics', to: '/services/cx-analytics/' },
+  { label: 'Security & Zero Trust', to: '/services/security-zero-trust/' },
+  { label: 'Treasury Management', to: '/services/treasury-management/' },
   { label: 'HCM', to: '/services/hcm/' },
   { label: 'ERP (Oracle Cloud)', to: '/services/erp-oracle-cloud/' },
   { label: 'Java Technologies', to: '/services/java-technologies/' },
@@ -11,7 +17,7 @@ const SERVICES_LINKS = [
   { label: 'Business Process Consulting', to: '/services/business-process-consulting/' },
   { label: 'HCaaS', to: '/services/health-check-as-a-service/' },
   { label: 'AaaS', to: '/services/adoption-as-a-service/' },
-  { label: 'MPC Tech Hub', to: '/services/mpc-tech-hub/' }
+  { label: 'AI CoE', to: '/services/ai-coe/' }
 ];
 
 const COMPANY_LINKS = [

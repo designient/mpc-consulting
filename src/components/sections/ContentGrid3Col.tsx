@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '../ui/Card';
 import { Heading } from '../ui/Heading';
 import { Button } from '../ui/Button';
@@ -7,6 +8,7 @@ export interface GridItem {
   title: string;
   description: string;
   ctaText?: string;
+  href?: string;
 }
 export interface ContentGrid3ColProps {
   sectionTitle?: string;
@@ -31,9 +33,17 @@ export function ContentGrid3Col({ sectionTitle, items }: ContentGrid3ColProps) {
             </p>
             {item.ctaText &&
           <div className="mt-auto">
-                <Button variant="primary" size="md">
-                  {item.ctaText}
-                </Button>
+                {item.href ? (
+                  <Link
+                    to={item.href}
+                    className="inline-flex items-center justify-center font-body font-semibold text-text-inverse rounded-button shadow-subtle transition-all duration-200 ease-in-out bg-cta hover:opacity-90 px-[28px] py-[12px] text-[15px]">
+                    {item.ctaText}
+                  </Link>
+                ) : (
+                  <Button variant="primary" size="md">
+                    {item.ctaText}
+                  </Button>
+                )}
               </div>
           }
           </Card>

@@ -12,8 +12,14 @@ import { BPC } from './pages/services/BPC';
 import { HCaaS } from './pages/services/HCaaS';
 import { AaaS } from './pages/services/AaaS';
 import { TechHub } from './pages/services/TechHub';
+import { OracleFusionEBS } from './pages/services/OracleFusionEBS';
+import { CloudDatabase } from './pages/services/CloudDatabase';
+import { CxAnalytics } from './pages/services/CxAnalytics';
+import { SecurityZeroTrust } from './pages/services/SecurityZeroTrust';
+import { TreasuryManagement } from './pages/services/TreasuryManagement';
 import { Industries } from './pages/Industries';
 import { Resources } from './pages/Resources';
+import { CaseStudies } from './pages/CaseStudies';
 import { Careers } from './pages/Careers';
 import { Leadership } from './pages/Leadership';
 import { Values } from './pages/Values';
@@ -50,6 +56,7 @@ export function App() {
 
         {/* Services */}
         <Route path="/services/" element={<Services />} />
+        <Route path="/services/oracle-fusion-ebs/" element={<OracleFusionEBS />} />
         <Route path="/services/hcm/" element={<HCM />} />
         <Route path="/services/erp-oracle-cloud/" element={<ERP />} />
         <Route path="/services/java-technologies/" element={<Java />} />
@@ -63,7 +70,15 @@ export function App() {
           element={<HCaaS />} />
         
         <Route path="/services/adoption-as-a-service/" element={<AaaS />} />
-        <Route path="/services/mpc-tech-hub/" element={<TechHub />} />
+        <Route path="/services/ai-coe/" element={<TechHub />} />
+        <Route path="/services/cloud-database/" element={<CloudDatabase />} />
+        <Route path="/services/cx-analytics/" element={<CxAnalytics />} />
+        <Route path="/services/security-zero-trust/" element={<SecurityZeroTrust />} />
+        <Route path="/services/treasury-management/" element={<TreasuryManagement />} />
+        <Route
+          path="/services/mpc-tech-hub/"
+          element={<Navigate to="/services/ai-coe/" replace />}
+        />
 
         {/* Industries */}
         <Route path="/industries/" element={<Industries />} />
@@ -89,24 +104,7 @@ export function App() {
 
           } />
         
-        <Route
-          path="/resources/case-studies/"
-          element={
-          <PageStub
-            title="Case Studies"
-            description="Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from MPC's 87+ successful engagements."
-            canonicalPath="/resources/case-studies/"
-            breadcrumb={[
-            {
-              label: 'Resources',
-              to: '/resources/'
-            },
-            {
-              label: 'Case Studies'
-            }]
-            } />
-
-          } />
+        <Route path="/resources/case-studies/" element={<CaseStudies />} />
         
         <Route
           path="/resources/whitepapers/"

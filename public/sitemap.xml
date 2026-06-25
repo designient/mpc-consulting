@@ -5,6 +5,7 @@
   <url><loc>https://www.mpccloudconsulting.com/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/careers/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/oracle-fusion-ebs/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/hcm/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/erp-oracle-cloud/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/java-technologies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -12,7 +13,12 @@
   <url><loc>https://www.mpccloudconsulting.com/services/business-process-consulting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/health-check-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/adoption-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/mpc-tech-hub/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/ai-coe/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/cloud-database/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/cx-analytics/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/security-zero-trust/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/treasury-management/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/industries/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/resources/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/resources/case-studies/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

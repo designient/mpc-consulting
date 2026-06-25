@@ -37,6 +37,10 @@ const BREADCRUMB = [
   to: '/services/'
 },
 {
+  label: 'Oracle (Fusion & EBS)',
+  to: '/services/oracle-fusion-ebs/'
+},
+{
   label: 'ERP (Oracle Cloud)'
 }];
 
