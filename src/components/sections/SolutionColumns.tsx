@@ -1,5 +1,6 @@
 import React from 'react';
-import { BoxIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BoxIcon } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Card } from '../ui/Card';
 
@@ -9,6 +10,7 @@ export interface SolutionColumn {
   items: string[];
   imageSrc?: string;
   imageAlt?: string;
+  to?: string;
 }
 
 export interface SolutionColumnsProps {
@@ -42,8 +44,8 @@ export function SolutionColumns({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-[1280px] mx-auto">
         {columns.map((col, i) => {
           const Icon = col.icon;
-          return (
-            <Card key={i} bg="white" className="p-0 min-h-0 overflow-hidden">
+          const cardInner = (
+            <Card bg="white" className="p-0 min-h-0 overflow-hidden h-full">
               {col.imageSrc && (
                 <img
                   src={col.imageSrc}
@@ -51,14 +53,14 @@ export function SolutionColumns({
                   className="w-full aspect-[16/10] object-cover"
                 />
               )}
-              <div className="p-6 md:p-7">
+              <div className="p-6 md:p-7 flex flex-col flex-1">
               <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
                 <Icon className="w-5 h-5" />
               </div>
               <Heading level={3} className="mb-4">
                 {col.title}
               </Heading>
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-grow">
                 {col.items.map((item) => (
                   <li
                     key={item}
@@ -68,8 +70,21 @@ export function SolutionColumns({
                   </li>
                 ))}
               </ul>
+              {col.to && (
+                <span className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta mt-6 group-hover:text-accent transition-colors">
+                  Explore
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              )}
               </div>
             </Card>
+          );
+          return col.to ? (
+            <Link key={i} to={col.to} className="group block h-full">
+              {cardInner}
+            </Link>
+          ) : (
+            <div key={i} className="h-full">{cardInner}</div>
           );
         })}
       </div>

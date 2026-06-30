@@ -11,9 +11,24 @@ import { DevOps } from './pages/services/DevOps';
 import { BPC } from './pages/services/BPC';
 import { HCaaS } from './pages/services/HCaaS';
 import { AaaS } from './pages/services/AaaS';
+import { SCM } from './pages/solutions/SCM';
+import { EPM } from './pages/solutions/EPM';
+import { Unifier } from './pages/solutions/Unifier';
+import { Tech } from './pages/solutions/Tech';
+import { ApplicationDevelopment } from './pages/solutions/ApplicationDevelopment';
+import { DatabaseMigration } from './pages/solutions/DatabaseMigration';
+import { CloudManagement } from './pages/solutions/CloudManagement';
+import { PowerBI } from './pages/solutions/PowerBI';
+import { Salesforce } from './pages/solutions/Salesforce';
+import { ServiceNow } from './pages/solutions/ServiceNow';
+import { CybersecurityZeroTrustStrategy } from './pages/solutions/CybersecurityZeroTrustStrategy';
+import { ApplicationCloudSecurity } from './pages/solutions/ApplicationCloudSecurity';
+import { InfrastructureManagedOperations } from './pages/solutions/InfrastructureManagedOperations';
+import { IBSFintech } from './pages/solutions/IBSFintech';
+import { TreasuryOperations } from './pages/solutions/TreasuryOperations';
 import { TechHub } from './pages/services/TechHub';
 import { OracleFusionEBS } from './pages/services/OracleFusionEBS';
-import { CloudDatabase } from './pages/services/CloudDatabase';
+import { CloudDigitalTransformation } from './pages/services/CloudDigitalTransformation';
 import { CxAnalytics } from './pages/services/CxAnalytics';
 import { SecurityZeroTrust } from './pages/services/SecurityZeroTrust';
 import { TreasuryManagement } from './pages/services/TreasuryManagement';
@@ -57,27 +72,69 @@ export function App() {
         {/* Services */}
         <Route path="/services/" element={<Services />} />
         <Route path="/services/oracle-fusion-ebs/" element={<OracleFusionEBS />} />
-        <Route path="/services/hcm/" element={<HCM />} />
-        <Route path="/services/erp-oracle-cloud/" element={<ERP />} />
-        <Route path="/services/java-technologies/" element={<Java />} />
-        <Route path="/services/devops/" element={<DevOps />} />
-        <Route
-          path="/services/business-process-consulting/"
-          element={<BPC />} />
-        
-        <Route
-          path="/services/health-check-as-a-service/"
-          element={<HCaaS />} />
-        
-        <Route path="/services/adoption-as-a-service/" element={<AaaS />} />
         <Route path="/services/ai-coe/" element={<TechHub />} />
-        <Route path="/services/cloud-database/" element={<CloudDatabase />} />
+        <Route
+          path="/services/cloud-digital-transformation/"
+          element={<CloudDigitalTransformation />}
+        />
+        <Route
+          path="/services/cloud-database/"
+          element={<Navigate to="/services/cloud-digital-transformation/" replace />}
+        />
         <Route path="/services/cx-analytics/" element={<CxAnalytics />} />
         <Route path="/services/security-zero-trust/" element={<SecurityZeroTrust />} />
         <Route path="/services/treasury-management/" element={<TreasuryManagement />} />
         <Route
           path="/services/mpc-tech-hub/"
           element={<Navigate to="/services/ai-coe/" replace />}
+        />
+
+        {/* Solutions */}
+        <Route path="/solutions/hcm/" element={<HCM />} />
+        <Route path="/solutions/erp-oracle-cloud/" element={<ERP />} />
+        <Route path="/solutions/java-technologies/" element={<Java />} />
+        <Route path="/solutions/devops/" element={<DevOps />} />
+        <Route path="/solutions/business-process-consulting/" element={<BPC />} />
+        <Route path="/solutions/health-check-as-a-service/" element={<HCaaS />} />
+        <Route path="/solutions/adoption-as-a-service/" element={<AaaS />} />
+        <Route path="/solutions/scm/" element={<SCM />} />
+        <Route path="/solutions/epm/" element={<EPM />} />
+        <Route path="/solutions/unifier/" element={<Unifier />} />
+        <Route path="/solutions/tech/" element={<Tech />} />
+        <Route path="/solutions/application-development/" element={<ApplicationDevelopment />} />
+        <Route path="/solutions/database-migration/" element={<DatabaseMigration />} />
+        <Route path="/solutions/cloud-management/" element={<CloudManagement />} />
+        <Route path="/solutions/power-bi/" element={<PowerBI />} />
+        <Route path="/solutions/salesforce/" element={<Salesforce />} />
+        <Route path="/solutions/servicenow/" element={<ServiceNow />} />
+        <Route path="/solutions/cybersecurity-zero-trust-strategy/" element={<CybersecurityZeroTrustStrategy />} />
+        <Route path="/solutions/application-cloud-security/" element={<ApplicationCloudSecurity />} />
+        <Route path="/solutions/infrastructure-managed-operations/" element={<InfrastructureManagedOperations />} />
+        <Route path="/solutions/ibs-fintech/" element={<IBSFintech />} />
+        <Route path="/solutions/treasury-operations/" element={<TreasuryOperations />} />
+
+        {/* Legacy solution redirects */}
+        <Route path="/services/hcm/" element={<Navigate to="/solutions/hcm/" replace />} />
+        <Route
+          path="/services/erp-oracle-cloud/"
+          element={<Navigate to="/solutions/erp-oracle-cloud/" replace />}
+        />
+        <Route
+          path="/services/java-technologies/"
+          element={<Navigate to="/solutions/java-technologies/" replace />}
+        />
+        <Route path="/services/devops/" element={<Navigate to="/solutions/devops/" replace />} />
+        <Route
+          path="/services/business-process-consulting/"
+          element={<Navigate to="/solutions/business-process-consulting/" replace />}
+        />
+        <Route
+          path="/services/health-check-as-a-service/"
+          element={<Navigate to="/solutions/health-check-as-a-service/" replace />}
+        />
+        <Route
+          path="/services/adoption-as-a-service/"
+          element={<Navigate to="/solutions/adoption-as-a-service/" replace />}
         />
 
         {/* Industries */}

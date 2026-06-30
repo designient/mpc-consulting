@@ -54,9 +54,9 @@ const SERVICES = [
   },
   {
     icon: Cloud,
-    title: 'Cloud & Database',
+    title: 'Cloud & Digital Transformation',
     desc: 'Application development, database migration, and cloud management at scale.',
-    to: '/services/cloud-database/',
+    to: '/services/cloud-digital-transformation/',
   },
   {
     icon: BarChart3,

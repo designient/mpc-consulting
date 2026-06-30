@@ -1,12 +1,11 @@
 import React from 'react';
-import { Shield, Lock, Globe } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
 import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
 import { TableOfContents } from '../../components/sections/TableOfContents';
-import { SolutionColumns } from '../../components/sections/SolutionColumns';
+import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import { LifecyclePath } from '../../components/sections/LifecyclePath';
 import { Heading } from '../../components/ui/Heading';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
@@ -16,10 +15,16 @@ import {
 } from '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_SECURITY,
+  SERVICES_INDEX,
+  SOLUTION_APP_CLOUD_SECURITY,
+  SOLUTION_INFRA_MANAGED_OPS,
+  SOLUTION_ZERO_TRUST_STRATEGY,
+} from '../../data/paths';
 
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Solutions', hash: 'solutions' },
   { label: 'Services', hash: 'services' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' },
@@ -29,51 +34,25 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: '/services/' },
+  { label: 'Services', to: SERVICES_INDEX },
   { label: 'Security & Zero Trust' },
 ];
 
-const SOLUTIONS = [
+const CAPABILITIES = [
   {
-    icon: Shield,
     title: 'Cybersecurity & Zero Trust Strategy',
-    imageSrc:
-      'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Zero Trust cybersecurity strategy',
-    items: [
-      'Zero Trust Architecture & Identity-Centric Security',
-      'Identity & Access Management (IAM), SASE Integration',
-      'Advanced Threat Protection & Digital Risk Mitigation',
-      'AI enabled cyber security',
-    ],
+    body: 'Zero Trust architecture, IAM and SASE integration, advanced threat protection, and AI-enabled cybersecurity.',
+    to: SOLUTION_ZERO_TRUST_STRATEGY,
   },
   {
-    icon: Lock,
     title: 'Application & Cloud Security',
-    imageSrc:
-      'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Application and cloud security engineering',
-    items: [
-      'Application Security (AppSec) & Vulnerability Assessment',
-      'Cloud Security Posture Management (CSPM)',
-      'Penetration Testing & Compliance Readiness',
-      'AI driven insights and analytics',
-    ],
+    body: 'AppSec and vulnerability assessment, CSPM, penetration testing and compliance readiness, and AI-driven insights.',
+    to: SOLUTION_APP_CLOUD_SECURITY,
   },
   {
-    icon: Globe,
     title: 'Infrastructure & Managed Operations',
-    imageSrc:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Network infrastructure and managed security operations',
-    items: [
-      'Network & Endpoint Security Solutions',
-      'Managed Services (MSP) & Systems Integration (SI)',
-      'SOC/NOC Operations & 24×7 Monitoring',
-      'Resident & Onsite Engineering Support',
-      'AV & Collaboration Solutions | War Room Setup',
-      'Project and program management office (PMO) services',
-    ],
+    body: 'Network and endpoint security, MSP/SI, SOC/NOC 24×7 monitoring, onsite support, AV and war room, and PMO.',
+    to: SOLUTION_INFRA_MANAGED_OPS,
   },
 ];
 
@@ -154,7 +133,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
     'Cybersecurity strategy, application and cloud security, Zero Trust architecture, and managed SOC/NOC operations.',
-  url: 'https://www.mpccloudconsulting.com/services/security-zero-trust/',
+  url: `https://www.mpccloudconsulting.com${SERVICE_SECURITY}`,
 };
 
 export function SecurityZeroTrust() {
@@ -163,7 +142,7 @@ export function SecurityZeroTrust() {
       <SEO
         title="Security & Zero Trust | Cybersecurity & Managed Operations | MPC"
         description="MPC delivers Zero Trust architecture, AppSec, CSPM, SOC/NOC 24×7 monitoring, and AI-enabled cybersecurity for enterprise environments."
-        canonicalPath="/services/security-zero-trust/"
+        canonicalPath={SERVICE_SECURITY}
         schema={[
           ORGANIZATION_SCHEMA,
           SERVICE_SCHEMA,
@@ -181,15 +160,14 @@ export function SecurityZeroTrust() {
           subhead="Cybersecurity strategy, application and cloud security, and managed operations — built on Zero Trust principles and AI-enabled threat protection."
           primaryCtaText="Talk to Our Security Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Solutions"
-          secondaryCtaTo="#solutions"
+          secondaryCtaText="Explore Overview"
+          secondaryCtaTo="#overview"
           imageSrc="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Cybersecurity and network protection"
           breadcrumb={BREADCRUMB}
         />
 
         <ServiceWhatIs
-          id="overview"
           title="What is MPC's Security & Zero Trust practice?"
           body="MPC's Security & Zero Trust practice protects enterprise environments from strategy through operations. We design Zero Trust architectures, secure applications and cloud workloads, and run SOC/NOC operations with 24×7 monitoring — combining traditional security expertise with AI-enabled detection and analytics."
           imageSrc={OVERVIEW_IMAGE}
@@ -198,7 +176,11 @@ export function SecurityZeroTrust() {
 
         <TableOfContents items={TOC} variant="inline" />
 
-        <SolutionColumns id="solutions" columns={SOLUTIONS} />
+        <ServiceCapabilities
+          title="Full security & Zero Trust portfolio"
+          intro="From Zero Trust strategy and application security to managed SOC/NOC operations — one partner for your entire security estate."
+          capabilities={CAPABILITIES}
+        />
 
         <section
           id="services"

@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Database, ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
 import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
 import { TableOfContents } from '../../components/sections/TableOfContents';
-import { Heading } from '../../components/ui/Heading';
-import { Card } from '../../components/ui/Card';
+import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
 import {
@@ -17,11 +14,19 @@ import {
 } from '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SOLUTION_ERP,
+  SOLUTION_EPM,
+  SOLUTION_HCM,
+  SOLUTION_SCM,
+  SOLUTION_TECH,
+  SOLUTION_UNIFIER,
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+} from '../../data/paths';
 
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Oracle Practices', hash: 'practices' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' },
@@ -31,64 +36,40 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: '/services/' },
+  { label: 'Services', to: SERVICES_INDEX },
   { label: 'Oracle (Fusion & EBS)' },
-];
-
-const TECH_CHIPS = [
-  'Oracle Fusion',
-  'Oracle EBS',
-  'Oracle HCM Cloud',
-  'Oracle APEX',
-  'OIC',
-  'OCI',
-  'Oracle Redwood',
-  'Oracle EPM',
-  'Oracle Unifier',
-  'Oracle ME',
-];
-
-const PRACTICES = [
-  {
-    icon: Users,
-    title: 'HCM',
-    description:
-      'Oracle HCM Cloud — HR, Talent, Payroll, and Workforce Management end-to-end.',
-    to: '/services/hcm/',
-  },
-  {
-    icon: Database,
-    title: 'ERP (Oracle Cloud)',
-    description:
-      'Oracle Fusion & EBS — Financials, Projects, Procurement, Risk, and Compliance.',
-    to: '/services/erp-oracle-cloud/',
-  },
 ];
 
 const CAPABILITIES = [
   {
     title: 'Oracle HCM Cloud',
     body: 'Core HR, Talent Management, Global Payroll, Workforce Management, and Oracle ME — implemented and supported by certified HCM specialists.',
+    to: SOLUTION_HCM,
   },
   {
     title: 'Oracle Fusion ERP',
     body: 'Cloud-native Financials, Projects, Procurement, Risk & Compliance, and Treasury — designed for modern enterprise operations.',
+    to: SOLUTION_ERP,
   },
   {
-    title: 'Oracle EBS',
-    body: 'E-Business Suite implementations, customisations, extensions, and structured EBS→Fusion migration programmes.',
+    title: 'Oracle SCM',
+    body: 'Supply chain planning, procurement, logistics, and inventory management on Oracle Fusion and EBS — from demand planning to fulfilment.',
+    to: SOLUTION_SCM,
   },
   {
-    title: 'Oracle APEX & PaaS',
-    body: 'Custom business applications on Oracle APEX and Platform as a Service — extending Oracle capability without breaking it.',
+    title: 'Oracle EPM',
+    body: 'Enterprise Performance Management — budgeting, forecasting, and financial consolidation on Oracle EPM Cloud.',
+    to: SOLUTION_EPM,
   },
   {
-    title: 'Oracle EPM & Unifier',
-    body: 'Enterprise Performance Management for budgeting and consolidation, plus Unifier for project lifecycle management.',
+    title: 'Oracle Unifier',
+    body: 'Project lifecycle management on Oracle Unifier — capital projects, document control, and portfolio delivery.',
+    to: SOLUTION_UNIFIER,
   },
   {
-    title: 'Managed Service & Support',
+    title: 'Tech',
     body: 'Post-go-live support, health checks, upgrades, and ongoing Oracle optimisation — so you stay current and compliant.',
+    to: SOLUTION_TECH,
   },
 ];
 
@@ -203,7 +184,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
     'End-to-end Oracle Fusion and EBS consulting — HCM, ERP, SCM, Unifier, EPM, and technology services across Fusion and EBS.',
-  url: 'https://www.mpccloudconsulting.com/services/oracle-fusion-ebs/',
+  url: `https://www.mpccloudconsulting.com${SERVICE_ORACLE}`,
 };
 
 export function OracleFusionEBS() {
@@ -212,7 +193,7 @@ export function OracleFusionEBS() {
       <SEO
         title="Oracle Fusion & EBS Consulting | HCM, ERP & Cloud Services | MPC"
         description="MPC delivers end-to-end Oracle Fusion & EBS — HCM, ERP, SCM, Unifier, EPM, and cloud services. 65+ clients across India, UAE, Singapore, UK & Australia."
-        canonicalPath="/services/oracle-fusion-ebs/"
+        canonicalPath={SERVICE_ORACLE}
         schema={[
           ORGANIZATION_SCHEMA,
           SERVICE_SCHEMA,
@@ -230,15 +211,14 @@ export function OracleFusionEBS() {
           subhead="HCM, ERP, SCM, Unifier, EPM, and technology services across Oracle Fusion Cloud and E-Business Suite — delivered by specialists who know the platform at depth."
           primaryCtaText="Talk to Our Oracle Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Our Practices"
-          secondaryCtaTo="#practices"
+          secondaryCtaText="Explore Overview"
+          secondaryCtaTo="#overview"
           imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Enterprise team reviewing Oracle Cloud strategy"
           breadcrumb={BREADCRUMB}
         />
 
         <ServiceWhatIs
-          id="overview"
           title="What is MPC's Oracle (Fusion & EBS) practice?"
           body="MPC's Oracle practice is an end-to-end capability spanning Oracle Fusion Cloud and E-Business Suite. With HCM and ERP as our two primary pillars, we deliver implementation, migration, extension, and managed service across the full Oracle portfolio — from Core HR and Global Payroll to Financials, Projects, and EPM."
           imageSrc={OVERVIEW_IMAGE}
@@ -247,74 +227,11 @@ export function OracleFusionEBS() {
 
         <TableOfContents items={TOC} variant="inline" />
 
-        <section
-          id="practices"
-          className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Oracle Practices</p>
-            <Heading level={2}>Explore our Oracle services</Heading>
-          </div>
-          <div className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            {PRACTICES.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={i}
-                  to={item.to}
-                  className="group flex flex-col rounded-card shadow-subtle bg-white border border-transparent hover:border-divider transition-all p-6 md:p-7">
-                  <div className="w-11 h-11 rounded-md bg-stat/10 flex items-center justify-center text-stat mb-4">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-[20px] md:text-[22px] leading-tight tracking-tight text-text-primary mb-3 group-hover:text-divider transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="font-body text-[15px] leading-[1.6] text-text-primary opacity-75 mb-6 flex-grow">
-                    {item.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 font-body text-[14px] font-semibold text-cta group-hover:text-accent transition-colors mt-auto">
-                    Explore{' '}
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-
-        <section
-          id="capabilities"
-          className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
-            <Heading level={2}>Full Oracle portfolio coverage</Heading>
-            <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mt-4">
-              From HCM and ERP to APEX, OIC, EPM, and Unifier — one partner for
-              your entire Oracle estate.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mb-10">
-            {CAPABILITIES.map((cap, i) => (
-              <Card key={i} bg="white">
-                <div className="w-10 h-1 bg-divider mb-5" />
-                <Heading level={3} className="mb-3">
-                  {cap.title}
-                </Heading>
-                <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80">
-                  {cap.body}
-                </p>
-              </Card>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2 justify-center max-w-[900px] mx-auto">
-            {TECH_CHIPS.map((c) => (
-              <span
-                key={c}
-                className="px-3.5 py-1.5 rounded-full border border-divider/30 bg-white font-body text-[13px] font-medium">
-                {c}
-              </span>
-            ))}
-          </div>
-        </section>
+        <ServiceCapabilities
+          title="Full Oracle portfolio coverage"
+          intro="From HCM and ERP to APEX, OIC, EPM, and Unifier — one partner for your entire Oracle estate."
+          capabilities={CAPABILITIES}
+        />
 
         <div id="process" className="scroll-mt-[140px]">
           <ProcessSteps

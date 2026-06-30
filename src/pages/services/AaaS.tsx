@@ -16,9 +16,16 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_AI_COE,
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+  SOLUTION_AAAS,
+  SOLUTION_BPC,
+  SOLUTION_HCM,
+} from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
 ];
@@ -29,7 +36,11 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
+},
+{
+  label: 'Oracle (Fusion & EBS)',
+  to: SERVICE_ORACLE
 },
 {
   label: 'AaaS'
@@ -107,20 +118,20 @@ const RELATED = [
   icon: Workflow,
   title: 'Business Process Consulting',
   description: 'Optimise the processes that adoption is enabling.',
-  to: '/services/business-process-consulting/'
+  to: SOLUTION_BPC
 },
 {
   icon: Users,
   title: 'HCM',
   description: 'Pair AaaS with HCM go-live for maximum HR adoption.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 },
 {
   icon: Sparkles,
   title: 'AI CoE',
   description:
   'AI training programmes that future-proof your workforce skills.',
-  to: '/services/ai-coe/'
+  to: SERVICE_AI_COE
 }];
 
 const SERVICE_SCHEMA = {
@@ -134,7 +145,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Change management, training, communications, super-user programmes and ongoing enablement to maximise Oracle Cloud ROI.',
-  url: 'https://www.mpccloudconsulting.com/services/adoption-as-a-service/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_AAAS}`
 };
 export function AaaS() {
   return (
@@ -142,7 +153,7 @@ export function AaaS() {
       <SEO
         title="Adoption as a Service (AaaS) | Oracle Cloud User Enablement | MPC"
         description="MPC AaaS maximises your Oracle Cloud ROI through change management, training and user enablement programmes."
-        canonicalPath="/services/adoption-as-a-service/"
+        canonicalPath={SOLUTION_AAAS}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -173,7 +184,6 @@ export function AaaS() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
           <div className="mb-10 max-w-[820px]">
@@ -202,10 +212,10 @@ export function AaaS() {
         </section>
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>The AaaS framework</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

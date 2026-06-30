@@ -18,9 +18,16 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_AI_COE,
+  SERVICE_CLOUD_DT,
+  SERVICES_INDEX,
+  SOLUTION_DEVOPS,
+  SOLUTION_ERP,
+  SOLUTION_JAVA,
+} from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
@@ -32,7 +39,11 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
+},
+{
+  label: 'Cloud & Digital Transformation',
+  to: SERVICE_CLOUD_DT
 },
 {
   label: 'DevOps Services'
@@ -150,21 +161,21 @@ const RELATED = [
   icon: Code2,
   title: 'Java Technologies',
   description: 'Java microservices delivered through MPC DevOps pipelines.',
-  to: '/services/java-technologies/'
+  to: SOLUTION_JAVA
 },
 {
   icon: Database,
   title: 'ERP (Oracle Cloud)',
   description:
   'Cloud infrastructure for Oracle ERP deployments and managed services.',
-  to: '/services/erp-oracle-cloud/'
+  to: SOLUTION_ERP
 },
 {
   icon: Sparkles,
   title: 'AI CoE',
   description:
   'AI agents and automation that operate within your DevOps platform.',
-  to: '/services/ai-coe/'
+  to: SERVICE_AI_COE
 }];
 
 const SERVICE_SCHEMA = {
@@ -178,7 +189,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'CI/CD pipelines, Kubernetes orchestration, multi-cloud infrastructure, DR, and DevSecOps.',
-  url: 'https://www.mpccloudconsulting.com/services/devops/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_DEVOPS}`
 };
 export function DevOps() {
   return (
@@ -186,7 +197,7 @@ export function DevOps() {
       <SEO
         title="DevOps Services — CI/CD, Cloud & Containers | MPC Cloud"
         description="MPC DevOps: CI/CD pipelines (GitLab, Jenkins, GitHub Actions), Docker & Kubernetes, multi-cloud (AWS, Azure, GCP, OCI) and DR."
-        canonicalPath="/services/devops/"
+        canonicalPath={SOLUTION_DEVOPS}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -217,7 +228,6 @@ export function DevOps() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
           <div className="mb-10">
@@ -236,10 +246,10 @@ export function DevOps() {
         </section>
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>What we deliver</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

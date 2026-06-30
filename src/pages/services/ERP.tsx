@@ -19,9 +19,16 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+  SOLUTION_ERP,
+  SOLUTION_HCM,
+  SOLUTION_HCAAS,
+  SOLUTION_JAVA,
+} from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'Case Study', hash: 'case-study' },
@@ -34,11 +41,11 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
 },
 {
   label: 'Oracle (Fusion & EBS)',
-  to: '/services/oracle-fusion-ebs/'
+  to: SERVICE_ORACLE
 },
 {
   label: 'ERP (Oracle Cloud)'
@@ -196,21 +203,21 @@ const RELATED = [
   title: 'Java Technologies',
   description:
   'Custom Java applications and APIs that integrate with Oracle ERP.',
-  to: '/services/java-technologies/'
+  to: SOLUTION_JAVA
 },
 {
   icon: Users,
   title: 'HCM',
   description:
   'Oracle HCM Cloud — pairs naturally with Oracle ERP for unified back office.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 },
 {
   icon: Activity,
   title: 'Health Check as a Service',
   description:
   'Independent audit of your live Oracle ERP environment with a fix roadmap.',
-  to: '/services/health-check-as-a-service/'
+  to: SOLUTION_HCAAS
 }];
 
 const SERVICE_SCHEMA = {
@@ -224,7 +231,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'End-to-end Oracle Fusion and EBS ERP — Financials, Projects, Procurement, Risk, and Compliance.',
-  url: 'https://www.mpccloudconsulting.com/services/erp-oracle-cloud/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_ERP}`
 };
 export function ERP() {
   return (
@@ -232,7 +239,7 @@ export function ERP() {
       <SEO
         title="Oracle ERP Cloud (Fusion & EBS) Consulting | MPC Cloud"
         description="MPC specialises in Oracle Fusion & EBS ERP — Financials, Projects, Risk & Compliance. End-to-end implementation globally."
-        canonicalPath="/services/erp-oracle-cloud/"
+        canonicalPath={SOLUTION_ERP}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -265,7 +272,6 @@ export function ERP() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
           <div className="mb-10">
@@ -302,10 +308,10 @@ export function ERP() {
         </section>
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>Our ERP Capabilities</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

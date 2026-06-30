@@ -17,9 +17,15 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_AI_COE,
+  SERVICES_INDEX,
+  SOLUTION_BPC,
+  SOLUTION_ERP,
+  SOLUTION_HCM,
+} from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Focus Areas', hash: 'focus' },
   { label: 'Extensions', hash: 'extensions' },
   { label: 'Comparison', hash: 'comparison' },
@@ -32,7 +38,7 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
 },
 {
   label: 'AI CoE'
@@ -153,20 +159,20 @@ const RELATED = [
   title: 'HCM',
   description:
   'AI agents that augment Oracle HCM workflows and employee experience.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 },
 {
   icon: Database,
   title: 'ERP (Oracle Cloud)',
   description:
   'AI extensions for Oracle Fusion and EBS — predictive analytics, automation.',
-  to: '/services/erp-oracle-cloud/'
+  to: SOLUTION_ERP
 },
 {
   icon: Workflow,
   title: 'Business Process Consulting',
   description: 'Identify where AI augmentation transforms your processes.',
-  to: '/services/business-process-consulting/'
+  to: SOLUTION_BPC
 }];
 
 const SERVICE_SCHEMA = {
@@ -180,7 +186,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'MPC\'s AI CoE delivers AI enablement, predictive AI, custom agents, generative AI, and Oracle extensions — built for enterprise Oracle Cloud environments.',
-  url: 'https://www.mpccloudconsulting.com/services/ai-coe/'
+  url: `https://www.mpccloudconsulting.com${SERVICE_AI_COE}`
 };
 export function TechHub() {
   return (
@@ -188,7 +194,7 @@ export function TechHub() {
       <SEO
         title="AI CoE — Oracle AI Agents, Custom Extensions & Agentic Studio | MPC"
         description="MPC's AI CoE delivers AI enablement, predictive AI, custom agents, and generative AI — from Agentic Studio to out-of-box Oracle solutions."
-        canonicalPath="/services/ai-coe/"
+        canonicalPath={SERVICE_AI_COE}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -211,7 +217,6 @@ export function TechHub() {
         />
 
         <ServiceWhatIs
-          id="overview"
           title="What is MPC's AI CoE?"
           body="MPC's AI CoE (Centre of Excellence) is a production-grade AI capability embedded within our Oracle consulting practice. We deliver AI enablement, predictive AI, custom agents, and generative AI — plus Oracle extensions and automation accelerators — all built to enterprise standards: documented, supported, and scalable."
           imageSrc={OVERVIEW_IMAGE}
@@ -221,10 +226,10 @@ export function TechHub() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>AI CoE Capabilities for Oracle</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

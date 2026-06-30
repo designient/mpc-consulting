@@ -18,6 +18,7 @@ import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
 import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
 import { TableOfContents } from '../../components/sections/TableOfContents';
+import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import { TreasuryModuleGrid } from '../../components/sections/TreasuryModuleGrid';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
@@ -28,6 +29,12 @@ import {
 } from '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_TREASURY,
+  SERVICES_INDEX,
+  SOLUTION_IBS_FINTECH,
+  SOLUTION_TREASURY_OPERATIONS,
+} from '../../data/paths';
 
 const TOC = [
   { label: 'Overview', hash: 'overview' },
@@ -45,8 +52,21 @@ const PLATFORM_IMAGE =
   'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1600&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: '/services/' },
+  { label: 'Services', to: SERVICES_INDEX },
   { label: 'Treasury Management' },
+];
+
+const CAPABILITIES = [
+  {
+    title: 'IBS Fintech',
+    body: 'All-in-one treasury tech platform — multi-company, multi-location, multi-currency, and multi-asset class with ERP, market data, and global bank integrations.',
+    to: SOLUTION_IBS_FINTECH,
+  },
+  {
+    title: 'All Aspects of Treasury Management',
+    body: 'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance — eight integrated modules.',
+    to: SOLUTION_TREASURY_OPERATIONS,
+  },
 ];
 
 const PLATFORM_HIGHLIGHTS = [
@@ -226,7 +246,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
     'IBS Fintech treasury platform — cash, payments, investments, FX, trade finance, debt, supply chain finance, and commodity risk.',
-  url: 'https://www.mpccloudconsulting.com/services/treasury-management/',
+  url: `https://www.mpccloudconsulting.com${SERVICE_TREASURY}`,
 };
 
 export function TreasuryManagement() {
@@ -235,7 +255,7 @@ export function TreasuryManagement() {
       <SEO
         title="Treasury Management | IBS Fintech Treasury Platform | MPC"
         description="MPC's IBS Fintech treasury platform — cash, liquidity, payments, investments, FX, trade finance, and commodity risk for multi-entity enterprises."
-        canonicalPath="/services/treasury-management/"
+        canonicalPath={SERVICE_TREASURY}
         schema={[
           ORGANIZATION_SCHEMA,
           SERVICE_SCHEMA,
@@ -253,15 +273,14 @@ export function TreasuryManagement() {
           subhead="An all-in-one treasury tech platform supporting multi-company, multi-location, multi-currency, and multi-asset class operations."
           primaryCtaText="Request a Demo"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Modules"
-          secondaryCtaTo="#modules"
+          secondaryCtaText="Explore Overview"
+          secondaryCtaTo="#overview"
           imageSrc="https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Treasury management and financial analytics"
           breadcrumb={BREADCRUMB}
         />
 
         <ServiceWhatIs
-          id="overview"
           title="What is MPC's Treasury Management practice?"
           body="MPC delivers treasury management through IBS Fintech — a comprehensive treasury tech platform that unifies cash, payments, investments, FX risk, trade finance, debt, supply chain finance, and commodity risk. Built for complex, multi-entity enterprises that need real-time visibility and control across their treasury operations."
           imageSrc={OVERVIEW_IMAGE}
@@ -269,6 +288,12 @@ export function TreasuryManagement() {
         />
 
         <TableOfContents items={TOC} variant="inline" />
+
+        <ServiceCapabilities
+          title="Full treasury management portfolio"
+          intro="From the IBS Fintech platform to end-to-end treasury operations — one partner for your entire treasury estate."
+          capabilities={CAPABILITIES}
+        />
 
         <section
           id="highlights"

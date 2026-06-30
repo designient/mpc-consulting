@@ -18,10 +18,17 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+  SOLUTION_AAAS,
+  SOLUTION_BPC,
+  SOLUTION_HCAAS,
+  SOLUTION_HCM,
+} from '../../data/paths';
 import { CheckCircle } from 'lucide-react';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
@@ -33,7 +40,11 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
+},
+{
+  label: 'Oracle (Fusion & EBS)',
+  to: SERVICE_ORACLE
 },
 {
   label: 'HCaaS'
@@ -173,20 +184,20 @@ const RELATED = [
   title: 'Adoption as a Service',
   description:
   'If user adoption is the issue, AaaS programmes can dramatically lift ROI.',
-  to: '/services/adoption-as-a-service/'
+  to: SOLUTION_AAAS
 },
 {
   icon: Workflow,
   title: 'Business Process Consulting',
   description:
   'If process issues underlie technical problems, BPC addresses the root cause.',
-  to: '/services/business-process-consulting/'
+  to: SOLUTION_BPC
 },
 {
   icon: Users,
   title: 'HCM',
   description: 'For HCM-specific health checks and remediation.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 }];
 
 const SERVICE_SCHEMA = {
@@ -200,7 +211,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Independent Oracle Cloud audit across performance, configuration, security, data quality, integration health and user adoption.',
-  url: 'https://www.mpccloudconsulting.com/services/health-check-as-a-service/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_HCAAS}`
 };
 export function HCaaS() {
   return (
@@ -208,7 +219,7 @@ export function HCaaS() {
       <SEO
         title="Health Check as a Service (HCaaS) | Oracle Cloud Review | MPC"
         description="MPC HCaaS delivers a comprehensive Oracle Cloud audit — performance, configuration, security and optimisation recommendations."
-        canonicalPath="/services/health-check-as-a-service/"
+        canonicalPath={SOLUTION_HCAAS}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -239,7 +250,6 @@ export function HCaaS() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
           <div className="mb-10 max-w-[820px]">
@@ -264,10 +274,10 @@ export function HCaaS() {
         </section>
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>What we assess</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

@@ -6,7 +6,7 @@ import { Logo } from '../ui/Logo';
 const SERVICES = [
   { label: 'Oracle (Fusion & EBS)', to: '/services/oracle-fusion-ebs/' },
   { label: 'AI CoE', to: '/services/ai-coe/' },
-  { label: 'Cloud & Database', to: '/services/cloud-database/' },
+  { label: 'Cloud & Digital Transformation', to: '/services/cloud-digital-transformation/' },
   { label: 'CX & Analytics', to: '/services/cx-analytics/' },
   { label: 'Security & Zero Trust', to: '/services/security-zero-trust/' },
   { label: 'Treasury Management', to: '/services/treasury-management/' },

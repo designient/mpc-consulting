@@ -22,7 +22,7 @@ const COUNTRIES = ['India', 'UAE', 'Singapore', 'Australia', 'UK', 'Other'];
 const SERVICES = [
   'Oracle (Fusion & EBS)',
   'AI CoE',
-  'Cloud & Database',
+  'Cloud & Digital Transformation',
   'CX & Analytics',
   'Security & Zero Trust',
   'Treasury Management',

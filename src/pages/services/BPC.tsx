@@ -17,9 +17,16 @@ import {
 '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_AI_COE,
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+  SOLUTION_BPC,
+  SOLUTION_ERP,
+  SOLUTION_HCM,
+} from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Capabilities', hash: 'capabilities' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
@@ -31,7 +38,11 @@ const OVERVIEW_IMAGE =
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
+},
+{
+  label: 'Oracle (Fusion & EBS)',
+  to: SERVICE_ORACLE
 },
 {
   label: 'Business Process Consulting'
@@ -139,21 +150,21 @@ const RELATED = [
   icon: Users,
   title: 'HCM',
   description: 'Configure Oracle HCM against redesigned HR processes.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 },
 {
   icon: Database,
   title: 'ERP (Oracle Cloud)',
   description:
   'Implement Oracle Fusion or EBS on top of process foundations.',
-  to: '/services/erp-oracle-cloud/'
+  to: SOLUTION_ERP
 },
 {
   icon: Sparkles,
   title: 'AI CoE',
   description:
   'AI agents and automation that bring redesigned processes to life.',
-  to: '/services/ai-coe/'
+  to: SERVICE_AI_COE
 }];
 
 const SERVICE_SCHEMA = {
@@ -167,7 +178,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'Map, redesign and optimise Finance, HR, Supply Chain and Sales operations for cloud-ready enterprises.',
-  url: 'https://www.mpccloudconsulting.com/services/business-process-consulting/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_BPC}`
 };
 export function BPC() {
   return (
@@ -175,7 +186,7 @@ export function BPC() {
       <SEO
         title="Business Process Consulting | MPC Cloud Consulting"
         description="MPC BPC maps, optimises and transforms Finance, HR, Supply Chain and Sales operations for cloud-ready enterprises."
-        canonicalPath="/services/business-process-consulting/"
+        canonicalPath={SOLUTION_BPC}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -206,7 +217,6 @@ export function BPC() {
         <TableOfContents items={TOC} variant="inline" />
 
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
           <div className="mb-10">
@@ -232,10 +242,10 @@ export function BPC() {
         </section>
 
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>Areas we cover</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

@@ -21,6 +21,14 @@ import {
   buildBreadcrumbSchema
 } from '../../components/sections/Breadcrumb';
 import { ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
+import {
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+  SOLUTION_AAAS,
+  SOLUTION_BPC,
+  SOLUTION_HCAAS,
+  SOLUTION_HCM,
+} from '../../data/paths';
 const FAQS = [
 {
   q: 'What Oracle HCM modules does MPC implement?',
@@ -43,10 +51,6 @@ const TOC = [
 {
   label: 'Overview',
   hash: 'overview'
-},
-{
-  label: 'Capabilities',
-  hash: 'capabilities'
 },
 {
   label: 'Modules',
@@ -72,11 +76,11 @@ const TOC = [
 const BREADCRUMB = [
 {
   label: 'Services',
-  to: '/services/'
+  to: SERVICES_INDEX
 },
 {
   label: 'Oracle (Fusion & EBS)',
-  to: '/services/oracle-fusion-ebs/'
+  to: SERVICE_ORACLE
 },
 {
   label: 'HCM'
@@ -229,21 +233,21 @@ const RELATED = [
   title: 'Adoption as a Service',
   description:
   'Maximise HCM ROI through change management, training, and user enablement.',
-  to: '/services/adoption-as-a-service/'
+  to: SOLUTION_AAAS
 },
 {
   icon: Activity,
   title: 'Health Check as a Service',
   description:
   'Independent audit of your live Oracle HCM environment with a remediation roadmap.',
-  to: '/services/health-check-as-a-service/'
+  to: SOLUTION_HCAAS
 },
 {
   icon: Workflow,
   title: 'Business Process Consulting',
   description:
   'Optimise HR workflows before, during, and after your Oracle HCM implementation.',
-  to: '/services/business-process-consulting/'
+  to: SOLUTION_BPC
 }];
 
 const SERVICE_SCHEMA = {
@@ -257,7 +261,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Australia', 'United Kingdom'],
   description:
   'End-to-end Oracle HCM Cloud implementation, managed support, and innovation — HR, Talent, Workforce Management, Global Payroll, and Oracle ME.',
-  url: 'https://www.mpccloudconsulting.com/services/hcm/'
+  url: `https://www.mpccloudconsulting.com${SOLUTION_HCM}`
 };
 export function HCM() {
   return (
@@ -265,7 +269,7 @@ export function HCM() {
       <SEO
         title="Oracle HCM Cloud Consulting & Implementation | MPC"
         description="MPC delivers end-to-end Oracle HCM Cloud — HR, Talent, Workforce Management, Payroll and Oracle ME. 65+ clients globally."
-        canonicalPath="/services/hcm/"
+        canonicalPath={SOLUTION_HCM}
         schema={[
         ORGANIZATION_SCHEMA,
         SERVICE_SCHEMA,
@@ -355,7 +359,6 @@ export function HCM() {
 
         {/* Overview */}
         <section
-          id="overview"
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="max-w-[1280px] mx-auto">
             <div className="mb-10">
@@ -388,13 +391,13 @@ export function HCM() {
           </div>
         </section>
 
-        {/* Capabilities */}
+        {/* Overview / Capabilities */}
         <section
-          id="capabilities"
+          id="overview"
           className="scroll-mt-[140px] w-full bg-bg-light px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Capabilities</p>
+            <p className="section-eyebrow mb-3">Overview</p>
             <Heading level={2}>Our HCM Capabilities</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

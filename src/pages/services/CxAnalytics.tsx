@@ -1,12 +1,11 @@
 import React from 'react';
-import { BarChart3, Users, Settings } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import { ServiceHero } from '../../components/sections/heroes/ServiceHero';
 import { ServiceWhatIs } from '../../components/sections/ServiceWhatIs';
 import { TableOfContents } from '../../components/sections/TableOfContents';
-import { SolutionColumns } from '../../components/sections/SolutionColumns';
+import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import { LifecyclePath } from '../../components/sections/LifecyclePath';
 import { Heading } from '../../components/ui/Heading';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
@@ -16,10 +15,16 @@ import {
 } from '../../components/sections/FAQAccordion';
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
+import {
+  SERVICE_CX_ANALYTICS,
+  SERVICES_INDEX,
+  SOLUTION_POWER_BI,
+  SOLUTION_SALESFORCE,
+  SOLUTION_SERVICENOW,
+} from '../../data/paths';
 
 const TOC = [
   { label: 'Overview', hash: 'overview' },
-  { label: 'Solutions', hash: 'solutions' },
   { label: 'Services', hash: 'services' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' },
@@ -29,51 +34,25 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: '/services/' },
+  { label: 'Services', to: SERVICES_INDEX },
   { label: 'CX & Analytics' },
 ];
 
-const SOLUTIONS = [
+const CAPABILITIES = [
   {
-    icon: BarChart3,
     title: 'Power BI',
-    imageSrc:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Power BI dashboards and business analytics',
-    items: [
-      'Power BI Consulting',
-      'Data Integration & Modelling',
-      'Dashboard Development & Self-Service BI',
-      'Licensing & Version recommendation',
-      'Advanced Analytics',
-      'Migration to Power BI',
-    ],
+    body: 'Power BI consulting, data integration and modelling, dashboard development, self-service BI, advanced analytics, and migration to Power BI.',
+    to: SOLUTION_POWER_BI,
   },
   {
-    icon: Users,
     title: 'Salesforce',
-    imageSrc:
-      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Salesforce CRM and customer engagement',
-    items: [
-      'End-to-End Implementation of Salesforce Clouds',
-      'B2C',
-      'B2B',
-      'OMS, Sales, Service, Marketing and other custom clouds',
-    ],
+    body: 'End-to-end Salesforce Cloud implementations — B2C, B2B, OMS, Sales, Service, Marketing, and custom clouds rolled out globally.',
+    to: SOLUTION_SALESFORCE,
   },
   {
-    icon: Settings,
     title: 'ServiceNow',
-    imageSrc:
-      'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'ServiceNow IT service management platform',
-    items: [
-      'HRSD (Human Resources Service Delivery)',
-      'ITAM (IT Asset Management)',
-      'ITOM (IT Operations Management)',
-      'ITSM (IT Service Management)',
-    ],
+    body: 'HRSD, ITAM, ITOM, and ITSM — enterprise service management that improves employee experience and IT operations at scale.',
+    to: SOLUTION_SERVICENOW,
   },
 ];
 
@@ -153,7 +132,7 @@ const SERVICE_SCHEMA = {
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
     'Power BI, Salesforce, and ServiceNow for customer experience, analytics, and enterprise service management.',
-  url: 'https://www.mpccloudconsulting.com/services/cx-analytics/',
+  url: `https://www.mpccloudconsulting.com${SERVICE_CX_ANALYTICS}`,
 };
 
 export function CxAnalytics() {
@@ -162,7 +141,7 @@ export function CxAnalytics() {
       <SEO
         title="CX & Analytics | Power BI, Salesforce & ServiceNow | MPC"
         description="MPC delivers Power BI, Salesforce, and ServiceNow — CX, analytics, and service management with global rollout and managed support."
-        canonicalPath="/services/cx-analytics/"
+        canonicalPath={SERVICE_CX_ANALYTICS}
         schema={[
           ORGANIZATION_SCHEMA,
           SERVICE_SCHEMA,
@@ -180,15 +159,14 @@ export function CxAnalytics() {
           subhead="Power BI, Salesforce, and ServiceNow for customer experience and insight — implemented, rolled out globally, and supported long after go-live."
           primaryCtaText="Talk to Our CX Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Solutions"
-          secondaryCtaTo="#solutions"
+          secondaryCtaText="Explore Overview"
+          secondaryCtaTo="#overview"
           imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Analytics dashboard and customer experience data"
           breadcrumb={BREADCRUMB}
         />
 
         <ServiceWhatIs
-          id="overview"
           title="What is MPC's CX & Analytics practice?"
           body="MPC's CX & Analytics practice helps enterprises turn data into decisions and deliver exceptional customer and employee experiences. We implement and support Power BI for analytics, Salesforce for customer engagement, and ServiceNow for IT and HR service delivery — with global rollout capability and ongoing managed support."
           imageSrc={OVERVIEW_IMAGE}
@@ -197,7 +175,11 @@ export function CxAnalytics() {
 
         <TableOfContents items={TOC} variant="inline" />
 
-        <SolutionColumns id="solutions" columns={SOLUTIONS} />
+        <ServiceCapabilities
+          title="Full CX & analytics portfolio"
+          intro="From Power BI and Salesforce to ServiceNow — one partner for customer experience, analytics, and enterprise service management."
+          capabilities={CAPABILITIES}
+        />
 
         <section
           id="services"

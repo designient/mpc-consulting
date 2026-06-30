@@ -6,15 +6,30 @@
   <url><loc>https://www.mpccloudconsulting.com/careers/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/oracle-fusion-ebs/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/hcm/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/erp-oracle-cloud/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/java-technologies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/devops/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/business-process-consulting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/health-check-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/adoption-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/hcm/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/erp-oracle-cloud/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/java-technologies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/devops/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/business-process-consulting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/health-check-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/adoption-as-a-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/scm/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/epm/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/unifier/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/tech/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/application-development/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/database-migration/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/cloud-management/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/power-bi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/salesforce/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/servicenow/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/cybersecurity-zero-trust-strategy/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/application-cloud-security/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/infrastructure-managed-operations/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/ibs-fintech/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/solutions/treasury-operations/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/ai-coe/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.mpccloudconsulting.com/services/cloud-database/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mpccloudconsulting.com/services/cloud-digital-transformation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/cx-analytics/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/security-zero-trust/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.mpccloudconsulting.com/services/treasury-management/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

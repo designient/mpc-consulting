@@ -29,6 +29,16 @@ import {
   Breadcrumb,
   buildBreadcrumbSchema } from
 '../components/sections/Breadcrumb';
+import {
+  SERVICE_AI_COE,
+  SOLUTION_AAAS,
+  SOLUTION_BPC,
+  SOLUTION_DEVOPS,
+  SOLUTION_ERP,
+  SOLUTION_HCM,
+  SOLUTION_HCAAS,
+  SOLUTION_JAVA,
+} from '../data/paths';
 const BREADCRUMB = [
 {
   label: 'Services'
@@ -39,49 +49,49 @@ const SERVICES = [
   icon: Users,
   title: 'HCM',
   desc: 'Oracle HCM Cloud — Transform HR, Talent, Payroll, and Workforce Management end-to-end.',
-  to: '/services/hcm/'
+  to: SOLUTION_HCM
 },
 {
   icon: Database,
   title: 'ERP (Oracle Cloud)',
   desc: 'Oracle Fusion & EBS — Financials, Projects, Procurement, Risk, and Compliance.',
-  to: '/services/erp-oracle-cloud/'
+  to: SOLUTION_ERP
 },
 {
   icon: Code2,
   title: 'Java Technologies',
   desc: 'Spring Boot, microservices, full-stack development, and legacy modernisation.',
-  to: '/services/java-technologies/'
+  to: SOLUTION_JAVA
 },
 {
   icon: Cloud,
   title: 'DevOps Services',
   desc: 'CI/CD pipelines, Kubernetes, multi-cloud infrastructure, and automated delivery.',
-  to: '/services/devops/'
+  to: SOLUTION_DEVOPS
 },
 {
   icon: Workflow,
   title: 'Business Process Consulting',
   desc: 'Map, redesign, and optimise Finance, HR, Supply Chain, and Sales processes.',
-  to: '/services/business-process-consulting/'
+  to: SOLUTION_BPC
 },
 {
   icon: Activity,
   title: 'HCaaS',
   desc: 'Health Check as a Service — an independent Oracle audit with a clear remediation roadmap.',
-  to: '/services/health-check-as-a-service/'
+  to: SOLUTION_HCAAS
 },
 {
   icon: UserCheck,
   title: 'AaaS',
   desc: 'Adoption as a Service — change management and training that maximises Oracle ROI.',
-  to: '/services/adoption-as-a-service/'
+  to: SOLUTION_AAAS
 },
 {
   icon: Sparkles,
   title: 'AI CoE',
   desc: 'AI enablement, predictive AI, custom agents, and generative AI for the enterprise.',
-  to: '/services/ai-coe/'
+  to: SERVICE_AI_COE
 }];
 
 const PORTFOLIO_TABS = {
