@@ -20,18 +20,14 @@ export function IndustryTabSwitcher({ industries, eyebrow, title }: Props) {
   return (
     <section className="w-full bg-white py-16 md:py-24 px-4 md:px-10 lg:px-[60px]">
       <div className="max-w-[1280px] mx-auto">
-        {eyebrow &&
-        <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider mb-3">
-            {eyebrow}
-          </p>
-        }
-        {title &&
-        <div className="mb-10 md:mb-12 max-w-3xl">
-            <Heading level={2} showAccentBar>
-              {title}
-            </Heading>
+        {(eyebrow || title) && (
+          <div className="text-center mb-10 md:mb-12 max-w-[800px] mx-auto">
+            {eyebrow && (
+              <p className="section-eyebrow mb-3">{eyebrow}</p>
+            )}
+            {title && <Heading level={2}>{title}</Heading>}
           </div>
-        }
+        )}
 
         {/* Tabs */}
         <div className="border-b border-text-primary/10 mb-10 md:mb-12 -mx-4 md:mx-0 px-4 md:px-0 overflow-x-auto">
