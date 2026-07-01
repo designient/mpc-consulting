@@ -29,6 +29,13 @@ import {
   SOLUTION_HCAAS,
   SOLUTION_HCM,
 } from '../../data/paths';
+import {
+  getCaseStudyForSolution,
+  withCaseStudyToc,
+} from '../../data/solutionCaseStudies';
+
+const CASE_STUDY = getCaseStudyForSolution(SOLUTION_HCM);
+
 const FAQS = [
 {
   q: 'What Oracle HCM modules does MPC implement?',
@@ -47,7 +54,7 @@ const FAQS = [
   a: "Yes. We've implemented Oracle Global Payroll across UAE, Singapore, Australia, and the UK — with full local compliance configuration."
 }];
 
-const TOC = [
+const TOC_ITEMS = withCaseStudyToc([
 {
   label: 'Overview',
   hash: 'overview'
@@ -65,13 +72,9 @@ const TOC = [
   hash: 'comparison'
 },
 {
-  label: 'Case Study',
-  hash: 'case-study'
-},
-{
   label: 'FAQ',
   hash: 'faq'
-}];
+}]);
 
 const BREADCRUMB = [
 {
@@ -355,7 +358,7 @@ export function HCM() {
           </div>
         </section>
 
-        <TableOfContents items={TOC} variant="inline" />
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         {/* Overview */}
         <section
@@ -490,17 +493,17 @@ export function HCM() {
           id="case-study"
           className="scroll-mt-[140px]"
           eyebrow="Featured Case Study"
-          tag="BFSI · 2024"
-          headline="Global BFSI consolidates HR onto one system"
-          description="A leading BFSI institution operating across three countries needed to consolidate four legacy HR systems into Oracle HCM Cloud — without disrupting payroll cycles or compliance reporting. MPC delivered a phased Core HR → Talent → Payroll implementation with a custom integration layer to legacy systems."
-          metadata="Industry: BFSI · Geography: India, UAE, Singapore, UK · Modules: Core HR, Talent, Payroll"
-          imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop"
-          imageAlt="Corporate finance and HR setting"
-          stat="40%"
-          statLabel="Reduction in HR admin time"
-          statContext="4 legacy systems consolidated to one Oracle HCM environment across 3 countries"
+          tag={CASE_STUDY.config.tag}
+          headline={CASE_STUDY.config.headline}
+          description={CASE_STUDY.config.description}
+          metadata={CASE_STUDY.config.metadata}
+          imageSrc={CASE_STUDY.config.imageSrc}
+          imageAlt={CASE_STUDY.config.imageAlt}
+          stat={CASE_STUDY.config.stat}
+          statLabel={CASE_STUDY.config.statLabel}
+          statContext={CASE_STUDY.config.statContext}
           ctaText="Read the full case study"
-          ctaTo="/resources/case-studies/"
+          ctaTo={CASE_STUDY.ctaTo}
           bg="soft" />
         
 

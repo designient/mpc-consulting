@@ -15,9 +15,14 @@ const SERVICES = [
 const RESOURCES = [
   { label: 'Resources Hub', to: '/resources/' },
   { label: 'Case Studies', to: '/resources/case-studies/' },
-  { label: 'Whitepapers', to: '/resources/whitepapers/' },
   { label: 'Blog', to: '/resources/blog/' },
-  { label: 'News', to: '/news/' }
+];
+
+const COMPANY = [
+  { label: 'About', to: '/about/' },
+  { label: 'Leadership', to: '/leadership/' },
+  { label: 'Values', to: '/values/' },
+  { label: 'Careers', to: '/careers/' },
 ];
 
 function navLinkClass(isActive: boolean) {
@@ -140,12 +145,30 @@ export function StickyNav() {
               </div>
             </div>
 
-            <NavLink to="/about/" className={({ isActive }) => navLinkClass(isActive)}>
-              About
-            </NavLink>
-            <NavLink to="/careers/" className={({ isActive }) => navLinkClass(isActive)}>
-              Careers
-            </NavLink>
+            <div className="relative group">
+              <button
+                type="button"
+                className="flex items-center gap-1.5 py-1 font-body text-[15px] font-medium tracking-[-0.01em] text-text-primary/75 hover:text-primary transition-colors"
+                aria-haspopup="true">
+                Company
+                <ChevronDown className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all pointer-events-none group-hover:pointer-events-auto">
+                <div className="bg-white rounded-2xl shadow-medium border border-black/8 p-4 w-[240px]">
+                  <p className="font-body text-[14px] uppercase tracking-[0.12em] text-text-primary/45 px-2 mb-2">
+                    Company
+                  </p>
+                  {COMPANY.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className="block px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-body text-[13px] text-text-primary hover:text-stat transition-colors">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="hidden lg:flex items-center shrink-0">
@@ -209,18 +232,18 @@ export function StickyNav() {
                   {r.label}
                 </Link>
               ))}
-              <Link
-                to="/about/"
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-medium mt-2">
-                About
-              </Link>
-              <Link
-                to="/careers/"
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 rounded-xl hover:bg-bg-minimal font-medium">
-                Careers
-              </Link>
+              <p className="px-3 pt-4 pb-1 text-[14px] uppercase tracking-[0.12em] text-text-primary/45">
+                Company
+              </p>
+              {COMPANY.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setMobileOpen(false)}
+                  className="px-3 py-2 rounded-xl hover:bg-bg-minimal text-text-primary/80">
+                  {item.label}
+                </Link>
+              ))}
               <div className="mt-5 px-3">
                 <Link
                   to="/contact/"

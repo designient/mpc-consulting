@@ -50,22 +50,7 @@ export function App() {
         <Route path="/leadership/" element={<Leadership />} />
         <Route path="/values/" element={<Values />} />
         <Route path="/team/" element={<Navigate to="/leadership/" replace />} />
-        
-        <Route
-          path="/news/"
-          element={
-          <PageStub
-            title="MPC in the News"
-            description="Company announcements, industry recognition, new office openings, and updates from our teams across India, UAE, Singapore, Australia, and the UK."
-            canonicalPath="/news/"
-            breadcrumb={[
-            {
-              label: 'News'
-            }]
-            } />
 
-          } />
-        
         <Route path="/careers/" element={<Careers />} />
         <Route path="/contact/" element={<Contact />} />
 
@@ -162,26 +147,7 @@ export function App() {
           } />
         
         <Route path="/resources/case-studies/" element={<CaseStudies />} />
-        
-        <Route
-          path="/resources/whitepapers/"
-          element={
-          <PageStub
-            title="Whitepapers & Guides"
-            description="Download in-depth Oracle Cloud and AI transformation guides from MPC's expert consultants."
-            canonicalPath="/resources/whitepapers/"
-            breadcrumb={[
-            {
-              label: 'Resources',
-              to: '/resources/'
-            },
-            {
-              label: 'Whitepapers'
-            }]
-            } />
 
-          } />
-        
         <Route
           path="/resources/blog/"
           element={

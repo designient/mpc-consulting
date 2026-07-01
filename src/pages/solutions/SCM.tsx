@@ -41,7 +41,6 @@ const CONFIG: OracleSolutionPageConfig = {
     { label: 'Modules', hash: 'modules' },
     { label: 'Process', hash: 'process' },
     { label: 'Comparison', hash: 'comparison' },
-    { label: 'Case Study', hash: 'case-study' },
     { label: 'FAQ', hash: 'faq' },
   ],
   overviewTitle: 'Oracle SCM with MPC',
@@ -190,19 +189,6 @@ const CONFIG: OracleSolutionPageConfig = {
       values: ['Hand-over and gone', 'Managed service from the team that built it'],
     },
   ],
-  caseStudy: {
-    tag: 'Manufacturing · 2024',
-    headline: '38% faster month-end close for a global auto components leader',
-    description:
-      'A unified Oracle Cloud ERP and SCM rollout across 14 plants — designed around multi-entity manufacturing realities, with industry-specific reporting from day one.',
-    metadata: '14 plants · 4 countries · 9 months',
-    imageSrc:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop',
-    imageAlt: 'Manufacturing operations dashboard',
-    stat: '38%',
-    statLabel: 'Faster month-end close',
-    statContext: 'Closing the books dropped from 11 days to under 7.',
-  },
   related: [
     {
       icon: Database,

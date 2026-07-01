@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Heading } from '../ui/Heading';
 export type Industry = {
   id: string;
@@ -9,7 +8,6 @@ export type Industry = {
   description: string;
   challenges: string[];
   image: string;
-  href: string;
 };
 type Props = {
   industries: Industry[];
@@ -71,7 +69,7 @@ export function IndustryTabSwitcher({ industries, eyebrow, title }: Props) {
             <p className="font-body text-[16px] md:text-[17px] leading-[1.7] text-text-primary/80 mb-6">
               {active.description}
             </p>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-0">
               {active.challenges.map((c, i) =>
               <li key={i} className="flex items-start gap-3">
                   <span className="mt-1 w-5 h-5 rounded-full bg-divider/10 flex items-center justify-center flex-shrink-0">
@@ -83,22 +81,13 @@ export function IndustryTabSwitcher({ industries, eyebrow, title }: Props) {
                 </li>
               )}
             </ul>
-            <Link
-              to={active.href}
-              className="inline-flex items-center gap-2 font-body text-[15px] font-medium text-divider hover:text-primary transition-colors group">
-              
-              Explore {active.label} solutions
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
 
-          <div className="relative w-full aspect-[4/3] overflow-hidden">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-[10px] md:rounded-[12px]">
             <img
               src={active.image}
               alt={active.label}
               className="w-full h-full object-cover" />
-            
-            <span className="absolute top-0 left-0 w-[60px] h-[3px] bg-divider" />
           </div>
         </div>
       </div>

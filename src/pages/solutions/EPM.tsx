@@ -40,7 +40,6 @@ const CONFIG: OracleSolutionPageConfig = {
     { label: 'Modules', hash: 'modules' },
     { label: 'Process', hash: 'process' },
     { label: 'Comparison', hash: 'comparison' },
-    { label: 'Case Study', hash: 'case-study' },
     { label: 'FAQ', hash: 'faq' },
   ],
   overviewTitle: 'Oracle EPM with MPC',
@@ -192,20 +191,6 @@ const CONFIG: OracleSolutionPageConfig = {
       ],
     },
   ],
-  caseStudy: {
-    tag: 'Manufacturing · 2024',
-    headline: 'Closing the books in 7 days: a manufacturing finance playbook',
-    description:
-      'What it took to compress month-end from 11 days to under 7 across a 14-plant Oracle Cloud rollout — with multi-entity consolidation and automated reconciliation built in from the start.',
-    metadata: 'Manufacturing · 14 plants · Oracle Cloud ERP',
-    imageSrc:
-      'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2000&auto=format&fit=crop',
-    imageAlt: 'Manufacturing finance operations',
-    stat: '11d → 7d',
-    statLabel: 'Month-end close cycle',
-    statContext:
-      'Automated GL reconciliation and standardised close processes across all plants.',
-  },
   related: [
     {
       icon: Database,

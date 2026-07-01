@@ -27,13 +27,18 @@ import {
   SOLUTION_HCAAS,
   SOLUTION_JAVA,
 } from '../../data/paths';
-const TOC = [
+import {
+  getCaseStudyForSolution,
+  withCaseStudyToc,
+} from '../../data/solutionCaseStudies';
+
+const CASE_STUDY = getCaseStudyForSolution(SOLUTION_ERP);
+const TOC_ITEMS = withCaseStudyToc([
   { label: 'Overview', hash: 'overview' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
-  { label: 'Case Study', hash: 'case-study' },
   { label: 'FAQ', hash: 'faq' }
-];
+]);
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop';
@@ -269,7 +274,7 @@ export function ERP() {
           imageAlt="Finance team reviewing ERP dashboards"
         />
 
-        <TableOfContents items={TOC} variant="inline" />
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
@@ -373,17 +378,17 @@ export function ERP() {
           id="case-study"
           className="scroll-mt-[140px]"
           eyebrow="Featured Case Study"
-          tag="Manufacturing · 2024"
-          headline="Manufacturer migrates EBS R12 → Fusion with zero close disruption"
-          description="A global manufacturing client needed to migrate from Oracle EBS R12 to Oracle Fusion Cloud with zero disruption to month-end financial close. MPC delivered a phased migration with parallel close cycles."
-          metadata="Manufacturing · Global · EBS → Fusion"
-          imageSrc="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2000&auto=format&fit=crop"
-          imageAlt="Manufacturing facility operations"
-          stat="8d → 3d"
-          statLabel="Financial close cycle"
-          statContext="Full GL reconciliation automated. Zero disruption to month-end during cutover."
+          tag={CASE_STUDY.config.tag}
+          headline={CASE_STUDY.config.headline}
+          description={CASE_STUDY.config.description}
+          metadata={CASE_STUDY.config.metadata}
+          imageSrc={CASE_STUDY.config.imageSrc}
+          imageAlt={CASE_STUDY.config.imageAlt}
+          stat={CASE_STUDY.config.stat}
+          statLabel={CASE_STUDY.config.statLabel}
+          statContext={CASE_STUDY.config.statContext}
           ctaText="Read the full case study"
-          ctaTo="/resources/case-studies/"
+          ctaTo={CASE_STUDY.ctaTo}
           bg="soft"
         />
 

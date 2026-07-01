@@ -22,6 +22,10 @@ import {
   buildBreadcrumbSchema,
 } from '../sections/Breadcrumb';
 import { SERVICE_ORACLE, SERVICES_INDEX } from '../../data/paths';
+import {
+  getCaseStudyForSolution,
+  withCaseStudyToc,
+} from '../../data/solutionCaseStudies';
 
 type ModuleItem = {
   title: string;
@@ -99,6 +103,8 @@ export type OracleSolutionPageConfig = {
   comparisonTitle: string;
   comparisonIntro: string;
   comparisonRows: ComparisonRow[];
+  /** Override mapped case study slug from solutionCaseStudies */
+  caseStudySlug?: string;
   caseStudy?: CaseStudyConfig;
   related: RelatedItem[];
   faqs: FAQItem[];
@@ -128,6 +134,13 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
     config.breadcrumbLabel,
     config.parentService,
   );
+  const caseStudyResolved = getCaseStudyForSolution(
+    config.canonicalPath,
+    config.caseStudySlug,
+  );
+  const caseStudy = config.caseStudy ?? caseStudyResolved.config;
+  const caseStudyCtaTo = caseStudyResolved.ctaTo;
+  const tocItems = withCaseStudyToc(config.toc);
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -224,7 +237,7 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           </div>
         </section>
 
-        <TableOfContents items={config.toc} variant="inline" />
+        <TableOfContents items={tocItems} variant="inline" />
 
         <section
           id="overview"
@@ -342,35 +355,31 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           centerHeader
         />
 
-        {config.caseStudy && (
-          <>
-            <StatOverlayCaseStudy
-              id="case-study"
-              className="scroll-mt-[140px]"
-              eyebrow="Featured Case Study"
-              tag={config.caseStudy.tag}
-              headline={config.caseStudy.headline}
-              description={config.caseStudy.description}
-              metadata={config.caseStudy.metadata}
-              imageSrc={config.caseStudy.imageSrc}
-              imageAlt={config.caseStudy.imageAlt}
-              stat={config.caseStudy.stat}
-              statLabel={config.caseStudy.statLabel}
-              statContext={config.caseStudy.statContext}
-              ctaText="Read the full case study"
-              ctaTo="/resources/case-studies/"
-              bg="soft"
-            />
-            <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-          </>
-        )}
+        <StatOverlayCaseStudy
+          id="case-study"
+          className="scroll-mt-[140px]"
+          eyebrow="Featured Case Study"
+          tag={caseStudy.tag}
+          headline={caseStudy.headline}
+          description={caseStudy.description}
+          metadata={caseStudy.metadata}
+          imageSrc={caseStudy.imageSrc}
+          imageAlt={caseStudy.imageAlt}
+          stat={caseStudy.stat}
+          statLabel={caseStudy.statLabel}
+          statContext={caseStudy.statContext}
+          ctaText="Read the full case study"
+          ctaTo={caseStudyCtaTo}
+          bg="soft"
+        />
+        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
 
         <RelatedServices
           id="related"
           eyebrow="Related Solutions"
           title="Continue exploring"
           items={config.related}
-          bg={config.caseStudy ? 'white' : 'soft'}
+          bg="white"
           centerHeader
         />
 

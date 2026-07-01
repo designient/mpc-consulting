@@ -172,6 +172,166 @@ export const CASE_STUDIES: CaseStudy[] = [
     region: 'India',
     featured: false,
   },
+  {
+    slug: 'cx-analytics-power-bi',
+    tag: 'Retail · 2024',
+    headline: 'Self-service BI rollout cuts reporting time by 60%',
+    description:
+      'A multi-region retailer replaced fragmented Excel reporting with a governed Power BI programme — semantic models, executive dashboards, and self-service analytics adopted by finance and operations teams.',
+    metadata: 'Retail · India, UAE · Power BI · Data modelling',
+    imageSrc:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Business intelligence dashboards and analytics',
+    stat: '60%',
+    statLabel: 'Faster reporting cycles',
+    statContext:
+      'Month-end reporting compressed from 5 days to 2 with governed self-service BI.',
+    services: ['Power BI', 'CX & Analytics'],
+    industries: ['Retail'],
+    topics: ['bfsi', 'professional-services'],
+    region: 'India, UAE',
+    featured: false,
+  },
+  {
+    slug: 'cx-salesforce-rollout',
+    tag: 'Professional Services · 2024',
+    headline: 'Global Salesforce rollout across 12 countries in 9 months',
+    description:
+      'A professional services firm unified B2B sales and service on Salesforce — phased rollouts across 12 countries with localisation, integration to Oracle ERP, and adoption programmes built in.',
+    metadata: 'Professional Services · 12 countries · Sales & Service Cloud',
+    imageSrc:
+      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Sales team using CRM platform',
+    stat: '12',
+    statLabel: 'Countries live',
+    statContext:
+      'Phased Salesforce rollout with ERP integration and local compliance.',
+    services: ['Salesforce', 'CX & Analytics'],
+    industries: ['Professional Services'],
+    topics: ['professional-services'],
+    region: 'Global',
+    featured: false,
+  },
+  {
+    slug: 'cx-servicenow-itsm',
+    tag: 'Technology · 2024',
+    headline: 'ITSM modernisation reduces incident resolution time by 45%',
+    description:
+      'An enterprise technology group replaced legacy ticketing with ServiceNow ITSM — automated workflows, SLA governance, and integration with monitoring tools for faster incident resolution.',
+    metadata: 'Technology · ITSM · ServiceNow',
+    imageSrc:
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'IT service management operations',
+    stat: '45%',
+    statLabel: 'Faster incident resolution',
+    statContext:
+      'Mean time to resolve dropped with automated triage and SLA workflows.',
+    services: ['ServiceNow', 'CX & Analytics'],
+    industries: ['Professional Services'],
+    topics: ['professional-services'],
+    region: 'India',
+    featured: false,
+  },
+  {
+    slug: 'cloud-app-modernization',
+    tag: 'Financial Services · 2024',
+    headline: 'Legacy monolith rewritten as cloud-native APIs in 6 months',
+    description:
+      'A financial services client modernised a legacy Java monolith into microservices on Spring Boot — API-first architecture, CI/CD pipelines, and integration with Oracle Cloud without big-bang cutover.',
+    metadata: 'Financial Services · Java · Microservices',
+    imageSrc:
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Application development and modernisation',
+    stat: '6mo',
+    statLabel: 'To production APIs',
+    statContext:
+      'Strangler pattern delivery with phased cutover and zero downtime.',
+    services: ['Application Development', 'Java'],
+    industries: ['BFSI'],
+    topics: ['devops', 'bfsi'],
+    region: 'India',
+    featured: false,
+  },
+  {
+    slug: 'cloud-database-migration',
+    tag: 'Manufacturing · 2024',
+    headline: 'Oracle database migration to cloud with 99.9% uptime',
+    description:
+      'A manufacturing enterprise migrated Oracle and SQL Server workloads to cloud-native databases — schema refactoring, zero-downtime cutover, and data lake engineering for analytics.',
+    metadata: 'Manufacturing · Oracle · PostgreSQL · Data lake',
+    imageSrc:
+      'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Database migration and cloud infrastructure',
+    stat: '99.9%',
+    statLabel: 'Migration uptime',
+    statContext:
+      'Phased migration with parallel validation and automated reconciliation.',
+    services: ['Database Migration', 'Cloud'],
+    industries: ['Manufacturing'],
+    topics: ['manufacturing', 'devops'],
+    region: 'Global',
+    featured: false,
+  },
+  {
+    slug: 'cloud-multi-cloud-ops',
+    tag: 'Energy · 2024',
+    headline: 'Multi-cloud operations unified across AWS, Azure, and OCI',
+    description:
+      'An energy sector client consolidated cloud operations across three providers — IaC standards, observability, backup/DR, and DevOps pipelines delivering consistent governance.',
+    metadata: 'Energy · AWS · Azure · OCI · DevOps',
+    imageSrc:
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Multi-cloud infrastructure operations',
+    stat: '3',
+    statLabel: 'Clouds unified',
+    statContext:
+      'Single operations model across AWS, Azure, and OCI with shared IaC.',
+    services: ['Cloud Management', 'DevOps'],
+    industries: ['Manufacturing'],
+    topics: ['devops'],
+    region: 'India, UAE',
+    featured: false,
+  },
+  {
+    slug: 'security-zero-trust-program',
+    tag: 'BFSI · 2024',
+    headline: 'Zero Trust programme cuts security incidents by 52%',
+    description:
+      'A BFSI institution implemented identity-centric Zero Trust architecture — IAM, SASE integration, SOC/NOC 24×7 monitoring, and AI-enabled threat detection across hybrid infrastructure.',
+    metadata: 'BFSI · Zero Trust · SOC/NOC · AppSec',
+    imageSrc:
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Cybersecurity and Zero Trust operations',
+    stat: '52%',
+    statLabel: 'Fewer security incidents',
+    statContext:
+      'Year-one reduction after Zero Trust rollout and SOC operationalisation.',
+    services: ['Security & Zero Trust'],
+    industries: ['BFSI'],
+    topics: ['bfsi'],
+    region: 'India, UAE',
+    featured: false,
+  },
+  {
+    slug: 'treasury-ibs-fintech',
+    tag: 'Conglomerate · 2024',
+    headline: 'Treasury platform unifies 8 entities on IBS Fintech',
+    description:
+      'A multi-entity conglomerate consolidated cash, payments, FX risk, and trade finance onto IBS Fintech — multi-currency operations with ERP and global bank integrations.',
+    metadata: 'Conglomerate · 8 entities · IBS Fintech · Treasury',
+    imageSrc:
+      'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Treasury management platform dashboard',
+    stat: '8',
+    statLabel: 'Entities unified',
+    statContext:
+      'Cash, FX, and trade finance on one platform with real-time visibility.',
+    services: ['Treasury Management', 'IBS Fintech'],
+    industries: ['BFSI'],
+    topics: ['bfsi', 'erp'],
+    region: 'India',
+    featured: false,
+  },
 ];
 
 export const FEATURED_CASE_STUDIES = CASE_STUDIES.filter((s) => s.featured);

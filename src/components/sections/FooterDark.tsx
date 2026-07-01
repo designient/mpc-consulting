@@ -25,7 +25,6 @@ const COMPANY_LINKS = [
   { label: 'Leadership Team', to: '/leadership/' },
   { label: 'Values', to: '/values/' },
   { label: 'Careers', to: '/careers/' },
-  { label: 'News', to: '/news/' },
   { label: 'Contact Us', to: '/contact/' }
 ];
 

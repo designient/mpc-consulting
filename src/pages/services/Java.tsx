@@ -10,6 +10,7 @@ import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
+import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
 import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
@@ -25,12 +26,18 @@ import {
   SOLUTION_ERP,
   SOLUTION_JAVA,
 } from '../../data/paths';
-const TOC = [
+import {
+  getCaseStudyForSolution,
+  withCaseStudyToc,
+} from '../../data/solutionCaseStudies';
+
+const CASE_STUDY = getCaseStudyForSolution(SOLUTION_JAVA);
+const TOC_ITEMS = withCaseStudyToc([
   { label: 'Overview', hash: 'overview' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
-];
+]);
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop';
@@ -231,7 +238,7 @@ export function Java() {
           imageAlt="Software engineering team at work"
         />
 
-        <TableOfContents items={TOC} variant="inline" />
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
@@ -308,6 +315,26 @@ export function Java() {
           bg="white"
           centerHeader
         />
+
+        <StatOverlayCaseStudy
+          id="case-study"
+          className="scroll-mt-[140px]"
+          eyebrow="Featured Case Study"
+          tag={CASE_STUDY.config.tag}
+          headline={CASE_STUDY.config.headline}
+          description={CASE_STUDY.config.description}
+          metadata={CASE_STUDY.config.metadata}
+          imageSrc={CASE_STUDY.config.imageSrc}
+          imageAlt={CASE_STUDY.config.imageAlt}
+          stat={CASE_STUDY.config.stat}
+          statLabel={CASE_STUDY.config.statLabel}
+          statContext={CASE_STUDY.config.statContext}
+          ctaText="Read the full case study"
+          ctaTo={CASE_STUDY.ctaTo}
+          bg="soft"
+        />
+
+        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
 
         <RelatedServices
           id="related"

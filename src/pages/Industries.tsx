@@ -2,10 +2,8 @@ import React from 'react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
 import { ServiceHero } from '../components/sections/heroes/ServiceHero';
-import { StatCalloutGrid } from '../components/sections/StatCalloutGrid';
 import { IndustryTabSwitcher } from '../components/sections/IndustryTabSwitcher';
-import { ContentGrid3Col } from '../components/sections/ContentGrid3Col';
-import { ProcessSteps } from '../components/sections/ProcessSteps';
+import { PillarsSection } from '../components/sections/PillarsSection';
 import { ComparisonTable } from '../components/sections/ComparisonTable';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
@@ -15,8 +13,14 @@ import {
 '../components/sections/FAQAccordion';
 import { CTABand } from '../components/sections/CTABand';
 import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO';
-import { QuickAnswerCard } from '../components/sections/QuickAnswerCard';
 import { buildBreadcrumbSchema } from '../components/sections/Breadcrumb';
+
+const INDUSTRY_STATS = [
+  { n: '8', l: 'Industries served' },
+  { n: '700+', l: 'Specialists' },
+  { n: '87+', l: 'Engagements delivered' },
+  { n: '4', l: 'Regions, one team' },
+];
 
 const BREADCRUMB = [{ label: 'Industries' }];
 const INDUSTRIES = [
@@ -33,8 +37,7 @@ const INDUSTRIES = [
   'AI and data governance demands across risk, fraud, and compliance'],
 
   image:
-  'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
+  'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80'
 },
 {
   id: 'manufacturing',
@@ -49,9 +52,7 @@ const INDUSTRIES = [
   'Sustainability and ESG reporting expectations from buyers'],
 
   image:
-  'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'travel',
   label: 'Travel & Hospitality',
@@ -65,9 +66,7 @@ const INDUSTRIES = [
   'Rising distribution costs and channel complexity'],
 
   image:
-  'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'real-estate',
   label: 'Real Estate',
@@ -81,9 +80,7 @@ const INDUSTRIES = [
   'Investor and lender reporting expectations rising every cycle'],
 
   image:
-  'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'energy',
   label: 'Energy & Utilities',
@@ -97,9 +94,7 @@ const INDUSTRIES = [
   'Cyber and OT/IT convergence raising security stakes'],
 
   image:
-  'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'telecom',
   label: 'Telecom',
@@ -113,9 +108,7 @@ const INDUSTRIES = [
   'AI-driven customer service redefining cost-to-serve'],
 
   image:
-  'https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'public-sector',
   label: 'Public Sector',
@@ -129,9 +122,7 @@ const INDUSTRIES = [
   'Audit, transparency, and accessibility non-negotiables'],
 
   image:
-  'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-},
+  'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80'},
 {
   id: 'professional-services',
   label: 'Professional Services',
@@ -145,57 +136,32 @@ const INDUSTRIES = [
   'Client-facing AI and automation reshaping service delivery'],
 
   image:
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=80',
-  href: '/industries/'
-}];
+  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=80'}];
 
-const WHY_ITEMS = [
+const WHY_PILLARS = [
 {
   imageSrc:
   'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=80',
+  imageAlt: 'Sector-specialist consultants collaborating',
   title: 'Sector-specialist consultants',
-  description:
+  body:
   'Every engagement is led by consultants with deep sector experience — not generalists learning your industry on your time.'
 },
 {
   imageSrc:
   'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80',
+  imageAlt: 'Industry accelerators and delivery playbooks',
   title: 'Pre-built industry accelerators',
-  description:
+  body:
   'Configurations, data models, and reports tuned for your sector — so you start three steps ahead of a blank Oracle Cloud tenant.'
 },
 {
   imageSrc:
   'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80',
+  imageAlt: 'Regulator-aware Oracle Cloud delivery',
   title: 'Regulator-aware delivery',
-  description:
+  body:
   'We build to the rules of your market — RBI, SAMA, APRA, FCA, GDPR — with audit trails and controls baked into every rollout.'
-}];
-
-const PROCESS = [
-{
-  number: '01',
-  title: 'Discovery',
-  description:
-  'Understand your industry pressures, current state, and ambitions before we put a single slide together.'
-},
-{
-  number: '02',
-  title: 'Industry Fit Assessment',
-  description:
-  'Map Oracle Cloud capabilities to your sector’s real workflows — not generic textbook processes.'
-},
-{
-  number: '03',
-  title: 'Tailored Roadmap',
-  description:
-  'Prioritise the moves that protect today and unlock tomorrow, with sequencing your CFO can defend.'
-},
-{
-  number: '04',
-  title: 'Implementation & Adoption',
-  description:
-  'Deliver in sprints, with adoption baked in from day one — not bolted on at go-live.'
 }];
 
 const COMPARISON_ROWS = [
@@ -287,8 +253,6 @@ export function Industries() {
         subhead="MPC builds for sectors, not stereotypes. Our practice leads, accelerators, and delivery playbooks are tuned for the eight industries we know deeply — so your transformation starts informed."
         primaryCtaText="Talk to an industry lead"
         primaryCtaTo="/contact/"
-        secondaryCtaText="See all services"
-        secondaryCtaTo="/services/"
         imageSrc="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1400&q=80"
         imageAlt="Cross-industry team collaborating"
         breadcrumb={[
@@ -297,48 +261,17 @@ export function Industries() {
         }]
         } />
 
-      <QuickAnswerCard
-        question="Which industries does MPC serve?"
-        answer="MPC delivers Oracle Cloud and AI solutions for BFSI, manufacturing, travel and hospitality, real estate, energy and utilities, telecommunications, public sector, and professional services — with industry-tuned accelerators and delivery playbooks."
-      />
-
-      <StatCalloutGrid
-        stats={[
-        {
-          number: '8',
-          label: 'Industries served'
-        },
-        {
-          number: '700+',
-          label: 'Specialists'
-        },
-        {
-          number: '87+',
-          label: 'Engagements delivered'
-        },
-        {
-          number: '4',
-          label: 'Regions, one team'
-        }]
-        } />
-      
-
       <IndustryTabSwitcher
         eyebrow="Pick your sector"
         title="Where MPC goes deep"
         industries={INDUSTRIES} />
       
 
-      <ContentGrid3Col
-        sectionTitle="Why MPC for industry transformation"
-        items={WHY_ITEMS} />
-      
-
-      <ProcessSteps
-        eyebrow="How we engage"
-        title="A delivery model built around your sector"
-        steps={PROCESS}
-        variant="light" />
+      <PillarsSection
+        eyebrow="Why MPC"
+        title="Industry transformation"
+        intro="Sector specialists, pre-built accelerators, and regulator-aware delivery — so your Oracle Cloud programme starts informed and stays audit-ready."
+        items={WHY_PILLARS} />
       
 
       <ComparisonTable
@@ -351,7 +284,9 @@ export function Industries() {
         'MPC Industry Practice']
         }
         rows={COMPARISON_ROWS}
-        highlightIndex={3} />
+        highlightIndex={3}
+        centerHeader
+      />
       
 
       <StatOverlayCaseStudy
@@ -373,7 +308,9 @@ export function Industries() {
         eyebrow="In their words"
         title="What industry leaders say about working with MPC"
         items={TESTIMONIALS}
-        variant="light" />
+        variant="light"
+        carousel
+      />
       
 
       <FAQAccordion
@@ -386,13 +323,28 @@ export function Industries() {
       
 
       <CTABand
-        title="Find your industry playbook"
+        title="Find your industry"
+        titleAccent="playbook"
         body="Talk to a sector lead who understands the rules of your market — and the levers Oracle Cloud gives you to win in it."
         ctaText="Talk to an industry lead"
         ctaTo="/contact/"
-        secondaryCtaText="See all services"
-        secondaryCtaTo="/services/" />
-      
+        variant="split"
+      />
+
+      <section className="w-full bg-white px-4 py-10 md:px-10 md:py-12 lg:px-[60px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-[1200px] mx-auto">
+          {INDUSTRY_STATS.map((s) => (
+            <div key={s.l} className="text-center">
+              <div className="font-heading font-semibold text-stat text-[44px] md:text-[56px] leading-none mb-2">
+                {s.n}
+              </div>
+              <div className="font-body text-[14px] uppercase tracking-[0.8px] font-medium text-text-primary opacity-80">
+                {s.l}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <FooterDark />
     </div>);

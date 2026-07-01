@@ -30,14 +30,6 @@ const FORMAT_ITEMS = [
   'Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from 87+ engagements across five regions.',
   ctaText: 'Explore case studies',
   href: '/resources/case-studies/'
-},
-{
-  imageSrc:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80',
-  title: 'Whitepapers & Guides',
-  description:
-  'In-depth Oracle Cloud and AI transformation guides from MPC consultants — practical, opinionated, and free to download.',
-  ctaText: 'Browse whitepapers'
 }];
 
 const FILTERS = [
@@ -102,7 +94,7 @@ const ALL_RESOURCES: Resource[] = [
   'Sequencing, change control, and the four decisions every CFO needs to make before kick-off.',
   date: 'May 4, 2026',
   readTime: '11 min read',
-  href: '/resources/whitepapers/'
+  href: '/resources/blog/'
 },
 {
   id: '3',
@@ -155,7 +147,7 @@ const ALL_RESOURCES: Resource[] = [
   'The pre-go-live payroll checklist that has kept our HCM rollouts on schedule for six straight years.',
   date: 'March 28, 2026',
   readTime: '6 min read',
-  href: '/resources/whitepapers/'
+  href: '/resources/blog/'
 },
 {
   id: '7',
@@ -194,7 +186,7 @@ const ALL_RESOURCES: Resource[] = [
   'When containerisation makes sense alongside Oracle Cloud — and when it absolutely does not.',
   date: 'March 3, 2026',
   readTime: '12 min read',
-  href: '/resources/whitepapers/'
+  href: '/resources/blog/'
 }];
 
 const FEATURED = ALL_RESOURCES.slice(0, 4);
@@ -217,7 +209,7 @@ export function Resources() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Resources & Insights | MPC Cloud Consulting"
-        description="Practical guides, case studies, whitepapers, and thought leadership from MPC's Oracle Cloud and AI experts."
+        description="Practical guides, case studies, and thought leadership from MPC's Oracle Cloud and AI experts."
         canonicalPath="/resources/"
         schema={[
           ORGANIZATION_SCHEMA,
@@ -231,7 +223,7 @@ export function Resources() {
       <ServiceHero
         eyebrow="Resources"
         headline="Insights from people who build Oracle Cloud every day"
-        subhead="Practical guides, case studies, whitepapers, and thought leadership from MPC consultants — written for leaders who have to make the decisions, not just attend the workshops."
+        subhead="Practical guides, case studies, and thought leadership from MPC consultants — written for leaders who have to make the decisions, not just attend the workshops."
         primaryCtaText="Subscribe to our digest"
         primaryCtaTo="#newsletter"
         secondaryCtaText="Talk to a consultant"
