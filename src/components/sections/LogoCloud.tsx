@@ -45,16 +45,16 @@ function LogoTile({ logo }: { logo: ClientLogo }) {
   }
 
   return (
-    <div className="shrink-0 flex items-center justify-center h-[56px] md:h-[64px] min-w-[130px] md:min-w-[150px] px-4 rounded-card bg-white border border-black/6 shadow-subtle">
-      <img
-        src={logo.src}
-        alt={`${logo.name} logo`}
-        width={140}
-        height={48}
-        loading="lazy"
-        decoding="async"
-        className="max-h-10 md:max-h-11 w-auto max-w-[130px] object-contain opacity-80 hover:opacity-100 transition-opacity"
-      />
+    <div className="shrink-0 w-[200px] h-[96px] rounded-card bg-white border border-black/6 p-3 flex items-center justify-center">
+      <div className="h-full w-full min-h-0 min-w-0 flex items-center justify-center">
+        <img
+          src={logo.src}
+          alt={`${logo.name} logo`}
+          loading="lazy"
+          decoding="async"
+          className="block h-full w-full object-contain"
+        />
+      </div>
     </div>
   );
 }
@@ -99,7 +99,7 @@ export function LogoCloud({
 
       {useMarquee ? (
         <div
-          className="relative max-w-[1280px] mx-auto overflow-hidden group/logo-marquee"
+          className="relative max-w-[1280px] mx-auto overflow-hidden py-4 group/logo-marquee"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
           onFocusCapture={() => setPaused(true)}
@@ -118,7 +118,7 @@ export function LogoCloud({
           />
 
           <div
-            className={`flex items-center gap-10 md:gap-14 w-max py-2 animate-logo-marquee motion-reduce:animate-none ${paused ? '[animation-play-state:paused]' : ''}`}>
+            className={`flex items-center gap-10 md:gap-14 w-max animate-logo-marquee motion-reduce:animate-none ${paused ? '[animation-play-state:paused]' : ''}`}>
             {marqueeTrack.map((logo, i) => (
               <div
                 key={`${logo.id}-${i}`}
@@ -168,12 +168,14 @@ export function LogoCloud({
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-6 items-center justify-items-center max-w-[1100px] mx-auto">
           {resolved.map((logo) =>
             logo.src ? (
-              <img
-                key={logo.id}
-                src={logo.src}
-                alt={`${logo.name} logo`}
-                className="max-h-10 object-contain opacity-70"
-              />
+              <div className="flex items-center justify-center w-full h-[88px] p-3 rounded-card bg-white border border-black/6">
+                <img
+                  key={logo.id}
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  className="block h-full w-full object-contain"
+                />
+              </div>
             ) : (
               <div
                 key={logo.id}
