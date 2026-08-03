@@ -11,6 +11,7 @@ import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
 import { RelatedServices } from '../../components/sections/RelatedServices';
+import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -22,10 +23,17 @@ import {
   SERVICES_INDEX,
   SOLUTION_BPC,
   SOLUTION_ERP,
+  SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
   SOLUTION_HCM,
+  SOLUTION_PO_LIFECYCLE_ANALYZER,
+  SOLUTION_CV_SCREENING_AGENT,
+  SOLUTION_HR_ONBOARDING_ASSISTANT,
+  SOLUTION_HR_PROBATION_ASSIST,
+  SOLUTION_PAYROLL_ISSUE_ANALYZER,
 } from '../../data/paths';
 const TOC = [
   { label: 'Overview', hash: 'overview' },
+  { label: 'Agents', hash: 'agents' },
   { label: 'Focus Areas', hash: 'focus' },
   { label: 'Extensions', hash: 'extensions' },
   { label: 'Comparison', hash: 'comparison' },
@@ -51,7 +59,7 @@ const AI_COE = [
 },
 {
   title: 'Out-of-Box AI Solutions',
-  body: 'Pre-built AI accelerators for common Oracle use cases — deployed in days, not months.'
+  body: 'Pre-built AI accelerators for common Oracle use cases — including the Financial Close Assistant — deployed in days, not months.'
 },
 {
   title: 'Custom AI Agents',
@@ -65,6 +73,39 @@ const AI_COE = [
   title: 'Digital Workers',
   body: 'AI-powered automation that operates alongside your Oracle users — handling routine processes so people can focus on decisions.'
 }];
+
+const FEATURED_AGENTS = [
+  {
+    title: 'Financial Close Assistant',
+    body: 'Orchestrates Oracle Fusion period close across GL, AP, AR, FA, Cash Management, and Projects — detect, notify, revalidate, and close with approvals.',
+    to: SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
+  },
+  {
+    title: 'Purchase Order Lifecycle Analyzer',
+    body: 'Virtual procurement assistant for Buyers and Procurement Managers — unified visibility across approvals, fulfillment, receipts, invoices, and supplier performance.',
+    to: SOLUTION_PO_LIFECYCLE_ANALYZER,
+  },
+  {
+    title: 'CV Screening Agent',
+    body: 'For Recruiters — automatically analyze resumes against the job description, categorize fitment, and deliver a summarized screening view for faster shortlisting.',
+    to: SOLUTION_CV_SCREENING_AGENT,
+  },
+  {
+    title: 'HR Onboarding Assistant',
+    body: 'Built into Fusion Cloud HCM — identifies journey tasks needing confirmation and updates status on verified criteria for HR Specialists and Shared Services.',
+    to: SOLUTION_HR_ONBOARDING_ASSISTANT,
+  },
+  {
+    title: 'HR Probation Assist Agent',
+    body: 'Automates probation status updates, letters, and employee communication — Confirm or Extend probation with policy-driven validation and org-wide visibility.',
+    to: SOLUTION_HR_PROBATION_ASSIST,
+  },
+  {
+    title: 'Payroll Issue Analyzer Agent',
+    body: 'Identifies missing critical employee data — Date of Birth, bank details, national ID, and payroll fields — before payroll processing for HR Specialists and Payroll teams.',
+    to: SOLUTION_PAYROLL_ISSUE_ANALYZER,
+  },
+];
 
 const FOCUS = [
   {
@@ -246,6 +287,14 @@ export function TechHub() {
             ))}
           </div>
         </section>
+
+        <ServiceCapabilities
+          id="agents"
+          eyebrow="Out-of-Box AI Solutions"
+          title="Featured AI agents"
+          intro="Pre-built agents for high-impact Oracle workflows — ready to deploy and expand with your operating model."
+          capabilities={FEATURED_AGENTS}
+        />
 
         <section
           id="focus"

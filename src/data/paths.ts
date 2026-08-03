@@ -30,3 +30,14 @@ export const SOLUTION_APP_CLOUD_SECURITY = '/solutions/application-cloud-securit
 export const SOLUTION_INFRA_MANAGED_OPS = '/solutions/infrastructure-managed-operations/';
 export const SOLUTION_IBS_FINTECH = '/solutions/ibs-fintech/';
 export const SOLUTION_TREASURY_OPERATIONS = '/solutions/treasury-operations/';
+export const SOLUTION_FINANCIAL_CLOSE_ASSISTANT =
+  '/solutions/financial-close-assistant/';
+export const SOLUTION_PO_LIFECYCLE_ANALYZER =
+  '/solutions/purchase-order-lifecycle-analyzer/';
+export const SOLUTION_CV_SCREENING_AGENT = '/solutions/cv-screening-agent/';
+export const SOLUTION_HR_ONBOARDING_ASSISTANT =
+  '/solutions/hr-onboarding-assistant/';
+export const SOLUTION_HR_PROBATION_ASSIST =
+  '/solutions/hr-probation-assist-agent/';
+export const SOLUTION_PAYROLL_ISSUE_ANALYZER =
+  '/solutions/payroll-issue-analyzer-agent/';

@@ -26,6 +26,12 @@ import { ApplicationCloudSecurity } from './pages/solutions/ApplicationCloudSecu
 import { InfrastructureManagedOperations } from './pages/solutions/InfrastructureManagedOperations';
 import { IBSFintech } from './pages/solutions/IBSFintech';
 import { TreasuryOperations } from './pages/solutions/TreasuryOperations';
+import { FinancialCloseAssistant } from './pages/solutions/FinancialCloseAssistant';
+import { PurchaseOrderLifecycleAnalyzer } from './pages/solutions/PurchaseOrderLifecycleAnalyzer';
+import { CVScreeningAgent } from './pages/solutions/CVScreeningAgent';
+import { HROnboardingAssistant } from './pages/solutions/HROnboardingAssistant';
+import { HRProbationAssistAgent } from './pages/solutions/HRProbationAssistAgent';
+import { PayrollIssueAnalyzerAgent } from './pages/solutions/PayrollIssueAnalyzerAgent';
 import { TechHub } from './pages/services/TechHub';
 import { OracleFusionEBS } from './pages/services/OracleFusionEBS';
 import { CloudDigitalTransformation } from './pages/services/CloudDigitalTransformation';
@@ -97,6 +103,30 @@ export function App() {
         <Route path="/solutions/infrastructure-managed-operations/" element={<InfrastructureManagedOperations />} />
         <Route path="/solutions/ibs-fintech/" element={<IBSFintech />} />
         <Route path="/solutions/treasury-operations/" element={<TreasuryOperations />} />
+        <Route
+          path="/solutions/financial-close-assistant/"
+          element={<FinancialCloseAssistant />}
+        />
+        <Route
+          path="/solutions/purchase-order-lifecycle-analyzer/"
+          element={<PurchaseOrderLifecycleAnalyzer />}
+        />
+        <Route
+          path="/solutions/cv-screening-agent/"
+          element={<CVScreeningAgent />}
+        />
+        <Route
+          path="/solutions/hr-onboarding-assistant/"
+          element={<HROnboardingAssistant />}
+        />
+        <Route
+          path="/solutions/hr-probation-assist-agent/"
+          element={<HRProbationAssistAgent />}
+        />
+        <Route
+          path="/solutions/payroll-issue-analyzer-agent/"
+          element={<PayrollIssueAnalyzerAgent />}
+        />
 
         {/* Legacy solution redirects */}
         <Route path="/services/hcm/" element={<Navigate to="/solutions/hcm/" replace />} />
