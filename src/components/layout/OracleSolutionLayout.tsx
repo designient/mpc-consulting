@@ -21,7 +21,11 @@ import {
   BreadcrumbItem,
   buildBreadcrumbSchema,
 } from '../sections/Breadcrumb';
-import { SERVICE_ORACLE, SERVICES_INDEX } from '../../data/paths';
+import {
+  SERVICE_AI_COE,
+  SERVICE_ORACLE,
+  SERVICES_INDEX,
+} from '../../data/paths';
 import {
   getCaseStudyForSolution,
   withCaseStudyToc,
@@ -134,13 +138,18 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
     config.breadcrumbLabel,
     config.parentService,
   );
+  const isAiCoeAgent = config.parentService?.to === SERVICE_AI_COE;
   const caseStudyResolved = getCaseStudyForSolution(
     config.canonicalPath,
     config.caseStudySlug,
   );
   const caseStudy = config.caseStudy ?? caseStudyResolved.config;
   const caseStudyCtaTo = caseStudyResolved.ctaTo;
-  const tocItems = withCaseStudyToc(config.toc);
+  const tocItems = withCaseStudyToc(
+    isAiCoeAgent
+      ? config.toc.filter((item) => item.hash !== 'process' && item.hash !== 'related')
+      : config.toc,
+  );
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -219,7 +228,9 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
             <div className="flex flex-col items-start">
-              <p className="section-eyebrow mb-3">AI Overview-ready</p>
+              {!isAiCoeAgent && (
+                <p className="section-eyebrow mb-3">AI Overview-ready</p>
+              )}
               <Heading level={2} className="mb-5">
                 {config.whatIsTitle}
               </Heading>
@@ -330,17 +341,19 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           </div>
         </section>
 
-        <div id="process" className="scroll-mt-[140px]">
-          <ProcessSteps
-            eyebrow="Delivery"
-            title={config.processTitle}
-            intro={config.processIntro}
-            steps={config.processSteps}
-            variant="light"
-            centerHeader
-            accentStepTitles
-          />
-        </div>
+        {!isAiCoeAgent && (
+          <div id="process" className="scroll-mt-[140px]">
+            <ProcessSteps
+              eyebrow="Delivery"
+              title={config.processTitle}
+              intro={config.processIntro}
+              steps={config.processSteps}
+              variant="light"
+              centerHeader
+              accentStepTitles
+            />
+          </div>
+        )}
 
         <ComparisonTable
           id="comparison"
@@ -374,14 +387,16 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
         />
         <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
 
-        <RelatedServices
-          id="related"
-          eyebrow="Related Solutions"
-          title="Continue exploring"
-          items={config.related}
-          bg="white"
-          centerHeader
-        />
+        {!isAiCoeAgent && (
+          <RelatedServices
+            id="related"
+            eyebrow="Related Solutions"
+            title="Continue exploring"
+            items={config.related}
+            bg="white"
+            centerHeader
+          />
+        )}
 
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
