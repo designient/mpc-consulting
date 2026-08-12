@@ -50,12 +50,12 @@ export function PillarsSection({
             <h3 className="type-h3 text-[20px] md:text-[22px] text-text-primary mb-3">
               {pillar.title}
             </h3>
-            <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow mb-6">
+            <p className="font-body text-[15px] leading-[1.65] text-text-primary opacity-80 flex-grow">
               {pillar.body}
             </p>
-            {(pillar.ctaTo ?? '/contact/') && (
+            {pillar.ctaTo && (
               <Link
-                to={pillar.ctaTo ?? '/contact/'}
+                to={pillar.ctaTo}
                 className="inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.06em] text-cta border-b-2 border-cta pb-0.5 w-fit hover:gap-2 transition-all mt-auto">
                 {pillar.ctaText ?? 'Explore'}
                 <ArrowRight className="w-3.5 h-3.5" aria-hidden />

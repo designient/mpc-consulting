@@ -4,7 +4,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   muted?: boolean;
 }
 
-/** Body paragraph — 16–17px */
+/** Body paragraph, 16–17px */
 export function Text({
   muted = false,
   className = '',

@@ -20,9 +20,9 @@ const CONFIG: OracleSolutionPageConfig = {
   canonicalPath: SOLUTION_TREASURY_OPERATIONS,
   breadcrumbLabel: 'All Aspects of Treasury Management',
   parentService: TREASURY_PARENT,
-  seoTitle: 'Treasury Operations — Cash, FX, Trade Finance & Risk | MPC',
+  seoTitle: 'Treasury Operations. Cash, FX, Trade Finance & Risk | MPC',
   seoDescription:
-    'MPC delivers end-to-end treasury management — cash and liquidity, payments, investments, currency risk, trade finance, debt, supply chain finance, and commodity risk.',
+    'MPC delivers end-to-end treasury management, cash and liquidity, payments, investments, currency risk, trade finance, debt, supply chain finance, and commodity risk.',
   serviceType: 'Treasury Operations Services',
   serviceDescription:
     'Comprehensive treasury management across cash, payments, investments, FX, trade finance, debt, supply chain finance, and commodity risk on IBS Fintech.',
@@ -30,13 +30,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Every aspect of',
   heroHeadlineAccent: 'treasury management',
   heroSubhead:
-    'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance — unified on IBS Fintech.',
+    'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance, unified on IBS Fintech.',
   heroCtaText: 'Talk to Our Treasury Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What are all aspects of treasury management?',
   whatIsBody:
-    'Enterprise treasury spans far beyond cash balances — it includes liquidity forecasting, payment operations, investment portfolios, FX and commodity hedging, trade finance instruments, debt facilities, and supply chain finance. MPC delivers all eight capability areas on the IBS Fintech platform.',
+    'Enterprise treasury spans far beyond cash balances, it includes liquidity forecasting, payment operations, investment portfolios, FX and commodity hedging, trade finance instruments, debt facilities, and supply chain finance. MPC delivers all eight capability areas on the IBS Fintech platform.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Treasury operations and financial management',
@@ -50,8 +50,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Treasury Operations with MPC',
   overviewParagraphs: [
-    'Treasury teams need end-to-end coverage — from daily cash visibility and payment execution to complex derivatives, trade finance, and commodity hedging programmes.',
-    'MPC implements and supports all aspects of treasury management on IBS Fintech — eight integrated modules with IFRS-9 hedge accounting, valuation engines, and analytical insights.',
+    'Treasury teams need end-to-end coverage, from daily cash visibility and payment execution to complex derivatives, trade finance, and commodity hedging programmes.',
+    'MPC implements and supports all aspects of treasury management on IBS Fintech, eight integrated modules with IFRS-9 hedge accounting, valuation engines, and analytical insights.',
   ],
   moduleChips: [
     'Cash & Liquidity',
@@ -83,7 +83,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Trade Finance Management',
-      body: 'Import/export LC, BC, SC processes, bank guarantees — both inwards and outwards.',
+      body: 'Import/export LC, BC, SC processes, bank guarantees, both inwards and outwards.',
     },
     {
       title: 'Debt & Supply Chain Finance',
@@ -121,7 +121,7 @@ const CONFIG: OracleSolutionPageConfig = {
     'A module-by-module approach to implementing treasury capabilities on IBS Fintech.',
   processSteps: [
     { number: '01', title: 'Assess', description: 'Treasury maturity review, module prioritisation, and gap analysis against current processes.' },
-    { number: '02', title: 'Design', description: 'Process design per module — cash, payments, FX, trade finance — aligned to controls and compliance.' },
+    { number: '02', title: 'Design', description: 'Process design per module, cash, payments, FX, trade finance, aligned to controls and compliance.' },
     { number: '03', title: 'Implement', description: 'Module configuration, workflow setup, and integration with ERP and banking partners.' },
     { number: '04', title: 'Validate', description: 'Parallel runs, reconciliation testing, and hedge accounting validation.' },
     { number: '05', title: 'Go-Live', description: 'Phased module rollout with treasury team enablement and hypercare support.' },
@@ -175,7 +175,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. Supply chain finance covers the entire lifecycle including accounts payable and receivable with digitised process flows and analytical insights.',
     },
   ],
-  faqTitle: 'Treasury Operations — Frequently Asked Questions',
+  faqTitle: 'Treasury Operations. Frequently Asked Questions',
   ctaTitle: 'Unify your',
   ctaTitleAccent: 'Treasury Operations',
   ctaBody:

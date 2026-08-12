@@ -31,13 +31,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Build security on',
   heroHeadlineAccent: 'Zero Trust principles',
   heroSubhead:
-    'Identity-centric Zero Trust architecture, IAM and SASE integration, advanced threat protection, and AI-enabled cybersecurity — designed for modern enterprise risk.',
+    'Identity-centric Zero Trust architecture, IAM and SASE integration, advanced threat protection, and AI-enabled cybersecurity, designed for modern enterprise risk.',
   heroCtaText: 'Talk to Our Security Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is MPC Cybersecurity & Zero Trust Strategy?',
   whatIsBody:
-    'MPC helps enterprises move from perimeter-based security to identity-centric Zero Trust models. We design architectures where every user, device, and connection is verified continuously — integrating IAM, SASE, and AI-enabled threat detection into a cohesive security strategy.',
+    'MPC helps enterprises move from perimeter-based security to identity-centric Zero Trust models. We design architectures where every user, device, and connection is verified continuously, integrating IAM, SASE, and AI-enabled threat detection into a cohesive security strategy.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Zero Trust cybersecurity strategy',
@@ -51,8 +51,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Zero Trust Strategy with MPC',
   overviewParagraphs: [
-    'Traditional perimeter security no longer matches how enterprises work — remote users, cloud workloads, and SaaS applications require continuous verification and least-privilege access.',
-    'MPC\'s strategy practice translates Zero Trust principles into actionable roadmaps — from identity architecture and SASE integration to threat modelling and AI-enabled detection.',
+    'Traditional perimeter security no longer matches how enterprises work, remote users, cloud workloads, and SaaS applications require continuous verification and least-privilege access.',
+    'MPC\'s strategy practice translates Zero Trust principles into actionable roadmaps, from identity architecture and SASE integration to threat modelling and AI-enabled detection.',
   ],
   moduleChips: [
     'Zero Trust Architecture',
@@ -159,7 +159,7 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'What is Zero Trust and how does MPC implement it?',
-      a: 'Zero Trust assumes no implicit trust — every user, device, and connection is verified. MPC designs identity-centric architectures with IAM, SASE integration, and continuous verification across your enterprise.',
+      a: 'Zero Trust assumes no implicit trust, every user, device, and connection is verified. MPC designs identity-centric architectures with IAM, SASE integration, and continuous verification across your enterprise.',
     },
     {
       q: 'How long does a Zero Trust strategy engagement take?',
@@ -174,7 +174,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. AI-driven threat detection, behavioural analytics, and automated response are core parts of our strategy and operations offerings.',
     },
   ],
-  faqTitle: 'Zero Trust Strategy — Frequently Asked Questions',
+  faqTitle: 'Zero Trust Strategy. Frequently Asked Questions',
   ctaTitle: 'Strengthen your',
   ctaTitleAccent: 'Security Strategy',
   ctaBody:

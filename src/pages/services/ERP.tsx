@@ -71,27 +71,27 @@ const TECH_CHIPS = [
 const CAPABILITIES = [
 {
   title: 'Oracle Fusion Implementation',
-  body: 'New Oracle Cloud Financials deployments — designed for the cloud from the ground up.'
+  body: 'New Oracle Cloud Financials deployments, designed for the cloud from the ground up.'
 },
 {
   title: 'EBS Implementation & Extension',
-  body: 'Oracle E-Business Suite — implementations, customisations, and extensions for complex ERP environments.'
+  body: 'Oracle E-Business Suite, implementations, customisations, and extensions for complex ERP environments.'
 },
 {
   title: 'EBS to Fusion Migration',
-  body: 'Structured migration programmes from Oracle EBS to Oracle Fusion Cloud — with proven data migration and process redesign methodology.'
+  body: 'Structured migration programmes from Oracle EBS to Oracle Fusion Cloud, with proven data migration and process redesign methodology.'
 },
 {
   title: 'Oracle APEX & PaaS',
-  body: 'Custom business applications built on Oracle APEX and Platform as a Service — extending ERP capability without breaking it.'
+  body: 'Custom business applications built on Oracle APEX and Platform as a Service, extending ERP capability without breaking it.'
 },
 {
   title: 'Oracle EPM',
-  body: 'Enterprise Performance Management — budgeting, forecasting, and financial consolidation on Oracle EPM Cloud.'
+  body: 'Enterprise Performance Management, budgeting, forecasting, and financial consolidation on Oracle EPM Cloud.'
 },
 {
   title: 'Managed Service',
-  body: 'Post-go-live support, system administration, and ongoing Oracle ERP optimisation — so you stay current and compliant.'
+  body: 'Post-go-live support, system administration, and ongoing Oracle ERP optimisation, so you stay current and compliant.'
 }];
 
 const PROCESS_STEPS = [
@@ -168,7 +168,7 @@ const COMPARISON_ROWS = [
 {
   criterion: 'Compliance configuration',
   values: [
-  'Reactive — fixed post-audit',
+  'Reactive, fixed post-audit',
   'Designed in across IN, UAE, AU, UK']
 
 },
@@ -191,7 +191,7 @@ const FAQS = [
 },
 {
   q: 'What is Oracle APEX and can MPC build with it?',
-  a: "Oracle APEX is Oracle's low-code application development platform. MPC uses APEX to build custom business applications within the Oracle ecosystem — extending ERP functionality without third-party tools."
+  a: "Oracle APEX is Oracle's low-code application development platform. MPC uses APEX to build custom business applications within the Oracle ecosystem, extending ERP functionality without third-party tools."
 },
 {
   q: 'Can MPC handle EBS to Fusion migration?',
@@ -214,7 +214,7 @@ const RELATED = [
   icon: Users,
   title: 'HCM',
   description:
-  'Oracle HCM Cloud — pairs naturally with Oracle ERP for unified back office.',
+  'Oracle HCM Cloud, pairs naturally with Oracle ERP for unified back office.',
   to: SOLUTION_HCM
 },
 {
@@ -235,7 +235,7 @@ const SERVICE_SCHEMA = {
   },
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-  'End-to-end Oracle Fusion and EBS ERP — Financials, Projects, Procurement, Risk, and Compliance.',
+  'End-to-end Oracle Fusion and EBS ERP. Financials, Projects, Procurement, Risk, and Compliance.',
   url: `https://www.mpccloudconsulting.com${SOLUTION_ERP}`
 };
 export function ERP() {
@@ -243,7 +243,7 @@ export function ERP() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Oracle ERP Cloud (Fusion & EBS) Consulting | MPC Cloud"
-        description="MPC specialises in Oracle Fusion & EBS ERP — Financials, Projects, Risk & Compliance. End-to-end implementation globally."
+        description="MPC specialises in Oracle Fusion & EBS ERP. Financials, Projects, Risk & Compliance. End-to-end implementation globally."
         canonicalPath={SOLUTION_ERP}
         schema={[
         ORGANIZATION_SCHEMA,
@@ -258,7 +258,7 @@ export function ERP() {
           eyebrow="Oracle Cloud · ERP"
           headline="Oracle ERP Cloud"
           headlineAccent="Finance, Projects & Compliance at Scale"
-          subhead="Oracle Fusion and EBS implementation, migration, and managed service — for enterprises that need ERP that performs at the pace of their business."
+          subhead="Oracle Fusion and EBS implementation, migration, and managed service, for enterprises that need ERP that performs at the pace of their business."
           primaryCtaText="Talk to Our ERP Team"
           primaryCtaTo="/contact/"
           secondaryCtaText="See the Comparison"
@@ -269,7 +269,7 @@ export function ERP() {
 
         <ServiceWhatIs
           title="What is Oracle ERP Cloud?"
-          body="Oracle ERP Cloud — comprising Oracle Fusion Financials and Oracle E-Business Suite — is the financial backbone of enterprise operations, covering Financials, Projects, Procurement, Risk & Compliance, Treasury, and Performance Management. MPC delivers Oracle ERP across both platforms — implementation, EBS→Fusion migration, APEX extensions, and managed service."
+          body="Oracle ERP Cloud, comprising Oracle Fusion Financials and Oracle E-Business Suite, is the financial backbone of enterprise operations, covering Financials, Projects, Procurement, Risk & Compliance, Treasury, and Performance Management. MPC delivers Oracle ERP across both platforms, implementation, EBS→Fusion migration, APEX extensions, and managed service."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Finance team reviewing ERP dashboards"
         />
@@ -293,7 +293,7 @@ export function ERP() {
             requiring upgrade, extension, or migration.
           </p>
           <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-6 max-w-[820px]">
-            Our Oracle-first DNA means we understand the platform at depth —
+            Our Oracle-first DNA means we understand the platform at depth, 
             from Chart of Accounts design and Subledger Accounting to complex
             multi-entity consolidations and treasury management with IBS
             Fintech.
@@ -406,7 +406,7 @@ export function ERP() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Oracle ERP — Frequently Asked Questions"
+            title="Oracle ERP. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"

@@ -16,7 +16,7 @@ export interface PillarCardsProps {
 const IMAGE_FALLBACK =
   'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80';
 
-/** Blue-bordered cards with compact image header — matches Industries We Serve styling */
+/** Blue-bordered cards with compact image header, matches Industries We Serve styling */
 export function PillarCards({ items }: PillarCardsProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 items-stretch">

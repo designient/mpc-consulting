@@ -137,7 +137,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
 {
   q: 'When is the right time to engage BPC?',
-  a: 'Ideally before an Oracle implementation begins — to ensure the platform is configured against improved processes, not legacy ones. We also engage post-go-live to optimise.'
+  a: 'Ideally before an Oracle implementation begins, to ensure the platform is configured against improved processes, not legacy ones. We also engage post-go-live to optimise.'
 },
 {
   q: 'Do you work with non-Oracle systems?',
@@ -207,7 +207,7 @@ export function BPC() {
           eyebrow="Oracle Cloud · BPC"
           headline="Optimise Operations."
           headlineAccent="Enable Growth."
-          subhead="Before you transform your technology, you need to understand your processes. MPC BPC helps you map, redesign, and optimise operations — so your Oracle implementation succeeds on a solid foundation."
+          subhead="Before you transform your technology, you need to understand your processes. MPC BPC helps you map, redesign, and optimise operations, so your Oracle implementation succeeds on a solid foundation."
           primaryCtaText="Book a Process Assessment"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
@@ -216,7 +216,7 @@ export function BPC() {
 
         <ServiceWhatIs
           title="What is Business Process Consulting?"
-          body="BPC is the discipline of mapping, redesigning, and optimising business operations — Finance, HR, Supply Chain, Sales — so your Oracle Cloud implementation succeeds on a solid process foundation. MPC's BPC practice runs assessments, designs future-state processes aligned to Oracle Cloud capabilities, and identifies AI augmentation opportunities."
+          body="BPC is the discipline of mapping, redesigning, and optimising business operations. Finance, HR, Supply Chain, Sales, so your Oracle Cloud implementation succeeds on a solid process foundation. MPC's BPC practice runs assessments, designs future-state processes aligned to Oracle Cloud capabilities, and identifies AI augmentation opportunities."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Strategy session with whiteboard process maps"
         />
@@ -241,7 +241,7 @@ export function BPC() {
           </p>
           <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 max-w-[820px]">
             MPC's BPC practice brings order, clarity, and improvement to your
-            operations before implementation begins — and continues to optimise
+            operations before implementation begins, and continues to optimise
             after go-live.
           </p>
           </div>
@@ -327,7 +327,7 @@ export function BPC() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="BPC — Frequently Asked Questions"
+            title="BPC. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"

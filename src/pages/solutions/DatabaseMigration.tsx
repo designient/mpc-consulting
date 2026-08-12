@@ -22,7 +22,7 @@ const CONFIG: OracleSolutionPageConfig = {
   parentService: CLOUD_PARENT,
   seoTitle: 'Database Migration & Data Engineering | MPC',
   seoDescription:
-    'MPC migrates and modernises Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL databases — plus data lakes, DWH, and AI-ready data platforms.',
+    'MPC migrates and modernises Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL databases, plus data lakes, DWH, and AI-ready data platforms.',
   serviceType: 'Database Migration Services',
   serviceDescription:
     'Database upgrades, cloud migrations, data engineering, data lakes, and data warehouse delivery across Oracle and open-source platforms.',
@@ -30,13 +30,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Move data safely',
   heroHeadlineAccent: 'to the cloud',
   heroSubhead:
-    'Database upgrades, migrations, and data engineering — Oracle, SQL Server, MySQL, PostgreSQL, NoSQL, data lakes, and DWH built for analytics and AI.',
+    'Database upgrades, migrations, and data engineering. Oracle, SQL Server, MySQL, PostgreSQL, NoSQL, data lakes, and DWH built for analytics and AI.',
   heroCtaText: 'Talk to Our Data Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is MPC Database Migration?',
   whatIsBody:
-    'MPC\'s database migration practice moves enterprise data from legacy platforms to cloud-native and modern on-prem estates — with schema conversion, data validation, and cutover planning that protects business continuity. We work across Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, and cloud data platforms.',
+    'MPC\'s database migration practice moves enterprise data from legacy platforms to cloud-native and modern on-prem estates, with schema conversion, data validation, and cutover planning that protects business continuity. We work across Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, and cloud data platforms.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Database and analytics infrastructure',
@@ -50,8 +50,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Database Migration with MPC',
   overviewParagraphs: [
-    'Database migrations fail when treated as a technical lift-and-shift. MPC plans migrations around business continuity — parallel runs, reconciliation, rollback paths, and performance validation before cutover.',
-    'Beyond migration, our data engineering practice builds data lakes and warehouses that feed analytics, reporting, and AI initiatives — so your data estate supports what comes next, not just what you leave behind.',
+    'Database migrations fail when treated as a technical lift-and-shift. MPC plans migrations around business continuity, parallel runs, reconciliation, rollback paths, and performance validation before cutover.',
+    'Beyond migration, our data engineering practice builds data lakes and warehouses that feed analytics, reporting, and AI initiatives, so your data estate supports what comes next, not just what you leave behind.',
   ],
   moduleChips: [
     'Oracle',
@@ -84,7 +84,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Data Engineering',
-      body: 'Data lake and data warehouse design — ingestion, transformation, and governed analytics layers.',
+      body: 'Data lake and data warehouse design, ingestion, transformation, and governed analytics layers.',
     },
     {
       title: 'Data & AI Readiness',
@@ -97,21 +97,21 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Enterprise RDBMS',
-      desc: 'Oracle, SQL Server, MySQL, and PostgreSQL — upgrades, replication, and cloud migration with documented cutover and rollback procedures.',
+      desc: 'Oracle, SQL Server, MySQL, and PostgreSQL, upgrades, replication, and cloud migration with documented cutover and rollback procedures.',
       imageSrc:
         'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Enterprise database servers',
     },
     {
       title: 'NoSQL & Modern Data',
-      desc: 'MongoDB and NoSQL platforms — schema design, sharding strategy, and migration from relational sources where document models fit better.',
+      desc: 'MongoDB and NoSQL platforms, schema design, sharding strategy, and migration from relational sources where document models fit better.',
       imageSrc:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Modern data platform monitoring',
     },
     {
       title: 'Data Lakes & DWH',
-      desc: 'Cloud data lakes and warehouses on AWS, Azure, GCP, and OCI — ETL/ELT pipelines, governance, and analytics-ready marts.',
+      desc: 'Cloud data lakes and warehouses on AWS, Azure, GCP, and OCI. ETL/ELT pipelines, governance, and analytics-ready marts.',
       imageSrc:
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Data warehouse and analytics',
@@ -119,7 +119,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'Our migration delivery process',
   processIntro:
-    'A proven six-stage methodology for database migrations — minimising downtime and data integrity risk.',
+    'A proven six-stage methodology for database migrations, minimising downtime and data integrity risk.',
   processSteps: [
     {
       number: '01',
@@ -214,14 +214,14 @@ const CONFIG: OracleSolutionPageConfig = {
       icon: Cloud,
       title: 'Cloud & Digital Transformation',
       description:
-        'Full practice overview — app dev, data, and cloud together.',
+        'Full practice overview, app dev, data, and cloud together.',
       to: SERVICE_CLOUD_DT,
     },
   ],
   faqs: [
     {
       q: 'Which databases does MPC migrate?',
-      a: 'Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, and other NoSQL platforms — to cloud or modern on-prem targets.',
+      a: 'Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, and other NoSQL platforms, to cloud or modern on-prem targets.',
     },
     {
       q: 'Can you migrate Oracle databases to the cloud?',
@@ -233,10 +233,10 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'How do you minimise migration downtime?',
-      a: 'We use replication, parallel runs, and rehearsed cutovers — with rollback criteria defined before production switch.',
+      a: 'We use replication, parallel runs, and rehearsed cutovers, with rollback criteria defined before production switch.',
     },
   ],
-  faqTitle: 'Database Migration — Frequently Asked Questions',
+  faqTitle: 'Database Migration. Frequently Asked Questions',
   ctaTitle: 'Plan your',
   ctaTitleAccent: 'Data Migration',
   ctaBody:

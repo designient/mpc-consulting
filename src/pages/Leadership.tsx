@@ -99,7 +99,7 @@ export function Leadership() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="MPC Leadership | Oracle Cloud & AI Transformation Leaders"
-        description="Meet MPC's leadership team — 11 leaders and 700+ Oracle Cloud experts united across India, UAE, Singapore, Australia, and the UK."
+        description="Meet MPC's leadership team, 11 leaders and 700+ Oracle Cloud experts united across India, UAE, Singapore, Australia, and the UK."
         canonicalPath="/leadership/"
         schema={[ORGANIZATION_SCHEMA, buildBreadcrumbSchema(BREADCRUMB)]}
       />

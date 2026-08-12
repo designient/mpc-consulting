@@ -51,7 +51,7 @@ const FAQS = [
 },
 {
   q: 'Do you support Global Payroll outside India?',
-  a: "Yes. We've implemented Oracle Global Payroll across UAE, Singapore, Australia, and the UK — with full local compliance configuration."
+  a: "Yes. We've implemented Oracle Global Payroll across UAE, Singapore, Australia, and the UK, with full local compliance configuration."
 }];
 
 const TOC_ITEMS = withCaseStudyToc([
@@ -109,11 +109,11 @@ const CAPABILITIES = [
 },
 {
   title: 'Implementation',
-  body: 'End-to-end Oracle HCM deployment — on time, within scope, with thorough testing and hypercare.'
+  body: 'End-to-end Oracle HCM deployment, on time, within scope, with thorough testing and hypercare.'
 },
 {
   title: 'Upgrades',
-  body: 'Managed upgrades and quarterly release readiness — so your Oracle HCM stays current and optimised.'
+  body: 'Managed upgrades and quarterly release readiness, so your Oracle HCM stays current and optimised.'
 },
 {
   title: 'Managed Support',
@@ -125,27 +125,27 @@ const CAPABILITIES = [
 },
 {
   title: 'Payroll as a Service',
-  body: 'End-to-end Oracle Global Payroll delivery — implementation, managed run, and ongoing compliance management.'
+  body: 'End-to-end Oracle Global Payroll delivery, implementation, managed run, and ongoing compliance management.'
 }];
 
 const MODULES = [
   {
     title: 'HR Core',
-    desc: 'Employee records, organisational structure, positions, and HR self-service. The backbone of every Oracle HCM environment — designed for the way your organisation actually operates today and built to flex as you grow.',
+    desc: 'Employee records, organisational structure, positions, and HR self-service. The backbone of every Oracle HCM environment, designed for the way your organisation actually operates today and built to flex as you grow.',
     imageSrc:
       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop',
     imageAlt: 'HR team reviewing core records',
   },
   {
     title: 'Talent Management',
-    desc: 'Goal setting, performance reviews, succession planning, and career development. We configure Oracle Talent to connect individual performance to business outcomes — not to generate reports nobody reads.',
+    desc: 'Goal setting, performance reviews, succession planning, and career development. We configure Oracle Talent to connect individual performance to business outcomes, not to generate reports nobody reads.',
     imageSrc:
       'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop',
     imageAlt: 'Performance review workshop',
   },
   {
     title: 'Global Payroll',
-    desc: 'Oracle Payroll configured for your country, your rules, your people — with full compliance and audit capability across India, UAE, Singapore, Australia, and the UK. We run parallel payrolls before go-live so day-1 is uneventful.',
+    desc: 'Oracle Payroll configured for your country, your rules, your people, with full compliance and audit capability across India, UAE, Singapore, Australia, and the UK. We run parallel payrolls before go-live so day-1 is uneventful.',
     imageSrc:
       'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop',
     imageAlt: 'Payroll specialist reviewing global compliance',
@@ -175,7 +175,7 @@ const PROCESS_STEPS = [
   number: '04',
   title: 'Test',
   description:
-  'SIT, UAT, payroll parallel runs, and security testing — with clear pass/fail criteria and defect triage.'
+  'SIT, UAT, payroll parallel runs, and security testing, with clear pass/fail criteria and defect triage.'
 },
 {
   number: '05',
@@ -211,7 +211,7 @@ const COMPARISON_ROWS = [
 {
   criterion: 'Compliance configuration',
   values: [
-  'Reactive — fixed after audits',
+  'Reactive, fixed after audits',
   'Compliance-first design across IN, UAE, AU, UK']
 
 },
@@ -225,8 +225,8 @@ const COMPARISON_ROWS = [
 {
   criterion: '3-year total cost of ownership',
   values: [
-  'High — rework, escalations, attrition risk',
-  'Lower — accelerator packs, certified delivery, fewer reworks']
+  'High, rework, escalations, attrition risk',
+  'Lower, accelerator packs, certified delivery, fewer reworks']
 
 }];
 
@@ -263,7 +263,7 @@ const SERVICE_SCHEMA = {
   },
   areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-  'End-to-end Oracle HCM Cloud implementation, managed support, and innovation — HR, Talent, Workforce Management, Global Payroll, and Oracle ME.',
+  'End-to-end Oracle HCM Cloud implementation, managed support, and innovation. HR, Talent, Workforce Management, Global Payroll, and Oracle ME.',
   url: `https://www.mpccloudconsulting.com${SOLUTION_HCM}`
 };
 export function HCM() {
@@ -271,7 +271,7 @@ export function HCM() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Oracle HCM Cloud Consulting & Implementation | MPC"
-        description="MPC delivers end-to-end Oracle HCM Cloud — HR, Talent, Workforce Management, Payroll and Oracle ME. 65+ clients globally."
+        description="MPC delivers end-to-end Oracle HCM Cloud. HR, Talent, Workforce Management, Payroll and Oracle ME. 65+ clients globally."
         canonicalPath={SOLUTION_HCM}
         schema={[
         ORGANIZATION_SCHEMA,
@@ -315,7 +315,7 @@ export function HCM() {
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 End-to-end Oracle HCM implementation, managed support, and
-                innovation — for enterprises that need HR technology that
+                innovation, for enterprises that need HR technology that
                 actually works for their people.
               </p>
 
@@ -335,16 +335,16 @@ export function HCM() {
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
             <div className="flex flex-col items-start">
-              <p className="section-eyebrow mb-3">AI Overview-ready</p>
+              <p className="section-eyebrow mb-3">AI Overview</p>
               <Heading level={2} className="mb-5">
                 What is Oracle HCM Cloud?
               </Heading>
               <p className="font-body text-[17px] md:text-[18px] leading-[1.75] text-text-primary opacity-85">
-                Oracle HCM Cloud is Oracle&apos;s complete enterprise HR platform —
+                Oracle HCM Cloud is Oracle&apos;s complete enterprise HR platform, 
                 covering Core HR, Talent Management, Workforce Management, Global
                 Payroll, and Oracle ME for employee experience. MPC delivers
                 Oracle HCM end-to-end: design, implementation, managed support,
-                and AI-augmented adoption — across 65+ enterprise clients in
+                and AI-augmented adoption, across 65+ enterprise clients in
                 India, UAE, Singapore, Australia, and the UK.
               </p>
             </div>
@@ -373,12 +373,12 @@ export function HCM() {
             <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-5 max-w-[900px]">
               Oracle HCM Cloud is the most comprehensive HR platform in the
               enterprise market. But technology without expertise is just
-              software. MPC brings both — Oracle-certified HCM consultants with
+              software. MPC brings both. Oracle-certified HCM consultants with
               real-world implementation experience across every major module and
               every major industry.
             </p>
             <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-6 max-w-[900px]">
-              We&apos;ve delivered Oracle HCM for 65+ organisations — from initial
+              We&apos;ve delivered Oracle HCM for 65+ organisations, from initial
               design and implementation to post-go-live managed support, payroll
               configuration, and custom Oracle ME builds.
             </p>
@@ -428,7 +428,7 @@ export function HCM() {
               Modules we implement
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              Three core areas where MPC delivers measurable transformation —
+              Three core areas where MPC delivers measurable transformation, 
               backed by certified specialists in every module.
             </p>
           </div>
@@ -465,7 +465,7 @@ export function HCM() {
           <ProcessSteps
             eyebrow="Delivery"
             title="Our HCM delivery process"
-            intro="A six-stage methodology refined across 65+ enterprise Oracle HCM engagements. Every project tracks against this framework — adapted to your scale and complexity."
+            intro="A six-stage methodology refined across 65+ enterprise Oracle HCM engagements. Every project tracks against this framework, adapted to your scale and complexity."
             steps={PROCESS_STEPS}
             variant="light"
             centerHeader
@@ -478,7 +478,7 @@ export function HCM() {
           id="comparison"
           className="scroll-mt-[140px]"
           eyebrow="Comparison"
-          title="Doing HCM yourself vs. with MPC"
+          title="Doing HCM yourself vs. With MPC"
           intro="What enterprises typically encounter when comparing in-house or generic SI delivery against an Oracle specialist."
           headers={['Criterion', 'DIY / Generic SI', 'With MPC']}
           highlightIndex={2}
@@ -525,7 +525,7 @@ export function HCM() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Oracle HCM — Frequently Asked Questions"
+            title="Oracle HCM. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"

@@ -14,23 +14,23 @@ import {
 const CONFIG: OracleSolutionPageConfig = {
   canonicalPath: SOLUTION_EPM,
   breadcrumbLabel: 'Oracle EPM',
-  seoTitle: 'Oracle EPM Consulting — Planning & Consolidation | MPC',
+  seoTitle: 'Oracle EPM Consulting. Planning & Consolidation | MPC',
   seoDescription:
-    'MPC delivers Oracle EPM Cloud — budgeting, forecasting, financial consolidation, and enterprise performance management.',
+    'MPC delivers Oracle EPM Cloud, budgeting, forecasting, financial consolidation, and enterprise performance management.',
   serviceType: 'Oracle EPM Consulting',
   serviceDescription:
-    'Enterprise Performance Management on Oracle EPM Cloud — budgeting, forecasting, consolidation, and narrative reporting.',
+    'Enterprise Performance Management on Oracle EPM Cloud, budgeting, forecasting, consolidation, and narrative reporting.',
   heroEyebrow: 'Oracle Cloud · EPM',
   heroHeadline: 'Plan, forecast, and consolidate',
   heroHeadlineAccent: 'with Oracle EPM',
   heroSubhead:
-    'Budgeting, forecasting, and financial consolidation on Oracle EPM Cloud — for finance teams that need one version of the truth across entities and currencies.',
+    'Budgeting, forecasting, and financial consolidation on Oracle EPM Cloud, for finance teams that need one version of the truth across entities and currencies.',
   heroCtaText: 'Schedule an EPM Discovery Call',
   heroImageSrc:
     'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is Oracle EPM?',
   whatIsBody:
-    'Oracle EPM Cloud is Oracle\'s enterprise performance management platform — covering planning, budgeting, forecasting, financial consolidation, account reconciliation, and narrative reporting. MPC helps CFO teams replace spreadsheet chaos with governed, auditable planning and close processes on Oracle EPM.',
+    'Oracle EPM Cloud is Oracle\'s enterprise performance management platform, covering planning, budgeting, forecasting, financial consolidation, account reconciliation, and narrative reporting. MPC helps CFO teams replace spreadsheet chaos with governed, auditable planning and close processes on Oracle EPM.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Finance team reviewing planning and consolidation',
@@ -44,8 +44,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Oracle EPM with MPC',
   overviewParagraphs: [
-    'Finance teams spend too much time reconciling spreadsheets instead of analysing performance. Oracle EPM Cloud centralises planning and consolidation — but success depends on chart-of-accounts design, dimension modelling, and close process discipline.',
-    'MPC implements Oracle EPM for multi-entity enterprises across India, UAE, Singapore, Australia, and the UK — integrated with Oracle Fusion Financials and EBS where required.',
+    'Finance teams spend too much time reconciling spreadsheets instead of analysing performance. Oracle EPM Cloud centralises planning and consolidation, but success depends on chart-of-accounts design, dimension modelling, and close process discipline.',
+    'MPC implements Oracle EPM for multi-entity enterprises across India, UAE, Singapore, Australia, and the UK, integrated with Oracle Fusion Financials and EBS where required.',
   ],
   moduleChips: [
     'Planning',
@@ -65,7 +65,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Planning Implementation',
-      body: 'Budgeting and forecasting on Oracle Planning — driver-based models and rolling forecasts.',
+      body: 'Budgeting and forecasting on Oracle Planning, driver-based models and rolling forecasts.',
     },
     {
       title: 'Financial Consolidation',
@@ -90,21 +90,21 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Planning & Budgeting',
-      desc: 'Driver-based planning models, workforce planning, and capital planning — configured for how your FP&A team actually forecasts, not how a template assumes you should.',
+      desc: 'Driver-based planning models, workforce planning, and capital planning, configured for how your FP&A team actually forecasts, not how a template assumes you should.',
       imageSrc:
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Financial planning and budgeting analysis',
     },
     {
       title: 'Financial Consolidation',
-      desc: 'Statutory and management consolidation across entities and currencies — with intercompany matching, eliminations, and journal adjustments built into the close cycle.',
+      desc: 'Statutory and management consolidation across entities and currencies, with intercompany matching, eliminations, and journal adjustments built into the close cycle.',
       imageSrc:
         'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Financial consolidation and reporting',
     },
     {
       title: 'Narrative Reporting',
-      desc: 'Management and statutory reporting packs generated from governed EPM data — reducing manual assembly and version-control risk before board submissions.',
+      desc: 'Management and statutory reporting packs generated from governed EPM data, reducing manual assembly and version-control risk before board submissions.',
       imageSrc:
         'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Executive reviewing narrative financial reports',
@@ -112,7 +112,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'Our EPM delivery process',
   processIntro:
-    'A proven six-stage approach for Oracle EPM implementations — from current-state assessment through hypercare and managed close support.',
+    'A proven six-stage approach for Oracle EPM implementations, from current-state assessment through hypercare and managed close support.',
   processSteps: [
     {
       number: '01',
@@ -232,7 +232,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. We provide managed EPM support, model enhancements, and close-cycle assistance post-go-live.',
     },
   ],
-  faqTitle: 'Oracle EPM — Frequently Asked Questions',
+  faqTitle: 'Oracle EPM. Frequently Asked Questions',
   ctaTitle: 'Schedule an EPM',
   ctaTitleAccent: 'Discovery Call',
   ctaBody:

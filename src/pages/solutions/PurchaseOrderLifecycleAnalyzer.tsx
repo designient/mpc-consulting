@@ -21,17 +21,17 @@ const CONFIG: OracleSolutionPageConfig = {
   breadcrumbLabel: 'Purchase Order Lifecycle Analyzer',
   parentService: AI_COE_PARENT,
   seoTitle:
-    'Purchase Order Lifecycle Analyzer — Procurement AI Agent | MPC',
+    'Purchase Order Lifecycle Analyzer. Procurement AI Agent | MPC',
   seoDescription:
-    'MPC Purchase Order Lifecycle Analyzer is a virtual procurement assistant for Buyers and Procurement Managers — unified visibility across approvals, fulfillment, receipts, invoices, and supplier performance.',
-  serviceType: 'Purchase Order Lifecycle Analyzer — AI Agent',
+    'MPC Purchase Order Lifecycle Analyzer is a virtual procurement assistant for Buyers and Procurement Managers, unified visibility across approvals, fulfillment, receipts, invoices, and supplier performance.',
+  serviceType: 'Purchase Order Lifecycle Analyzer. AI Agent',
   serviceDescription:
     'An AI agent that monitors pending approvals, escalates bottlenecks, tracks GRNs and mismatches, and automates follow-ups across the purchase order lifecycle.',
   heroEyebrow: 'AI CoE · Out-of-Box AI Solution',
   heroHeadline: 'Introducing the MPC',
   heroHeadlineAccent: 'Purchase Order Lifecycle Analyzer',
   heroSubhead:
-    'Built for Buyers and Procurement Managers — a virtual procurement assistant with unified visibility across approvals, fulfillment, receipts, and supplier performance.',
+    'Built for Buyers and Procurement Managers, a virtual procurement assistant with unified visibility across approvals, fulfillment, receipts, and supplier performance.',
   heroCtaText: 'Talk to Our AI CoE Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2400&auto=format&fit=crop',
@@ -53,7 +53,7 @@ const CONFIG: OracleSolutionPageConfig = {
   overviewTitle: 'End-to-end PO lifecycle under control',
   overviewParagraphs: [
     'Procurement is constrained by limited visibility into PO status across business units and buyers, approval bottlenecks, hard-to-track receipts and invoices, manual supplier follow-ups, and a lack of actionable insights. Creation and approval alone can add 2–5 days of delay without automated escalation.',
-    'Receiving and invoicing compound the problem — opaque receipt tracking, labor-intensive verification, invoice holds from mismatches, and payment status that requires cross-department chasing. The result: +3–7 days average delay, cash-flow disruption risk, damaged supplier trust, and compliance exposure. Integrated PO automation restores real-time visibility.',
+    'Receiving and invoicing compound the problem, opaque receipt tracking, labor-intensive verification, invoice holds from mismatches, and payment status that requires cross-department chasing. The result: +3–7 days average delay, cash-flow disruption risk, damaged supplier trust, and compliance exposure. Integrated PO automation restores real-time visibility.',
   ],
   moduleChips: [
     'Creation',
@@ -72,7 +72,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'The Solution',
-      body: 'The Purchase Order Lifecycle Analyzer AI Agent acts as a virtual procurement assistant — unified visibility across approvals, fulfillment, receipts, and supplier performance, with proactive monitoring, bottleneck escalation, GRN and mismatch tracking, and automated follow-ups.',
+      body: 'The Purchase Order Lifecycle Analyzer AI Agent acts as a virtual procurement assistant, unified visibility across approvals, fulfillment, receipts, and supplier performance, with proactive monitoring, bottleneck escalation, GRN and mismatch tracking, and automated follow-ups.',
     },
     {
       title: 'Velocity',
@@ -93,7 +93,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   modulesSectionTitle: 'Challenges across the PO lifecycle',
   modulesSectionSubtitle:
-    'From creation and approvals through receiving and invoicing — where delays, visibility gaps, and manual work accumulate.',
+    'From creation and approvals through receiving and invoicing, where delays, visibility gaps, and manual work accumulate.',
   modules: [
     {
       title: 'Creation & Approvals',
@@ -104,14 +104,14 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Receiving Challenges',
-      desc: 'Receipt tracking lacks transparency; manual verification delays system updates for large PO volumes; inaccurate receipt data delays invoice matching and inventory accuracy — adding +3–7 days average delay.',
+      desc: 'Receipt tracking lacks transparency; manual verification delays system updates for large PO volumes; inaccurate receipt data delays invoice matching and inventory accuracy, adding +3–7 days average delay.',
       imageSrc:
         'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Goods receipt and GRN validation',
     },
     {
       title: 'Invoicing Challenges',
-      desc: 'Hard to track invoice creation and validation against POs; invoices held for mismatches, missing receipts, or incomplete supplier docs; payment status needs cross-department chase — cash-flow disruption risk.',
+      desc: 'Hard to track invoice creation and validation against POs; invoices held for mismatches, missing receipts, or incomplete supplier docs; payment status needs cross-department chase, cash-flow disruption risk.',
       imageSrc:
         'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Invoice validation and payment tracking',
@@ -125,25 +125,25 @@ const CONFIG: OracleSolutionPageConfig = {
       number: '01',
       title: 'Detect',
       description:
-        'T+0 — Agent flags issues during a real-time scan across the PO lifecycle (e.g. 23 issues detected).',
+        'T+0. Agent flags issues during a real-time scan across the PO lifecycle (e.g. 23 issues detected).',
     },
     {
       number: '02',
       title: 'Notify',
       description:
-        'T+2h — Automated alerts sent to stakeholders with assigned ownership (e.g. 8 notifications sent).',
+        'T+2h. Automated alerts sent to stakeholders with assigned ownership (e.g. 8 notifications sent).',
     },
     {
       number: '03',
       title: 'Resolve',
       description:
-        'T+24h — Teams resolve assigned issues with guided workflows (e.g. 18 issues resolved).',
+        'T+24h. Teams resolve assigned issues with guided workflows (e.g. 18 issues resolved).',
     },
     {
       number: '04',
       title: 'Confirm',
       description:
-        'T+26h — Agent confirms cycle complete and readiness (e.g. 78% resolution rate in first pass).',
+        'T+26h. Agent confirms cycle complete and readiness (e.g. 78% resolution rate in first pass).',
     },
   ],
   comparisonTitle: 'Manual procurement chase vs. PO Lifecycle Analyzer',
@@ -184,7 +184,7 @@ const CONFIG: OracleSolutionPageConfig = {
   caseStudy: {
     tag: 'AI CoE · Procurement',
     headline:
-      'Cut PO cycle time from days to hours — 85% less chase, 60% faster close',
+      'Cut PO cycle time from days to hours, 85% less chase, 60% faster close',
     description:
       'Procurement teams replacing manual follow-ups and fragmented trackers with the MPC Purchase Order Lifecycle Analyzer gain continuous exception detection, automated escalation, and end-to-end visibility from approval through payment.',
     metadata: 'Oracle Fusion · PO · GRN · Invoice · Supplier Performance',
@@ -194,14 +194,14 @@ const CONFIG: OracleSolutionPageConfig = {
     stat: '85%',
     statLabel: 'Effort reduction',
     statContext:
-      'Elimination of manual follow-up tasks — with 60% time reduction (8 → 2 days) and 100% compliance tracking.',
+      'Elimination of manual follow-up tasks, with 60% time reduction (8 → 2 days) and 100% compliance tracking.',
   },
   related: [
     {
       icon: Bot,
       title: 'AI CoE',
       description:
-        'Return to MPC\'s AI Centre of Excellence — Agentic Studio, custom agents, and out-of-box solutions.',
+        'Return to MPC\'s AI Centre of Excellence. Agentic Studio, custom agents, and out-of-box solutions.',
       to: SERVICE_AI_COE,
     },
     {
@@ -215,7 +215,7 @@ const CONFIG: OracleSolutionPageConfig = {
       icon: Database,
       title: 'ERP (Oracle Cloud)',
       description:
-        'Oracle Fusion procurement and financials — the systems the PO Lifecycle Analyzer monitors.',
+        'Oracle Fusion procurement and financials, the systems the PO Lifecycle Analyzer monitors.',
       to: SOLUTION_ERP,
     },
   ],
@@ -226,7 +226,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Which stages of the PO lifecycle does it cover?',
-      a: 'Creation, approvals, fulfillment, receiving (GRN), invoicing, payments, and supplier performance — with continuous monitoring and exception handling across the chain.',
+      a: 'Creation, approvals, fulfillment, receiving (GRN), invoicing, payments, and supplier performance, with continuous monitoring and exception handling across the chain.',
     },
     {
       q: 'How does escalation work for approval bottlenecks?',
@@ -238,10 +238,10 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Does it replace our ERP procurement module?',
-      a: 'No. It orchestrates and monitors the lifecycle on top of Oracle Fusion — unifying status, automating follow-ups, and validating PO–GRN–invoice integrity without replacing core ERP transactions.',
+      a: 'No. It orchestrates and monitors the lifecycle on top of Oracle Fusion, unifying status, automating follow-ups, and validating PO–GRN–invoice integrity without replacing core ERP transactions.',
     },
   ],
-  faqTitle: 'Purchase Order Lifecycle Analyzer — Frequently Asked Questions',
+  faqTitle: 'Purchase Order Lifecycle Analyzer. Frequently Asked Questions',
   ctaTitle: 'Accelerate your',
   ctaTitleAccent: 'PO lifecycle',
   ctaBody:

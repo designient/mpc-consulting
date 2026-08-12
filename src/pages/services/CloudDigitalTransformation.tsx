@@ -43,17 +43,17 @@ const BREADCRUMB = [
 const CAPABILITIES = [
   {
     title: 'Application Development',
-    body: 'Mobile and web apps, full stack engineering, APIs and microservices, UI/UX design, and legacy modernization — built for enterprise scale.',
+    body: 'Mobile and web apps, full stack engineering, APIs and microservices, UI/UX design, and legacy modernization built for enterprise scale.',
     to: SOLUTION_APP_DEV,
   },
   {
     title: 'Database Migration',
-    body: 'Data and AI services across Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL — upgrades, migrations, data lakes, and data warehouse engineering.',
+    body: 'Data and AI services across Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL, upgrades, migrations, data lakes, and data warehouse engineering.',
     to: SOLUTION_DB_MIGRATION,
   },
   {
     title: 'Cloud Management',
-    body: 'OCI, AWS, Azure, and GCP operations — multi-cloud strategy, backup and disaster recovery, and DevOps with CI/CD and Kubernetes.',
+    body: 'OCI, AWS, Azure, and GCP operations, multi-cloud strategy, backup and disaster recovery, and DevOps with CI/CD and Kubernetes.',
     to: SOLUTION_CLOUD_MANAGEMENT,
   },
 ];
@@ -80,7 +80,7 @@ const COMPARISON_ROWS = [
     criterion: 'Database expertise',
     values: [
       'Lift-and-shift only',
-      'Oracle, SQL Server, PostgreSQL, NoSQL — upgrades and migrations',
+      'Oracle, SQL Server, PostgreSQL, NoSQL, upgrades and migrations',
     ],
   },
   {
@@ -109,19 +109,19 @@ const COMPARISON_ROWS = [
 const FAQS = [
   {
     q: 'Which cloud platforms does MPC support?',
-    a: 'We design, migrate, and manage workloads across OCI, AWS, Azure, and GCP — including multi-cloud strategies with consistent infrastructure as code and observability.',
+    a: 'We design, migrate, and manage workloads across OCI, AWS, Azure, and GCP, including multi-cloud strategies with consistent infrastructure as code and observability.',
   },
   {
     q: 'Can MPC migrate our databases to the cloud?',
-    a: 'Yes. We handle Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL databases — including upgrades, schema migrations, and data lake / data warehouse engineering.',
+    a: 'Yes. We handle Oracle, SQL Server, MySQL, PostgreSQL, and NoSQL databases, including upgrades, schema migrations, and data lake / data warehouse engineering.',
   },
   {
     q: 'Do you build custom applications alongside cloud work?',
-    a: 'Yes. Our application development practice covers mobile, web, full-stack, and API/microservices development — often delivered alongside cloud and digital transformation engagements.',
+    a: 'Yes. Our application development practice covers mobile, web, full-stack, and API/microservices development, often delivered alongside cloud and digital transformation engagements.',
   },
   {
     q: 'How does DevOps fit into Cloud & Digital Transformation?',
-    a: 'DevOps is embedded in our cloud management offering — CI/CD pipelines, container orchestration, and automated delivery are part of how we run and maintain cloud environments.',
+    a: 'DevOps is embedded in our cloud management offering. CI/CD pipelines, container orchestration, and automated delivery are part of how we run and maintain cloud environments.',
   },
 ];
 
@@ -135,7 +135,7 @@ const SERVICE_SCHEMA = {
   },
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-    'Application development, database migration, cloud management, and enterprise digital transformation at scale — OCI, AWS, Azure, GCP.',
+    'Application development, database migration, cloud management, and enterprise digital transformation at scale. OCI, AWS, Azure, GCP.',
   url: `https://www.mpccloudconsulting.com${SERVICE_CLOUD_DT}`,
 };
 
@@ -144,7 +144,7 @@ export function CloudDigitalTransformation() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Cloud & Digital Transformation | App Dev, Migration & Multi-Cloud | MPC"
-        description="MPC delivers application development, database migration, cloud management, and digital transformation — OCI, AWS, Azure, GCP. Enterprise scale across India, UAE, Singapore, UK & Australia."
+        description="MPC delivers application development, database migration, cloud management, and digital transformation. OCI, AWS, Azure, GCP. Enterprise scale across India, UAE, Singapore, UK & Australia."
         canonicalPath={CANONICAL_PATH}
         schema={[
           ORGANIZATION_SCHEMA,
@@ -160,7 +160,7 @@ export function CloudDigitalTransformation() {
           eyebrow="Cloud & Digital Transformation"
           headline="Build, Migrate & Transform"
           headlineAccent="at Enterprise Scale"
-          subhead="Application development, database migration, and cloud management at scale — across OCI, AWS, Azure, and GCP."
+          subhead="Application development, database migration, and cloud management at scale, across OCI, AWS, Azure, and GCP."
           primaryCtaText="Talk to Our Cloud Team"
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
@@ -172,7 +172,7 @@ export function CloudDigitalTransformation() {
 
         <ServiceWhatIs
           title="What is MPC's Cloud & Digital Transformation practice?"
-          body="MPC's Cloud & Digital Transformation practice spans the full stack — from custom application development and database migration to multi-cloud management and DevOps. We help enterprises build modern applications, move data safely to the cloud, and operate infrastructure across OCI, AWS, Azure, and GCP with enterprise-grade reliability."
+          body="MPC's Cloud & Digital Transformation practice spans the full stack from custom application development and database migration to multi-cloud management and DevOps. We help enterprises build modern applications, move data safely to the cloud, and operate infrastructure across OCI, AWS, Azure, and GCP with enterprise-grade reliability."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Cloud infrastructure and digital transformation systems"
         />
@@ -181,7 +181,7 @@ export function CloudDigitalTransformation() {
 
         <ServiceCapabilities
           title="Full cloud & digital portfolio"
-          intro="From application development and database migration to multi-cloud management — one partner for your entire digital estate."
+          intro="From application development and database migration to multi-cloud management, one partner for your entire digital estate."
           capabilities={CAPABILITIES}
         />
 
@@ -195,7 +195,7 @@ export function CloudDigitalTransformation() {
                 End-to-end cloud & digital transformation services
               </Heading>
               <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mt-4">
-                From initial consulting through managed operations — a complete
+                From initial consulting through managed operations, a complete
                 service lifecycle for your cloud, data, and digital estate.
               </p>
             </div>
@@ -219,7 +219,7 @@ export function CloudDigitalTransformation() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Cloud & Digital Transformation — Frequently Asked Questions"
+            title="Cloud & Digital Transformation. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="white"

@@ -127,7 +127,7 @@ export function CaseStudySpotlight({
                 </p>
                 {study.quoteAttribution && (
                   <cite className="not-italic font-body text-[13px] text-text-primary/60 mt-2 block">
-                    — {study.quoteAttribution}
+                    {study.quoteAttribution}
                   </cite>
                 )}
               </blockquote>

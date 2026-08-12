@@ -21,17 +21,17 @@ const CONFIG: OracleSolutionPageConfig = {
   breadcrumbLabel: 'Payroll Issue Analyzer Agent',
   parentService: AI_COE_PARENT,
   seoTitle:
-    'Payroll Issue Analyzer Agent — Pre-Payroll Data Gap Detection | MPC',
+    'Payroll Issue Analyzer Agent. Pre-Payroll Data Gap Detection | MPC',
   seoDescription:
-    'MPC Payroll Issue Analyzer identifies missing critical employee data — Date of Birth, bank details, national ID, and payroll fields — before payroll processing for HR Specialists and Payroll teams.',
-  serviceType: 'Payroll Issue Analyzer Agent — AI Agent',
+    'MPC Payroll Issue Analyzer identifies missing critical employee data. Date of Birth, bank details, national ID, and payroll fields, before payroll processing for HR Specialists and Payroll teams.',
+  serviceType: 'Payroll Issue Analyzer Agent. AI Agent',
   serviceDescription:
-    'An AI agent that identifies missing critical employee data such as Date of Birth, bank account details, national ID, and payroll-related information before payroll processing — extensible to any payroll and legislation.',
+    'An AI agent that identifies missing critical employee data such as Date of Birth, bank account details, national ID, and payroll-related information before payroll processing, extensible to any payroll and legislation.',
   heroEyebrow: 'AI CoE · Out-of-Box AI Solution',
   heroHeadline: 'Introducing the',
   heroHeadlineAccent: 'Payroll Issue Analyzer Agent',
   heroSubhead:
-    'Built for HR Specialists, Payroll Managers, and Payroll Administrators — detect critical data gaps before the payroll run, not after.',
+    'Built for HR Specialists, Payroll Managers, and Payroll Administrators, detect critical data gaps before the payroll run, not after.',
   heroCtaText: 'Talk to Our AI CoE Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
@@ -51,7 +51,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Payroll readiness before the cycle closes',
   overviewParagraphs: [
-    'Payroll teams deal with high volumes of emails, spreadsheets, and manual validations. Critical data gaps — bank details, statutory info, and more — are often identified late in the cycle, when fixes are costly and stressful.',
+    'Payroll teams deal with high volumes of emails, spreadsheets, and manual validations. Critical data gaps, bank details, statutory info, and more, are often identified late in the cycle, when fixes are costly and stressful.',
     'Manual checks are time-consuming, error-prone, and difficult to scale. The Payroll Issue Analyzer surfaces missing fields early so HR Specialists and Payroll Administrators can remediate before processing.',
   ],
   moduleChips: [
@@ -69,7 +69,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'The Solution',
-      body: 'The MPC Payroll Issue Analyzer identifies missing critical employee data — Date of Birth, bank account details, national ID, and payroll-related information — before payroll processing, and can extend to any payroll, legislation, or business rule set.',
+      body: 'The MPC Payroll Issue Analyzer identifies missing critical employee data. Date of Birth, bank account details, national ID, and payroll-related information, before payroll processing, and can extend to any payroll, legislation, or business rule set.',
     },
     {
       title: 'Efficiency',
@@ -97,20 +97,20 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Late-cycle data gaps',
-      desc: 'Missing bank details, statutory fields, or IDs found at the last minute delay the run. Detect gaps early — before processing.',
+      desc: 'Missing bank details, statutory fields, or IDs found at the last minute delay the run. Detect gaps early, before processing.',
       imageSrc:
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Payroll calendar and cycle readiness review',
     },
     {
       title: 'Pre-payroll readiness checks',
-      desc: 'Scan for Date of Birth, bank accounts, national ID, and payroll-related fields — tailored to legislation and business requirements.',
+      desc: 'Scan for Date of Birth, bank accounts, national ID, and payroll-related fields, tailored to legislation and business requirements.',
       imageSrc:
         'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Team confirming payroll data completeness',
     },
   ],
-  processTitle: 'From scan to remediate — before the payroll run',
+  processTitle: 'From scan to remediate, before the payroll run',
   processIntro:
     'A clear readiness loop so gaps are visible org-wide while there is still time to fix them.',
   processSteps: [
@@ -136,7 +136,7 @@ const CONFIG: OracleSolutionPageConfig = {
       number: '04',
       title: 'Remediate',
       description:
-        'Close gaps before processing — reducing late-cycle fire drills and compliance risk.',
+        'Close gaps before processing, reducing late-cycle fire drills and compliance risk.',
     },
   ],
   comparisonTitle: 'Manual payroll checks vs. Payroll Issue Analyzer',
@@ -154,7 +154,7 @@ const CONFIG: OracleSolutionPageConfig = {
       criterion: 'Timing',
       values: [
         'Critical gaps identified late in the cycle',
-        'Gaps detected early — before payroll processing',
+        'Gaps detected early, before payroll processing',
       ],
     },
     {
@@ -182,9 +182,9 @@ const CONFIG: OracleSolutionPageConfig = {
   caseStudy: {
     tag: 'AI CoE · Payroll',
     headline:
-      'Find missing payroll data before the run — not in the fire drill',
+      'Find missing payroll data before the run, not in the fire drill',
     description:
-      'Payroll Managers and HR Specialists replacing late-cycle spreadsheet checks with the MPC Payroll Issue Analyzer gain early visibility into missing DOB, bank, national ID, and statutory fields — for better readiness and oversight.',
+      'Payroll Managers and HR Specialists replacing late-cycle spreadsheet checks with the MPC Payroll Issue Analyzer gain early visibility into missing DOB, bank, national ID, and statutory fields, for better readiness and oversight.',
     metadata:
       'HR Specialists · Payroll Manager · Payroll Administrator · Data gaps',
     imageSrc:
@@ -193,21 +193,21 @@ const CONFIG: OracleSolutionPageConfig = {
     stat: 'Earlier',
     statLabel: 'Gap detection',
     statContext:
-      'Efficiency, compliance, and control — less manual validation, complete required data, org-wide readiness visibility.',
+      'Efficiency, compliance, and control, less manual validation, complete required data, org-wide readiness visibility.',
   },
   related: [
     {
       icon: Bot,
       title: 'AI CoE',
       description:
-        'Return to MPC\'s AI Centre of Excellence — Agentic Studio, custom agents, and out-of-box solutions.',
+        'Return to MPC\'s AI Centre of Excellence. Agentic Studio, custom agents, and out-of-box solutions.',
       to: SERVICE_AI_COE,
     },
     {
       icon: Users,
       title: 'HCM',
       description:
-        'Oracle HCM Cloud — employee master data and payroll-related records this agent checks.',
+        'Oracle HCM Cloud, employee master data and payroll-related records this agent checks.',
       to: SOLUTION_HCM,
     },
     {
@@ -233,18 +233,18 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'When should we run it in the cycle?',
-      a: 'Before payroll processing — so missing critical data is detected early, not late in the cycle when fixes are hardest.',
+      a: 'Before payroll processing, so missing critical data is detected early, not late in the cycle when fixes are hardest.',
     },
     {
       q: 'How quickly can we deploy it?',
       a: 'As an Out-of-Box AI Solution from MPC\'s AI CoE, focused deployments typically start in days, then expand across entities, legislations, and payroll calendars.',
     },
   ],
-  faqTitle: 'Payroll Issue Analyzer Agent — Frequently Asked Questions',
+  faqTitle: 'Payroll Issue Analyzer Agent. Frequently Asked Questions',
   ctaTitle: 'Close data gaps',
   ctaTitleAccent: 'before the run.',
   ctaBody:
-    'Tell us how payroll readiness works today. We\'ll show how the Payroll Issue Analyzer flags missing DOB, bank, national ID, and statutory fields — before processing.',
+    'Tell us how payroll readiness works today. We\'ll show how the Payroll Issue Analyzer flags missing DOB, bank, national ID, and statutory fields, before processing.',
   ctaText: 'Talk to Our AI CoE Team',
 };
 

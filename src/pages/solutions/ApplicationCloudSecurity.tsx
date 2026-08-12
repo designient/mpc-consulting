@@ -31,7 +31,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Secure applications',
   heroHeadlineAccent: 'and cloud workloads',
   heroSubhead:
-    'AppSec assessments, CSPM, penetration testing, and compliance readiness — with AI-driven insights to protect your application and cloud estate.',
+    'AppSec assessments, CSPM, penetration testing, and compliance readiness, with AI-driven insights to protect your application and cloud estate.',
   heroCtaText: 'Talk to Our Security Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2400&auto=format&fit=crop',
@@ -51,8 +51,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Application & Cloud Security with MPC',
   overviewParagraphs: [
-    'Applications and cloud workloads are primary attack surfaces — yet many enterprises lack consistent AppSec practices and cloud posture visibility across multi-cloud estates.',
-    'MPC delivers end-to-end application and cloud security — from vulnerability assessment and CSPM through penetration testing and audit-ready compliance programmes.',
+    'Applications and cloud workloads are primary attack surfaces, yet many enterprises lack consistent AppSec practices and cloud posture visibility across multi-cloud estates.',
+    'MPC delivers end-to-end application and cloud security, from vulnerability assessment and CSPM through penetration testing and audit-ready compliance programmes.',
   ],
   moduleChips: [
     'AppSec',
@@ -74,7 +74,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Cloud Security Posture Management',
-      body: 'CSPM across AWS, Azure, GCP, and OCI — misconfiguration detection, policy enforcement, and drift monitoring.',
+      body: 'CSPM across AWS, Azure, GCP, and OCI, misconfiguration detection, policy enforcement, and drift monitoring.',
     },
     {
       title: 'Penetration Testing',
@@ -159,11 +159,11 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'Can MPC assess our application and cloud security posture?',
-      a: 'Yes. We deliver AppSec assessments, vulnerability testing, CSPM, penetration testing, and compliance readiness reviews — with AI-driven insights where applicable.',
+      a: 'Yes. We deliver AppSec assessments, vulnerability testing, CSPM, penetration testing, and compliance readiness reviews, with AI-driven insights where applicable.',
     },
     {
       q: 'Which cloud platforms does CSPM cover?',
-      a: 'We support CSPM across AWS, Azure, GCP, and OCI — including multi-cloud posture management with consistent policy baselines.',
+      a: 'We support CSPM across AWS, Azure, GCP, and OCI, including multi-cloud posture management with consistent policy baselines.',
     },
     {
       q: 'Do you integrate AppSec into CI/CD pipelines?',
@@ -174,7 +174,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. Penetration testing, compliance gap assessments, and evidence collection are part of our application and cloud security offering.',
     },
   ],
-  faqTitle: 'Application & Cloud Security — Frequently Asked Questions',
+  faqTitle: 'Application & Cloud Security. Frequently Asked Questions',
   ctaTitle: 'Harden your',
   ctaTitleAccent: 'App & Cloud Estate',
   ctaBody:

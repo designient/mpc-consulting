@@ -58,7 +58,7 @@ const INDUSTRIES = [
   label: 'Travel & Hospitality',
   headline: 'Run lean while scaling guest experience',
   description:
-  'Airlines, hotel chains, and travel platforms use MPC to consolidate HR, finance, and operations on Oracle Cloud — so they can flex up and down with demand without breaking margins.',
+  'Airlines, hotel chains, and travel platforms use MPC to consolidate HR, finance, and operations on Oracle Cloud, so they can flex up and down with demand without breaking margins.',
   challenges: [
   'High-volume seasonal hiring and shift-based workforces',
   'Multi-property, multi-currency consolidation pain',
@@ -72,7 +72,7 @@ const INDUSTRIES = [
   label: 'Real Estate',
   headline: 'Portfolio finance and people, in one cockpit',
   description:
-  'Developers, REITs, and facility operators trust MPC to unify project finance, leasing, FM, and HR across complex portfolios — with the reporting agility their boards expect.',
+  'Developers, REITs, and facility operators trust MPC to unify project finance, leasing, FM, and HR across complex portfolios, with the reporting agility their boards expect.',
   challenges: [
   'Project, property, and corporate books on different systems',
   'Complex revenue recognition across multi-year projects',
@@ -86,7 +86,7 @@ const INDUSTRIES = [
   label: 'Energy & Utilities',
   headline: 'Modernise without disrupting the grid',
   description:
-  'We help energy producers, utilities, and EPCs modernise on Oracle Cloud with the safety, asset, and regulatory rigour the sector demands — across upstream, downstream, and renewables.',
+  'We help energy producers, utilities, and EPCs modernise on Oracle Cloud with the safety, asset, and regulatory rigour the sector demands, across upstream, downstream, and renewables.',
   challenges: [
   'Aging workforces and critical skills transfer',
   'Asset-heavy operations needing real-time visibility',
@@ -100,7 +100,7 @@ const INDUSTRIES = [
   label: 'Telecom',
   headline: 'B/OSS-aware Oracle Cloud, done right',
   description:
-  'Telcos partner with MPC for HR, finance, and customer-platform modernisation — with deep understanding of how Oracle Cloud sits alongside B/OSS, billing, and network systems.',
+  'Telcos partner with MPC for HR, finance, and customer-platform modernisation, with deep understanding of how Oracle Cloud sits alongside B/OSS, billing, and network systems.',
   challenges: [
   'High-volume frontline workforce churn and reskilling',
   'Revenue assurance across complex product portfolios',
@@ -128,7 +128,7 @@ const INDUSTRIES = [
   label: 'Professional Services',
   headline: 'Bill, staff, and grow without the spreadsheet sprawl',
   description:
-  'Consultancies, law firms, and agencies turn to MPC to put project finance, utilisation, and HR on Oracle Cloud — so growth doesn’t come at the cost of margin visibility.',
+  'Consultancies, law firms, and agencies turn to MPC to put project finance, utilisation, and HR on Oracle Cloud, so growth doesn’t come at the cost of margin visibility.',
   challenges: [
   'Project profitability lost between systems and spreadsheets',
   'Talent acquisition and retention in a tight specialist market',
@@ -145,7 +145,7 @@ const WHY_PILLARS = [
   imageAlt: 'Sector-specialist consultants collaborating',
   title: 'Sector-specialist consultants',
   body:
-  'Every engagement is led by consultants with deep sector experience — not generalists learning your industry on your time.'
+  'Every engagement is led by consultants with deep sector experience, not generalists learning your industry on your time.'
 },
 {
   imageSrc:
@@ -153,7 +153,7 @@ const WHY_PILLARS = [
   imageAlt: 'Industry accelerators and delivery playbooks',
   title: 'Pre-built industry accelerators',
   body:
-  'Configurations, data models, and reports tuned for your sector — so you start three steps ahead of a blank Oracle Cloud tenant.'
+  'Configurations, data models, and reports tuned for your sector, so you start three steps ahead of a blank Oracle Cloud tenant.'
 },
 {
   imageSrc:
@@ -161,7 +161,7 @@ const WHY_PILLARS = [
   imageAlt: 'Regulator-aware Oracle Cloud delivery',
   title: 'Regulator-aware delivery',
   body:
-  'We build to the rules of your market — RBI, SAMA, APRA, FCA, GDPR — with audit trails and controls baked into every rollout.'
+  'We build to the rules of your market, including RBI, SAMA, APRA, FCA, and GDPR, with audit trails and controls baked into every rollout.'
 }];
 
 const COMPARISON_ROWS = [
@@ -223,7 +223,7 @@ const FAQS = [
 },
 {
   q: 'How do you handle regulatory differences across regions?',
-  a: 'Our delivery teams operate inside the regulatory frameworks of each region we serve — India, UAE, Singapore, Australia, and the UK — and configure Oracle Cloud accordingly.'
+  a: 'Our delivery teams operate inside the regulatory frameworks of each region we serve. India, UAE, Singapore, Australia, and the UK, and configure Oracle Cloud accordingly.'
 },
 {
   q: 'What’s the smallest engagement you take on?',
@@ -235,7 +235,7 @@ export function Industries() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Industry Solutions | MPC Cloud Consulting"
-        description="Oracle Cloud and AI transformation tuned for 8 industries — BFSI, Manufacturing, Travel, Real Estate, Energy, Telecom, Public Sector, and Professional Services."
+        description="Oracle Cloud and AI transformation tuned for 8 industries. BFSI, Manufacturing, Travel, Real Estate, Energy, Telecom, Public Sector, and Professional Services."
         canonicalPath="/industries/"
         schema={[
           ORGANIZATION_SCHEMA,
@@ -250,7 +250,7 @@ export function Industries() {
       <ServiceHero
         eyebrow="Industries"
         headline="Industry-tuned Oracle Cloud and AI solutions"
-        subhead="MPC builds for sectors, not stereotypes. Our practice leads, accelerators, and delivery playbooks are tuned for the eight industries we know deeply — so your transformation starts informed."
+        subhead="MPC builds for sectors, not stereotypes. Our practice leads, accelerators, and delivery playbooks are tuned for the eight industries we know deeply, so your transformation starts informed."
         primaryCtaText="Talk to an industry lead"
         primaryCtaTo="/contact/"
         imageSrc="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1400&q=80"
@@ -270,13 +270,13 @@ export function Industries() {
       <PillarsSection
         eyebrow="Why MPC"
         title="Industry transformation"
-        intro="Sector specialists, pre-built accelerators, and regulator-aware delivery — so your Oracle Cloud programme starts informed and stays audit-ready."
+        intro="Sector specialists, pre-built accelerators, and regulator-aware delivery, so your Oracle Cloud programme starts informed and stays audit-ready."
         items={WHY_PILLARS} />
       
 
       <ComparisonTable
         eyebrow="How we compare"
-        title="MPC vs. the alternatives in your industry"
+        title="MPC vs. The alternatives in your industry"
         headers={[
         'Capability',
         'Generic Consultancies',
@@ -293,7 +293,7 @@ export function Industries() {
         eyebrow="Featured Case Study"
         tag="Manufacturing"
         headline="38% faster month-end close for a global auto components leader"
-        description="A unified Oracle Cloud ERP and HCM rollout across 14 plants — designed around the realities of multi-entity manufacturing, with industry-specific reporting from day one."
+        description="A unified Oracle Cloud ERP and HCM rollout across 14 plants, designed around the realities of multi-entity manufacturing, with industry-specific reporting from day one."
         metadata="14 plants · 4 countries · 9 months"
         imageSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80"
         imageAlt="Manufacturing operations dashboard"
@@ -325,7 +325,7 @@ export function Industries() {
       <CTABand
         title="Find your industry"
         titleAccent="playbook"
-        body="Talk to a sector lead who understands the rules of your market — and the levers Oracle Cloud gives you to win in it."
+        body="Talk to a sector lead who understands the rules of your market, and the levers Oracle Cloud gives you to win in it."
         ctaText="Talk to an industry lead"
         ctaTo="/contact/"
         variant="split"

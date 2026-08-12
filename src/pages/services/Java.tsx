@@ -79,15 +79,15 @@ const CAPABILITIES = [
 },
 {
   title: 'REST & GraphQL APIs',
-  body: 'API-first design — clean, documented, versioned interfaces that connect your systems.'
+  body: 'API-first design, clean, documented, versioned interfaces that connect your systems.'
 },
 {
   title: 'Full-Stack Development',
-  body: 'Java backend with React.js, Angular, or Node.js front-ends — complete application delivery.'
+  body: 'Java backend with React.js, Angular, or Node.js front-ends, complete application delivery.'
 },
 {
   title: 'Legacy Modernisation',
-  body: 'Re-platform ageing Java monoliths into cloud-native microservices — without business disruption.'
+  body: 'Re-platform ageing Java monoliths into cloud-native microservices, without business disruption.'
 },
 {
   title: 'Oracle Integration',
@@ -95,7 +95,7 @@ const CAPABILITIES = [
 },
 {
   title: 'Database Engineering',
-  body: 'PostgreSQL, MySQL, and Oracle DB — data modelling, query optimisation, and migration.'
+  body: 'PostgreSQL, MySQL, and Oracle DB, data modelling, query optimisation, and migration.'
 }];
 
 const PROCESS_STEPS = [
@@ -103,7 +103,7 @@ const PROCESS_STEPS = [
   number: '01',
   title: 'Discover',
   description:
-  'Architecture review, dependency mapping, and clear definition of build vs. integrate boundaries.'
+  'Architecture review, dependency mapping, and clear definition of build vs. Integrate boundaries.'
 },
 {
   number: '02',
@@ -158,7 +158,7 @@ const FAQS = [
 },
 {
   q: 'Can MPC integrate Java applications with Oracle Cloud?',
-  a: 'Yes. Our Java services are designed to integrate with Oracle Cloud APIs, Oracle Integration Cloud (OIC), and OCI — built by engineers who understand both worlds.'
+  a: 'Yes. Our Java services are designed to integrate with Oracle Cloud APIs, Oracle Integration Cloud (OIC), and OCI, built by engineers who understand both worlds.'
 },
 {
   q: 'Do you handle legacy Java modernisation?',
@@ -201,7 +201,7 @@ const SERVICE_SCHEMA = {
   },
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-  'Enterprise Java development — Spring Boot, microservices, REST/GraphQL APIs, full-stack, and legacy modernisation.',
+  'Enterprise Java development. Spring Boot, microservices, REST/GraphQL APIs, full-stack, and legacy modernisation.',
   url: `https://www.mpccloudconsulting.com${SOLUTION_JAVA}`
 };
 export function Java() {
@@ -224,7 +224,7 @@ export function Java() {
           eyebrow="Oracle Cloud · Java"
           headline="Enterprise Java Development"
           headlineAccent="for the Cloud Era"
-          subhead="Custom Java applications, microservices architecture, and full-stack development — built to integrate with Oracle Cloud and scale with your business."
+          subhead="Custom Java applications, microservices architecture, and full-stack development built to integrate with Oracle Cloud and scale with your business."
           primaryCtaText="Discuss Your Build"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop"
@@ -233,7 +233,7 @@ export function Java() {
 
         <ServiceWhatIs
           title="What does MPC's Java practice deliver?"
-          body="MPC builds production-grade enterprise Java applications using Spring Boot, microservices patterns, and API-first architectures — designed to integrate cleanly with Oracle Cloud and other enterprise platforms. We deliver full-stack development, REST and GraphQL APIs, legacy modernisation, and database engineering."
+          body="MPC builds production-grade enterprise Java applications using Spring Boot, microservices patterns, and API-first architectures, designed to integrate cleanly with Oracle Cloud and other enterprise platforms. We deliver full-stack development, REST and GraphQL APIs, legacy modernisation, and database engineering."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Software engineering team at work"
         />
@@ -250,7 +250,7 @@ export function Java() {
           </Heading>
           <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-6 max-w-[820px]">
             Modern enterprises need custom applications that extend their Oracle
-            Cloud investments — without introducing complexity or fragility.
+            Cloud investments, without introducing complexity or fragility.
             MPC's Java practice builds production-grade applications using
             Spring Boot, microservices patterns, and API-first architectures
             that integrate cleanly with Oracle and other enterprise platforms.
@@ -295,7 +295,7 @@ export function Java() {
           <ProcessSteps
             eyebrow="Delivery"
             title="How a Java engagement runs"
-            intro="A four-stage delivery model for enterprise Java builds — from architecture through production deployment."
+            intro="A four-stage delivery model for enterprise Java builds, from architecture through production deployment."
             steps={PROCESS_STEPS}
             variant="light"
             centerHeader
@@ -348,7 +348,7 @@ export function Java() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Java — Frequently Asked Questions"
+            title="Java. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"

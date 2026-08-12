@@ -78,11 +78,11 @@ const DIMENSIONS = [
 },
 {
   title: 'Data Quality',
-  body: 'Master data review — Customers, Suppliers, Employees, Chart of Accounts. Duplicate and integrity analysis.'
+  body: 'Master data review. Customers, Suppliers, Employees, Chart of Accounts. Duplicate and integrity analysis.'
 },
 {
   title: 'Integration Health',
-  body: 'OIC and middleware review — interface error rates, performance, and integration architecture assessment.'
+  body: 'OIC and middleware review, interface error rates, performance, and integration architecture assessment.'
 },
 {
   title: 'User Adoption',
@@ -113,7 +113,7 @@ const DELIVERABLES = [
   },
   {
     title: 'Remediation Roadmap',
-    desc: 'Sequenced action plan — quick wins first, strategic improvements second.',
+    desc: 'Sequenced action plan, quick wins first, strategic improvements second.',
     imageSrc:
       'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2000&auto=format&fit=crop',
     imageAlt: 'Team planning remediation roadmap on whiteboard',
@@ -145,7 +145,7 @@ const COMPARISON_ROWS = [
   criterion: 'Independence',
   values: [
   'Your implementation partner reviews their own work',
-  'Truly independent — we audit any Oracle environment']
+  'Truly independent, we audit any Oracle environment']
 
 },
 {
@@ -170,7 +170,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
 {
   q: 'What is included in an HCaaS engagement?',
-  a: 'Independent audit of your Oracle environment across six dimensions — performance, configuration, security, data quality, integration health, and user adoption — followed by an executive summary, technical report, risk register, and remediation roadmap.'
+  a: 'Independent audit of your Oracle environment across six dimensions, performance, configuration, security, data quality, integration health, and user adoption, followed by an executive summary, technical report, risk register, and remediation roadmap.'
 },
 {
   q: 'How long does HCaaS take?',
@@ -182,7 +182,7 @@ const FAQS = [
 },
 {
   q: 'Can MPC fix what we find?',
-  a: 'Yes. After delivery, you can engage MPC for remediation work — but the audit itself is independent and not contingent on remediation engagement.'
+  a: 'Yes. After delivery, you can engage MPC for remediation work, but the audit itself is independent and not contingent on remediation engagement.'
 }];
 
 const RELATED = [
@@ -225,7 +225,7 @@ export function HCaaS() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Health Check as a Service (HCaaS) | Oracle Cloud Review | MPC"
-        description="MPC HCaaS delivers a comprehensive Oracle Cloud audit — performance, configuration, security and optimisation recommendations."
+        description="MPC HCaaS delivers a comprehensive Oracle Cloud audit, performance, configuration, security and optimisation recommendations."
         canonicalPath={SOLUTION_HCAAS}
         schema={[
         ORGANIZATION_SCHEMA,
@@ -240,7 +240,7 @@ export function HCaaS() {
           eyebrow="Oracle Cloud · HCaaS"
           headline="Know Exactly Where"
           headlineAccent="Your Oracle System Stands"
-          subhead="An independent, expert review of your Oracle Cloud environment — with a clear, prioritised roadmap to fix what's wrong and optimise what's underperforming."
+          subhead="An independent, expert review of your Oracle Cloud environment, with a clear, prioritised roadmap to fix what's wrong and optimise what's underperforming."
           primaryCtaText="Request a Health Check"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
@@ -249,7 +249,7 @@ export function HCaaS() {
 
         <ServiceWhatIs
           title="What is Health Check as a Service?"
-          body="HCaaS is MPC's structured 4-week Oracle Cloud audit. Senior consultants review your Oracle environment across six dimensions — performance, configuration, security, data quality, integration health, and user adoption — and deliver an executive summary, technical report, risk register, and prioritised remediation roadmap."
+          body="HCaaS is MPC's structured 4-week Oracle Cloud audit. Senior consultants review your Oracle environment across six dimensions, performance, configuration, security, data quality, integration health, and user adoption, and deliver an executive summary, technical report, risk register, and prioritised remediation roadmap."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Analytics dashboards under review"
         />
@@ -311,7 +311,7 @@ export function HCaaS() {
               What you receive
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              Four structured outputs from every HCaaS engagement — designed for
+              Four structured outputs from every HCaaS engagement, designed for
               board visibility, technical clarity, and a prioritised path to
               remediation.
             </p>
@@ -348,7 +348,7 @@ export function HCaaS() {
           <ProcessSteps
             eyebrow="Engagement Timeline"
             title="From kick-off to roadmap in 4 weeks"
-            intro="A fixed four-week engagement timeline — from access provisioning through to a prioritised remediation roadmap."
+            intro="A fixed four-week engagement timeline, from access provisioning through to a prioritised remediation roadmap."
             steps={TIMELINE_STEPS}
             variant="light"
             centerHeader
@@ -401,7 +401,7 @@ export function HCaaS() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="HCaaS — Frequently Asked Questions"
+            title="HCaaS. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"
@@ -411,7 +411,7 @@ export function HCaaS() {
         <CTABand
           title="Request your Oracle"
           titleAccent="Health Check"
-          body="We'll tell you exactly what's working, what isn't, and what to do about it — in four weeks."
+          body="We'll tell you exactly what's working, what isn't, and what to do about it, in four weeks."
           ctaText="Request a Health Check"
           ctaTo="/contact/"
           variant="split"

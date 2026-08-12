@@ -60,7 +60,7 @@ const FRAMEWORK = [
 },
 {
   title: 'Training Design & Delivery',
-  body: 'Role-based training programmes — classroom, e-learning, and job aids. Tailored to how your people actually work.'
+  body: 'Role-based training programmes, classroom, e-learning, and job aids. Tailored to how your people actually work.'
 },
 {
   title: 'Communication Strategy',
@@ -68,7 +68,7 @@ const FRAMEWORK = [
 },
 {
   title: 'Super-User Programme',
-  body: 'Identify, train, and support internal champions — the people who sustain adoption after MPC leaves.'
+  body: 'Identify, train, and support internal champions, the people who sustain adoption after MPC leaves.'
 },
 {
   title: 'Ongoing Enablement',
@@ -105,7 +105,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
 {
   q: 'When should AaaS start in an Oracle programme?',
-  a: 'At project kick-off — not at go-live. The most successful adoption programmes begin during design so change impact is shaped, not absorbed.'
+  a: 'At project kick-off, not at go-live. The most successful adoption programmes begin during design so change impact is shaped, not absorbed.'
 },
 {
   q: 'Does AaaS cover technical and functional training?',
@@ -117,7 +117,7 @@ const FAQS = [
 },
 {
   q: 'Can AaaS run on existing Oracle environments?',
-  a: 'Yes. Many enterprises engage AaaS post-go-live when adoption has stalled — we run a diagnostic, then build a recovery programme.'
+  a: 'Yes. Many enterprises engage AaaS post-go-live when adoption has stalled, we run a diagnostic, then build a recovery programme.'
 }];
 
 const RELATED = [
@@ -174,7 +174,7 @@ export function AaaS() {
           eyebrow="Oracle Cloud · AaaS"
           headline="Turn Deployment Into"
           headlineAccent="True Adoption"
-          subhead="Going live is not the finish line. The ROI of Oracle Cloud only arrives when your people actually use it — confidently, correctly, and consistently."
+          subhead="Going live is not the finish line. The ROI of Oracle Cloud only arrives when your people actually use it, confidently, correctly, and consistently."
           primaryCtaText="Book a Conversation"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop"
@@ -183,7 +183,7 @@ export function AaaS() {
 
         <ServiceWhatIs
           title="What is Adoption as a Service?"
-          body="AaaS is MPC's structured user-enablement service for Oracle Cloud — covering change management, training, communications, super-user programmes, and ongoing enablement. It exists because implementation isn't enough: 70% of technology transformations fail to deliver intended benefits, and the cause is almost always human, not technical."
+          body="AaaS is MPC's structured user-enablement service for Oracle Cloud, covering change management, training, communications, super-user programmes, and ongoing enablement. It exists because implementation isn't enough: 70% of technology transformations fail to deliver intended benefits, and the cause is almost always human, not technical."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Training workshop with engaged participants"
         />
@@ -206,7 +206,7 @@ export function AaaS() {
                 70% of technology transformations fail to deliver their intended
                 benefits
               </span>{' '}
-              — and the primary cause is not technical. It is human.
+              and the primary cause is not technical. It is human.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               Systems go live, but users revert to old habits, workarounds
@@ -285,7 +285,7 @@ export function AaaS() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="AaaS — Frequently Asked Questions"
+            title="AaaS. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"

@@ -8,7 +8,7 @@ export interface NewsletterInlineProps {
 }
 export function NewsletterInline({
   title = 'Stay Ahead of Oracle',
-  subhead = 'Monthly insights on Oracle Cloud, AI, and enterprise technology — direct to your inbox. No fluff.',
+  subhead = 'Monthly insights on Oracle Cloud, AI, and enterprise technology, delivered straight to your inbox. No fluff.',
   variant = 'dark',
   buttonText = 'Subscribe'
 }: NewsletterInlineProps) {

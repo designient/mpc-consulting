@@ -59,12 +59,12 @@ const BREADCRUMB = [
 const CAPABILITIES = [
   {
     title: 'IBS Fintech',
-    body: 'All-in-one treasury tech platform — multi-company, multi-location, multi-currency, and multi-asset class with ERP, market data, and global bank integrations.',
+    body: 'All-in-one treasury tech platform, multi-company, multi-location, multi-currency, and multi-asset class with ERP, market data, and global bank integrations.',
     to: SOLUTION_IBS_FINTECH,
   },
   {
     title: 'All Aspects of Treasury Management',
-    body: 'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance — eight integrated modules.',
+    body: 'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance, eight integrated modules.',
     to: SOLUTION_TREASURY_OPERATIONS,
   },
 ];
@@ -108,7 +108,7 @@ const TREASURY_MODULES = [
     icon: ArrowLeftRight,
     title: 'Currency Risk Management',
     items: [
-      'Currency derivatives — forwards, futures, options, swaps',
+      'Currency derivatives, forwards, futures, options, swaps',
       'IFRS-9 hedge accounting',
       'Valuation engine',
     ],
@@ -119,7 +119,7 @@ const TREASURY_MODULES = [
     items: [
       'Import process management: LC, BC, SC',
       'Export process management: LC maintenance, pre-shipment, post-shipment, regularisation',
-      'Bank guarantee — both inwards and outwards',
+      'Bank guarantee, both inwards and outwards',
     ],
   },
   {
@@ -219,7 +219,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
   {
     q: 'What is IBS Fintech?',
-    a: 'IBS Fintech is MPC\'s treasury technology platform — an all-in-one product supporting multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
+    a: 'IBS Fintech is MPC\'s treasury technology platform, an all-in-one product supporting multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
   },
   {
     q: 'Which treasury modules does the platform cover?',
@@ -227,7 +227,7 @@ const FAQS = [
   },
   {
     q: 'Can IBS Fintech integrate with our ERP?',
-    a: 'Yes. The platform integrates seamlessly with SAP, Oracle, and other third-party ERP systems — as well as market data providers like Bloomberg and LSEG (Refinitiv).',
+    a: 'Yes. The platform integrates seamlessly with SAP, Oracle, and other third-party ERP systems, as well as market data providers like Bloomberg and LSEG (Refinitiv).',
   },
   {
     q: 'Does the platform support hedge accounting?',
@@ -238,14 +238,14 @@ const FAQS = [
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Treasury Management — IBS Fintech',
+  serviceType: 'Treasury Management. IBS Fintech',
   provider: {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting',
   },
   areaServed: ['India', 'UAE', 'Singapore', 'Australia', 'United Kingdom'],
   description:
-    'IBS Fintech treasury platform — cash, payments, investments, FX, trade finance, debt, supply chain finance, and commodity risk.',
+    'IBS Fintech treasury platform, cash, payments, investments, FX, trade finance, debt, supply chain finance, and commodity risk.',
   url: `https://www.mpccloudconsulting.com${SERVICE_TREASURY}`,
 };
 
@@ -254,7 +254,7 @@ export function TreasuryManagement() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Treasury Management | IBS Fintech Treasury Platform | MPC"
-        description="MPC's IBS Fintech treasury platform — cash, liquidity, payments, investments, FX, trade finance, and commodity risk for multi-entity enterprises."
+        description="MPC's IBS Fintech treasury platform, cash, liquidity, payments, investments, FX, trade finance, and commodity risk for multi-entity enterprises."
         canonicalPath={SERVICE_TREASURY}
         schema={[
           ORGANIZATION_SCHEMA,
@@ -282,7 +282,7 @@ export function TreasuryManagement() {
 
         <ServiceWhatIs
           title="What is MPC's Treasury Management practice?"
-          body="MPC delivers treasury management through IBS Fintech — a comprehensive treasury tech platform that unifies cash, payments, investments, FX risk, trade finance, debt, supply chain finance, and commodity risk. Built for complex, multi-entity enterprises that need real-time visibility and control across their treasury operations."
+          body="MPC delivers treasury management through IBS Fintech, a comprehensive treasury tech platform that unifies cash, payments, investments, FX risk, trade finance, debt, supply chain finance, and commodity risk. Built for complex, multi-entity enterprises that need real-time visibility and control across their treasury operations."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Treasury management and financial analytics"
         />
@@ -291,7 +291,7 @@ export function TreasuryManagement() {
 
         <ServiceCapabilities
           title="Full treasury management portfolio"
-          intro="From the IBS Fintech platform to end-to-end treasury operations — one partner for your entire treasury estate."
+          intro="From the IBS Fintech platform to end-to-end treasury operations, one partner for your entire treasury estate."
           capabilities={CAPABILITIES}
         />
 
@@ -311,7 +311,7 @@ export function TreasuryManagement() {
             <div aria-hidden className="absolute inset-0 bg-cta/40" />
             <div className="relative z-10 flex h-full items-center justify-center px-6">
               <p className="font-heading text-[22px] md:text-[28px] font-semibold text-white text-center tracking-tight">
-                Treasury Tech Platform — IBS Fintech
+                Treasury Tech Platform. IBS Fintech
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ export function TreasuryManagement() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Treasury Management — Frequently Asked Questions"
+            title="Treasury Management. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="white"

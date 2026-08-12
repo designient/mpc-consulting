@@ -116,7 +116,7 @@ export const WEB_SITE_SCHEMA = {
   name: 'MPC Cloud Consulting',
   url: ORIGIN,
   description:
-    'Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.',
+    'Your global partner for digital transformation across India, UAE, Singapore, Australia, and the UK.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -138,7 +138,7 @@ export function buildLocalBusinessSchema(offices: OfficeLocation[]) {
   return offices.map((office) => ({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: `MPC Cloud Consulting — ${office.city}`,
+    name: `MPC Cloud Consulting, ${office.city}`,
     image: DEFAULT_OG_IMAGE,
     url: ORIGIN,
     telephone: '+91-000-000-0000',
@@ -165,7 +165,7 @@ export const ORGANIZATION_SCHEMA = {
   url: ORIGIN,
   logo: `${ORIGIN}/mpc-main-logo.svg`,
   description:
-    'Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.',
+    'Your global partner for digital transformation across India, UAE, Singapore, Australia, and the UK.',
   foundingDate: '2019',
   sameAs: [
     'https://www.linkedin.com/company/mpccloudconsulting',

@@ -22,7 +22,7 @@ const CONFIG: OracleSolutionPageConfig = {
   parentService: TREASURY_PARENT,
   seoTitle: 'IBS Fintech Treasury Tech Platform | MPC',
   seoDescription:
-    'IBS Fintech is MPC\'s all-in-one treasury technology platform — multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
+    'IBS Fintech is MPC\'s all-in-one treasury technology platform, multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
   serviceType: 'IBS Fintech Treasury Platform',
   serviceDescription:
     'All-in-one treasury tech platform supporting multi-company, multi-location, multi-currency, and multi-asset class operations with ERP and market data integrations.',
@@ -30,13 +30,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'The treasury tech',
   heroHeadlineAccent: 'platform built for scale',
   heroSubhead:
-    'IBS Fintech unifies treasury operations on one platform — multi-company, multi-location, multi-currency, and multi-asset class — with seamless ERP and market data connectivity.',
+    'IBS Fintech unifies treasury operations on one platform, multi-company, multi-location, multi-currency, and multi-asset class, with seamless ERP and market data connectivity.',
   heroCtaText: 'Request a Demo',
   heroImageSrc:
     'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is IBS Fintech?',
   whatIsBody:
-    'IBS Fintech is MPC\'s treasury technology platform — an all-in-one product that replaces spreadsheets and point solutions with a unified treasury operating environment. Built for complex enterprises that need real-time visibility across cash, risk, investments, and trade finance.',
+    'IBS Fintech is MPC\'s treasury technology platform, an all-in-one product that replaces spreadsheets and point solutions with a unified treasury operating environment. Built for complex enterprises that need real-time visibility across cash, risk, investments, and trade finance.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'IBS Fintech treasury tech platform',
@@ -51,7 +51,7 @@ const CONFIG: OracleSolutionPageConfig = {
   overviewTitle: 'IBS Fintech with MPC',
   overviewParagraphs: [
     'Treasury teams struggle when data lives in spreadsheets, bank portals, and disconnected systems. IBS Fintech brings cash, payments, investments, FX, trade finance, and risk onto one governed platform.',
-    'Modern, personalised, and connected — IBS Fintech supports the full treasury lifecycle with native integrations to ERP, market data providers, and global banks.',
+    'Modern, personalised, and connected. IBS Fintech supports the full treasury lifecycle with native integrations to ERP, market data providers, and global banks.',
   ],
   moduleChips: [
     'Multi-Company',
@@ -140,7 +140,7 @@ const CONFIG: OracleSolutionPageConfig = {
     {
       icon: Landmark,
       title: 'All Aspects of Treasury Management',
-      description: 'Eight treasury modules — cash, payments, investments, FX, trade finance, and more.',
+      description: 'Eight treasury modules, cash, payments, investments, FX, trade finance, and more.',
       to: SOLUTION_TREASURY_OPERATIONS,
     },
     {
@@ -159,11 +159,11 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'What is IBS Fintech?',
-      a: 'IBS Fintech is MPC\'s treasury technology platform — an all-in-one product supporting multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
+      a: 'IBS Fintech is MPC\'s treasury technology platform, an all-in-one product supporting multi-company, multi-location, multi-currency, and multi-asset class treasury operations.',
     },
     {
       q: 'Can IBS Fintech integrate with our ERP?',
-      a: 'Yes. The platform integrates seamlessly with SAP, Oracle, and other third-party ERP systems — as well as market data providers like Bloomberg and LSEG (Refinitiv).',
+      a: 'Yes. The platform integrates seamlessly with SAP, Oracle, and other third-party ERP systems, as well as market data providers like Bloomberg and LSEG (Refinitiv).',
     },
     {
       q: 'Is IBS Fintech suitable for multi-entity groups?',
@@ -174,7 +174,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Typical deployments range from 12–24 weeks depending on module scope, entity count, and integration complexity.',
     },
   ],
-  faqTitle: 'IBS Fintech — Frequently Asked Questions',
+  faqTitle: 'IBS Fintech. Frequently Asked Questions',
   ctaTitle: 'See IBS Fintech',
   ctaTitleAccent: 'in Action',
   ctaBody:

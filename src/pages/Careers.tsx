@@ -37,14 +37,14 @@ const CULTURE_ITEMS = [
       'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
     title: 'Care',
     description:
-      'We care about the client outcome, the teammate next to you, and the long-term path of your career. No heroics needed — just sustained quality.'
+      'We care about the client outcome, the teammate next to you, and the long-term path of your career. No heroics needed, just sustained quality.'
   },
   {
     imageSrc:
       'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',
     title: 'Curiosity',
     description:
-      'AI, new Oracle modules, emerging architectures — we read, experiment, and bring ideas back into client work. The status quo is a starting point.'
+      'AI, new Oracle modules, emerging architectures, we read, experiment, and bring ideas back into client work. The status quo is a starting point.'
   }
 ];
 
@@ -52,7 +52,7 @@ const LIFE_AT_MPC = [
   {
     title: 'Our Culture Framework',
     description:
-      'Our values, leadership principles, and ways of working — the foundation for how we show up for clients and each other.',
+      'Our values, leadership principles, and ways of working, the foundation for how we show up for clients and each other.',
     imageSrc:
       'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
     imageAlt: 'MPC team collaborating on culture and values',
@@ -140,7 +140,7 @@ const ROLES: Role[] = [
   },
   {
     id: 'r5',
-    title: 'AI Engineer — AI CoE',
+    title: 'AI Engineer, AI CoE',
     team: 'Engineering',
     teamId: 'engineering',
     location: 'Hyderabad',
@@ -176,7 +176,7 @@ const ROLES: Role[] = [
   },
   {
     id: 'r9',
-    title: 'Account Director — BFSI',
+    title: 'Account Director. BFSI',
     team: 'Sales',
     teamId: 'sales',
     location: 'Mumbai',
@@ -190,7 +190,7 @@ const ROLES: Role[] = [
     teamId: 'operations',
     location: 'Gurugram',
     blurb:
-      'Be the HR business partner for our consulting practice — hiring, retention, and growth conversations.'
+      'Be the HR business partner for our consulting practice, hiring, retention, and growth conversations.'
   }
 ];
 
@@ -330,7 +330,7 @@ export function Careers() {
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 700+ Oracle Cloud specialists across India, UAE, Singapore,
-                Australia, and the UK — doing meaningful work with people you
+                Australia, and the UK, doing meaningful work with people you
                 want to learn from.
               </p>
 
@@ -413,7 +413,7 @@ export function Careers() {
               Our culture
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              Three qualities that define how we work together — and how we
+              Three qualities that define how we work together, and how we
               show up for clients every day.
             </p>
           </div>
@@ -469,7 +469,7 @@ export function Careers() {
                   No matching roles right now
                 </p>
                 <p className="font-body text-[15px] text-text-primary opacity-70">
-                  Send your CV to careers@mpccloudconsulting.com — we’ll keep
+                  Send your CV to careers@mpccloudconsulting.com, we’ll keep
                   you posted.
                 </p>
               </div>

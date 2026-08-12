@@ -82,7 +82,7 @@ const INDUSTRIES = [
   {
     icon: Banknote,
     name: 'BFSI',
-    desc: 'Oracle Cloud for banks and insurers — audit-ready, regulator-aligned, and built for scale across every region we operate in.',
+    desc: 'Oracle Cloud for banks and insurers that is audit-ready, regulator-aligned, and built for scale across every region we operate in.',
   },
   {
     icon: Factory,
@@ -139,7 +139,7 @@ const PILLARS = [
 const TESTIMONIALS = [
 {
   quote:
-  'MPC delivered our Oracle HCM transformation on time and on budget — with measurable improvements in HR efficiency from day one.',
+  'MPC delivered our Oracle HCM transformation on time and on budget with measurable improvements in HR efficiency from day one.',
   name: 'CHRO',
   title: 'Chief HR Officer',
   company: 'Global BFSI Group',
@@ -163,7 +163,7 @@ const TESTIMONIALS = [
 },
 {
   quote:
-  'Their Oracle depth is genuinely rare — they navigated configuration edge cases our previous SI never even surfaced.',
+  'Their Oracle depth is genuinely rare, they navigated configuration edge cases our previous SI never even surfaced.',
   name: 'VP IT',
   title: 'VP, Enterprise Applications',
   company: 'Public Sector Body',
@@ -199,7 +199,7 @@ export function Home() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Oracle Cloud & AI Consulting | MPC Cloud Consulting"
-        description="MPC Cloud Consulting — Oracle Cloud, HCM & ERP transformation across India, UAE, Singapore, UK & Australia. 65+ clients. 350+ years combined expertise."
+        description="MPC Cloud Consulting, Oracle Cloud, HCM & ERP transformation across India, UAE, Singapore, UK & Australia. 65+ clients. 350+ years combined expertise."
         canonicalPath="/"
         schema={[ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA, buildFAQSchema(FAQS)]}
       />
@@ -208,7 +208,7 @@ export function Home() {
       <StickyNav />
 
       <main className="flex-grow w-full">
-        {/* HERO — Compact display typography */}
+        {/* HERO. Compact display typography */}
         <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
           <img
             src={HERO_BG}
@@ -236,7 +236,7 @@ export function Home() {
 
               <p className="type-paragraph text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 We help enterprises transform how they work through cloud, AI,
-                automation, and modern technology — turning complex business
+                automation, and modern technology, turning complex business
                 challenges into measurable outcomes.
               </p>
 
@@ -273,7 +273,7 @@ export function Home() {
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               MPC combines deep industry understanding, technology mastery,
               and cross-functional expertise to solve complex business
-              challenges and deliver measurable outcomes — across cloud,
+              challenges and deliver measurable outcomes across cloud,
               SaaS, AI, automation, and digital transformation.
             </p>
           </div>
@@ -375,12 +375,12 @@ export function Home() {
               </Heading>
               <p className="font-body text-[18px] leading-[1.6] text-text-primary opacity-90 mb-5">
                 Founded in 2019, MPC Cloud Consulting has grown into a global
-                Oracle implementation and AI transformation partner — with 8
+                Oracle implementation and AI transformation partner with 8
                 global offices across India, UAE, Singapore, Australia, and the UK.
               </p>
               <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80 mb-7">
                 We combine Oracle-certified expertise with genuine industry
-                knowledge to deliver outcomes that move the needle — not just
+                knowledge to deliver outcomes that move the needle, not just
                 go-lives that hit a date. Our 700+ consultants have shaped ERP,
                 HCM, and AI strategies for 65+ enterprises across four
                 continents.
@@ -409,7 +409,7 @@ export function Home() {
                 n: 'Oracle + AI',
                 l: 'Focus'
               }].
-              map((s) => {
+              Map((s) => {
               const isCompactStat = s.n === 'Oracle + AI';
               return (
               <div
@@ -454,7 +454,7 @@ export function Home() {
             ['hcm', 'HCM Clients'],
             ['erp', 'ERP Clients']] as
             const).
-            map(([key, label]) =>
+            Map(([key, label]) =>
             <button
               key={key}
               onClick={() => setLogoTab(key)}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Award,
@@ -97,21 +97,21 @@ const STATS = [
 const PILLARS = [
   {
     title: 'Deep Industry Understanding',
-    body: 'We operate at the intersection of technology and business. Every engagement begins with a thorough understanding of your industry, your processes, and your competitive pressures — not with a product pitch.',
+    body: "We understand the processes, challenges, and priorities that shape your business. Our experience across BFSI, manufacturing, energy, and other industries helps us design solutions grounded in real-world business needs.",
     imageSrc:
       'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Industry and business context for Oracle Cloud delivery'
   },
   {
     title: 'Domain Specialisation',
-    body: 'Oracle is not a sideline for us. It is our core. Every consultant on our team is Oracle-focused, Oracle-certified, and committed to mastering one platform rather than spreading across many.',
+    body: '85+ Consultants & SME in Oracle Tech & Cloud. We have 30+ Certified Consultants in Multicloud & Cyber Security. Every consultant on our team is Cloud & AI-focused, Oracle/AWS/Microsoft-certified, and committed to mastering one platform rather than spreading across many.',
     imageSrc:
       'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Oracle domain specialists collaborating'
   },
   {
     title: 'Strong Competencies',
-    body: "From advisory and design to implementation, managed support, and innovation — we deliver the full lifecycle. You don't need five partners. You need one that can do the work from start to finish.",
+    body: 'Our capabilities span advisory, implementation, integration, managed support, and continuous innovation. Agile delivery, cross-functional collaboration, and a commitment to quality help us turn transformation strategies into outcomes that last.',
     imageSrc:
       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'End-to-end Oracle Cloud delivery team'
@@ -163,29 +163,36 @@ const OFFICES = [
 const LEADERSHIP_IMG =
   'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop';
 
-const CERTS = [
-{
-  icon: Award,
-  title: 'Oracle Partner',
-  body: 'Implementation partner — the foundation of our technical capability.'
-},
-{
-  icon: ShieldCheck,
-  title: 'ISO 27001 Aligned',
-  body: 'Information security management aligned to global standards.'
-},
-{
-  icon: Cloud,
-  title: 'AWS · Azure · GCP',
-  body: 'Multi-cloud partner relationships for infrastructure delivery.'
-},
-{
-  icon: ShieldCheck,
-  title: 'SOC 2 Processes',
-  body: 'Operational controls aligned to SOC 2 trust principles.'
-}];
+const AWARDS = [
+  {
+    icon: Award,
+    title: 'Oracle Partner',
+    body: 'Implementation partner, the foundation of our technical capability.',
+  },
+  {
+    icon: Cloud,
+    title: 'AWS · Azure · GCP',
+    body: 'Multi-cloud partner relationships for infrastructure delivery.',
+  },
+];
+
+const CERTIFICATIONS = [
+  {
+    icon: ShieldCheck,
+    title: 'ISO 27001 Aligned',
+    body: 'Information security management aligned to global standards.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'SOC 2 Processes',
+    body: 'Operational controls aligned to SOC 2 trust principles.',
+  },
+];
 
 export function About() {
+  const [credsTab, setCredsTab] = useState<'awards' | 'certifications'>('awards');
+  const credsItems = credsTab === 'awards' ? AWARDS : CERTIFICATIONS;
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
@@ -243,32 +250,29 @@ export function About() {
           </div>
           <div className="text-center">
             <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85 mb-5">
-              MPC Cloud Consulting was founded in 2019 with a simple
-              conviction: technology transformation must begin with
-              understanding the business it is meant to transform.
+              MPC Cloud Consulting was founded in 2019 with a simple belief:
+              good technology work starts with understanding the business it
+              is meant to change.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mb-5">
-              We take the time to understand the processes, people, industry
-              realities, and business challenges behind every technology
-              decision. That belief has shaped how we work — and how we have
-              grown.
+              We spend time getting to know the processes, people, industry
+              realities, and challenges behind every technology decision. That
+              approach has shaped how we work and how we have grown.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               Today, MPC brings together 700+ consultants across 8 global
               offices in 5 countries, with 87+ successful engagements for 65+
-              enterprise clients across industries including BFSI,
-              manufacturing, energy, and more. Our foundation is built on deep
-              technology expertise, with strong capabilities across Oracle,
-              Cloud, Multicloud, SaaS, AI, automation, and modern
-              architectures. We believe in depth of expertise, continuous
-              learning, and applying the right technology to the right business
-              problem — rather than technology for technology's sake. As
-              enterprises move into an AI-driven future, MPC is building what
-              comes next. MPC Tech Hub, our AI innovation centre, explores and
-              develops practical AI solutions — from intelligent agents and
-              automation to extending enterprise platforms with new intelligence.
-              Because for us, transformation isn't about following the next
-              technology trend. It's about finding what can work better — and
+              enterprise clients in industries such as BFSI, manufacturing,
+              energy, and more. Our strength sits in deep technology expertise
+              across Oracle, Cloud, Multicloud, SaaS, AI, automation, and modern
+              architectures. We focus on continuous learning and choosing the
+              right technology for the right business problem, not technology
+              for its own sake. As more enterprises move into an AI-driven
+              future, MPC is helping build what comes next. Through MPC Tech
+              Hub, our AI innovation centre, we explore and develop practical
+              AI solutions, from intelligent agents and automation to smarter
+              enterprise platforms. For us, transformation is not about chasing
+              the next trend. It is about finding what can work better, and
               making it real.
             </p>
           </div>
@@ -316,7 +320,7 @@ export function About() {
         <PillarsSection
           eyebrow="What Sets Us Apart"
           title="Three pillars of excellence"
-          intro="MPC's approach combines industry understanding with Oracle specialisation and cross-functional competencies — built to deliver real outcomes, not just implementations."
+          intro="MPC combines deep industry understanding, technology mastery, and cross-functional expertise to solve complex business challenges and deliver measurable outcomes across cloud, SaaS, AI, automation, and digital transformation."
           items={PILLARS}
         />
 
@@ -393,12 +397,34 @@ export function About() {
               Trusted by partners, certified by standards
             </Heading>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            {CERTS.map((c, i) => {
+
+          <div className="flex justify-center gap-2 mb-8">
+            {(
+              [
+                ['awards', 'Awards'],
+                ['certifications', 'Certifications'],
+              ] as const
+            ).map(([key, label]) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setCredsTab(key)}
+                className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${
+                  credsTab === key
+                    ? 'bg-cta text-text-inverse'
+                    : 'bg-bg-light text-text-primary hover:bg-divider/10'
+                }`}>
+                {label}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-[900px] mx-auto">
+            {credsItems.map((c) => {
               const Icon = c.icon;
               return (
                 <div
-                  key={i}
+                  key={c.title}
                   className="bg-bg-light rounded-card p-6 border border-transparent hover:border-divider/20 transition-colors">
                   <Icon className="w-7 h-7 text-cta mb-4" />
                   <h3 className="font-heading font-semibold text-[18px] text-text-primary mb-2">
@@ -416,7 +442,7 @@ export function About() {
         <StatOverlayCaseStudy
           eyebrow="Careers"
           headline="Where Trust Meets Innovation"
-          description="We believe great transformation comes from people who are curious enough to keep learning, disciplined enough to challenge their own work, and collaborative enough to make each other better. We invest in mastery, embrace agile ways of working, and explore AI, automation, and emerging technologies — always with a focus on solving real business problems."
+          description="We believe great transformation comes from people who are curious enough to keep learning, disciplined enough to challenge their own work, and collaborative enough to make each other better. We invest in mastery, embrace agile ways of working, and explore AI, automation, and emerging technologies, always with a focus on solving real business problems."
           imageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80"
           imageAlt="MPC team collaborating in the office"
           showStatOverlay={false}
@@ -431,7 +457,7 @@ export function About() {
         <CTABand
           title="Ready to work"
           titleAccent="with us?"
-          body="Wherever you are in your transformation journey — let's talk."
+          body="Wherever you are in your transformation journey, let's talk."
           ctaText="Contact Our Team"
           ctaTo="/contact/"
           variant="split" />

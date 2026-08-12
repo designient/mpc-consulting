@@ -23,7 +23,7 @@ const CONFIG: OracleSolutionPageConfig = {
   parentService: CLOUD_PARENT,
   seoTitle: 'Application Development | Mobile, Web & Full Stack | MPC',
   seoDescription:
-    'MPC builds enterprise applications — mobile, web, full stack, APIs, UI/UX, and legacy modernization across modern cloud platforms.',
+    'MPC builds enterprise applications, mobile, web, full stack, APIs, UI/UX, and legacy modernization across modern cloud platforms.',
   serviceType: 'Application Development Services',
   serviceDescription:
     'Mobile and web application development, full stack engineering, APIs, microservices, UI/UX, and legacy modernization.',
@@ -31,13 +31,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Build applications',
   heroHeadlineAccent: 'that scale with your business',
   heroSubhead:
-    'Mobile, web, full stack, and API development — from greenfield builds to legacy modernization, delivered with enterprise-grade engineering discipline.',
+    'Mobile, web, full stack, and API development, from greenfield builds to legacy modernization, delivered with enterprise-grade engineering discipline.',
   heroCtaText: 'Talk to Our App Dev Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is MPC Application Development?',
   whatIsBody:
-    'MPC\'s application development practice delivers modern software across mobile, web, and backend tiers — using React, Angular, Node.js, .NET Core, Java Spring Boot, Flutter, and React Native. We build applications that integrate with Oracle, cloud platforms, and enterprise APIs without compromising security or maintainability.',
+    'MPC\'s application development practice delivers modern software across mobile, web, and backend tiers, using React, Angular, Node.js, .NET Core, Java Spring Boot, Flutter, and React Native. We build applications that integrate with Oracle, cloud platforms, and enterprise APIs without compromising security or maintainability.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Software development and pair programming',
@@ -51,7 +51,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Application Development with MPC',
   overviewParagraphs: [
-    'Enterprise applications need more than code — they need architecture that survives audits, integrations that don\'t break at month-end, and UX that people actually use. MPC delivers application development as part of a broader cloud and digital transformation practice.',
+    'Enterprise applications need more than code, they need architecture that survives audits, integrations that don\'t break at month-end, and UX that people actually use. MPC delivers application development as part of a broader cloud and digital transformation practice.',
     'From mobile apps and responsive web portals to microservices and legacy modernization, we build with the stacks your teams can hire for and operate long after go-live.',
   ],
   moduleChips: [
@@ -70,11 +70,11 @@ const CONFIG: OracleSolutionPageConfig = {
   capabilities: [
     {
       title: 'Mobile Development',
-      body: 'Native and cross-platform mobile apps for Android and iOS — Flutter and React Native where speed-to-market matters.',
+      body: 'Native and cross-platform mobile apps for Android and iOS. Flutter and React Native where speed-to-market matters.',
     },
     {
       title: 'Web Applications',
-      body: 'Responsive web apps on React.js and Angular — enterprise portals, dashboards, and customer-facing experiences.',
+      body: 'Responsive web apps on React.js and Angular, enterprise portals, dashboards, and customer-facing experiences.',
     },
     {
       title: 'Backend & APIs',
@@ -82,7 +82,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Full Stack Delivery',
-      body: 'End-to-end ownership from database design through UI — one team accountable for the full application stack.',
+      body: 'End-to-end ownership from database design through UI, one team accountable for the full application stack.',
     },
     {
       title: 'UI/UX Design',
@@ -99,14 +99,14 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Mobile & Cross-Platform',
-      desc: 'Android, iOS, Flutter, and React Native applications — offline-capable, secure, and integrated with enterprise identity and APIs.',
+      desc: 'Android, iOS, Flutter, and React Native applications, offline-capable, secure, and integrated with enterprise identity and APIs.',
       imageSrc:
         'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Mobile application development',
     },
     {
       title: 'Web & Full Stack',
-      desc: 'React and Angular front ends with Node, .NET, or Java backends — database design, API layers, and deployment pipelines included.',
+      desc: 'React and Angular front ends with Node, .NET, or Java backends, database design, API layers, and deployment pipelines included.',
       imageSrc:
         'https://images.unsplash.com/photo-1461743480684-dccba630e2f6?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Full stack web development',
@@ -121,13 +121,13 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'Our application delivery process',
   processIntro:
-    'A six-stage delivery model for enterprise applications — from discovery through hypercare and handover to managed support.',
+    'A six-stage delivery model for enterprise applications, from discovery through hypercare and handover to managed support.',
   processSteps: [
     {
       number: '01',
       title: 'Discover',
       description:
-        'Requirements workshops, technical assessment, and architecture options — aligned to business outcomes.',
+        'Requirements workshops, technical assessment, and architecture options, aligned to business outcomes.',
     },
     {
       number: '02',
@@ -139,13 +139,13 @@ const CONFIG: OracleSolutionPageConfig = {
       number: '03',
       title: 'Build',
       description:
-        'Agile sprints with CI/CD, code review, and demo cadence — iterative delivery with stakeholder visibility.',
+        'Agile sprints with CI/CD, code review, and demo cadence, iterative delivery with stakeholder visibility.',
     },
     {
       number: '04',
       title: 'Test',
       description:
-        'Automated and manual testing — functional, integration, performance, and security validation.',
+        'Automated and manual testing, functional, integration, performance, and security validation.',
     },
     {
       number: '05',
@@ -217,7 +217,7 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'Which tech stacks does MPC use for application development?',
-      a: 'React.js, Angular, Node.js, .NET Core, Java Spring Boot, Flutter, and React Native — selected based on your existing estate and hiring strategy.',
+      a: 'React.js, Angular, Node.js, .NET Core, Java Spring Boot, Flutter, and React Native, selected based on your existing estate and hiring strategy.',
     },
     {
       q: 'Can MPC modernize legacy applications?',
@@ -229,10 +229,10 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'How does application development connect to Oracle projects?',
-      a: 'We build Oracle extensions, APEX applications, and integration layers that extend Fusion and EBS — not isolated apps that fight your ERP.',
+      a: 'We build Oracle extensions, APEX applications, and integration layers that extend Fusion and EBS, not isolated apps that fight your ERP.',
     },
   ],
-  faqTitle: 'Application Development — Frequently Asked Questions',
+  faqTitle: 'Application Development. Frequently Asked Questions',
   ctaTitle: 'Start your',
   ctaTitleAccent: 'Application Build',
   ctaBody:

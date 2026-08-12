@@ -21,23 +21,23 @@ const CONFIG: OracleSolutionPageConfig = {
   breadcrumbLabel: 'HR Probation Assist Agent',
   parentService: AI_COE_PARENT,
   seoTitle:
-    'HR Probation Assist Agent — Confirm & Extend Probation AI | MPC',
+    'HR Probation Assist Agent. Confirm & Extend Probation AI | MPC',
   seoDescription:
-    'MPC HR Probation Assist Agent automates probation status updates, letter generation, and employee communication — Confirm or Extend probation instantly for HR Specialists and Shared Services.',
-  serviceType: 'HR Probation Assist Agent — AI Agent',
+    'MPC HR Probation Assist Agent automates probation status updates, letter generation, and employee communication. Confirm or Extend probation instantly for HR Specialists and Shared Services.',
+  serviceType: 'HR Probation Assist Agent. AI Agent',
   serviceDescription:
-    'An intelligent agent that automates probation monitoring, status updates, letter generation, and employee communication — with seamless Confirm and Extend actions across the hire-to-confirmation lifecycle.',
+    'An intelligent agent that automates probation monitoring, status updates, letter generation, and employee communication, with seamless Confirm and Extend actions across the hire-to-confirmation lifecycle.',
   heroEyebrow: 'AI CoE · Out-of-Box AI Solution',
   heroHeadline: 'Introducing the MPC',
   heroHeadlineAccent: 'HR Probation Assist Agent',
   heroSubhead:
-    'Built for HR Specialists, HR Coordinators, and Shared Services Administrators — from probation check-in to confirmation or extension, without the manual chase.',
+    'Built for HR Specialists, HR Coordinators, and Shared Services Administrators, from probation check-in to confirmation or extension, without the manual chase.',
   heroCtaText: 'Talk to Our AI CoE Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is the MPC HR Probation Assist Agent?',
   whatIsBody:
-    'The MPC HR Probation Assistant is an intelligent agent designed to automate status updates, letter generation, and employee communication across the probation lifecycle. It enables seamless, instant execution of key actions — Confirm probation or Extend probation — as the natural continuation from onboarding through final assessment to confirmation.',
+    'The MPC HR Probation Assistant is an intelligent agent designed to automate status updates, letter generation, and employee communication across the probation lifecycle. It enables seamless, instant execution of key actions. Confirm probation or Extend probation, as the natural continuation from onboarding through final assessment to confirmation.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'HR team reviewing probation status and assessments',
@@ -52,7 +52,7 @@ const CONFIG: OracleSolutionPageConfig = {
   overviewTitle: 'From onboarding to confirmation: a unified probation flow',
   overviewParagraphs: [
     'HR teams currently face a repetitive, time-consuming, and error-prone process when monitoring probation completion and validating manager assessments. Follow-ups stall; status stays opaque across the organization.',
-    'The Probation Assist Agent sits on the same hire-to-confirmation journey as onboarding — Hire Date, Onboarding, Probation Check-in, Final Assessment, then Confirmation or Extension — with instant Confirm / Extend actions and structured visibility into pending work.',
+    'The Probation Assist Agent sits on the same hire-to-confirmation journey as onboarding. Hire Date, Onboarding, Probation Check-in, Final Assessment, then Confirmation or Extension, with instant Confirm / Extend actions and structured visibility into pending work.',
   ],
   moduleChips: [
     'Hire Date',
@@ -69,7 +69,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'The Solution',
-      body: 'The MPC HR Probation Assistant automates status updates, letter generation, and employee communication — with seamless Confirm and Extend actions across the probation lifecycle.',
+      body: 'The MPC HR Probation Assistant automates status updates, letter generation, and employee communication, with seamless Confirm and Extend actions across the probation lifecycle.',
     },
     {
       title: 'Efficiency',
@@ -86,7 +86,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   modulesSectionTitle: 'Probation lifecycle actions that matter',
   modulesSectionSubtitle:
-    'Monitor, validate, and execute — Confirm or Extend — without the manual coordination tax.',
+    'Monitor, validate, and execute. Confirm or Extend, without the manual coordination tax.',
   modules: [
     {
       title: 'Probation monitoring pain',
@@ -97,27 +97,27 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Manager assessment validation',
-      desc: 'Policy-driven checks before outcomes land — reducing error-prone manual validation of assessments ahead of confirmation.',
+      desc: 'Policy-driven checks before outcomes land, reducing error-prone manual validation of assessments ahead of confirmation.',
       imageSrc:
         'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Manager and HR reviewing employee assessment',
     },
     {
       title: 'Confirm & Extend actions',
-      desc: 'Instant execution: Confirm probation for a named employee or Extend probation — plus status updates, letters, and employee communication.',
+      desc: 'Instant execution: Confirm probation for a named employee or Extend probation, plus status updates, letters, and employee communication.',
       imageSrc:
         'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Confirming employment status after probation',
     },
   ],
-  processTitle: 'Hire date to confirmation — in five stages',
+  processTitle: 'Hire date to confirmation, in five stages',
   processIntro:
     'A unified flow from hire through onboarding into probation check-ins, final assessment, and confirm or extend.',
   processSteps: [
     {
       number: '01',
       title: 'Hire Date',
-      description: 'Employee enters the organization — probation clock and milestones begin.',
+      description: 'Employee enters the organization, probation clock and milestones begin.',
     },
     {
       number: '02',
@@ -141,7 +141,7 @@ const CONFIG: OracleSolutionPageConfig = {
       number: '05',
       title: 'Confirm or Extend',
       description:
-        'Execute Confirm probation or Extend probation instantly — with letters and employee communication.',
+        'Execute Confirm probation or Extend probation instantly, with letters and employee communication.',
     },
   ],
   comparisonTitle: 'Manual probation chase vs. Probation Assist Agent',
@@ -187,7 +187,7 @@ const CONFIG: OracleSolutionPageConfig = {
   caseStudy: {
     tag: 'AI CoE · HCM',
     headline:
-      'Confirm or extend probation in one flow — less chase, more control',
+      'Confirm or extend probation in one flow, less chase, more control',
     description:
       'HR Specialists and Shared Services teams replacing repetitive probation monitoring with the MPC HR Probation Assist Agent gain policy-driven validation, org-wide visibility, and instant Confirm / Extend actions with letters and employee communication.',
     metadata:
@@ -198,28 +198,28 @@ const CONFIG: OracleSolutionPageConfig = {
     stat: 'Confirm',
     statLabel: 'Or extend',
     statContext:
-      'Efficiency, compliance, and control — less manual coordination, policy-driven validation, structured visibility.',
+      'Efficiency, compliance, and control, less manual coordination, policy-driven validation, structured visibility.',
   },
   related: [
     {
       icon: Bot,
       title: 'AI CoE',
       description:
-        'Return to MPC\'s AI Centre of Excellence — Agentic Studio, custom agents, and out-of-box solutions.',
+        'Return to MPC\'s AI Centre of Excellence. Agentic Studio, custom agents, and out-of-box solutions.',
       to: SERVICE_AI_COE,
     },
     {
       icon: ClipboardCheck,
       title: 'HR Onboarding Assistant',
       description:
-        'Companion agent for journey task confirmations — the handoff into the probation flow.',
+        'Companion agent for journey task confirmations, the handoff into the probation flow.',
       to: SOLUTION_HR_ONBOARDING_ASSISTANT,
     },
     {
       icon: Users,
       title: 'HCM',
       description:
-        'Oracle HCM Cloud — talent and employee lifecycle processes this agent supports.',
+        'Oracle HCM Cloud, talent and employee lifecycle processes this agent supports.',
       to: SOLUTION_HCM,
     },
   ],
@@ -230,7 +230,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'What do Confirm and Extend do?',
-      a: 'The agent enables seamless, instant execution of Confirm probation or Extend probation for a named employee — including related status updates and communication as designed in your process.',
+      a: 'The agent enables seamless, instant execution of Confirm probation or Extend probation for a named employee, including related status updates and communication as designed in your process.',
     },
     {
       q: 'Does it generate letters and employee communication?',
@@ -245,11 +245,11 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'As an Out-of-Box AI Solution from MPC\'s AI CoE, focused deployments typically start in days, then expand across entities and Shared Services teams.',
     },
   ],
-  faqTitle: 'HR Probation Assist Agent — Frequently Asked Questions',
+  faqTitle: 'HR Probation Assist Agent. Frequently Asked Questions',
   ctaTitle: 'Confirm or extend.',
   ctaTitleAccent: 'Without the chase.',
   ctaBody:
-    'Tell us how probation monitoring works today. We\'ll show how the Probation Assist Agent validates assessments, updates status, and executes Confirm or Extend — with letters and employee communication.',
+    'Tell us how probation monitoring works today. We\'ll show how the Probation Assist Agent validates assessments, updates status, and executes Confirm or Extend, with letters and employee communication.',
   ctaText: 'Talk to Our AI CoE Team',
 };
 

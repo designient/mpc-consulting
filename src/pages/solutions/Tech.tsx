@@ -14,23 +14,23 @@ import {
 const CONFIG: OracleSolutionPageConfig = {
   canonicalPath: SOLUTION_TECH,
   breadcrumbLabel: 'Tech',
-  seoTitle: 'Oracle Tech — Managed Support & Optimisation | MPC',
+  seoTitle: 'Oracle Tech. Managed Support & Optimisation | MPC',
   seoDescription:
     'MPC Tech delivers post-go-live Oracle support, health checks, upgrades, and ongoing optimisation across Fusion and EBS.',
   serviceType: 'Oracle Tech Managed Services',
   serviceDescription:
-    'Post-go-live Oracle support, health checks, upgrades, release management, and ongoing optimisation — Fusion and EBS.',
+    'Post-go-live Oracle support, health checks, upgrades, release management, and ongoing optimisation. Fusion and EBS.',
   heroEyebrow: 'Oracle Cloud · Tech',
   heroHeadline: 'Keep Oracle running',
   heroHeadlineAccent: 'at peak performance',
   heroSubhead:
-    'Post-go-live support, health checks, upgrades, and ongoing Oracle optimisation — so your Fusion and EBS estate stays current, compliant, and performant.',
+    'Post-go-live support, health checks, upgrades, and ongoing Oracle optimisation, so your Fusion and EBS estate stays current, compliant, and performant.',
   heroCtaText: 'Talk to Our Tech Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is MPC Tech?',
   whatIsBody:
-    'MPC Tech is our Oracle managed services and optimisation practice — the team that keeps your Oracle environment healthy after go-live. From health checks and quarterly release readiness to incident response, upgrades, and continuous improvement, we treat your Oracle estate as if it were our own.',
+    'MPC Tech is our Oracle managed services and optimisation practice, the team that keeps your Oracle environment healthy after go-live. From health checks and quarterly release readiness to incident response, upgrades, and continuous improvement, we treat your Oracle estate as if it were our own.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Oracle systems monitoring and support',
@@ -44,8 +44,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Oracle Tech with MPC',
   overviewParagraphs: [
-    'Go-live is not the finish line — it is where operational reality begins. Oracle environments need ongoing care: quarterly patches, performance tuning, integration monitoring, and users who know how to get help when something breaks.',
-    'MPC Tech provides managed Oracle support from the same consultants who implement Fusion and EBS — across HCM, ERP, SCM, EPM, and Unifier modules.',
+    'Go-live is not the finish line, it is where operational reality begins. Oracle environments need ongoing care: quarterly patches, performance tuning, integration monitoring, and users who know how to get help when something breaks.',
+    'MPC Tech provides managed Oracle support from the same consultants who implement Fusion and EBS, across HCM, ERP, SCM, EPM, and Unifier modules.',
   ],
   moduleChips: [
     'Managed Support',
@@ -61,11 +61,11 @@ const CONFIG: OracleSolutionPageConfig = {
   capabilities: [
     {
       title: 'Managed Application Support',
-      body: 'Functional and technical support with defined SLAs — incident triage, root cause analysis, and resolution.',
+      body: 'Functional and technical support with defined SLAs, incident triage, root cause analysis, and resolution.',
     },
     {
       title: 'Health Check as a Service',
-      body: 'Independent Oracle audits with prioritised remediation roadmaps — performance, security, and configuration.',
+      body: 'Independent Oracle audits with prioritised remediation roadmaps, performance, security, and configuration.',
     },
     {
       title: 'Upgrade & Patch Management',
@@ -90,21 +90,21 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Managed Support',
-      desc: 'Dedicated Oracle support desk with functional and technical consultants — incident management, change requests, and proactive monitoring for your live environment.',
+      desc: 'Dedicated Oracle support desk with functional and technical consultants, incident management, change requests, and proactive monitoring for your live environment.',
       imageSrc:
         'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Support team managing Oracle environment',
     },
     {
       title: 'Health Checks',
-      desc: 'Structured Oracle health assessments across performance, security, configuration, and data quality — with executive summaries and sequenced remediation roadmaps.',
+      desc: 'Structured Oracle health assessments across performance, security, configuration, and data quality, with executive summaries and sequenced remediation roadmaps.',
       imageSrc:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Oracle health check analysis',
     },
     {
       title: 'Upgrades & Releases',
-      desc: 'Quarterly Fusion release testing, EBS patch application, and regression validation — so your team stays current without disrupting business cycles.',
+      desc: 'Quarterly Fusion release testing, EBS patch application, and regression validation, so your team stays current without disrupting business cycles.',
       imageSrc:
         'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Oracle upgrade and release management',
@@ -112,7 +112,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'How MPC Tech works',
   processIntro:
-    'A structured engagement model for managed Oracle support — from onboarding through continuous improvement.',
+    'A structured engagement model for managed Oracle support, from onboarding through continuous improvement.',
   processSteps: [
     {
       number: '01',
@@ -203,21 +203,21 @@ const CONFIG: OracleSolutionPageConfig = {
       icon: Database,
       title: 'Oracle Fusion ERP',
       description:
-        'ERP implementation and migration — supported by Tech post-go-live.',
+        'ERP implementation and migration, supported by Tech post-go-live.',
       to: SOLUTION_ERP,
     },
     {
       icon: Users,
       title: 'Oracle HCM Cloud',
       description:
-        'HCM implementation and payroll — with ongoing Tech managed support.',
+        'HCM implementation and payroll, with ongoing Tech managed support.',
       to: SOLUTION_HCM,
     },
   ],
   faqs: [
     {
       q: 'What is the difference between Tech and HCaaS?',
-      a: 'HCaaS is a point-in-time independent health audit with a remediation roadmap. Tech is ongoing managed support — incident resolution, upgrades, and continuous optimisation of your live Oracle environment.',
+      a: 'HCaaS is a point-in-time independent health audit with a remediation roadmap. Tech is ongoing managed support, incident resolution, upgrades, and continuous optimisation of your live Oracle environment.',
     },
     {
       q: 'Does MPC Tech support both Fusion and EBS?',
@@ -225,14 +225,14 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Can MPC Tech take over from our current support provider?',
-      a: 'Yes. We run structured transition programmes — knowledge transfer, environment discovery, and parallel support before full handover.',
+      a: 'Yes. We run structured transition programmes, knowledge transfer, environment discovery, and parallel support before full handover.',
     },
     {
       q: 'What SLAs does MPC Tech offer?',
-      a: 'SLAs are tailored to your criticality tiers — typically P1 response within 1–4 hours depending on engagement scope and coverage hours.',
+      a: 'SLAs are tailored to your criticality tiers, typically P1 response within 1–4 hours depending on engagement scope and coverage hours.',
     },
   ],
-  faqTitle: 'Oracle Tech — Frequently Asked Questions',
+  faqTitle: 'Oracle Tech. Frequently Asked Questions',
   ctaTitle: 'Talk to our',
   ctaTitleAccent: 'Tech Team',
   ctaBody:

@@ -31,7 +31,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Operate security',
   heroHeadlineAccent: 'around the clock',
   heroSubhead:
-    'Network and endpoint security, MSP and systems integration, SOC/NOC 24×7 monitoring, onsite engineering, and PMO — keeping your infrastructure secure and resilient.',
+    'Network and endpoint security, MSP and systems integration, SOC/NOC 24×7 monitoring, onsite engineering, and PMO, keeping your infrastructure secure and resilient.',
   heroCtaText: 'Talk to Our Security Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop',
@@ -51,7 +51,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Managed Security Operations with MPC',
   overviewParagraphs: [
-    'Security strategy and tooling only deliver value when operations teams can detect, respond, and recover at speed — especially across distributed infrastructure and hybrid environments.',
+    'Security strategy and tooling only deliver value when operations teams can detect, respond, and recover at speed, especially across distributed infrastructure and hybrid environments.',
     'MPC provides managed security operations from network and endpoint protection through SOC/NOC monitoring, onsite engineering, and programme management.',
   ],
   moduleChips: [
@@ -164,7 +164,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'What SLAs do managed security operations include?',
-      a: 'SLAs are tailored to criticality tiers — typically P1 response within 1–4 hours depending on engagement scope and coverage hours.',
+      a: 'SLAs are tailored to criticality tiers, typically P1 response within 1–4 hours depending on engagement scope and coverage hours.',
     },
     {
       q: 'Can MPC provide onsite or resident engineers?',
@@ -175,7 +175,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. AV and collaboration solutions, war room setup, and PMO governance are part of our infrastructure and managed operations offering.',
     },
   ],
-  faqTitle: 'Infrastructure & Managed Operations — Frequently Asked Questions',
+  faqTitle: 'Infrastructure & Managed Operations. Frequently Asked Questions',
   ctaTitle: 'Secure your',
   ctaTitleAccent: 'Operations 24×7',
   ctaBody:

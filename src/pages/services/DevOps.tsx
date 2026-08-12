@@ -67,11 +67,11 @@ const CAPABILITIES = [
 },
 {
   title: 'Multi-Cloud Infrastructure',
-  body: 'AWS, Azure, GCP, and OCI — managed, monitored, and optimised.'
+  body: 'AWS, Azure, GCP, and OCI, managed, monitored, and optimised.'
 },
 {
   title: 'Infrastructure as Code',
-  body: 'Terraform, Ansible, and cloud-native IaC — repeatable, version-controlled infrastructure.'
+  body: 'Terraform, Ansible, and cloud-native IaC, repeatable, version-controlled infrastructure.'
 },
 {
   title: 'Backup & Disaster Recovery',
@@ -79,7 +79,7 @@ const CAPABILITIES = [
 },
 {
   title: 'DevSecOps',
-  body: 'Security integrated into the pipeline — not bolted on at the end.'
+  body: 'Security integrated into the pipeline, not bolted on at the end.'
 }];
 
 const LIFECYCLE = [
@@ -109,7 +109,7 @@ const PROCESS_STEPS = [
   number: '03',
   title: 'Implement',
   description:
-  'Build out CI/CD, containers, IaC, and monitoring — with developer enablement workshops.'
+  'Build out CI/CD, containers, IaC, and monitoring, with developer enablement workshops.'
 },
 {
   number: '04',
@@ -123,7 +123,7 @@ const COMPARISON_ROWS = [
   criterion: 'Cloud coverage',
   values: [
   'Usually one cloud',
-  'AWS, Azure, GCP, and OCI — including Oracle ecosystem']
+  'AWS, Azure, GCP, and OCI, including Oracle ecosystem']
 
 },
 {
@@ -141,7 +141,7 @@ const COMPARISON_ROWS = [
   criterion: 'Outcome focus',
   values: [
   'Tools delivered',
-  'DORA metrics moved — deploy freq, lead time, MTTR, change failure rate']
+  'DORA metrics moved, deploy freq, lead time, MTTR, change failure rate']
 
 }];
 
@@ -160,7 +160,7 @@ const FAQS = [
 },
 {
   q: 'How do you measure DevOps success?',
-  a: 'We track DORA metrics — deployment frequency, lead time for changes, mean time to recovery, and change failure rate — and report against them quarterly.'
+  a: 'We track DORA metrics, deployment frequency, lead time for changes, mean time to recovery, and change failure rate, and report against them quarterly.'
 }];
 
 const RELATED = [
@@ -202,7 +202,7 @@ export function DevOps() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="DevOps Services — CI/CD, Cloud & Containers | MPC Cloud"
+        title="DevOps Services. CI/CD, Cloud & Containers | MPC Cloud"
         description="MPC DevOps: CI/CD pipelines (GitLab, Jenkins, GitHub Actions), Docker & Kubernetes, multi-cloud (AWS, Azure, GCP, OCI) and DR."
         canonicalPath={SOLUTION_DEVOPS}
         schema={[
@@ -218,7 +218,7 @@ export function DevOps() {
           eyebrow="Oracle Cloud · DevOps"
           headline="Accelerate Delivery"
           headlineAccent="with Enterprise-Grade DevOps"
-          subhead="CI/CD pipelines, Kubernetes orchestration, and multi-cloud infrastructure — built to accelerate your software delivery and reduce operational risk."
+          subhead="CI/CD pipelines, Kubernetes orchestration, and multi-cloud infrastructure built to accelerate your software delivery and reduce operational risk."
           primaryCtaText="Talk to Our DevOps Team"
           primaryCtaTo="/contact/"
           imageSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
@@ -227,7 +227,7 @@ export function DevOps() {
 
         <ServiceWhatIs
           title="What does enterprise DevOps look like?"
-          body="DevOps is not a toolset — it is an operating model. MPC helps enterprises build the practices, pipelines, and platforms that allow development and operations to work as one — shipping faster, failing less, and recovering quicker. We deliver CI/CD, containers, multi-cloud infra, IaC, DR, and DevSecOps."
+          body="DevOps is not a toolset, it is an operating model. MPC helps enterprises build the practices, pipelines, and platforms that allow development and operations to work as one, shipping faster, failing less, and recovering quicker. We deliver CI/CD, containers, multi-cloud infra, IaC, DR, and DevSecOps."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Modern data centre infrastructure"
         />
@@ -243,7 +243,7 @@ export function DevOps() {
             DevOps as a transformation enabler
           </Heading>
           <p className="font-body text-[17px] leading-[1.75] text-text-primary opacity-85 mb-8 max-w-[820px]">
-            DevOps is not a toolset — it is an operating model. We help
+            DevOps is not a toolset, it is an operating model. We help
             enterprises build the practices, pipelines, and platforms that allow
             development and operations to work as one.
           </p>
@@ -331,7 +331,7 @@ export function DevOps() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="DevOps — Frequently Asked Questions"
+            title="DevOps. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="soft"
@@ -341,7 +341,7 @@ export function DevOps() {
         <CTABand
           title="Start your DevOps"
           titleAccent="Journey"
-          body="Whether you're starting fresh or modernising an existing platform — we'll architect the right path."
+          body="Whether you're starting fresh or modernising an existing platform, we'll architect the right path."
           ctaText="Talk to Our DevOps Team"
           ctaTo="/contact/"
           variant="split"

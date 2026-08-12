@@ -79,7 +79,7 @@ export function StickyNav() {
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 h-[80px] flex items-center justify-between">
           <Link
             to="/"
-            aria-label="MPC Cloud Consulting — Home"
+            aria-label="MPC Cloud Consulting Home"
             className="flex items-center shrink-0">
             <Logo height={44} />
           </Link>

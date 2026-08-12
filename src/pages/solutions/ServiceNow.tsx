@@ -176,7 +176,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'No. We deploy ServiceNow for broader enterprise service use cases including HR service delivery and cross-functional operations.',
     },
   ],
-  faqTitle: 'ServiceNow — Frequently Asked Questions',
+  faqTitle: 'ServiceNow. Frequently Asked Questions',
   ctaTitle: 'Elevate your',
   ctaTitleAccent: 'Service Operations',
   ctaBody:

@@ -175,7 +175,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. We offer managed support for model maintenance, performance tuning, report enhancements, and governance.',
     },
   ],
-  faqTitle: 'Power BI — Frequently Asked Questions',
+  faqTitle: 'Power BI. Frequently Asked Questions',
   ctaTitle: 'Scale your',
   ctaTitleAccent: 'Analytics Capability',
   ctaBody:

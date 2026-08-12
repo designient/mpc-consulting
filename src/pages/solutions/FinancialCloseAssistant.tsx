@@ -21,23 +21,23 @@ const CONFIG: OracleSolutionPageConfig = {
   breadcrumbLabel: 'Financial Close Assistant',
   parentService: AI_COE_PARENT,
   seoTitle:
-    'Financial Close Assistant — Oracle Fusion Period Close AI Agent | MPC',
+    'Financial Close Assistant. Oracle Fusion Period Close AI Agent | MPC',
   seoDescription:
-    'MPC Financial Close Assistant orchestrates Oracle Fusion period close across GL, AP, AR, FA, Cash Management, and Projects — detect, notify, revalidate, and close.',
-  serviceType: 'Financial Close Assistant — AI Agent',
+    'MPC Financial Close Assistant orchestrates Oracle Fusion period close across GL, AP, AR, FA, Cash Management, and Projects, detect, notify, revalidate, and close.',
+  serviceType: 'Financial Close Assistant. AI Agent',
   serviceDescription:
-    'An AI agent that actively orchestrates Oracle Fusion period close — detecting pending transactions, triggering corrective actions, revalidating completion, and driving close with required approvals.',
+    'An AI agent that actively orchestrates Oracle Fusion period close, detecting pending transactions, triggering corrective actions, revalidating completion, and driving close with required approvals.',
   heroEyebrow: 'AI CoE · Out-of-Box AI Solution',
   heroHeadline: 'Introducing the MPC',
   heroHeadlineAccent: 'Financial Close Assistant',
   heroSubhead:
-    'Built for Financial Managers and Controllers — an AI agent that orchestrates Oracle Fusion period close across six critical finance modules, not just reports status.',
+    'Built for Financial Managers and Controllers, an AI agent that orchestrates Oracle Fusion period close across six critical finance modules, not just reports status.',
   heroCtaText: 'Talk to Our AI CoE Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is the MPC Financial Close Assistant?',
   whatIsBody:
-    'The MPC Financial Close Assistant actively orchestrates the Oracle Fusion period close — not just reports status. It detects pending transactions, triggers corrective actions, revalidates completion, and drives the period close to execution with required approvals. Built for Financial Managers and Financial Controllers who need predictable, milestone-driven close cycles.',
+    'The MPC Financial Close Assistant actively orchestrates the Oracle Fusion period close, not just reports status. It detects pending transactions, triggers corrective actions, revalidates completion, and drives the period close to execution with required approvals. Built for Financial Managers and Financial Controllers who need predictable, milestone-driven close cycles.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt:
@@ -52,7 +52,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Oracle Financial Module Coordination',
   overviewParagraphs: [
-    'Period close fails when six critical Oracle Financial modules — General Ledger, Accounts Payable, Accounts Receivable, Fixed Assets, Cash Management, and Projects — cannot coordinate seamlessly. Sequential dependencies, multiple stakeholders, time-zone handoffs, and error propagation turn close into reactive firefighting.',
+    'Period close fails when six critical Oracle Financial modules. General Ledger, Accounts Payable, Accounts Receivable, Fixed Assets, Cash Management, and Projects, cannot coordinate seamlessly. Sequential dependencies, multiple stakeholders, time-zone handoffs, and error propagation turn close into reactive firefighting.',
     'Manual close means running validation reports per module, chasing stakeholders by email and phone, tracking status in spreadsheets, and executing close in a brittle defined order. The Financial Close Assistant replaces that chain with continuous detection, guided action, and automated re-validation.',
   ],
   moduleChips: [
@@ -71,7 +71,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'The Solution',
-      body: 'The MPC Financial Close Assistant orchestrates Oracle Fusion period close end-to-end — detecting pending transactions, triggering corrective actions, revalidating completion, and driving close execution with required approvals.',
+      body: 'The MPC Financial Close Assistant orchestrates Oracle Fusion period close end-to-end, detecting pending transactions, triggering corrective actions, revalidating completion, and driving close execution with required approvals.',
     },
     {
       title: 'Predictability',
@@ -79,11 +79,11 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Efficiency',
-      body: 'Minimises manual effort and dependency on emails, calls, and trackers — so finance teams focus on exceptions that matter.',
+      body: 'Minimises manual effort and dependency on emails, calls, and trackers, so finance teams focus on exceptions that matter.',
     },
     {
       title: 'Automation',
-      body: 'Continuously validates and re-validates exceptions until resolution — no more one-shot checks that go stale after a correction.',
+      body: 'Continuously validates and re-validates exceptions until resolution, no more one-shot checks that go stale after a correction.',
     },
     {
       title: 'Control',
@@ -92,46 +92,46 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   modulesSectionTitle: 'Six modules that must close together',
   modulesSectionSubtitle:
-    'Complex dependencies across Oracle Financial modules — each with its own steps, coordination needs, and failure modes.',
+    'Complex dependencies across Oracle Financial modules, each with its own steps, coordination needs, and failure modes.',
   modules: [
     {
       title: 'General Ledger',
-      desc: 'Post journals, reconcile accounts, close periods. Depends on all subledgers — challenged by unposted journals and reconciliation delays.',
+      desc: 'Post journals, reconcile accounts, close periods. Depends on all subledgers, challenged by unposted journals and reconciliation delays.',
       imageSrc:
         'https://images.unsplash.com/photo-1554224154-26032ffc0d62?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'General Ledger period close and reconciliation',
     },
     {
       title: 'Accounts Payable',
-      desc: 'Invoice validation, payment processing, period close. Feeds GL and depends on PO — challenged by pending invoices and unaccounted invoices.',
+      desc: 'Invoice validation, payment processing, period close. Feeds GL and depends on PO, challenged by pending invoices and unaccounted invoices.',
       imageSrc:
         'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Accounts Payable invoice and payment processing',
     },
     {
       title: 'Accounts Receivable',
-      desc: 'Transactions, receipt application, dispute resolution, period close. Feeds GL and customer data — challenged by unaccounted transactions and unapplied receipts.',
+      desc: 'Transactions, receipt application, dispute resolution, period close. Feeds GL and customer data, challenged by unaccounted transactions and unapplied receipts.',
       imageSrc:
         'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Accounts Receivable transactions and receipts',
     },
     {
       title: 'Fixed Assets',
-      desc: 'Asset additions, depreciation, period close. Feeds GL and links to AP for additions — challenged by depreciation errors and pending asset additions.',
+      desc: 'Asset additions, depreciation, period close. Feeds GL and links to AP for additions, challenged by depreciation errors and pending asset additions.',
       imageSrc:
         'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Fixed Assets and depreciation management',
     },
     {
       title: 'Cash Management',
-      desc: 'Bank reconciliation, statement processing, period close. Feeds GL and bank data — challenged by reconciliation delays and statement errors.',
+      desc: 'Bank reconciliation, statement processing, period close. Feeds GL and bank data, challenged by reconciliation delays and statement errors.',
       imageSrc:
         'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Cash Management and bank reconciliation',
     },
     {
       title: 'Projects',
-      desc: 'Cost collection, revenue recognition, period close. Feeds GL and links to AP, AR, and FA — challenged by cost collection and revenue recognition issues.',
+      desc: 'Cost collection, revenue recognition, period close. Feeds GL and links to AP, AR, and FA, challenged by cost collection and revenue recognition issues.',
       imageSrc:
         'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Projects cost collection and revenue recognition',
@@ -139,36 +139,36 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'From days of manual chase to hours of orchestrated close',
   processIntro:
-    'A proactive AI agent cycle — detect, notify, re-check, and close — instead of an 8–10 day reactive sequence.',
+    'A proactive AI agent cycle, detect, notify, re-check, and close, instead of an 8–10 day reactive sequence.',
   processSteps: [
     {
       number: '01',
       title: 'Detect',
       description:
-        'Hour 0 — Agent continuously scans all modules 24/7 and identifies issues in real time before they become critical.',
+        'Hour 0. Agent continuously scans all modules 24/7 and identifies issues in real time before they become critical.',
     },
     {
       number: '02',
       title: 'Notify & Act',
       description:
-        'Hour 1–2 — Auto-notify stakeholders and assign tasks. Users resolve issues with guided workflows.',
+        'Hour 1–2. Auto-notify stakeholders and assign tasks. Users resolve issues with guided workflows.',
     },
     {
       number: '03',
       title: 'Re-check',
       description:
-        'Hour 3–24 — Agent automatically re-validates completed tasks and confirms all prerequisites are met.',
+        'Hour 3–24. Agent automatically re-validates completed tasks and confirms all prerequisites are met.',
     },
     {
       number: '04',
       title: 'Close',
       description:
-        'Hour 25–26 — Confirm readiness, trigger period close, and execute the close sequence with required approvals.',
+        'Hour 25–26. Confirm readiness, trigger period close, and execute the close sequence with required approvals.',
     },
   ],
   comparisonTitle: 'Manual close vs. Financial Close Assistant',
   comparisonIntro:
-    'Revolutionary transformation from manual processes to intelligent automation — reactive multi-day close versus proactive agent-led execution.',
+    'Revolutionary transformation from manual processes to intelligent automation, reactive multi-day close versus proactive agent-led execution.',
   comparisonRows: [
     {
       criterion: 'Close time',
@@ -217,21 +217,21 @@ const CONFIG: OracleSolutionPageConfig = {
     stat: '26 hrs',
     statLabel: 'Total close time',
     statContext:
-      'Versus 8–10 days average — with ~6 hours manual effort per month and under 2% error rate.',
+      'Versus 8–10 days average, with ~6 hours manual effort per month and under 2% error rate.',
   },
   related: [
     {
       icon: Bot,
       title: 'AI CoE',
       description:
-        'Return to MPC\'s AI Centre of Excellence — Agentic Studio, custom agents, and out-of-box solutions.',
+        'Return to MPC\'s AI Centre of Excellence. Agentic Studio, custom agents, and out-of-box solutions.',
       to: SERVICE_AI_COE,
     },
     {
       icon: Database,
       title: 'ERP (Oracle Cloud)',
       description:
-        'Oracle Fusion and EBS financials — the systems the Close Assistant orchestrates.',
+        'Oracle Fusion and EBS financials, the systems the Close Assistant orchestrates.',
       to: SOLUTION_ERP,
     },
     {
@@ -245,11 +245,11 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'Which Oracle Fusion modules does the Financial Close Assistant cover?',
-      a: 'Six critical finance modules: General Ledger, Accounts Payable, Accounts Receivable, Fixed Assets, Cash Management, and Projects — coordinating dependencies across the close sequence.',
+      a: 'Six critical finance modules: General Ledger, Accounts Payable, Accounts Receivable, Fixed Assets, Cash Management, and Projects, coordinating dependencies across the close sequence.',
     },
     {
       q: 'How is this different from a status dashboard?',
-      a: 'The agent actively orchestrates close — detecting pending transactions, triggering corrective actions, revalidating after corrections, and driving period close with approvals. It does not only report status.',
+      a: 'The agent actively orchestrates close, detecting pending transactions, triggering corrective actions, revalidating after corrections, and driving period close with approvals. It does not only report status.',
     },
     {
       q: 'Who is the target audience?',
@@ -261,14 +261,14 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Does it replace our existing close checklist?',
-      a: 'It replaces fragmented spreadsheet tracking and manual chase with continuous validation and guided workflows — while preserving your required close sequence and approval controls.',
+      a: 'It replaces fragmented spreadsheet tracking and manual chase with continuous validation and guided workflows, while preserving your required close sequence and approval controls.',
     },
   ],
-  faqTitle: 'Financial Close Assistant — Frequently Asked Questions',
+  faqTitle: 'Financial Close Assistant. Frequently Asked Questions',
   ctaTitle: 'Orchestrate your next',
   ctaTitleAccent: 'period close',
   ctaBody:
-    'Tell us how your Oracle Fusion close works today. We\'ll show how the Financial Close Assistant detects, notifies, revalidates, and closes — with your approvals intact.',
+    'Tell us how your Oracle Fusion close works today. We\'ll show how the Financial Close Assistant detects, notifies, revalidates, and closes, with your approvals intact.',
   ctaText: 'Talk to Our AI CoE Team',
 };
 

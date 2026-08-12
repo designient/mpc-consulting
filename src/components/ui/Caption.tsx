@@ -8,7 +8,7 @@ export interface CaptionProps extends React.HTMLAttributes<HTMLElement> {
   inverse?: boolean;
 }
 
-/** Caption — minimum 14px; use for labels, meta, eyebrows */
+/** Caption, minimum 14px; use for labels, meta, eyebrows */
 export function Caption({
   as: Tag = 'span',
   muted = false,

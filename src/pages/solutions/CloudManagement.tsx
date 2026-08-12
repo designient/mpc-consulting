@@ -21,9 +21,9 @@ const CONFIG: OracleSolutionPageConfig = {
   canonicalPath: SOLUTION_CLOUD_MANAGEMENT,
   breadcrumbLabel: 'Cloud Management',
   parentService: CLOUD_PARENT,
-  seoTitle: 'Cloud Management — OCI, AWS, Azure & GCP | MPC',
+  seoTitle: 'Cloud Management. OCI, AWS, Azure & GCP | MPC',
   seoDescription:
-    'MPC manages multi-cloud infrastructure across OCI, AWS, Azure, and GCP — migration, DevOps, backup/DR, and managed operations.',
+    'MPC manages multi-cloud infrastructure across OCI, AWS, Azure, and GCP, migration, DevOps, backup/DR, and managed operations.',
   serviceType: 'Cloud Management Services',
   serviceDescription:
     'Multi-cloud strategy, migration, platform operations, backup and disaster recovery, and embedded DevOps across OCI, AWS, Azure, and GCP.',
@@ -31,13 +31,13 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Operate multi-cloud',
   heroHeadlineAccent: 'with confidence',
   heroSubhead:
-    'OCI, AWS, Azure, and GCP — cloud migration, platform management, backup and disaster recovery, and DevOps woven into how your estate runs day to day.',
+    'OCI, AWS, Azure, and GCP, cloud migration, platform management, backup and disaster recovery, and DevOps woven into how your estate runs day to day.',
   heroCtaText: 'Talk to Our Cloud Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is MPC Cloud Management?',
   whatIsBody:
-    'MPC Cloud Management is our practice for designing, migrating, and operating workloads across Oracle Cloud Infrastructure, AWS, Azure, and Google Cloud. We deliver multi-cloud strategy, infrastructure as code, observability, backup and disaster recovery, and DevOps pipelines — so your cloud estate is secure, cost-aware, and operable.',
+    'MPC Cloud Management is our practice for designing, migrating, and operating workloads across Oracle Cloud Infrastructure, AWS, Azure, and Google Cloud. We deliver multi-cloud strategy, infrastructure as code, observability, backup and disaster recovery, and DevOps pipelines, so your cloud estate is secure, cost-aware, and operable.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Cloud infrastructure operations center',
@@ -51,8 +51,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Cloud Management with MPC',
   overviewParagraphs: [
-    'Cloud success is not just migration — it is how you run, secure, and optimise workloads after landing. MPC Cloud Management covers the full operational lifecycle: landing zone design, workload migration, CI/CD, monitoring, cost governance, and disaster recovery.',
-    'We operate across OCI, AWS, Azure, and GCP with consistent practices — so multi-cloud does not mean multiplied complexity for your operations team.',
+    'Cloud success is not just migration, it is how you run, secure, and optimise workloads after landing. MPC Cloud Management covers the full operational lifecycle: landing zone design, workload migration, CI/CD, monitoring, cost governance, and disaster recovery.',
+    'We operate across OCI, AWS, Azure, and GCP with consistent practices, so multi-cloud does not mean multiplied complexity for your operations team.',
   ],
   moduleChips: [
     'OCI',
@@ -77,7 +77,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Platform Operations',
-      body: 'Day-2 operations — patching, scaling, incident response, and cost optimisation across clouds.',
+      body: 'Day-2 operations, patching, scaling, incident response, and cost optimisation across clouds.',
     },
     {
       title: 'DevOps & CI/CD',
@@ -98,21 +98,21 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Oracle Cloud (OCI)',
-      desc: 'OCI compute, networking, and database services — aligned with Oracle application estates and Fusion/EBS integrations.',
+      desc: 'OCI compute, networking, and database services, aligned with Oracle application estates and Fusion/EBS integrations.',
       imageSrc:
         'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Oracle Cloud infrastructure',
     },
     {
       title: 'AWS & Azure',
-      desc: 'EC2, Lambda, S3, RDS, CloudFormation, CloudWatch on AWS; App Services, DevOps, and Security Center on Azure — managed with IaC and observability.',
+      desc: 'EC2, Lambda, S3, RDS, CloudFormation, CloudWatch on AWS; App Services, DevOps, and Security Center on Azure, managed with IaC and observability.',
       imageSrc:
         'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'AWS and Azure cloud services',
     },
     {
       title: 'Google Cloud',
-      desc: 'App Engine, BigQuery, Cloud Functions, and GKE — for analytics-heavy and cloud-native application workloads.',
+      desc: 'App Engine, BigQuery, Cloud Functions, and GKE, for analytics-heavy and cloud-native application workloads.',
       imageSrc:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Google Cloud platform analytics',
@@ -120,7 +120,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'Our cloud delivery process',
   processIntro:
-    'Six stages from cloud readiness assessment through managed operations — consistent across OCI, AWS, Azure, and GCP.',
+    'Six stages from cloud readiness assessment through managed operations, consistent across OCI, AWS, Azure, and GCP.',
   processSteps: [
     {
       number: '01',
@@ -215,14 +215,14 @@ const CONFIG: OracleSolutionPageConfig = {
       icon: Code2,
       title: 'DevOps',
       description:
-        'Dedicated DevOps practice — CI/CD, containers, and release automation.',
+        'Dedicated DevOps practice. CI/CD, containers, and release automation.',
       to: SOLUTION_DEVOPS,
     },
   ],
   faqs: [
     {
       q: 'Which cloud platforms does MPC manage?',
-      a: 'OCI, AWS, Azure, and GCP — including multi-cloud architectures with consistent security and operations practices.',
+      a: 'OCI, AWS, Azure, and GCP, including multi-cloud architectures with consistent security and operations practices.',
     },
     {
       q: 'Does MPC provide DevOps as part of cloud management?',
@@ -234,10 +234,10 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'How does cloud management relate to Oracle workloads?',
-      a: 'We specialise in running Oracle applications and databases on OCI and other clouds — with integrations to Fusion, EBS, and hybrid estates.',
+      a: 'We specialise in running Oracle applications and databases on OCI and other clouds, with integrations to Fusion, EBS, and hybrid estates.',
     },
   ],
-  faqTitle: 'Cloud Management — Frequently Asked Questions',
+  faqTitle: 'Cloud Management. Frequently Asked Questions',
   ctaTitle: 'Start your',
   ctaTitleAccent: 'Cloud Journey',
   ctaBody:

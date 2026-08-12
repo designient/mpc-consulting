@@ -48,13 +48,13 @@ const SERVICES = [
 {
   icon: Users,
   title: 'HCM',
-  desc: 'Oracle HCM Cloud — Transform HR, Talent, Payroll, and Workforce Management end-to-end.',
+  desc: 'Oracle HCM Cloud. Transform HR, Talent, Payroll, and Workforce Management end-to-end.',
   to: SOLUTION_HCM
 },
 {
   icon: Database,
   title: 'ERP (Oracle Cloud)',
-  desc: 'Oracle Fusion & EBS — Financials, Projects, Procurement, Risk, and Compliance.',
+  desc: 'Oracle Fusion & EBS. Financials, Projects, Procurement, Risk, and Compliance.',
   to: SOLUTION_ERP
 },
 {
@@ -78,13 +78,13 @@ const SERVICES = [
 {
   icon: Activity,
   title: 'HCaaS',
-  desc: 'Health Check as a Service — an independent Oracle audit with a clear remediation roadmap.',
+  desc: 'Health Check as a Service, an independent Oracle audit with a clear remediation roadmap.',
   to: SOLUTION_HCAAS
 },
 {
   icon: UserCheck,
   title: 'AaaS',
-  desc: 'Adoption as a Service — change management and training that maximises Oracle ROI.',
+  desc: 'Adoption as a Service, change management and training that maximises Oracle ROI.',
   to: SOLUTION_AAAS
 },
 {
@@ -161,7 +161,7 @@ const TECH_STACK = [
 const WHY_MPC = [
 {
   title: 'Full-Cycle Implementation',
-  body: 'From business process mapping and solution design to go-live and hypercare — we own the entire delivery journey.'
+  body: 'From business process mapping and solution design to go-live and hypercare, we own the entire delivery journey.'
 },
 {
   title: 'Managed Support',
@@ -169,7 +169,7 @@ const WHY_MPC = [
 },
 {
   title: 'Accelerator Packs',
-  body: 'Pre-built templates, configuration accelerators, and documented methodologies — reducing implementation time and risk.'
+  body: 'Pre-built templates, configuration accelerators, and documented methodologies that reduce implementation time and risk.'
 }];
 
 const ENGAGEMENT_STEPS = [
@@ -220,7 +220,7 @@ const COMPARISON = [
 },
 {
   criterion: 'AI tooling',
-  values: ['Generic plug-ins', 'AI CoE — purpose-built for Oracle']
+  values: ['Generic plug-ins', 'AI CoE, purpose-built for Oracle']
 },
 {
   criterion: 'Regional coverage',
@@ -237,7 +237,7 @@ const FAQS = [
 },
 {
   q: 'Can MPC handle multi-service engagements?',
-  a: 'Yes. Most enterprise engagements blend two or more services — e.g. BPC + HCM + AaaS, or DevOps + Java + ERP. We scope and deliver as one integrated programme.'
+  a: 'Yes. Most enterprise engagements blend two or more services, e.g. BPC + HCM + AaaS, or DevOps + Java + ERP. We scope and deliver as one integrated programme.'
 },
 {
   q: 'Do all services come with managed support?',
@@ -273,7 +273,7 @@ export function Services() {
             End-to-End Cloud Services, Powered by AI
           </Heading>
           <p className="font-body text-[18px] md:text-[20px] leading-[1.6] text-text-inverse opacity-90 mt-6 max-w-[760px]">
-            From Oracle HCM and ERP to DevOps, Java, and AI innovation — MPC
+            From Oracle HCM and ERP to DevOps, Java, and AI innovation. MPC
             delivers the full spectrum of cloud consulting for enterprises that
             demand more than a standard implementation.
           </p>
@@ -288,7 +288,7 @@ export function Services() {
 
         <QuickAnswerCard
           question="What does MPC Cloud Consulting do?"
-          answer="MPC is an Oracle Cloud and AI transformation partner delivering HCM, ERP, DevOps, Java, business process consulting, health checks, adoption services, and AI innovation — with 700+ specialists across India, UAE, Singapore, Australia, and the UK."
+          answer="MPC is an Oracle Cloud and AI transformation partner delivering HCM, ERP, DevOps, Java, business process consulting, health checks, adoption services, and AI innovation, with 700+ specialists across India, UAE, Singapore, Australia, and the UK."
         />
 
         {/* Services hub grid */}
@@ -402,14 +402,14 @@ export function Services() {
         <ProcessSteps
           eyebrow="Engagement Model"
           title="How an MPC engagement runs"
-          intro="A consistent four-stage methodology — adapted to your scope, refined across 87+ engagements."
+          intro="A consistent four-stage methodology adapted to your scope, refined across 87+ engagements."
           steps={ENGAGEMENT_STEPS}
           variant="light" />
         
 
         <ComparisonTable
           eyebrow="Comparison"
-          title="MPC vs. typical SI vs. in-house"
+          title="MPC vs. Typical SI vs. In-house"
           headers={['Criterion', 'Typical SI', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON}
@@ -432,7 +432,7 @@ export function Services() {
 
         <FAQAccordion
           eyebrow="FAQs"
-          title="Services — Frequently Asked Questions"
+          title="Services. Frequently Asked Questions"
           items={FAQS}
           layout="full"
           bg="soft" />

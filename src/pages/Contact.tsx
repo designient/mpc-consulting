@@ -105,7 +105,7 @@ export function Contact() {
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
                 Whether you&apos;re starting an Oracle Cloud programme or need
-                expert support on an existing one — our team is ready to help.
+                expert support on an existing one, our team is ready to help.
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export function Contact() {
             {submitted ? (
               <div className="bg-divider/10 border border-divider rounded-card p-8 text-left">
                 <h3 className="font-heading font-semibold text-[22px] text-text-primary mb-2">
-                  Thanks — we&apos;ve received your message.
+                  Thanks. We&apos;ve received your message.
                 </h3>
                 <p className="font-body text-[16px] text-text-primary opacity-80">
                   A consultant will be in touch within one business day.
@@ -257,7 +257,7 @@ export function Contact() {
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
               Eight locations across India, UAE, Singapore, Australia, and the
-              UK — one connected team delivering Oracle Cloud and AI
+              UK, one connected team delivering Oracle Cloud and AI
               transformation worldwide.
             </p>
           </div>

@@ -106,7 +106,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
   {
     q: 'What is Zero Trust and how does MPC implement it?',
-    a: 'Zero Trust assumes no implicit trust — every user, device, and connection is verified. MPC designs identity-centric Zero Trust architectures with IAM, SASE integration, and continuous verification across your enterprise.',
+    a: 'Zero Trust assumes no implicit trust, every user, device, and connection is verified. MPC designs identity-centric Zero Trust architectures with IAM, SASE integration, and continuous verification across your enterprise.',
   },
   {
     q: 'Do you provide 24×7 security monitoring?',
@@ -114,11 +114,11 @@ const FAQS = [
   },
   {
     q: 'Can MPC assess our application and cloud security posture?',
-    a: 'Yes. We deliver AppSec assessments, vulnerability testing, CSPM, penetration testing, and compliance readiness reviews — with AI-driven insights where applicable.',
+    a: 'Yes. We deliver AppSec assessments, vulnerability testing, CSPM, penetration testing, and compliance readiness reviews, with AI-driven insights where applicable.',
   },
   {
     q: 'Do you support compliance and audit readiness?',
-    a: 'Yes. Penetration testing, compliance readiness, and PMO services are part of our security offering — helping you meet regulatory and audit requirements.',
+    a: 'Yes. Penetration testing, compliance readiness, and PMO services are part of our security offering, helping you meet regulatory and audit requirements.',
   },
 ];
 
@@ -157,7 +157,7 @@ export function SecurityZeroTrust() {
           eyebrow="Security & Zero Trust"
           headline="Secure by Design."
           headlineAccent="Trusted by Default."
-          subhead="Cybersecurity strategy, application and cloud security, and managed operations — built on Zero Trust principles and AI-enabled threat protection."
+          subhead="Cybersecurity strategy, application and cloud security, and managed operations built on Zero Trust principles and AI-enabled threat protection."
           primaryCtaText="Talk to Our Security Team"
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
@@ -169,7 +169,7 @@ export function SecurityZeroTrust() {
 
         <ServiceWhatIs
           title="What is MPC's Security & Zero Trust practice?"
-          body="MPC's Security & Zero Trust practice protects enterprise environments from strategy through operations. We design Zero Trust architectures, secure applications and cloud workloads, and run SOC/NOC operations with 24×7 monitoring — combining traditional security expertise with AI-enabled detection and analytics."
+          body="MPC's Security & Zero Trust practice protects enterprise environments from strategy through operations. We design Zero Trust architectures, secure applications and cloud workloads, and run SOC/NOC operations with 24×7 monitoring, combining traditional security expertise with AI-enabled detection and analytics."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Cybersecurity and network protection"
         />
@@ -178,7 +178,7 @@ export function SecurityZeroTrust() {
 
         <ServiceCapabilities
           title="Full security & Zero Trust portfolio"
-          intro="From Zero Trust strategy and application security to managed SOC/NOC operations — one partner for your entire security estate."
+          intro="From Zero Trust strategy and application security to managed SOC/NOC operations, one partner for your entire security estate."
           capabilities={CAPABILITIES}
         />
 
@@ -214,7 +214,7 @@ export function SecurityZeroTrust() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Security & Zero Trust — Frequently Asked Questions"
+            title="Security & Zero Trust. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="white"

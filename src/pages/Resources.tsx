@@ -19,7 +19,7 @@ const FORMAT_ITEMS = [
   'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80',
   title: 'Thought Leadership',
   description:
-  'Strategic perspectives on Oracle Cloud, AI, and enterprise transformation — from practitioners who build these systems every day.',
+  'Strategic perspectives on Oracle Cloud, AI, and enterprise transformation from practitioners who build these systems every day.',
   ctaText: 'Read thought leadership'
 },
 {
@@ -27,7 +27,7 @@ const FORMAT_ITEMS = [
   'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=900&q=80',
   title: 'Case Studies',
   description:
-  'Real Oracle Cloud transformation stories — outcomes, metrics, and lessons from 87+ engagements across five regions.',
+  'Real Oracle Cloud transformation stories, outcomes, metrics, and lessons from 87+ engagements across five regions.',
   ctaText: 'Explore case studies',
   href: '/resources/case-studies/'
 }];
@@ -76,7 +76,7 @@ const ALL_RESOURCES: Resource[] = [
   'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80',
   category: 'Oracle HCM',
   topic: 'hcm',
-  title: 'Five HCM rollout mistakes we keep seeing — and how to avoid them',
+  title: 'Five HCM rollout mistakes we keep seeing, and how to avoid them',
   description:
   'A pattern-by-pattern breakdown of where Oracle HCM Cloud rollouts go wrong, drawn from 40+ engagements.',
   date: 'May 12, 2026',
@@ -102,7 +102,7 @@ const ALL_RESOURCES: Resource[] = [
   'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80',
   category: 'AI',
   topic: 'ai',
-  title: 'Where AI agents fit inside Oracle Cloud — without breaking it',
+  title: 'Where AI agents fit inside Oracle Cloud, without breaking it',
   description:
   'A grounded look at the integration patterns that actually work in production Oracle environments.',
   date: 'April 22, 2026',
@@ -157,7 +157,7 @@ const ALL_RESOURCES: Resource[] = [
   topic: 'ai',
   title: 'AI in HR: separating signal from noise for enterprise leaders',
   description:
-  'A practical framework for deciding where AI belongs in your HR stack — and where it doesn’t.',
+  'A practical framework for deciding where AI belongs in your HR stack, and where it doesn’t.',
   date: 'March 19, 2026',
   readTime: '8 min read',
   href: '/resources/thought-leadership/'
@@ -170,7 +170,7 @@ const ALL_RESOURCES: Resource[] = [
   topic: 'industry',
   title: 'Margin visibility for professional services on Oracle Cloud',
   description:
-  'How to put project profitability, utilisation, and HR on one source of truth — without spreadsheet sprawl.',
+  'How to put project profitability, utilisation, and HR on one source of truth, without spreadsheet sprawl.',
   date: 'March 11, 2026',
   readTime: '7 min read',
   href: '/resources/blog/'
@@ -183,7 +183,7 @@ const ALL_RESOURCES: Resource[] = [
   topic: 'devops',
   title: 'Kubernetes for Oracle Cloud workloads: where it pays off',
   description:
-  'When containerisation makes sense alongside Oracle Cloud — and when it absolutely does not.',
+  'When containerisation makes sense alongside Oracle Cloud, and when it absolutely does not.',
   date: 'March 3, 2026',
   readTime: '12 min read',
   href: '/resources/blog/'
@@ -223,7 +223,7 @@ export function Resources() {
       <ServiceHero
         eyebrow="Resources"
         headline="Insights from people who build Oracle Cloud every day"
-        subhead="Practical guides, case studies, and thought leadership from MPC consultants — written for leaders who have to make the decisions, not just attend the workshops."
+        subhead="Practical guides, case studies, and thought leadership from MPC consultants written for leaders who have to make the decisions and not just attend the workshops."
         primaryCtaText="Subscribe to our digest"
         primaryCtaTo="#newsletter"
         secondaryCtaText="Talk to a consultant"

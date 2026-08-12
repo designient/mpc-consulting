@@ -17,21 +17,21 @@ const CONFIG: OracleSolutionPageConfig = {
   breadcrumbLabel: 'Oracle SCM',
   seoTitle: 'Oracle SCM Consulting & Implementation | MPC',
   seoDescription:
-    'MPC delivers Oracle SCM Cloud and EBS supply chain — planning, procurement, logistics, and inventory across Fusion and EBS.',
+    'MPC delivers Oracle SCM Cloud and EBS supply chain, planning, procurement, logistics, and inventory across Fusion and EBS.',
   serviceType: 'Oracle SCM Consulting',
   serviceDescription:
-    'End-to-end Oracle Supply Chain Management — demand planning, procurement, logistics, and inventory on Fusion and EBS.',
+    'End-to-end Oracle Supply Chain Management, demand planning, procurement, logistics, and inventory on Fusion and EBS.',
   heroEyebrow: 'Oracle Cloud · SCM',
   heroHeadline: 'Connect your supply chain',
   heroHeadlineAccent: 'with Oracle SCM',
   heroSubhead:
-    'Demand planning, procurement, logistics, and inventory management on Oracle Fusion and EBS — implemented by specialists who understand manufacturing and distribution at scale.',
+    'Demand planning, procurement, logistics, and inventory management on Oracle Fusion and EBS, implemented by specialists who understand manufacturing and distribution at scale.',
   heroCtaText: 'Schedule an SCM Discovery Call',
   heroImageSrc:
     'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2400&auto=format&fit=crop',
   whatIsTitle: 'What is Oracle SCM?',
   whatIsBody:
-    'Oracle SCM Cloud unifies planning, procurement, manufacturing, logistics, and order management on a single platform. MPC implements Oracle SCM for enterprises that need end-to-end visibility from demand signal to fulfilment — on Fusion Cloud or EBS, with integrations to finance and manufacturing operations.',
+    'Oracle SCM Cloud unifies planning, procurement, manufacturing, logistics, and order management on a single platform. MPC implements Oracle SCM for enterprises that need end-to-end visibility from demand signal to fulfilment, on Fusion Cloud or EBS, with integrations to finance and manufacturing operations.',
   whatIsImageSrc:
     'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=1200&auto=format&fit=crop',
   whatIsImageAlt: 'Manufacturing and supply chain operations',
@@ -45,8 +45,8 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   overviewTitle: 'Oracle SCM with MPC',
   overviewParagraphs: [
-    'Supply chain complexity grows with every new plant, supplier, and channel. Oracle SCM brings planning, procurement, and logistics onto one platform — but only if it is configured for how your network actually operates.',
-    'MPC delivers Oracle SCM across Fusion and EBS — from demand and supply planning through procurement, inventory, and order fulfilment — with deep integration to Oracle Financials and manufacturing.',
+    'Supply chain complexity grows with every new plant, supplier, and channel. Oracle SCM brings planning, procurement, and logistics onto one platform, but only if it is configured for how your network actually operates.',
+    'MPC delivers Oracle SCM across Fusion and EBS, from demand and supply planning through procurement, inventory, and order fulfilment, with deep integration to Oracle Financials and manufacturing.',
   ],
   moduleChips: [
     'Demand Planning',
@@ -66,11 +66,11 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Fusion SCM Implementation',
-      body: 'Cloud-native SCM deployments — planning, procurement, and logistics on Oracle Fusion.',
+      body: 'Cloud-native SCM deployments, planning, procurement, and logistics on Oracle Fusion.',
     },
     {
       title: 'EBS SCM Extension',
-      body: 'Oracle EBS supply chain modules — implementations, customisations, and structured upgrades.',
+      body: 'Oracle EBS supply chain modules, implementations, customisations, and structured upgrades.',
     },
     {
       title: 'Planning & Inventory',
@@ -91,21 +91,21 @@ const CONFIG: OracleSolutionPageConfig = {
   modules: [
     {
       title: 'Planning',
-      desc: 'Demand planning, supply planning, and sales & operations planning (S&OP) configured for your product hierarchy and planning calendars — so forecasts drive procurement and production decisions.',
+      desc: 'Demand planning, supply planning, and sales & operations planning (S&OP) configured for your product hierarchy and planning calendars, so forecasts drive procurement and production decisions.',
       imageSrc:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Supply chain planning dashboard',
     },
     {
       title: 'Procurement',
-      desc: 'Strategic sourcing, supplier qualification, and purchase order management integrated with Oracle Financials — with approval workflows and compliance controls built in from day one.',
+      desc: 'Strategic sourcing, supplier qualification, and purchase order management integrated with Oracle Financials, with approval workflows and compliance controls built in from day one.',
       imageSrc:
         'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Procurement team reviewing supplier contracts',
     },
     {
       title: 'Logistics & Inventory',
-      desc: 'Warehouse management, inventory optimisation, and order fulfilment across plants and distribution centres — with real-time visibility for operations and finance.',
+      desc: 'Warehouse management, inventory optimisation, and order fulfilment across plants and distribution centres, with real-time visibility for operations and finance.',
       imageSrc:
         'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'Warehouse logistics and inventory management',
@@ -113,7 +113,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'Our SCM delivery process',
   processIntro:
-    'A six-stage methodology refined across Oracle SCM engagements — from network assessment through go-live and hypercare.',
+    'A six-stage methodology refined across Oracle SCM engagements, from network assessment through go-live and hypercare.',
   processSteps: [
     {
       number: '01',
@@ -137,7 +137,7 @@ const CONFIG: OracleSolutionPageConfig = {
       number: '04',
       title: 'Test',
       description:
-        'End-to-end scenario testing — planning runs, procurement cycles, and inventory transactions with clear pass criteria.',
+        'End-to-end scenario testing, planning runs, procurement cycles, and inventory transactions with clear pass criteria.',
     },
     {
       number: '05',
@@ -215,7 +215,7 @@ const CONFIG: OracleSolutionPageConfig = {
   faqs: [
     {
       q: 'Does MPC implement Oracle SCM on Fusion and EBS?',
-      a: 'Yes. We deliver Oracle SCM Cloud on Fusion and supply chain modules on Oracle EBS — including structured migration paths from EBS to Fusion SCM.',
+      a: 'Yes. We deliver Oracle SCM Cloud on Fusion and supply chain modules on Oracle EBS, including structured migration paths from EBS to Fusion SCM.',
     },
     {
       q: 'Can SCM be rolled out separately from Financials?',
@@ -223,14 +223,14 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Which industries does MPC serve for SCM?',
-      a: 'Manufacturing, distribution, retail, and energy — anywhere multi-site planning, procurement, and inventory complexity demands Oracle SCM at depth.',
+      a: 'Manufacturing, distribution, retail, and energy, anywhere multi-site planning, procurement, and inventory complexity demands Oracle SCM at depth.',
     },
     {
       q: 'Do you support existing Oracle SCM environments?',
       a: 'Yes. We provide health checks, upgrades, process optimisation, and managed support for live Oracle SCM estates.',
     },
   ],
-  faqTitle: 'Oracle SCM — Frequently Asked Questions',
+  faqTitle: 'Oracle SCM. Frequently Asked Questions',
   ctaTitle: 'Schedule an SCM',
   ctaTitleAccent: 'Discovery Call',
   ctaBody:

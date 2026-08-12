@@ -162,7 +162,7 @@ export function App() {
           element={
           <PageStub
             title="Thought Leadership"
-            description="Strategic perspectives on Oracle Cloud, AI, and enterprise transformation — from practitioners who build these systems every day."
+            description="Strategic perspectives on Oracle Cloud, AI, and enterprise transformation from practitioners who build these systems every day."
             canonicalPath="/resources/thought-leadership/"
             breadcrumb={[
             {
@@ -183,7 +183,7 @@ export function App() {
           element={
           <PageStub
             title="The MPC Blog"
-            description="Practical thinking on Oracle Cloud, AI, DevOps, and enterprise technology — written by consultants who build these systems."
+            description="Practical thinking on Oracle Cloud, AI, DevOps, and enterprise technology written by consultants who build these systems."
             canonicalPath="/resources/blog/"
             breadcrumb={[
             {

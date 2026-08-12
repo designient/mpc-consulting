@@ -46,12 +46,12 @@ const CAPABILITIES = [
   },
   {
     title: 'Salesforce',
-    body: 'End-to-end Salesforce Cloud implementations — B2C, B2B, OMS, Sales, Service, Marketing, and custom clouds rolled out globally.',
+    body: 'End-to-end Salesforce Cloud implementations. B2C, B2B, OMS, Sales, Service, Marketing, and custom clouds rolled out globally.',
     to: SOLUTION_SALESFORCE,
   },
   {
     title: 'ServiceNow',
-    body: 'HRSD, ITAM, ITOM, and ITSM — enterprise service management that improves employee experience and IT operations at scale.',
+    body: 'HRSD, ITAM, ITOM, and ITSM, enterprise service management that improves employee experience and IT operations at scale.',
     to: SOLUTION_SERVICENOW,
   },
 ];
@@ -109,15 +109,15 @@ const FAQS = [
   },
   {
     q: 'Can MPC handle global Salesforce rollouts?',
-    a: 'Yes. We have experience with multi-region Salesforce implementations and rollouts across our operating markets — with localisation, integration, and change management built in.',
+    a: 'Yes. We have experience with multi-region Salesforce implementations and rollouts across our operating markets, with localisation, integration, and change management built in.',
   },
   {
     q: 'Do you provide ongoing managed support for Power BI and ServiceNow?',
-    a: 'Yes. Managed service support, upgrades, and instance migration are core parts of our CX & Analytics service lifecycle — not just initial implementation.',
+    a: 'Yes. Managed service support, upgrades, and instance migration are core parts of our CX & Analytics service lifecycle and not just initial implementation.',
   },
   {
     q: 'Can CX platforms integrate with our Oracle back office?',
-    a: 'Yes. We design integrations between Salesforce, ServiceNow, and Power BI and your Oracle ERP/HCM environment — so customer and employee data flows correctly across systems.',
+    a: 'Yes. We design integrations between Salesforce, ServiceNow, and Power BI and your Oracle ERP/HCM environment, so customer and employee data flows correctly across systems.',
   },
 ];
 
@@ -140,7 +140,7 @@ export function CxAnalytics() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="CX & Analytics | Power BI, Salesforce & ServiceNow | MPC"
-        description="MPC delivers Power BI, Salesforce, and ServiceNow — CX, analytics, and service management with global rollout and managed support."
+        description="MPC delivers Power BI, Salesforce, and ServiceNow. CX, analytics, and service management with global rollout and managed support."
         canonicalPath={SERVICE_CX_ANALYTICS}
         schema={[
           ORGANIZATION_SCHEMA,
@@ -156,7 +156,7 @@ export function CxAnalytics() {
           eyebrow="CX & Analytics"
           headline="Customer Experience &"
           headlineAccent="Enterprise Insight"
-          subhead="Power BI, Salesforce, and ServiceNow for customer experience and insight — implemented, rolled out globally, and supported long after go-live."
+          subhead="Power BI, Salesforce, and ServiceNow for customer experience and insight, implemented, rolled out globally, and supported long after go-live."
           primaryCtaText="Talk to Our CX Team"
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
@@ -168,7 +168,7 @@ export function CxAnalytics() {
 
         <ServiceWhatIs
           title="What is MPC's CX & Analytics practice?"
-          body="MPC's CX & Analytics practice helps enterprises turn data into decisions and deliver exceptional customer and employee experiences. We implement and support Power BI for analytics, Salesforce for customer engagement, and ServiceNow for IT and HR service delivery — with global rollout capability and ongoing managed support."
+          body="MPC's CX & Analytics practice helps enterprises turn data into decisions and deliver exceptional customer and employee experiences. We implement and support Power BI for analytics, Salesforce for customer engagement, and ServiceNow for IT and HR service delivery, with global rollout capability and ongoing managed support."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Analytics dashboard and customer experience data"
         />
@@ -177,7 +177,7 @@ export function CxAnalytics() {
 
         <ServiceCapabilities
           title="Full CX & analytics portfolio"
-          intro="From Power BI and Salesforce to ServiceNow — one partner for customer experience, analytics, and enterprise service management."
+          intro="From Power BI and Salesforce to ServiceNow, one partner for customer experience, analytics, and enterprise service management."
           capabilities={CAPABILITIES}
         />
 
@@ -213,7 +213,7 @@ export function CxAnalytics() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="CX & Analytics — Frequently Asked Questions"
+            title="CX & Analytics. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="white"

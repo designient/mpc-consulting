@@ -20,17 +20,17 @@ const CONFIG: OracleSolutionPageConfig = {
   canonicalPath: SOLUTION_CV_SCREENING_AGENT,
   breadcrumbLabel: 'CV Screening Agent',
   parentService: AI_COE_PARENT,
-  seoTitle: 'CV Screening Agent — Recruiter AI for Resume Fitment | MPC',
+  seoTitle: 'CV Screening Agent. Recruiter AI for Resume Fitment | MPC',
   seoDescription:
     'MPC CV Screening Agent automatically analyzes resumes against the job description, categorizes applicants by fitment, and gives recruiters a summarized screening view for faster shortlisting.',
-  serviceType: 'CV Screening Agent — AI Agent',
+  serviceType: 'CV Screening Agent. AI Agent',
   serviceDescription:
     'An AI agent that screens candidate resumes against job descriptions, categorizes fitment, and provides a summarized view so recruiters can shortlist faster with consistent evaluation.',
   heroEyebrow: 'AI CoE · Out-of-Box AI Solution',
   heroHeadline: 'Introducing the MPC',
   heroHeadlineAccent: 'CV Screening Agent',
   heroSubhead:
-    'Built for Recruiters — automatically analyze resumes against the job description, categorize applicants by fitment, and shortlist with a clear screening summary.',
+    'Built for Recruiters, automatically analyze resumes against the job description, categorize applicants by fitment, and shortlist with a clear screening summary.',
   heroCtaText: 'Talk to Our AI CoE Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2400&auto=format&fit=crop',
@@ -51,7 +51,7 @@ const CONFIG: OracleSolutionPageConfig = {
   overviewTitle: 'Faster, consistent shortlisting for recruiters',
   overviewParagraphs: [
     'Recruiters often spend significant time manually reviewing large volumes of resumes, making it difficult to quickly identify the most suitable candidates for a role. That manual effort delays shortlisting and reduces the time available for meaningful candidate engagement.',
-    'The CV Screening Agent turns high-volume intake into a structured screening workflow — match to the JD, categorize fitment, and present a summarized view so recruiters can decide faster with objective, standardized evaluation.',
+    'The CV Screening Agent turns high-volume intake into a structured screening workflow, match to the JD, categorize fitment, and present a summarized view so recruiters can decide faster with objective, standardized evaluation.',
   ],
   moduleChips: [
     'Resume parse',
@@ -76,7 +76,7 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       title: 'Consistency',
-      body: 'Standardized, objective screening of candidates against job requirements — less variance across reviewers.',
+      body: 'Standardized, objective screening of candidates against job requirements, less variance across reviewers.',
     },
     {
       title: 'Speed',
@@ -85,7 +85,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   modulesSectionTitle: 'Where manual screening breaks down',
   modulesSectionSubtitle:
-    'High volume, delayed shortlists, and inconsistent evaluation — and how the agent changes the outcome.',
+    'High volume, delayed shortlists, and inconsistent evaluation, and how the agent changes the outcome.',
   modules: [
     {
       title: 'High-volume manual screening',
@@ -111,7 +111,7 @@ const CONFIG: OracleSolutionPageConfig = {
   ],
   processTitle: 'From application intake to recruiter-ready shortlist',
   processIntro:
-    'A clear screening loop — ingest, match, categorize, and summarize — so recruiters decide with confidence.',
+    'A clear screening loop, ingest, match, categorize, and summarize, so recruiters decide with confidence.',
   processSteps: [
     {
       number: '01',
@@ -174,7 +174,7 @@ const CONFIG: OracleSolutionPageConfig = {
   caseStudy: {
     tag: 'AI CoE · Talent',
     headline:
-      'Give recruiters a summarized screening view — less manual review, faster shortlists',
+      'Give recruiters a summarized screening view, less manual review, faster shortlists',
     description:
       'Recruiting teams replacing high-volume manual resume review with the MPC CV Screening Agent gain JD-aligned fitment categorization and a clear screening summary so they can engage strong candidates sooner.',
     metadata: 'Recruiters · Resume · JD match · Fitment · Shortlist',
@@ -184,14 +184,14 @@ const CONFIG: OracleSolutionPageConfig = {
     stat: 'Faster',
     statLabel: 'Shortlisting',
     statContext:
-      'Efficiency, consistency, and speed — less manual screening, objective JD match, quicker strong-fit identification.',
+      'Efficiency, consistency, and speed, less manual screening, objective JD match, quicker strong-fit identification.',
   },
   related: [
     {
       icon: Bot,
       title: 'AI CoE',
       description:
-        'Return to MPC\'s AI Centre of Excellence — Agentic Studio, custom agents, and out-of-box solutions.',
+        'Return to MPC\'s AI Centre of Excellence. Agentic Studio, custom agents, and out-of-box solutions.',
       to: SERVICE_AI_COE,
     },
     {
@@ -205,7 +205,7 @@ const CONFIG: OracleSolutionPageConfig = {
       icon: ClipboardList,
       title: 'Financial Close Assistant',
       description:
-        'Another Out-of-Box AI Solution from the AI CoE — finance close orchestration.',
+        'Another Out-of-Box AI Solution from the AI CoE, finance close orchestration.',
       to: SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
     },
   ],
@@ -220,14 +220,14 @@ const CONFIG: OracleSolutionPageConfig = {
     },
     {
       q: 'Does it replace recruiter judgment?',
-      a: 'No. It provides a summarized screening view and objective JD alignment so recruiters can decide faster — final shortlisting and engagement remain with the recruiter.',
+      a: 'No. It provides a summarized screening view and objective JD alignment so recruiters can decide faster, final shortlisting and engagement remain with the recruiter.',
     },
     {
       q: 'How quickly can we deploy it?',
       a: 'As an Out-of-Box AI Solution from MPC\'s AI CoE, focused deployments typically start in days, then expand across roles and recruiting teams.',
     },
   ],
-  faqTitle: 'CV Screening Agent — Frequently Asked Questions',
+  faqTitle: 'CV Screening Agent. Frequently Asked Questions',
   ctaTitle: 'Screen smarter.',
   ctaTitleAccent: 'Shortlist faster.',
   ctaBody:

@@ -31,7 +31,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroHeadline: 'Implement Salesforce',
   heroHeadlineAccent: 'for full customer lifecycle impact',
   heroSubhead:
-    'End-to-end Salesforce delivery across B2C, B2B, OMS, Sales, Service, and Marketing — integrated with your enterprise systems.',
+    'End-to-end Salesforce delivery across B2C, B2B, OMS, Sales, Service, and Marketing, integrated with your enterprise systems.',
   heroCtaText: 'Talk to Our Salesforce Team',
   heroImageSrc:
     'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2400&auto=format&fit=crop',
@@ -176,7 +176,7 @@ const CONFIG: OracleSolutionPageConfig = {
       a: 'Yes. Managed support includes incident resolution, enhancement delivery, release planning, and process optimization.',
     },
   ],
-  faqTitle: 'Salesforce — Frequently Asked Questions',
+  faqTitle: 'Salesforce. Frequently Asked Questions',
   ctaTitle: 'Build a stronger',
   ctaTitleAccent: 'Customer Revenue Engine',
   ctaBody:

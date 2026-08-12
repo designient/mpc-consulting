@@ -98,12 +98,12 @@ export function FooterDark() {
                   Stay Ahead of What’s Next
                 </h3>
                 <p className="font-body text-[15px] leading-[1.6] text-white">
-                  Monthly insights on AI, cloud, SaaS, automation, digital transformation, and enterprise technology — direct to your inbox.
+                  Monthly insights on AI, cloud, SaaS, automation, digital transformation, and enterprise technology, delivered straight to your inbox.
                 </p>
               </div>
               {submitted ? (
                 <p className="font-body text-[15px] text-white font-medium">
-                  Thank you — you&apos;re subscribed.
+                  Thank you. You&apos;re subscribed.
                 </p>
               ) : (
                 <form
@@ -136,7 +136,7 @@ export function FooterDark() {
                 <Logo tone="white" height={44} />
               </div>
               <p className="font-body text-[15px] leading-[1.6] text-white mb-6">
-                Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.
+                Your global partner for digital transformation across India, UAE, Singapore, Australia, and the UK.
               </p>
             </div>
 

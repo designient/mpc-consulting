@@ -32,7 +32,7 @@ export function TreasuryModuleGrid({
           {platformTitle}
         </Heading>
         <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-          {platformSubtitle} — an all-in-one treasury platform supporting multi-company,
+          {platformSubtitle}, an all-in-one treasury platform supporting multi-company,
           multi-location, multi-currency, and multi-asset class operations.
         </p>
       </div>

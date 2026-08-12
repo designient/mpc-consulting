@@ -229,7 +229,7 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
             <div className="flex flex-col items-start">
               {!isAiCoeAgent && (
-                <p className="section-eyebrow mb-3">AI Overview-ready</p>
+                <p className="section-eyebrow mb-3">AI Overview</p>
               )}
               <Heading level={2} className="mb-5">
                 {config.whatIsTitle}
