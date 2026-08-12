@@ -116,7 +116,7 @@ export const WEB_SITE_SCHEMA = {
   name: 'MPC Cloud Consulting',
   url: ORIGIN,
   description:
-    'Oracle Cloud and AI transformation partner across India, UAE, Singapore, Australia, and the UK.',
+    'Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -142,7 +142,7 @@ export function buildLocalBusinessSchema(offices: OfficeLocation[]) {
     image: DEFAULT_OG_IMAGE,
     url: ORIGIN,
     telephone: '+91-000-000-0000',
-    email: 'hello@mpccloudconsulting.com',
+    email: 'info@mpccloudconsulting.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: office.addr,
@@ -165,7 +165,7 @@ export const ORGANIZATION_SCHEMA = {
   url: ORIGIN,
   logo: `${ORIGIN}/mpc-main-logo.svg`,
   description:
-    'Oracle Cloud and AI transformation partner across India, UAE, Singapore, Australia, and the UK.',
+    'Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.',
   foundingDate: '2019',
   sameAs: [
     'https://www.linkedin.com/company/mpccloudconsulting',
@@ -173,7 +173,7 @@ export const ORGANIZATION_SCHEMA = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'hello@mpccloudconsulting.com',
+    email: 'info@mpccloudconsulting.com',
     contactType: 'Customer Service',
     areaServed: ['IN', 'AE', 'SG', 'AU', 'GB'],
     availableLanguage: ['English']

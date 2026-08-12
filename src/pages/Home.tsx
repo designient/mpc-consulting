@@ -124,15 +124,15 @@ const INDUSTRIES = [
 const PILLARS = [
   {
     title: 'Deep Industry Understanding',
-    body: "We don't just implement technology. We understand the business problems it must solve — across BFSI, manufacturing, energy, and seven other verticals."
+    body: "We understand the processes, challenges, and priorities that shape your business. Our experience across BFSI, manufacturing, energy, and other industries helps us design solutions grounded in real-world business needs."
   },
   {
     title: 'Domain Specialisation',
-    body: 'Oracle-certified consultants. Deep product knowledge across HCM, ERP, DevOps, and AI. Not generalists — specialists.'
+    body: '85+ Consultants & SME in Oracle Tech & Cloud. We have 30+ Certified Consultants in Multicloud & Cyber Security. Every consultant on our team is Cloud & AI-focused, Oracle/AWS/Microsoft-certified, and committed to mastering one platform rather than spreading across many.'
   },
   {
     title: 'Strong Competencies',
-    body: 'End-to-end delivery capability: advisory, implementation, managed support, and innovation. One partner for the full journey.'
+    body: 'Our capabilities span advisory, implementation, integration, managed support, and continuous innovation. Agile delivery, cross-functional collaboration, and a commitment to quality help us turn transformation strategies into outcomes that last.'
   }
 ];
 
@@ -235,9 +235,9 @@ export function Home() {
               </h1>
 
               <p className="type-paragraph text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                We help enterprises transform their operations with Oracle
-                Cloud, AI solutions, and deep domain expertise — across India,
-                UAE, Singapore, Australia, and the UK.
+                We help enterprises transform how they work through cloud, AI,
+                automation, and modern technology — turning complex business
+                challenges into measurable outcomes.
               </p>
 
               <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
@@ -271,9 +271,10 @@ export function Home() {
               Built on Three Pillars of Excellence
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              MPC's approach combines industry understanding with Oracle
-              specialisation and cross-functional competencies — built to
-              deliver real outcomes, not just implementations.
+              MPC combines deep industry understanding, technology mastery,
+              and cross-functional expertise to solve complex business
+              challenges and deliver measurable outcomes — across cloud,
+              SaaS, AI, automation, and digital transformation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

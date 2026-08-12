@@ -95,10 +95,10 @@ export function FooterDark() {
               <div className="max-w-[480px]">
                 <p className={columnHeading}>Newsletter</p>
                 <h3 className="type-h3 text-[22px] md:text-[26px] leading-tight tracking-tight mb-2 text-white">
-                  Stay ahead of Oracle Cloud
+                  Stay Ahead of What’s Next
                 </h3>
                 <p className="font-body text-[15px] leading-[1.6] text-white">
-                  Monthly insights on Oracle Cloud, AI, and enterprise technology — direct to your inbox.
+                  Monthly insights on AI, cloud, SaaS, automation, digital transformation, and enterprise technology — direct to your inbox.
                 </p>
               </div>
               {submitted ? (
@@ -136,7 +136,7 @@ export function FooterDark() {
                 <Logo tone="white" height={44} />
               </div>
               <p className="font-body text-[15px] leading-[1.6] text-white mb-6">
-                Your Oracle Cloud and AI transformation partner — across India, UAE, Singapore, Australia, and the UK.
+                Your Global Partner for Digital Transformation — across India, UAE, Singapore, Australia, and the UK.
               </p>
             </div>
 
@@ -169,10 +169,10 @@ export function FooterDark() {
             <div className="flex flex-col">
               <h4 className={columnHeading}>Connect</h4>
               <a
-                href="mailto:hello@mpccloudconsulting.com"
+                href="mailto:info@mpccloudconsulting.com"
                 className={`${linkCls} flex items-center gap-2 mb-3`}>
                 <Mail className="w-4 h-4 shrink-0" />
-                hello@mpccloudconsulting.com
+                info@mpccloudconsulting.com
               </a>
               <p className="font-body text-[14px] text-white leading-[1.7] mb-6">
                 Gurugram · Hyderabad · Bengaluru

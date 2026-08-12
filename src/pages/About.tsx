@@ -71,7 +71,7 @@ const STATS = [
 },
 {
   number: '350+',
-  label: 'Years Combined Expertise'
+  label: 'years of Leadership Experience'
 },
 {
   number: '87+',
@@ -190,7 +190,7 @@ export function About() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="About MPC Cloud Consulting | Oracle & AI Transformation Partner"
-        description="Founded in 2019, MPC Cloud Consulting has 65+ clients across India, UAE, Singapore, UK & Australia. 700+ consultants. Deep Oracle Cloud & AI expertise."
+        description="We help enterprises turn complex business challenges into meaningful outcomes through digital transformation, cloud, SaaS, AI, automation, and deep industry expertise."
         canonicalPath="/about/"
         schema={[ORGANIZATION_SCHEMA, buildBreadcrumbSchema(BREADCRUMB)]} />
       
@@ -224,9 +224,9 @@ export function About() {
               </h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                We are a global Oracle Cloud and AI transformation partner —
-                built on deep expertise, industry understanding, and a
-                commitment to measurable outcomes.
+                We help enterprises turn complex business challenges into
+                meaningful outcomes through digital transformation, cloud,
+                SaaS, AI, automation, and deep industry expertise.
               </p>
             </div>
           </div>
@@ -238,28 +238,38 @@ export function About() {
           <div className="text-center mb-10">
             <p className="section-eyebrow mb-3">Our Story</p>
             <Heading level={2} className="mb-4">
-              From Cloud First to AI-First
+              From Cloud Expertise to Intelligent Transformation
             </Heading>
           </div>
           <div className="text-center">
             <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85 mb-5">
-              MPC Cloud Consulting was founded in 2019 with a single conviction:
-              that enterprise transformation must begin with genuine
-              understanding — of business processes, of industry context, and of
-              the people who use the systems we build.
+              MPC Cloud Consulting was founded in 2019 with a simple
+              conviction: technology transformation must begin with
+              understanding the business it is meant to transform.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80 mb-5">
-              In six years, we've grown to 700+ consultants across 8 global
-              offices in 5 countries. We've completed 87+ engagements for 65+
-              organisations — from BFSI giants to manufacturing leaders and
-              energy companies. And we've done it by staying focused on Oracle
-              Cloud, refusing to be generalists in a space that rewards depth.
+              We take the time to understand the processes, people, industry
+              realities, and business challenges behind every technology
+              decision. That belief has shaped how we work — and how we have
+              grown.
             </p>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              Today, with the rise of AI, we're leading a new chapter. MPC Tech
-              Hub is our AI innovation centre — building custom agents,
-              extending Oracle with intelligence, and helping enterprises move
-              from Cloud First to AI-First.
+              Today, MPC brings together 700+ consultants across 8 global
+              offices in 5 countries, with 87+ successful engagements for 65+
+              enterprise clients across industries including BFSI,
+              manufacturing, energy, and more. Our foundation is built on deep
+              technology expertise, with strong capabilities across Oracle,
+              Cloud, Multicloud, SaaS, AI, automation, and modern
+              architectures. We believe in depth of expertise, continuous
+              learning, and applying the right technology to the right business
+              problem — rather than technology for technology's sake. As
+              enterprises move into an AI-driven future, MPC is building what
+              comes next. MPC Tech Hub, our AI innovation centre, explores and
+              develops practical AI solutions — from intelligent agents and
+              automation to extending enterprise platforms with new intelligence.
+              Because for us, transformation isn't about following the next
+              technology trend. It's about finding what can work better — and
+              making it real.
             </p>
           </div>
           </div>
@@ -406,7 +416,7 @@ export function About() {
         <StatOverlayCaseStudy
           eyebrow="Careers"
           headline="Where Trust Meets Innovation"
-          description="We believe security empowers possibility. It creates the foundation for a more inclusive, connected, and empowered world. By helping our customers anticipate challenges, protect what matters most, and simplify their business experience, we unlock the potential for innovation. Through your talent, expertise, and insight, today's ideas become tomorrow's breakthroughs, transforming the way people live, work, and connect."
+          description="We believe great transformation comes from people who are curious enough to keep learning, disciplined enough to challenge their own work, and collaborative enough to make each other better. We invest in mastery, embrace agile ways of working, and explore AI, automation, and emerging technologies — always with a focus on solving real business problems."
           imageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80"
           imageAlt="MPC team collaborating in the office"
           showStatOverlay={false}
@@ -421,7 +431,7 @@ export function About() {
         <CTABand
           title="Ready to work"
           titleAccent="with us?"
-          body="Wherever you are in your Oracle journey — let's talk."
+          body="Wherever you are in your transformation journey — let's talk."
           ctaText="Contact Our Team"
           ctaTo="/contact/"
           variant="split" />

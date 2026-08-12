@@ -16,36 +16,36 @@ const HERO_BG =
 
 const VALUES = [
   {
-    title: 'Entrepreneurial by Nature',
-    body: 'We value innovation and creativity in the work we do, combined with the willingness to take calculated risks that drive real results for our clients and our team.',
+    title: 'Business First',
+    body: 'We take the time to understand our clients\' businesses, challenges, people, and priorities before deciding what to build. Technology is only valuable when it creates meaningful business impact.',
     imageSrc:
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Team innovating on Oracle Cloud solutions',
   },
   {
-    title: 'Customer Orientation',
-    body: "Customer orientation helps us understand our clients' perspectives, pain points, and requirements. We think about customers in everything we do — from design to delivery.",
+    title: 'Customer Obsession',
+    body: 'We listen closely, challenge assumptions when needed, and stay accountable from the first conversation through delivery and beyond. We don\'t just aim to meet expectations — we aim to earn the right to be trusted partners.',
     imageSrc:
       'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Consultants collaborating with enterprise clients',
   },
   {
-    title: 'Ownership',
-    body: 'We value complete ownership and accountability across our team. It shows in how we deliver every project to our customers — we do not do anything half-heartedly.',
+    title: 'Mastery Matters',
+    body: 'We invest in continuously developing our craft, learning from one another, and reviewing each other\'s work. Whether it\'s Oracle, Multicloud, SaaS, AI, automation, or emerging architectures, we strive to understand what we do deeply and do it exceptionally well.',
     imageSrc:
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'MPC team taking ownership of client outcomes',
   },
   {
-    title: 'Speed and Agility',
-    body: 'Speed is critical to us. We value fast, thoughtful decision-making and swift action. Procrastination is not our style — we stay agile and adjust course when needed.',
+    title: 'Innovate with Purpose',
+    body: 'AI, automation, and emerging technologies are changing how businesses operate. We read, experiment, test, and learn — but we bring those ideas back to real work and real business problems. The status quo is a starting point, not a destination.',
     imageSrc:
       'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Agile delivery and rapid iteration',
   },
   {
-    title: 'Value Self',
-    body: 'We want our people to value themselves. Only when you invest in your own growth can you be truly effective at work — and that investment is something we actively support.',
+    title: 'Quality Without Heroics',
+    body: 'We embrace agile ways of working, take ownership of outcomes, and hold ourselves and each other to high standards. We believe in sustained quality, thoughtful execution, and doing work we\'re proud to put our name on.',
     imageSrc:
       'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Professional growth and learning at MPC',
@@ -90,9 +90,8 @@ export function Values() {
               <h1 className="type-h1 text-text-inverse">What We Stand For</h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                Our values shape how we serve clients, support our people, and
-                deliver Oracle Cloud outcomes — every day, across every
-                engagement.
+                Our values shape how we think, how we work, and how we show up
+                — for our clients, our people, and every challenge we take on.
               </p>
             </div>
           </div>
@@ -107,9 +106,11 @@ export function Values() {
             </Heading>
             <p className="font-body text-[18px] leading-[1.7] text-text-primary opacity-85">
               At MPC, values are not posters on a wall — they are the standards
-              we hold ourselves to when advising clients, building solutions,
-              and growing as a team. These five principles have guided us since
-              2019 and continue to define who we are.
+              we hold ourselves to every day. They shape how we solve business
+              problems, work with our clients, challenge each other, develop our
+              expertise, and deliver quality work. These principles have guided
+              us since 2019 and continue to define how we work, how we grow, and
+              what we stand for.
             </p>
           </div>
         </section>
@@ -122,8 +123,10 @@ export function Values() {
               Five principles that guide us
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-80">
-              The beliefs that inform how we work with clients, collaborate as
-              a team, and pursue excellence in Oracle Cloud delivery.
+              The beliefs that shape how we solve business problems, work with our
+              clients, challenge ourselves, and grow together. These aren't
+              values we simply talk about — they're standards we hold ourselves to
+              in the work we deliver every day.
             </p>
           </div>
 
@@ -156,11 +159,13 @@ export function Values() {
               How we treat our people
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-85 mb-10">
-              In six years, we have become an organisation of choice for Oracle
-              HCM and ERP consultants. We take pride in caring for our people in
-              ways that are genuinely personal — because every person is
-              different, with different needs, and we treat each team member
-              accordingly.
+              At MPC, we believe great work starts with people who feel trusted,
+              respected, and empowered to do their best work. We invest in our
+              people as individuals — supporting their growth, deepening their
+              expertise, and giving them the space to learn, experiment, and take
+              ownership. We encourage people to challenge ideas, review each
+              other's work, and continuously raise the bar for what good looks
+              like.
             </p>
 
             <div className="bg-cta rounded-card px-8 py-10 md:px-12 md:py-12 text-text-inverse text-left md:text-center max-w-[800px] mx-auto">
@@ -178,7 +183,7 @@ export function Values() {
         <StatOverlayCaseStudy
           eyebrow="Careers"
           headline="Where values become careers"
-          description="Join a team of 700+ Oracle Cloud specialists who live these principles every day — across India, UAE, Singapore, Australia, and the UK. If our values resonate with you, there is a place for you at MPC."
+          description="Join 700+ technology professionals working across India, UAE, Singapore, Australia, and the UK — bringing together expertise across Oracle, Cloud, Multicloud, SaaS, AI, automation, and digital transformation."
           imageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80"
           imageAlt="MPC team collaborating in the office"
           showStatOverlay={false}

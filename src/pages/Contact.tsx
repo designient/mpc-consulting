@@ -230,10 +230,10 @@ export function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 <a
-                  href="mailto:hello@mpccloudconsulting.com"
+                  href="mailto:info@mpccloudconsulting.com"
                   className="inline-flex items-center gap-2.5 font-body text-[15px] text-text-primary hover:text-cta transition-colors">
                   <Mail className="w-4 h-4 text-cta shrink-0" />
-                  hello@mpccloudconsulting.com
+                  info@mpccloudconsulting.com
                 </a>
                 <a
                   href="https://mpccloudconsulting.com"
