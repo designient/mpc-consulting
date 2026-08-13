@@ -22,7 +22,7 @@ const HERO_BG =
 const CAREER_PATH_BG = '/career-path-bg.png';
 
 const MISSION_INTRO =
-  'Join a team of 700+ Oracle Cloud specialists working across India, UAE, Singapore, Australia, and the UK. We build the kind of place where senior people stay because the work is meaningful, the people are sharp, and the path forward is visible.';
+  'Join a team of 700+ technology evangelists and industry veterans. At MPC we build high-performing teams who can be the bedrock to support our mission and vision. If you are curious and have the intent to co-create, deliver on commitments, and are ready to contribute to our mission, join us.';
 
 const CULTURE_ITEMS = [
   {
@@ -30,7 +30,7 @@ const CULTURE_ITEMS = [
       'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80',
     title: 'Craft',
     description:
-      'We take Oracle Cloud seriously. We invest in mastery, we review each other’s work, and we ship things we’re proud to put our name on.'
+      'We take work engineering seriously. We invest in mastery, we review each other’s work, and we ship things we’re proud to put our name on.'
   },
   {
     imageSrc:
@@ -44,7 +44,7 @@ const CULTURE_ITEMS = [
       'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',
     title: 'Curiosity',
     description:
-      'AI, new Oracle modules, emerging architectures, we read, experiment, and bring ideas back into client work. The status quo is a starting point.'
+      'We learn, relearn, and build high-performing teams to deliver by fostering a culture of exceptional delivery, collaboration, ownership, and accountability.'
   }
 ];
 
@@ -329,9 +329,7 @@ export function Careers() {
               </h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                700+ Oracle Cloud specialists across India, UAE, Singapore,
-                Australia, and the UK, doing meaningful work with people you
-                want to learn from.
+                Unlock Your Potential. Where Innovation Meets Transformation.
               </p>
 
               <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
