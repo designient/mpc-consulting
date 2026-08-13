@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Award,
   ShieldCheck,
-  Cloud,
   ArrowRight,
   MapPin } from
 'lucide-react';
@@ -21,6 +19,8 @@ import {
   Breadcrumb,
   buildBreadcrumbSchema } from
 '../components/sections/Breadcrumb';
+import { LogoCloud } from '../components/sections/LogoCloud';
+import { PARTNER_LOGOS } from '../data/partnerLogos';
 const BREADCRUMB = [{ label: 'About' }];
 
 const HERO_BG =
@@ -160,21 +160,7 @@ const OFFICES = [
   addr: '7 Benton Mews, Aylesbury'
 }];
 
-const LEADERSHIP_IMG =
-  'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop';
-
-const AWARDS = [
-  {
-    icon: Award,
-    title: 'Oracle Partner',
-    body: 'Implementation partner, the foundation of our technical capability.',
-  },
-  {
-    icon: Cloud,
-    title: 'AWS · Azure · GCP',
-    body: 'Multi-cloud partner relationships for infrastructure delivery.',
-  },
-];
+const LEADERSHIP_IMG = '/mpc-leadership/amit-garg-ceo.jpeg';
 
 const CERTIFICATIONS = [
   {
@@ -190,8 +176,7 @@ const CERTIFICATIONS = [
 ];
 
 export function About() {
-  const [credsTab, setCredsTab] = useState<'awards' | 'certifications'>('awards');
-  const credsItems = credsTab === 'awards' ? AWARDS : CERTIFICATIONS;
+  const [credsTab, setCredsTab] = useState<'partners' | 'certifications'>('partners');
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -389,10 +374,10 @@ export function About() {
           </div>
         </section>
 
-        {/* Awards & Certifications */}
+        {/* Partners & Certifications */}
         <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
-            <p className="section-eyebrow mb-3">Awards & Certifications</p>
+            <p className="section-eyebrow mb-3">Partners & Certifications</p>
             <Heading level={2}>
               Trusted by partners, certified by standards
             </Heading>
@@ -401,7 +386,7 @@ export function About() {
           <div className="flex justify-center gap-2 mb-8">
             {(
               [
-                ['awards', 'Awards'],
+                ['partners', 'Partners'],
                 ['certifications', 'Certifications'],
               ] as const
             ).map(([key, label]) => (
@@ -419,24 +404,33 @@ export function About() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-[900px] mx-auto">
-            {credsItems.map((c) => {
-              const Icon = c.icon;
-              return (
-                <div
-                  key={c.title}
-                  className="bg-bg-light rounded-card p-6 border border-transparent hover:border-divider/20 transition-colors">
-                  <Icon className="w-7 h-7 text-cta mb-4" />
-                  <h3 className="font-heading font-semibold text-[18px] text-text-primary mb-2">
-                    {c.title}
-                  </h3>
-                  <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-80">
-                    {c.body}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+          {credsTab === 'partners' ? (
+            <LogoCloud
+              items={PARTNER_LOGOS}
+              bg="transparent"
+              scrollable
+              autoScroll
+            />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-[900px] mx-auto">
+              {CERTIFICATIONS.map((c) => {
+                const Icon = c.icon;
+                return (
+                  <div
+                    key={c.title}
+                    className="bg-bg-light rounded-card p-6 border border-transparent hover:border-divider/20 transition-colors">
+                    <Icon className="w-7 h-7 text-cta mb-4" />
+                    <h3 className="font-heading font-semibold text-[18px] text-text-primary mb-2">
+                      {c.title}
+                    </h3>
+                    <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-80">
+                      {c.body}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </section>
 
         <StatOverlayCaseStudy

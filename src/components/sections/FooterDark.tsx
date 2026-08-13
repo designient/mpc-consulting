@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Youtube, Mail } from 'lucide-react';
+import { Linkedin, Facebook, Mail } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 import {
   SERVICE_AI_COE,
@@ -189,18 +189,12 @@ export function FooterDark() {
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://twitter.com/mpccloudconsult"
+                  href="https://www.facebook.com/MPCCloudConsulting"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Twitter"
+                  aria-label="Facebook"
                   className="w-10 h-10 rounded-full border border-white/30 text-white hover:border-white hover:bg-white/10 flex items-center justify-center transition-colors">
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  aria-label="YouTube"
-                  className="w-10 h-10 rounded-full border border-white/30 text-white hover:border-white hover:bg-white/10 flex items-center justify-center transition-colors">
-                  <Youtube className="w-4 h-4" />
+                  <Facebook className="w-4 h-4" />
                 </a>
               </div>
             </div>

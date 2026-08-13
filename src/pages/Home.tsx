@@ -409,7 +409,7 @@ export function Home() {
                 n: 'Oracle + AI',
                 l: 'Focus'
               }].
-              Map((s) => {
+              map((s) => {
               const isCompactStat = s.n === 'Oracle + AI';
               return (
               <div
@@ -454,7 +454,7 @@ export function Home() {
             ['hcm', 'HCM Clients'],
             ['erp', 'ERP Clients']] as
             const).
-            Map(([key, label]) =>
+            map(([key, label]) =>
             <button
               key={key}
               onClick={() => setLogoTab(key)}

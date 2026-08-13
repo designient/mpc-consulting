@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
@@ -18,79 +17,68 @@ const MANAGEMENT_TEAM = [
   {
     name: 'Amit Garg',
     title: 'Founder & CEO',
-    image:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Amit-garg.png',
+    linkedin: 'https://www.linkedin.com/in/amitgargi/',
   },
   {
     name: 'Kishore Nerella',
     title: 'Co-Founder & COO',
-    image:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Kishore-Nerella.png',
+    linkedin: 'https://www.linkedin.com/in/kishorenerella/',
   },
   {
     name: 'Siva Prakya',
     title: 'Director & CTO',
-    image:
-      'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Siva-Prakya.png',
+    linkedin: 'https://www.linkedin.com/in/siva-prakya-99b4361b1/',
   },
   {
     name: 'Abhay Singh',
     title: 'Chief Business Office',
-    image:
-      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Abhay-Singh.png',
+    linkedin: 'https://www.linkedin.com/in/abhay-singh-05982910/',
   },
   {
     name: 'Mukund Moorthy',
     title: 'Head of Strategy',
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Mukund-Moorthy.png',
+    linkedin: 'https://www.linkedin.com/in/mukund-moorthy-82293972/',
   },
   {
     name: 'Gurbir Soi',
     title: 'Head of Strategic Accounts',
-    image:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Gurbir-Soi.png',
+    linkedin: 'https://www.linkedin.com/in/gurbir-soi-b1247026/',
   },
   {
     name: 'Pushyamy Arapirala',
     title: 'Head of HCM',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Pushyamy-Arapirala.png',
+    linkedin: 'https://www.linkedin.com/in/pushyamy-arapirala-577a8043/',
   },
   {
     name: 'Vikas Basantani',
     title: 'P&L Leader - ANZ',
-    image:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Vikas-Basantani.png',
+    linkedin: 'https://www.linkedin.com/in/vikas-basantani-7432365/',
   },
   {
     name: 'Vikas Chaudhary',
     title: 'Head of ERP',
-    image:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Vikas-Chaudhary.png',
+    linkedin: 'https://www.linkedin.com/in/vikas-chaudhary-6a034126/',
   },
   {
     name: 'Aditya Tiruveedhula',
     title: 'Head of Tech',
-    image:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Aditya-Tiruveedhula.png',
+    linkedin: 'https://www.linkedin.com/in/tadityachandra/',
   },
   {
     name: 'Arup Das',
     title: 'Program Director',
-    image:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop',
-    linkedin: 'https://www.linkedin.com/company/mpccloudconsulting',
+    image: '/mpc-leadership/Arup-Das.png',
+    linkedin: 'https://www.linkedin.com/in/arup-das-9a84b884/',
   },
 ];
 
@@ -144,13 +132,15 @@ export function Leadership() {
           <div className="max-w-[1400px] mx-auto">
             <p className="section-eyebrow mb-8 md:mb-10">Management Team</p>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
               {MANAGEMENT_TEAM.map((member) => (
-                <article key={member.name} className="flex flex-col items-start">
+                <article
+                  key={member.name}
+                  className="flex flex-col items-start rounded-card border border-cta bg-white p-4 md:p-5">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full aspect-[4/5] object-cover"
+                    className="w-full aspect-[4/5] object-cover rounded-card"
                   />
 
                   <img
@@ -167,21 +157,14 @@ export function Leadership() {
                     {member.title}
                   </p>
 
-                  <div className="flex items-center gap-4 mt-3">
-                    <Link
-                      to="/contact/"
-                      className="font-body text-[13px] font-semibold text-stat hover:text-cta transition-colors">
-                      Bio
-                    </Link>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cta hover:text-stat transition-colors"
-                      aria-label={`${member.name} on LinkedIn`}>
-                      <Linkedin className="w-4 h-4" strokeWidth={1.75} />
-                    </a>
-                  </div>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 text-cta hover:text-stat transition-colors"
+                    aria-label={`${member.name} on LinkedIn`}>
+                    <Linkedin className="w-4 h-4" strokeWidth={1.75} />
+                  </a>
                 </article>
               ))}
             </div>

@@ -90,8 +90,9 @@ export function Values() {
               <h1 className="type-h1 text-text-inverse">What We Stand For</h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                Our values shape how we think, how we work, and how we show up
-                for our clients, our people, and every challenge we take on.
+                Our values shape how we serve clients, support our people, and
+                deliver Business outcomes with better ROI, every day, across
+                every engagement.
               </p>
             </div>
           </div>
@@ -159,12 +160,11 @@ export function Values() {
               How we treat our people
             </Heading>
             <p className="font-body text-[17px] leading-[1.7] text-text-primary opacity-85 mb-10">
-              At MPC, we believe great work starts with people who feel trusted,
-              respected, and able to do their best. We invest in our people as
-              individuals by supporting their growth, deepening their expertise,
-              and giving them room to learn, experiment, and take ownership. We
-              encourage people to challenge ideas, review each other's work, and
-              keep raising the bar for what good looks like.
+              At MPC, we invest in mastery, encourage continuous learning, and
+              create space for innovation. We challenge each other, support each
+              other, and take pride in delivering work that reflects our highest
+              standards. Because exceptional outcomes are built by teams that
+              grow together, not by individuals working alone.
             </p>
 
             <div className="bg-cta rounded-card px-8 py-10 md:px-12 md:py-12 text-text-inverse text-left md:text-center max-w-[800px] mx-auto">
