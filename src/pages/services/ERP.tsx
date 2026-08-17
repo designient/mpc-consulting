@@ -21,7 +21,6 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_ORACLE,
-  SERVICES_INDEX,
   SOLUTION_ERP,
   SOLUTION_HCM,
   SOLUTION_HCAAS,
@@ -45,8 +44,7 @@ const OVERVIEW_IMAGE =
 
 const BREADCRUMB = [
 {
-  label: 'Services',
-  to: SERVICES_INDEX
+  label: 'Services'
 },
 {
   label: 'Oracle (Fusion & EBS)',

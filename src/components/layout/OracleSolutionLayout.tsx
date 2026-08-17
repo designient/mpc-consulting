@@ -17,14 +17,12 @@ import {
 } from '../sections/FAQAccordion';
 import { CTABand } from '../sections/CTABand';
 import {
-  Breadcrumb,
   BreadcrumbItem,
   buildBreadcrumbSchema,
 } from '../sections/Breadcrumb';
 import {
   SERVICE_AI_COE,
   SERVICE_ORACLE,
-  SERVICES_INDEX,
 } from '../../data/paths';
 import {
   getCaseStudyForSolution,
@@ -127,7 +125,7 @@ function buildBreadcrumb(
   },
 ): BreadcrumbItem[] {
   return [
-    { label: 'Services', to: SERVICES_INDEX },
+    { label: 'Services' },
     { label: parent.label, to: parent.to },
     { label },
   ];
@@ -190,18 +188,7 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
-            <Breadcrumb
-              items={breadcrumb}
-              variant="dark"
-              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
-            />
-
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                {config.heroEyebrow}
-              </span>
-
               <h1 className="type-h1 text-text-inverse">
                 <span className="block">{config.heroHeadline}</span>
                 <span className="block font-body italic font-normal text-text-inverse mt-1 md:mt-2">
@@ -228,9 +215,6 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
             <div className="flex flex-col items-start">
-              {!isAiCoeAgent && (
-                <p className="section-eyebrow mb-3">AI Overview</p>
-              )}
               <Heading level={2} className="mb-5">
                 {config.whatIsTitle}
               </Heading>

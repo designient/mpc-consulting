@@ -5,7 +5,6 @@ import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { Heading } from '../components/ui/Heading';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
-  Breadcrumb,
   buildBreadcrumbSchema,
 } from '../components/sections/Breadcrumb';
 
@@ -75,18 +74,7 @@ export function Values() {
           <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
-            <Breadcrumb
-              items={BREADCRUMB}
-              variant="dark"
-              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
-            />
-
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                Values
-              </span>
-
               <h1 className="type-h1 text-text-inverse">What We Stand For</h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">

@@ -21,7 +21,6 @@ import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_AI_COE,
   SERVICE_ORACLE,
-  SERVICES_INDEX,
   SOLUTION_BPC,
   SOLUTION_ERP,
   SOLUTION_HCM,
@@ -44,8 +43,7 @@ const OVERVIEW_IMAGE =
 
 const BREADCRUMB = [
 {
-  label: 'Services',
-  to: SERVICES_INDEX
+  label: 'Services'
 },
 {
   label: 'Oracle (Fusion & EBS)',

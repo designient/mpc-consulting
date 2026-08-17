@@ -22,7 +22,6 @@ import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_AI_COE,
   SERVICE_CLOUD_DT,
-  SERVICES_INDEX,
   SOLUTION_DEVOPS,
   SOLUTION_ERP,
   SOLUTION_JAVA,
@@ -45,8 +44,7 @@ const OVERVIEW_IMAGE =
 
 const BREADCRUMB = [
 {
-  label: 'Services',
-  to: SERVICES_INDEX
+  label: 'Services'
 },
 {
   label: 'Cloud & Digital Transformation',

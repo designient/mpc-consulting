@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
-import { Services } from './pages/Services';
 import { HCM } from './pages/services/HCM';
 import { ERP } from './pages/services/ERP';
 import { Java } from './pages/services/Java';
@@ -61,7 +60,7 @@ export function App() {
         <Route path="/contact/" element={<Contact />} />
 
         {/* Services */}
-        <Route path="/services/" element={<Services />} />
+        <Route path="/services/" element={<Navigate to="/" replace />} />
         <Route path="/services/oracle-fusion-ebs/" element={<OracleFusionEBS />} />
         <Route path="/services/ai-coe/" element={<TechHub />} />
         <Route

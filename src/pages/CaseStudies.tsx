@@ -178,7 +178,7 @@ export function CaseStudies() {
         ctaText="Talk to MPC"
         ctaTo="/contact/"
         secondaryCtaText="See all services"
-        secondaryCtaTo="/services/"
+        secondaryCtaTo="/#services"
       />
 
       <FooterDark />

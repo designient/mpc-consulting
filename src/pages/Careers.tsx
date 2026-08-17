@@ -316,11 +316,6 @@ export function Careers() {
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                Careers
-              </span>
-
               <h1 className="type-h1 text-text-inverse">
                 Build your career at{' '}
                 <span className="font-body italic font-normal text-text-inverse">

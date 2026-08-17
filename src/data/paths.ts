@@ -5,7 +5,6 @@ export const SERVICE_CLOUD_DT = '/services/cloud-digital-transformation/';
 export const SERVICE_CX_ANALYTICS = '/services/cx-analytics/';
 export const SERVICE_SECURITY = '/services/security-zero-trust/';
 export const SERVICE_TREASURY = '/services/treasury-management/';
-export const SERVICES_INDEX = '/services/';
 
 /** Solution pages (nested under services) */
 export const SOLUTION_HCM = '/solutions/hcm/';

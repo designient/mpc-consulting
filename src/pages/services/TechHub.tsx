@@ -20,7 +20,6 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_AI_COE,
-  SERVICES_INDEX,
   SOLUTION_BPC,
   SOLUTION_ERP,
   SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
@@ -44,7 +43,7 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: SERVICES_INDEX },
+  { label: 'Services' },
   { label: 'AI CoE' },
 ];
 
@@ -257,7 +256,7 @@ export function TechHub() {
           subhead="MPC's AI CoE is our dedicated Centre of Excellence for AI, combining deep Oracle expertise with intelligent solutions, custom AI agents, and generative AI to transform your Oracle investment into measurable business outcomes."
           primaryCtaText="Start the Conversation"
           primaryCtaTo="/contact/"
-          imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/ai-coe-hero.png"
           imageAlt="AI Centre of Excellence, enterprise AI innovation"
           breadcrumb={BREADCRUMB}
         />

@@ -22,7 +22,6 @@ import {
   SOLUTION_TECH,
   SOLUTION_UNIFIER,
   SERVICE_ORACLE,
-  SERVICES_INDEX,
 } from '../../data/paths';
 
 const TOC = [
@@ -36,7 +35,7 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: SERVICES_INDEX },
+  { label: 'Services' },
   { label: 'Oracle (Fusion & EBS)' },
 ];
 
@@ -213,7 +212,7 @@ export function OracleFusionEBS() {
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
           secondaryCtaTo="#overview"
-          imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/oracle-fusion-ebs-hero.png"
           imageAlt="Enterprise team reviewing Oracle Cloud strategy"
           breadcrumb={BREADCRUMB}
         />

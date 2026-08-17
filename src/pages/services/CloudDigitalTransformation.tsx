@@ -20,7 +20,6 @@ import {
   SOLUTION_APP_DEV,
   SOLUTION_CLOUD_MANAGEMENT,
   SOLUTION_DB_MIGRATION,
-  SERVICES_INDEX,
 } from '../../data/paths';
 
 const CANONICAL_PATH = '/services/cloud-digital-transformation/';
@@ -36,7 +35,7 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: SERVICES_INDEX },
+  { label: 'Services' },
   { label: 'Cloud & Digital Transformation' },
 ];
 
@@ -165,7 +164,7 @@ export function CloudDigitalTransformation() {
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
           secondaryCtaTo="#overview"
-          imageSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/cloud-digital-transformation-hero.png"
           imageAlt="Modern cloud infrastructure and digital transformation"
           breadcrumb={BREADCRUMB}
         />

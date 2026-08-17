@@ -31,7 +31,6 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_TREASURY,
-  SERVICES_INDEX,
   SOLUTION_IBS_FINTECH,
   SOLUTION_TREASURY_OPERATIONS,
 } from '../../data/paths';
@@ -52,7 +51,7 @@ const PLATFORM_IMAGE =
   'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1600&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: SERVICES_INDEX },
+  { label: 'Services' },
   { label: 'Treasury Management' },
 ];
 
@@ -275,7 +274,7 @@ export function TreasuryManagement() {
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
           secondaryCtaTo="#overview"
-          imageSrc="https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/treasury-management-hero.png"
           imageAlt="Treasury management and financial analytics"
           breadcrumb={BREADCRUMB}
         />

@@ -4,7 +4,7 @@ import { StickyNav } from './StickyNav';
 import { FooterDark } from '../sections/FooterDark';
 import { SEO } from '../seo/SEO';
 import { Heading } from '../ui/Heading';
-import { Breadcrumb, BreadcrumbItem } from '../sections/Breadcrumb';
+import { BreadcrumbItem } from '../sections/Breadcrumb';
 export interface PageStubProps {
   title: string;
   description: string;
@@ -16,7 +16,6 @@ export function PageStub({
   title,
   description,
   canonicalPath,
-  breadcrumb,
   noindex = true
 }: PageStubProps) {
   return (
@@ -31,11 +30,6 @@ export function PageStub({
 
       <main className="flex-grow w-full">
         <section className="w-full bg-primary px-4 py-16 md:px-10 md:py-24 lg:px-[60px] lg:py-[120px]">
-          {breadcrumb &&
-          <div className="mb-6">
-              <Breadcrumb items={breadcrumb} variant="dark" />
-            </div>
-          }
           <div className="w-[60px] h-[3px] bg-divider mb-6" />
           <Heading level={1} color="text-inverse">
             {title}
@@ -51,7 +45,7 @@ export function PageStub({
             <Link to="/" className="text-divider-bright hover:text-stat transition-colors">
               Home
             </Link>
-            <Link to="/services/" className="text-divider-bright hover:text-stat transition-colors">
+            <Link to="/#services" className="text-divider-bright hover:text-stat transition-colors">
               Services
             </Link>
             <Link to="/industries/" className="text-divider-bright hover:text-stat transition-colors">

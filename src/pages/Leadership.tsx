@@ -1,10 +1,8 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
 import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import {
-  Breadcrumb,
   buildBreadcrumbSchema,
 } from '../components/sections/Breadcrumb';
 
@@ -17,13 +15,13 @@ const MANAGEMENT_TEAM = [
   {
     name: 'Amit Garg',
     title: 'Founder & CEO',
-    image: '/mpc-leadership/Amit-garg.png',
+    image: '/mpc-leadership/Amit.png',
     linkedin: 'https://www.linkedin.com/in/amitgargi/',
   },
   {
     name: 'Kishore Nerella',
     title: 'Co-Founder & COO',
-    image: '/mpc-leadership/Kishore-Nerella.png',
+    image: '/mpc-leadership/Kishore.png',
     linkedin: 'https://www.linkedin.com/in/kishorenerella/',
   },
   {
@@ -105,18 +103,7 @@ export function Leadership() {
           <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
-            <Breadcrumb
-              items={BREADCRUMB}
-              variant="dark"
-              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
-            />
-
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                Leadership
-              </span>
-
               <h1 className="type-h1 text-text-inverse">MPC Leadership</h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
@@ -134,37 +121,41 @@ export function Leadership() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
               {MANAGEMENT_TEAM.map((member) => (
-                <article
-                  key={member.name}
-                  className="flex flex-col items-start rounded-card border border-cta bg-white p-4 md:p-5">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-[4/5] object-cover rounded-card"
-                  />
+                <article key={member.name} className="group relative pb-14 md:pb-16">
+                  <div className="relative">
+                    <div className="overflow-hidden rounded-[20px] shadow-medium">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full aspect-[4/5] object-cover object-top origin-top transition-transform duration-500 ease-out group-hover:scale-110"
+                      />
+                    </div>
 
-                  <img
-                    src="/mpc-main-logo.svg"
-                    alt=""
-                    aria-hidden
-                    className="h-5 md:h-6 w-auto mt-4 object-contain object-left"
-                  />
-
-                  <h3 className="font-heading font-semibold text-[16px] md:text-[17px] text-text-primary mt-3 leading-snug">
-                    {member.name}
-                  </h3>
-                  <p className="font-body text-[13px] md:text-[14px] leading-[1.5] text-text-primary/75 mt-1">
-                    {member.title}
-                  </p>
-
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 text-cta hover:text-stat transition-colors"
-                    aria-label={`${member.name} on LinkedIn`}>
-                    <Linkedin className="w-4 h-4" strokeWidth={1.75} />
-                  </a>
+                    <div className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-[30%] z-10 w-[90%] flex items-center gap-3 rounded-full bg-black shadow-medium pl-2 pr-5 py-2.5 md:pl-2.5 md:pr-6 md:py-3.5">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-[#0A66C2] text-white hover:opacity-90 flex items-center justify-center transition-opacity"
+                        aria-label={`${member.name} on LinkedIn`}>
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="w-5 h-5 md:w-[22px] md:h-[22px]"
+                          fill="currentColor"
+                          aria-hidden>
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                      </a>
+                      <div className="min-w-0 py-0.5 pr-1">
+                        <h3 className="font-heading font-semibold text-[14px] md:text-[16px] text-white leading-tight">
+                          {member.name}
+                        </h3>
+                        <p className="font-body text-[12px] md:text-[13px] leading-snug text-white mt-0.5">
+                          {member.title}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </article>
               ))}
             </div>

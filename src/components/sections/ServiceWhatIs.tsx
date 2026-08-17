@@ -20,7 +20,6 @@ export function ServiceWhatIs({
       className={`w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20${id ? ' scroll-mt-[140px]' : ''}`}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
         <div className="flex flex-col items-start">
-          <p className="section-eyebrow mb-3">AI Overview</p>
           <Heading level={2} className="mb-5">
             {title}
           </Heading>

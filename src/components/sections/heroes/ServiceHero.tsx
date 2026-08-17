@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
+import { BreadcrumbItem } from '../Breadcrumb';
 export interface ServiceHeroProps {
   eyebrow: string;
   headline: string;
@@ -17,7 +17,6 @@ export interface ServiceHeroProps {
   breadcrumb?: BreadcrumbItem[];
 }
 export function ServiceHero({
-  eyebrow,
   headline,
   headlineAccent,
   subhead,
@@ -27,7 +26,6 @@ export function ServiceHero({
   secondaryCtaTo,
   imageSrc,
   imageAlt = '',
-  breadcrumb
 }: ServiceHeroProps) {
   return (
     <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
@@ -40,20 +38,7 @@ export function ServiceHero({
       <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
       <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
-        {breadcrumb && (
-          <Breadcrumb
-            items={breadcrumb}
-            variant="dark"
-            className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
-          />
-        )}
-
         <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-          <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-            <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-            {eyebrow}
-          </span>
-
           <h1 className="type-h1 text-text-inverse">
             <span className="block">{headline}</span>
             {headlineAccent && (

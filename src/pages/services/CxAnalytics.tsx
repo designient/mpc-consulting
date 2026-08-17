@@ -17,7 +17,6 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_CX_ANALYTICS,
-  SERVICES_INDEX,
   SOLUTION_POWER_BI,
   SOLUTION_SALESFORCE,
   SOLUTION_SERVICENOW,
@@ -34,7 +33,7 @@ const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop';
 
 const BREADCRUMB = [
-  { label: 'Services', to: SERVICES_INDEX },
+  { label: 'Services' },
   { label: 'CX & Analytics' },
 ];
 
@@ -161,7 +160,7 @@ export function CxAnalytics() {
           primaryCtaTo="/contact/"
           secondaryCtaText="Explore Overview"
           secondaryCtaTo="#overview"
-          imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/cx-analytics-hero.png"
           imageAlt="Analytics dashboard and customer experience data"
           breadcrumb={BREADCRUMB}
         />

@@ -16,15 +16,13 @@ import { PillarsSection } from '../components/sections/PillarsSection';
 import { CTABand } from '../components/sections/CTABand';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
-  Breadcrumb,
   buildBreadcrumbSchema } from
 '../components/sections/Breadcrumb';
 import { LogoCloud } from '../components/sections/LogoCloud';
 import { PARTNER_LOGOS } from '../data/partnerLogos';
 const BREADCRUMB = [{ label: 'About' }];
 
-const HERO_BG =
-  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
+const HERO_BG = '/about-hero.png';
 
 const TIMELINE = [
 {
@@ -199,18 +197,7 @@ export function About() {
           <div aria-hidden className="absolute inset-0 bg-cta/55" />
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
-            <Breadcrumb
-              items={BREADCRUMB}
-              variant="dark"
-              className="mb-6 md:mb-8 w-full max-w-[1100px] mx-auto lg:mx-0"
-            />
-
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                About MPC
-              </span>
-
               <h1 className="type-h1 text-text-inverse">
                 About MPC Cloud Consulting
               </h1>

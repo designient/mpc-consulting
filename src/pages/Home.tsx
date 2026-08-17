@@ -21,14 +21,9 @@ import { StickyNav } from '../components/layout/StickyNav';
 import { FooterDark } from '../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO';
 import { Heading } from '../components/ui/Heading';
-import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
 import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
-import {
-  statAccentCardClass,
-  statAccentLabelClass,
-} from '../components/ui/StatCallout';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -36,8 +31,7 @@ import {
 import { LogoCloud } from '../components/sections/LogoCloud';
 import { ERP_CLIENT_LOGOS, HCM_CLIENT_LOGOS } from '../data/clientLogos';
 
-const HERO_BG =
-  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
+const HERO_BG = '/home-hero.png';
 
 const SERVICES = [
   {
@@ -222,11 +216,6 @@ export function Home() {
 
           <div className="relative w-full max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px] py-12 md:py-14 lg:py-16 min-h-[inherit] flex flex-col justify-center text-text-inverse">
             <div className="w-full max-w-[1100px] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="section-eyebrow-inverse inline-flex items-center gap-2 tracking-[0.2em] mb-4 md:mb-5 text-text-inverse">
-                <span className="w-1.5 h-1.5 rounded-full bg-text-inverse" />
-                Oracle Cloud · AI Transformation
-              </span>
-
               <h1 className="type-h1 text-text-inverse">
                 From Cloud First to{' '}
                 <span className="font-body italic font-normal text-text-inverse">
@@ -242,7 +231,7 @@ export function Home() {
 
               <div className="flex items-center justify-center lg:justify-start mt-6 md:mt-8">
                 <Link
-                  to="/services/"
+                  to="/#services"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
                   Explore Our Services
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -293,7 +282,7 @@ export function Home() {
         </section>
 
         {/* SERVICES TEASER */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
+        <section id="services" className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
           <div className="text-center mb-10 max-w-[800px] mx-auto">
             <p className="section-eyebrow mb-3">
               Services
@@ -360,76 +349,6 @@ export function Home() {
                 </Link>
               );
             })}
-          </div>
-        </section>
-
-        {/* ABOUT TEASER + STATS */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div>
-              <p className="section-eyebrow mb-3">
-                About MPC
-              </p>
-              <Heading level={2} className="mb-5">
-                The MPC Difference
-              </Heading>
-              <p className="font-body text-[18px] leading-[1.6] text-text-primary opacity-90 mb-5">
-                Founded in 2019, MPC Cloud Consulting has grown into a global
-                Oracle implementation and AI transformation partner with 8
-                global offices across India, UAE, Singapore, Australia, and the UK.
-              </p>
-              <p className="font-body text-[16px] leading-[1.7] text-text-primary opacity-80 mb-7">
-                We combine Oracle-certified expertise with genuine industry
-                knowledge to deliver outcomes that move the needle, not just
-                go-lives that hit a date. Our 700+ consultants have shaped ERP,
-                HCM, and AI strategies for 65+ enterprises across four
-                continents.
-              </p>
-              <Link to="/about/">
-                <Button variant="primary" size="md">
-                  About MPC
-                </Button>
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 gap-4 md:gap-5">
-              {[
-              {
-                n: '2019',
-                l: 'Founded'
-              },
-              {
-                n: '8',
-                l: 'Global Offices'
-              },
-              {
-                n: '4',
-                l: 'Countries'
-              },
-              {
-                n: 'Oracle + AI',
-                l: 'Focus'
-              }].
-              map((s) => {
-              const isCompactStat = s.n === 'Oracle + AI';
-              return (
-              <div
-                key={s.l}
-                className={`${statAccentCardClass} p-5 md:p-6 min-w-0`}>
-                <div
-                  className={`font-heading font-semibold text-white leading-tight mb-1 ${
-                    isCompactStat
-                      ? 'text-[20px] sm:text-[22px] md:text-[24px] whitespace-nowrap'
-                      : 'text-[26px] sm:text-[28px] md:text-[32px]'
-                  }`}>
-                  {s.n}
-                </div>
-                <div className={`${statAccentLabelClass} !mt-1.5 text-[13px]`}>
-                  {s.l}
-                </div>
-              </div>
-              );
-              })}
-            </div>
           </div>
         </section>
 
