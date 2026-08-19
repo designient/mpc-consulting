@@ -93,7 +93,7 @@ export function CaseStudies() {
         primaryCtaTo="/contact/"
         secondaryCtaText="Explore stories"
         secondaryCtaTo="#library"
-        imageSrc="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1400&q=80"
+        imageSrc="/case-studies-hero.png"
         imageAlt="MPC case studies"
         breadcrumb={BREADCRUMB}
       />

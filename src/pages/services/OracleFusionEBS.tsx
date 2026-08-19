@@ -210,12 +210,12 @@ export function OracleFusionEBS() {
           subhead="HCM, ERP, SCM, Unifier, EPM, and technology services across Oracle Fusion Cloud and E-Business Suite, delivered by specialists who know the platform at depth."
           primaryCtaText="Talk to Our Oracle Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Overview"
-          secondaryCtaTo="#overview"
           imageSrc="/oracle-fusion-ebs-hero.png"
           imageAlt="Enterprise team reviewing Oracle Cloud strategy"
           breadcrumb={BREADCRUMB}
         />
+
+        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
           title="What is MPC's Oracle (Fusion & EBS) practice?"
@@ -223,8 +223,6 @@ export function OracleFusionEBS() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Enterprise team reviewing Oracle Cloud strategy"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceCapabilities
           title="Full Oracle portfolio coverage"

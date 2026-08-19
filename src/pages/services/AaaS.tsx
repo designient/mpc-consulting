@@ -179,14 +179,14 @@ export function AaaS() {
           imageAlt="Training workshop with engaged participants"
           breadcrumb={BREADCRUMB} />
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         <ServiceWhatIs
           title="What is Adoption as a Service?"
           body="AaaS is MPC's structured user-enablement service for Oracle Cloud, covering change management, training, communications, super-user programmes, and ongoing enablement. It exists because implementation isn't enough: 70% of technology transformations fail to deliver intended benefits, and the cause is almost always human, not technical."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Training workshop with engaged participants"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

@@ -212,6 +212,8 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           </div>
         </section>
 
+        <TableOfContents items={tocItems} variant="inline" />
+
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
             <div className="flex flex-col items-start">
@@ -231,8 +233,6 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
             </div>
           </div>
         </section>
-
-        <TableOfContents items={tocItems} variant="inline" />
 
         <section
           id="overview"

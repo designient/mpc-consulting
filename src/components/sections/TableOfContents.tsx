@@ -9,7 +9,7 @@ export interface TOCItem {
 export interface TableOfContentsProps {
   items: TOCItem[];
   title?: string;
-  /** Sidebar list (default) or horizontal sticky bar below the main nav */
+  /** Sidebar list (default) or horizontal sticky bar below the hero */
   variant?: 'sidebar' | 'inline';
   /** Scroll offset when jumping to a section (px). Inline variant auto-measures if omitted. */
   scrollOffset?: number;
@@ -30,11 +30,9 @@ export function TableOfContents({
 }: TableOfContentsProps) {
   const [activeHash, setActiveHash] = useState(items[0]?.hash || '');
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isPinned, setIsPinned] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(80);
-  const [navHeight, setNavHeight] = useState(52);
+  const [navHeight, setNavHeight] = useState(56);
 
-  const sentinelRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
 
   const inlineOffset =
@@ -62,22 +60,7 @@ export function TableOfContents({
       window.removeEventListener('resize', updateMeasurements);
       resizeObserver.disconnect();
     };
-  }, [variant, isPinned]);
-
-  useEffect(() => {
-    if (variant !== 'inline') return;
-
-    const sentinel = sentinelRef.current;
-    if (!sentinel) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsPinned(!entry.isIntersecting),
-      { threshold: 0, rootMargin: `-${headerHeight}px 0px 0px 0px` },
-    );
-
-    observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, [variant, headerHeight]);
+  }, [variant]);
 
   useEffect(() => {
     const elements = items
@@ -123,38 +106,32 @@ export function TableOfContents({
 
   if (variant === 'inline') {
     return (
-      <div className="w-full">
-        <div ref={sentinelRef} className="h-px w-full" aria-hidden />
-        <nav
-          ref={navRef}
-          aria-label="Page sections"
-          style={{ top: isPinned ? headerHeight : undefined }}
-          className={`z-40 w-full bg-white/95 backdrop-blur-md border-b border-black/8 shadow-subtle ${
-            isPinned ? 'fixed left-0 right-0' : 'relative'
-          }`}>
-          <div className="max-w-[1400px] mx-auto px-4 md:px-10 lg:px-[60px]">
-            <div className="flex items-center gap-1 overflow-x-auto py-3 md:py-3.5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {items.map((it) => {
-                const isActive = activeHash === it.hash;
-                return (
-                  <a
-                    key={it.hash}
-                    href={`#${it.hash}`}
-                    onClick={(e) => handleClick(e, it.hash)}
-                    className={`shrink-0 px-3.5 py-2 rounded-full font-body text-[13px] md:text-[14px] font-medium whitespace-nowrap transition-colors ${
-                      isActive
-                        ? 'bg-cta text-white'
-                        : 'text-text-primary/75 hover:text-cta hover:bg-bg-light'
-                    }`}>
-                    {it.label}
-                  </a>
-                );
-              })}
-            </div>
+      <nav
+        ref={navRef}
+        aria-label="Page sections"
+        style={{ top: headerHeight }}
+        className="sticky z-40 w-full bg-bg-minimal border-b border-black/5">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12">
+          <div className="flex items-center gap-1 overflow-x-auto h-14 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {items.map((it) => {
+              const isActive = activeHash === it.hash;
+              return (
+                <a
+                  key={it.hash}
+                  href={`#${it.hash}`}
+                  onClick={(e) => handleClick(e, it.hash)}
+                  className={`shrink-0 px-3 py-1.5 rounded-full font-body text-[13px] font-medium whitespace-nowrap transition-colors ${
+                    isActive
+                      ? 'bg-cta text-white'
+                      : 'text-text-primary/75 hover:text-cta hover:bg-white'
+                  }`}>
+                  {it.label}
+                </a>
+              );
+            })}
           </div>
-        </nav>
-        {isPinned && <div style={{ height: navHeight }} aria-hidden />}
-      </div>
+        </div>
+      </nav>
     );
   }
 

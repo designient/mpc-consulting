@@ -259,11 +259,11 @@ export function ERP() {
           subhead="Oracle Fusion and EBS implementation, migration, and managed service, for enterprises that need ERP that performs at the pace of their business."
           primaryCtaText="Talk to Our ERP Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="See the Comparison"
-          secondaryCtaTo="#comparison"
           imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
           imageAlt="Finance team reviewing ERP dashboards"
           breadcrumb={BREADCRUMB} />
+
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <ServiceWhatIs
           title="What is Oracle ERP Cloud?"
@@ -271,8 +271,6 @@ export function ERP() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Finance team reviewing ERP dashboards"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

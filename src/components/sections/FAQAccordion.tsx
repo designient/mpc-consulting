@@ -81,10 +81,9 @@ export function FAQAccordion({
         }
           <div>
             {eyebrow &&
-          <span className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider" />
+          <p className="font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
                 {eyebrow}
-              </span>
+              </p>
           }
             <h2 className="type-h2 text-text-primary mb-8">
               {title}
@@ -96,10 +95,9 @@ export function FAQAccordion({
       <div className="max-w-[1200px] mx-auto w-full">
           <div className="text-center mb-10">
             {eyebrow &&
-          <span className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-divider" />
+          <p className="font-body text-[14px] uppercase tracking-[2px] font-semibold text-divider mb-4">
                 {eyebrow}
-              </span>
+              </p>
           }
             <h2 className="type-h2 text-text-primary">
               {title}

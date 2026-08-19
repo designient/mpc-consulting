@@ -317,6 +317,8 @@ export function HCM() {
           </div>
         </section>
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         {/* What is Oracle HCM Cloud */}
         <section className="w-full bg-bg-light px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1280px] mx-auto">
@@ -342,8 +344,6 @@ export function HCM() {
             </div>
           </div>
         </section>
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         {/* Overview */}
         <section

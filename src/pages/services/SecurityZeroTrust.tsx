@@ -159,12 +159,12 @@ export function SecurityZeroTrust() {
           subhead="Cybersecurity strategy, application and cloud security, and managed operations built on Zero Trust principles and AI-enabled threat protection."
           primaryCtaText="Talk to Our Security Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Overview"
-          secondaryCtaTo="#overview"
           imageSrc="/security-zero-trust-hero.png"
           imageAlt="Cybersecurity and network protection"
           breadcrumb={BREADCRUMB}
         />
+
+        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
           title="What is MPC's Security & Zero Trust practice?"
@@ -172,8 +172,6 @@ export function SecurityZeroTrust() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Cybersecurity and network protection"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceCapabilities
           title="Full security & Zero Trust portfolio"

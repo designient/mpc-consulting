@@ -223,14 +223,14 @@ export function DevOps() {
           imageAlt="Modern data centre infrastructure"
           breadcrumb={BREADCRUMB} />
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         <ServiceWhatIs
           title="What does enterprise DevOps look like?"
           body="DevOps is not a toolset, it is an operating model. MPC helps enterprises build the practices, pipelines, and platforms that allow development and operations to work as one, shipping faster, failing less, and recovering quicker. We deliver CI/CD, containers, multi-cloud infra, IaC, DR, and DevSecOps."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Modern data centre infrastructure"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

@@ -245,14 +245,14 @@ export function HCaaS() {
           imageAlt="Analytics dashboards under review"
           breadcrumb={BREADCRUMB} />
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         <ServiceWhatIs
           title="What is Health Check as a Service?"
           body="HCaaS is MPC's structured 4-week Oracle Cloud audit. Senior consultants review your Oracle environment across six dimensions, performance, configuration, security, data quality, integration health, and user adoption, and deliver an executive summary, technical report, risk register, and prioritised remediation roadmap."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Analytics dashboards under review"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

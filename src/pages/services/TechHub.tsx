@@ -261,14 +261,14 @@ export function TechHub() {
           breadcrumb={BREADCRUMB}
         />
 
+        <TableOfContents items={TOC} variant="inline" />
+
         <ServiceWhatIs
           title="What is MPC's AI CoE?"
           body="MPC's AI CoE (Centre of Excellence) is a production-grade AI capability embedded within our Oracle consulting practice. We design Oracle AI Agents, build tailored AI solutions, develop reusable accelerators, explore emerging capabilities through prototypes and PoCs, and upskill our consultants so AI lands in real business processes."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="MPC AI CoE, enterprise AI and Oracle innovation"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <section
           id="overview"

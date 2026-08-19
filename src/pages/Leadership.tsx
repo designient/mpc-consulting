@@ -8,8 +8,7 @@ import {
 
 const BREADCRUMB = [{ label: 'Leadership' }];
 
-const HERO_BG =
-  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=80';
+const HERO_BG = '/leadership-hero.png';
 
 const MANAGEMENT_TEAM = [
   {
@@ -27,55 +26,55 @@ const MANAGEMENT_TEAM = [
   {
     name: 'Siva Prakya',
     title: 'Director & CTO',
-    image: '/mpc-leadership/Siva-Prakya.png',
+    image: '/mpc-leadership/siva-prakya.png',
     linkedin: 'https://www.linkedin.com/in/siva-prakya-99b4361b1/',
   },
   {
     name: 'Abhay Singh',
     title: 'Chief Business Office',
-    image: '/mpc-leadership/Abhay-Singh.png',
+    image: '/mpc-leadership/abhay-singh.png',
     linkedin: 'https://www.linkedin.com/in/abhay-singh-05982910/',
   },
   {
     name: 'Mukund Moorthy',
     title: 'Head of Strategy',
-    image: '/mpc-leadership/Mukund-Moorthy.png',
+    image: '/mpc-leadership/mukund-moorthy.png',
     linkedin: 'https://www.linkedin.com/in/mukund-moorthy-82293972/',
   },
   {
     name: 'Gurbir Soi',
     title: 'Head of Strategic Accounts',
-    image: '/mpc-leadership/Gurbir-Soi.png',
+    image: '/mpc-leadership/gurbir-soi.png',
     linkedin: 'https://www.linkedin.com/in/gurbir-soi-b1247026/',
   },
   {
     name: 'Pushyamy Arapirala',
     title: 'Head of HCM',
-    image: '/mpc-leadership/Pushyamy-Arapirala.png',
+    image: '/mpc-leadership/pushyamy-arapirala.png',
     linkedin: 'https://www.linkedin.com/in/pushyamy-arapirala-577a8043/',
   },
   {
     name: 'Vikas Basantani',
     title: 'P&L Leader - ANZ',
-    image: '/mpc-leadership/Vikas-Basantani.png',
+    image: '/mpc-leadership/vikas-basantani.png',
     linkedin: 'https://www.linkedin.com/in/vikas-basantani-7432365/',
   },
   {
     name: 'Vikas Chaudhary',
     title: 'Head of ERP',
-    image: '/mpc-leadership/Vikas-Chaudhary.png',
+    image: '/mpc-leadership/vikas-chaudhary.png',
     linkedin: 'https://www.linkedin.com/in/vikas-chaudhary-6a034126/',
   },
   {
     name: 'Aditya Tiruveedhula',
     title: 'Head of Tech',
-    image: '/mpc-leadership/Aditya-Tiruveedhula.png',
+    image: '/mpc-leadership/aditya-tiruveedhula.png',
     linkedin: 'https://www.linkedin.com/in/tadityachandra/',
   },
   {
     name: 'Arup Das',
     title: 'Program Director',
-    image: '/mpc-leadership/Arup-Das.png',
+    image: '/mpc-leadership/arup-das.png',
     linkedin: 'https://www.linkedin.com/in/arup-das-9a84b884/',
   },
 ];

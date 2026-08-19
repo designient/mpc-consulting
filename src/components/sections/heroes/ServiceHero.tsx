@@ -52,7 +52,7 @@ export function ServiceHero({
             {subhead}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-6 md:mt-8">
+          <div className={`flex items-center justify-center lg:justify-start mt-6 md:mt-8${secondaryCtaText && secondaryCtaTo ? ' flex-col sm:flex-row gap-3' : ''}`}>
             <Link
               to={primaryCtaTo}
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">

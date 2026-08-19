@@ -229,14 +229,14 @@ export function Java() {
           imageAlt="Software engineering team at work"
           breadcrumb={BREADCRUMB} />
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         <ServiceWhatIs
           title="What does MPC's Java practice deliver?"
           body="MPC builds production-grade enterprise Java applications using Spring Boot, microservices patterns, and API-first architectures, designed to integrate cleanly with Oracle Cloud and other enterprise platforms. We deliver full-stack development, REST and GraphQL APIs, legacy modernisation, and database engineering."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Software engineering team at work"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

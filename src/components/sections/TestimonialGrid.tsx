@@ -180,13 +180,10 @@ export function TestimonialGrid({
       {(eyebrow || title) && (
         <div className={`max-w-[1280px] mx-auto mb-12 ${headerAlignCls}`}>
           {eyebrow && (
-            <span
-              className={`inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-[2px] font-semibold ${isDark ? 'text-white/80' : 'text-divider'} mb-4`}>
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${isDark ? 'bg-white/80' : 'bg-divider'}`}
-              />
+            <p
+              className={`font-body text-[14px] uppercase tracking-[2px] font-semibold ${isDark ? 'text-white/80' : 'text-divider'} mb-4`}>
               {eyebrow}
-            </span>
+            </p>
           )}
           {title && (
             <h2

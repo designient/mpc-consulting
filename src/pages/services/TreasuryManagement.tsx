@@ -272,12 +272,12 @@ export function TreasuryManagement() {
           subhead="An all-in-one treasury tech platform supporting multi-company, multi-location, multi-currency, and multi-asset class operations."
           primaryCtaText="Request a Demo"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Overview"
-          secondaryCtaTo="#overview"
           imageSrc="/treasury-management-hero.png"
           imageAlt="Treasury management and financial analytics"
           breadcrumb={BREADCRUMB}
         />
+
+        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
           title="What is MPC's Treasury Management practice?"
@@ -285,8 +285,6 @@ export function TreasuryManagement() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Treasury management and financial analytics"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceCapabilities
           title="Full treasury management portfolio"

@@ -36,8 +36,7 @@ const INDUSTRIES = [
   'Customer experience expectations rising faster than internal systems',
   'AI and data governance demands across risk, fraud, and compliance'],
 
-  image:
-  'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80'
+  image: '/industry-types/bfsi-thumbnail.png'
 },
 {
   id: 'manufacturing',
@@ -51,8 +50,7 @@ const INDUSTRIES = [
   'Skilled-labour shortages and rapid workforce shifts',
   'Sustainability and ESG reporting expectations from buyers'],
 
-  image:
-  'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/Manufacturing-thumbnail.png'},
 {
   id: 'travel',
   label: 'Travel & Hospitality',
@@ -65,8 +63,7 @@ const INDUSTRIES = [
   'Pressure to personalise guest experience at scale',
   'Rising distribution costs and channel complexity'],
 
-  image:
-  'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/Travel-and-Hospitality-thumbnail.png'},
 {
   id: 'real-estate',
   label: 'Real Estate',
@@ -79,8 +76,7 @@ const INDUSTRIES = [
   'Workforce spanning HQ, on-site, and contracted staff',
   'Investor and lender reporting expectations rising every cycle'],
 
-  image:
-  'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/real-estate--thumbnail.png'},
 {
   id: 'energy',
   label: 'Energy & Utilities',
@@ -93,8 +89,7 @@ const INDUSTRIES = [
   'Energy transition and ESG reshaping the cost base',
   'Cyber and OT/IT convergence raising security stakes'],
 
-  image:
-  'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/Energy-and-Utilities--thumbnail.png'},
 {
   id: 'telecom',
   label: 'Telecom',
@@ -107,8 +102,7 @@ const INDUSTRIES = [
   '5G and edge investments competing with legacy maintenance',
   'AI-driven customer service redefining cost-to-serve'],
 
-  image:
-  'https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/telecom-thumbnail.png'},
 {
   id: 'public-sector',
   label: 'Public Sector',
@@ -121,8 +115,7 @@ const INDUSTRIES = [
   'Citizen experience expectations rising alongside private sector',
   'Audit, transparency, and accessibility non-negotiables'],
 
-  image:
-  'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80'},
+  image: '/industry-types/public-sector-thumbnail.png'},
 {
   id: 'professional-services',
   label: 'Professional Services',
@@ -135,8 +128,7 @@ const INDUSTRIES = [
   'Global teams needing one source of truth for utilisation',
   'Client-facing AI and automation reshaping service delivery'],
 
-  image:
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=80'}];
+  image: '/industry-types/Professional-services-thumbnail.png'}];
 
 const WHY_PILLARS = [
 {
@@ -253,7 +245,7 @@ export function Industries() {
         subhead="MPC builds for sectors, not stereotypes. Our practice leads, accelerators, and delivery playbooks are tuned for the eight industries we know deeply, so your transformation starts informed."
         primaryCtaText="Talk to an industry lead"
         primaryCtaTo="/contact/"
-        imageSrc="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1400&q=80"
+        imageSrc="/Industries-hero.png"
         imageAlt="Cross-industry team collaborating"
         breadcrumb={[
         {

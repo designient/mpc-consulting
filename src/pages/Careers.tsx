@@ -16,8 +16,7 @@ import { SEO, ORGANIZATION_SCHEMA } from '../components/seo/SEO';
 import { buildBreadcrumbSchema } from '../components/sections/Breadcrumb';
 const BREADCRUMB = [{ label: 'Careers' }];
 
-const HERO_BG =
-  'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=2400&q=80';
+const HERO_BG = '/careers-hero.png';
 
 const CAREER_PATH_BG = '/career-path-bg.png';
 

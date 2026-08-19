@@ -228,7 +228,7 @@ export function Resources() {
         primaryCtaTo="#newsletter"
         secondaryCtaText="Talk to a consultant"
         secondaryCtaTo="/contact/"
-        imageSrc="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?auto=format&fit=crop&w=1400&q=80"
+        imageSrc="/resources-hero.png"
         imageAlt="MPC Resources"
         breadcrumb={[
         {

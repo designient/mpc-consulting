@@ -212,14 +212,14 @@ export function BPC() {
           imageAlt="Strategy session with whiteboard process maps"
           breadcrumb={BREADCRUMB} />
 
+        <TableOfContents items={TOC_ITEMS} variant="inline" />
+
         <ServiceWhatIs
           title="What is Business Process Consulting?"
           body="BPC is the discipline of mapping, redesigning, and optimising business operations. Finance, HR, Supply Chain, Sales, so your Oracle Cloud implementation succeeds on a solid process foundation. MPC's BPC practice runs assessments, designs future-state processes aligned to Oracle Cloud capabilities, and identifies AI augmentation opportunities."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Strategy session with whiteboard process maps"
         />
-
-        <TableOfContents items={TOC_ITEMS} variant="inline" />
 
         <section
           className="scroll-mt-[140px] w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">

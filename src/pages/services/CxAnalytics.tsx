@@ -158,12 +158,12 @@ export function CxAnalytics() {
           subhead="Power BI, Salesforce, and ServiceNow for customer experience and insight, implemented, rolled out globally, and supported long after go-live."
           primaryCtaText="Talk to Our CX Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Overview"
-          secondaryCtaTo="#overview"
           imageSrc="/cx-analytics-hero.png"
           imageAlt="Analytics dashboard and customer experience data"
           breadcrumb={BREADCRUMB}
         />
+
+        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
           title="What is MPC's CX & Analytics practice?"
@@ -171,8 +171,6 @@ export function CxAnalytics() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Analytics dashboard and customer experience data"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceCapabilities
           title="Full CX & analytics portfolio"

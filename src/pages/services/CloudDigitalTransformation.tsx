@@ -162,12 +162,12 @@ export function CloudDigitalTransformation() {
           subhead="Application development, database migration, and cloud management at scale, across OCI, AWS, Azure, and GCP."
           primaryCtaText="Talk to Our Cloud Team"
           primaryCtaTo="/contact/"
-          secondaryCtaText="Explore Overview"
-          secondaryCtaTo="#overview"
           imageSrc="/cloud-digital-transformation-hero.png"
           imageAlt="Modern cloud infrastructure and digital transformation"
           breadcrumb={BREADCRUMB}
         />
+
+        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
           title="What is MPC's Cloud & Digital Transformation practice?"
@@ -175,8 +175,6 @@ export function CloudDigitalTransformation() {
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Cloud infrastructure and digital transformation systems"
         />
-
-        <TableOfContents items={TOC} variant="inline" />
 
         <ServiceCapabilities
           title="Full cloud & digital portfolio"
