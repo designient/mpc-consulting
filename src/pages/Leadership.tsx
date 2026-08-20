@@ -26,55 +26,55 @@ const MANAGEMENT_TEAM = [
   {
     name: 'Siva Prakya',
     title: 'Director & CTO',
-    image: '/mpc-leadership/Siva-Prakya.png',
+    image: '/mpc-leadership/siva-prakya.png',
     linkedin: 'https://www.linkedin.com/in/siva-prakya-99b4361b1/',
   },
   {
     name: 'Abhay Singh',
     title: 'Chief Business Office',
-    image: '/mpc-leadership/Abhay-Singh.png',
+    image: '/mpc-leadership/abhay-singh.png',
     linkedin: 'https://www.linkedin.com/in/abhay-singh-05982910/',
   },
   {
     name: 'Mukund Moorthy',
     title: 'Head of Strategy',
-    image: '/mpc-leadership/Mukund-Moorthy.png',
+    image: '/mpc-leadership/mukund-moorthy.png',
     linkedin: 'https://www.linkedin.com/in/mukund-moorthy-82293972/',
   },
   {
     name: 'Gurbir Soi',
     title: 'Head of Strategic Accounts',
-    image: '/mpc-leadership/Gurbir-Soi.png',
+    image: '/mpc-leadership/gurbir-soi.png',
     linkedin: 'https://www.linkedin.com/in/gurbir-soi-b1247026/',
   },
   {
     name: 'Pushyamy Arapirala',
     title: 'Head of HCM',
-    image: '/mpc-leadership/Pushyamy-Arapirala.png',
+    image: '/mpc-leadership/pushyamy-arapirala.png',
     linkedin: 'https://www.linkedin.com/in/pushyamy-arapirala-577a8043/',
   },
   {
     name: 'Vikas Basantani',
     title: 'P&L Leader - ANZ',
-    image: '/mpc-leadership/Vikas-Basantani.png',
+    image: '/mpc-leadership/vikas-basantani.png',
     linkedin: 'https://www.linkedin.com/in/vikas-basantani-7432365/',
   },
   {
     name: 'Vikas Chaudhary',
     title: 'Head of ERP',
-    image: '/mpc-leadership/Vikas-Chaudhary.png',
+    image: '/mpc-leadership/vikas-chaudhary.png',
     linkedin: 'https://www.linkedin.com/in/vikas-chaudhary-6a034126/',
   },
   {
     name: 'Aditya Tiruveedhula',
     title: 'Head of Tech',
-    image: '/mpc-leadership/Aditya-Tiruveedhula.png',
+    image: '/mpc-leadership/aditya-tiruveedhula.png',
     linkedin: 'https://www.linkedin.com/in/tadityachandra/',
   },
   {
     name: 'Arup Das',
     title: 'Program Director',
-    image: '/mpc-leadership/Arup-Das.png',
+    image: '/mpc-leadership/arup-das.png',
     linkedin: 'https://www.linkedin.com/in/arup-das-9a84b884/',
   },
 ];
@@ -114,15 +114,15 @@ export function Leadership() {
         </section>
 
         {/* Management Team */}
-        <section className="w-full bg-white px-4 py-12 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="w-full bg-white py-16 md:py-24 px-4 md:px-10 lg:px-[60px]">
+          <div className="max-w-[1280px] mx-auto">
             <p className="section-eyebrow mb-8 md:mb-10">Management Team</p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 justify-items-stretch">
               {MANAGEMENT_TEAM.map((member) => (
-                <article key={member.name} className="group relative pb-14 md:pb-16">
-                  <div className="relative">
-                    <div className="overflow-hidden rounded-[20px] shadow-medium">
+                <article key={member.name} className="group relative w-full min-w-0 pb-14 md:pb-16">
+                  <div className="relative w-full">
+                    <div className="overflow-hidden rounded-[20px] shadow-medium w-full">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -130,26 +130,26 @@ export function Leadership() {
                       />
                     </div>
 
-                    <div className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-[30%] z-10 w-[90%] flex items-center gap-3 rounded-full bg-black shadow-medium pl-2 pr-5 py-2.5 md:pl-2.5 md:pr-6 md:py-3.5">
+                    <div className="absolute left-3 right-3 top-full -translate-y-[30%] z-10 min-w-0 flex items-center gap-2.5 md:gap-3 rounded-full bg-black shadow-medium pl-1.5 pr-3 py-1.5 md:pl-2 md:pr-4 md:py-2.5">
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-[#0A66C2] text-white hover:opacity-90 flex items-center justify-center transition-opacity"
+                        className="shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-full bg-[#0A66C2] text-white hover:opacity-90 flex items-center justify-center transition-opacity"
                         aria-label={`${member.name} on LinkedIn`}>
                         <svg
                           viewBox="0 0 24 24"
-                          className="w-5 h-5 md:w-[22px] md:h-[22px]"
+                          className="w-4 h-4 md:w-5 md:h-5"
                           fill="currentColor"
                           aria-hidden>
                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                       </a>
-                      <div className="min-w-0 py-0.5 pr-1">
-                        <h3 className="font-heading font-semibold text-[14px] md:text-[16px] text-white leading-tight">
+                      <div className="min-w-0 flex-1 py-0.5">
+                        <h3 className="font-heading font-semibold text-[13px] md:text-[15px] text-white leading-tight truncate">
                           {member.name}
                         </h3>
-                        <p className="font-body text-[12px] md:text-[13px] leading-snug text-white mt-0.5">
+                        <p className="font-body text-[11px] md:text-[12px] leading-snug text-white/90 mt-0.5 truncate">
                           {member.title}
                         </p>
                       </div>

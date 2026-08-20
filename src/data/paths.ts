@@ -40,3 +40,5 @@ export const SOLUTION_HR_PROBATION_ASSIST =
   '/solutions/hr-probation-assist-agent/';
 export const SOLUTION_PAYROLL_ISSUE_ANALYZER =
   '/solutions/payroll-issue-analyzer-agent/';
+export const SOLUTION_AR_PAYTHREAD = '/solutions/ar-paythread/';
+export const SOLUTION_RESOURCESYNCX = '/solutions/resourcesyncx/';

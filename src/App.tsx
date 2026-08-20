@@ -31,6 +31,8 @@ import { CVScreeningAgent } from './pages/solutions/CVScreeningAgent';
 import { HROnboardingAssistant } from './pages/solutions/HROnboardingAssistant';
 import { HRProbationAssistAgent } from './pages/solutions/HRProbationAssistAgent';
 import { PayrollIssueAnalyzerAgent } from './pages/solutions/PayrollIssueAnalyzerAgent';
+import { ARPayThread } from './pages/solutions/ARPayThread';
+import { ResourceSyncX } from './pages/solutions/ResourceSyncX';
 import { TechHub } from './pages/services/TechHub';
 import { OracleFusionEBS } from './pages/services/OracleFusionEBS';
 import { CloudDigitalTransformation } from './pages/services/CloudDigitalTransformation';
@@ -44,9 +46,11 @@ import { Careers } from './pages/Careers';
 import { Leadership } from './pages/Leadership';
 import { Values } from './pages/Values';
 import { PageStub } from './components/layout/PageStub';
+import { ScrollToTop } from './components/layout/ScrollToTop';
 export function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -126,6 +130,8 @@ export function App() {
           path="/solutions/payroll-issue-analyzer-agent/"
           element={<PayrollIssueAnalyzerAgent />}
         />
+        <Route path="/solutions/ar-paythread/" element={<ARPayThread />} />
+        <Route path="/solutions/resourcesyncx/" element={<ResourceSyncX />} />
 
         {/* Legacy solution redirects */}
         <Route path="/services/hcm/" element={<Navigate to="/solutions/hcm/" replace />} />

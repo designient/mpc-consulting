@@ -29,6 +29,8 @@ import {
   SOLUTION_HR_ONBOARDING_ASSISTANT,
   SOLUTION_HR_PROBATION_ASSIST,
   SOLUTION_PAYROLL_ISSUE_ANALYZER,
+  SOLUTION_AR_PAYTHREAD,
+  SOLUTION_RESOURCESYNCX,
 } from '../../data/paths';
 
 const TOC = [
@@ -100,6 +102,16 @@ const FEATURED_AGENTS = [
     title: 'Payroll Issue Analyzer Agent',
     body: 'Identifies missing critical employee data such as Date of Birth, bank details, national ID, and payroll fields before payroll processing for HR Specialists and Payroll teams.',
     to: SOLUTION_PAYROLL_ISSUE_ANALYZER,
+  },
+  {
+    title: 'AR PayThread',
+    body: 'Reads inbound payment emails, matches them to open invoices, and sends branded PDF receipts automatically, cutting AR handling from minutes to seconds.',
+    to: SOLUTION_AR_PAYTHREAD,
+  },
+  {
+    title: 'ResourceSyncX',
+    body: 'High-volume resume screening with 0 to 100 scoring, a reusable talent pool, and one-click sync to Oracle Cloud HCM for recruiters.',
+    to: SOLUTION_RESOURCESYNCX,
   },
 ];
 
@@ -298,6 +310,7 @@ export function TechHub() {
           title="Featured AI agents"
           intro="Pre-built agents for high-impact Oracle workflows, ready to deploy and expand with your operating model."
           capabilities={FEATURED_AGENTS}
+          columns={4}
         />
 
         <section

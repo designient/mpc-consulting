@@ -15,6 +15,7 @@ export interface ServiceCapabilitiesProps {
   title: string;
   intro?: string;
   capabilities: ServiceCapability[];
+  columns?: 3 | 4;
 }
 
 export function ServiceCapabilities({
@@ -23,7 +24,13 @@ export function ServiceCapabilities({
   title,
   intro,
   capabilities,
+  columns = 3,
 }: ServiceCapabilitiesProps) {
+  const gridClass =
+    columns === 4
+      ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-[1280px] mx-auto'
+      : 'grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-[1280px] mx-auto';
+
   return (
     <section
       id={id}
@@ -37,7 +44,7 @@ export function ServiceCapabilities({
           </p>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-[1280px] mx-auto">
+      <div className={gridClass}>
         {capabilities.map((cap) => (
           <Link
             key={cap.to}

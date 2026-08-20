@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, ClipboardList, Users } from 'lucide-react';
+import { Bot, ScanSearch, Users } from 'lucide-react';
 import {
   OracleSolutionLayout,
   type OracleSolutionPageConfig,
@@ -7,8 +7,8 @@ import {
 import {
   SERVICE_AI_COE,
   SOLUTION_CV_SCREENING_AGENT,
-  SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
   SOLUTION_HCM,
+  SOLUTION_RESOURCESYNCX,
 } from '../../data/paths';
 
 const AI_COE_PARENT = {
@@ -202,11 +202,11 @@ const CONFIG: OracleSolutionPageConfig = {
       to: SOLUTION_HCM,
     },
     {
-      icon: ClipboardList,
-      title: 'Financial Close Assistant',
+      icon: ScanSearch,
+      title: 'ResourceSyncX',
       description:
-        'Another Out-of-Box AI Solution from the AI CoE, finance close orchestration.',
-      to: SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
+        'Full screen-and-sync platform: scored shortlists, talent pool reuse, and outbound sync to Oracle Cloud HCM.',
+      to: SOLUTION_RESOURCESYNCX,
     },
   ],
   faqs: [

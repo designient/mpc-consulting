@@ -1,13 +1,13 @@
 import React from 'react';
-import { Bot, Database, LineChart } from 'lucide-react';
+import { Bot, Database, Receipt } from 'lucide-react';
 import {
   OracleSolutionLayout,
   type OracleSolutionPageConfig,
 } from '../../components/layout/OracleSolutionLayout';
 import {
   SERVICE_AI_COE,
-  SOLUTION_EPM,
   SOLUTION_ERP,
+  SOLUTION_AR_PAYTHREAD,
   SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
 } from '../../data/paths';
 
@@ -98,7 +98,7 @@ const CONFIG: OracleSolutionPageConfig = {
       title: 'General Ledger',
       desc: 'Post journals, reconcile accounts, close periods. Depends on all subledgers, challenged by unposted journals and reconciliation delays.',
       imageSrc:
-        'https://images.unsplash.com/photo-1554224154-26032ffc0d62?q=80&w=2000&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2000&auto=format&fit=crop',
       imageAlt: 'General Ledger period close and reconciliation',
     },
     {
@@ -235,11 +235,11 @@ const CONFIG: OracleSolutionPageConfig = {
       to: SOLUTION_ERP,
     },
     {
-      icon: LineChart,
-      title: 'EPM',
+      icon: Receipt,
+      title: 'AR PayThread',
       description:
-        'Planning, consolidation, and reporting that sit alongside a governed period close.',
-      to: SOLUTION_EPM,
+        'Companion AR agent that matches payment emails to invoices and issues branded receipts automatically.',
+      to: SOLUTION_AR_PAYTHREAD,
     },
   ],
   faqs: [
