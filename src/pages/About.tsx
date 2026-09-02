@@ -158,7 +158,7 @@ const OFFICES = [
   addr: '7 Benton Mews, Aylesbury'
 }];
 
-const LEADERSHIP_IMG = '/mpc-leadership/Amit.png';
+const LEADERSHIP_IMG = '/mpc-leadership/amit-garg-mpc.png';
 
 const CERTIFICATIONS = [
   {

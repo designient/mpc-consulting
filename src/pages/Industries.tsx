@@ -36,7 +36,7 @@ const INDUSTRIES = [
   'Customer experience expectations rising faster than internal systems',
   'AI and data governance demands across risk, fraud, and compliance'],
 
-  image: '/industry-types/bfsi-thumbnail.png'
+  image: '/industry-types/bfsi-home-page-thumbnail.jpg'
 },
 {
   id: 'manufacturing',
@@ -50,7 +50,7 @@ const INDUSTRIES = [
   'Skilled-labour shortages and rapid workforce shifts',
   'Sustainability and ESG reporting expectations from buyers'],
 
-  image: '/industry-types/Manufacturing-thumbnail.png'},
+  image: '/industry-types/manufacturing-home-page-thumbnail.jpg'},
 {
   id: 'travel',
   label: 'Travel & Hospitality',
@@ -63,7 +63,7 @@ const INDUSTRIES = [
   'Pressure to personalise guest experience at scale',
   'Rising distribution costs and channel complexity'],
 
-  image: '/industry-types/Travel-and-Hospitality-thumbnail.png'},
+  image: '/industry-types/travel-and-hospitality-home-page-thumbnail.jpg'},
 {
   id: 'real-estate',
   label: 'Real Estate',
@@ -76,7 +76,7 @@ const INDUSTRIES = [
   'Workforce spanning HQ, on-site, and contracted staff',
   'Investor and lender reporting expectations rising every cycle'],
 
-  image: '/industry-types/real-estate--thumbnail.png'},
+  image: '/industry-types/real-estate-home-page-thumbnail.jpg'},
 {
   id: 'energy',
   label: 'Energy & Utilities',
@@ -89,7 +89,7 @@ const INDUSTRIES = [
   'Energy transition and ESG reshaping the cost base',
   'Cyber and OT/IT convergence raising security stakes'],
 
-  image: '/industry-types/Energy-and-Utilities--thumbnail.png'},
+  image: '/industry-types/energy-and-utilities-home-page-thumbnail.jpg'},
 {
   id: 'telecom',
   label: 'Telecom',
@@ -102,7 +102,7 @@ const INDUSTRIES = [
   '5G and edge investments competing with legacy maintenance',
   'AI-driven customer service redefining cost-to-serve'],
 
-  image: '/industry-types/telecom-thumbnail.png'},
+  image: '/industry-types/telecomunication-home-page-thumbnail.jpg'},
 {
   id: 'public-sector',
   label: 'Public Sector',
@@ -115,7 +115,7 @@ const INDUSTRIES = [
   'Citizen experience expectations rising alongside private sector',
   'Audit, transparency, and accessibility non-negotiables'],
 
-  image: '/industry-types/public-sector-thumbnail.png'},
+  image: '/industry-types/public-sector-home-page-thumbnail.jpg'},
 {
   id: 'professional-services',
   label: 'Professional Services',
@@ -128,7 +128,7 @@ const INDUSTRIES = [
   'Global teams needing one source of truth for utilisation',
   'Client-facing AI and automation reshaping service delivery'],
 
-  image: '/industry-types/Professional-services-thumbnail.png'}];
+  image: '/industry-types/professional-services-home-page-thumbnail.jpg'}];
 
 const WHY_PILLARS = [
 {

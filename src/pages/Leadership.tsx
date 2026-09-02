@@ -14,67 +14,79 @@ const MANAGEMENT_TEAM = [
   {
     name: 'Amit Garg',
     title: 'Founder & CEO',
-    image: '/mpc-leadership/Amit.png',
+    image: '/mpc-leadership/amit-garg-mpc.png',
     linkedin: 'https://www.linkedin.com/in/amitgargi/',
   },
   {
     name: 'Kishore Nerella',
     title: 'Co-Founder & COO',
-    image: '/mpc-leadership/Kishore.png',
+    image: '/mpc-leadership/kishore-nerella-mpc.png',
     linkedin: 'https://www.linkedin.com/in/kishorenerella/',
   },
   {
     name: 'Siva Prakya',
     title: 'Director & CTO',
-    image: '/mpc-leadership/siva-prakya.png',
+    image: '/mpc-leadership/siva-prakya-mpc.png',
     linkedin: 'https://www.linkedin.com/in/siva-prakya-99b4361b1/',
   },
   {
     name: 'Abhay Singh',
     title: 'Chief Business Office',
-    image: '/mpc-leadership/abhay-singh.png',
+    image: '/mpc-leadership/abhay-singh-mpc.png',
     linkedin: 'https://www.linkedin.com/in/abhay-singh-05982910/',
   },
   {
     name: 'Mukund Moorthy',
     title: 'Head of Strategy',
-    image: '/mpc-leadership/mukund-moorthy.png',
+    image: '/mpc-leadership/mukund-moorthy-mpc.png',
     linkedin: 'https://www.linkedin.com/in/mukund-moorthy-82293972/',
   },
   {
     name: 'Gurbir Soi',
     title: 'Head of Strategic Accounts',
-    image: '/mpc-leadership/gurbir-soi.png',
+    image: '/mpc-leadership/gurbir-soi-mpc.png',
     linkedin: 'https://www.linkedin.com/in/gurbir-soi-b1247026/',
   },
   {
     name: 'Pushyamy Arapirala',
     title: 'Head of HCM',
-    image: '/mpc-leadership/pushyamy-arapirala.png',
+    image: '/mpc-leadership/pushyamy-arapirala-mpc.png',
     linkedin: 'https://www.linkedin.com/in/pushyamy-arapirala-577a8043/',
+  },
+  {
+    name: 'Papiya Sarkhel',
+    title: 'Assistant Vice President - HR',
+    image: '/mpc-leadership/papiya-sarkhel-mpc.png',
+    linkedin: 'https://www.linkedin.com/in/papiyasarkhel123/',
   },
   {
     name: 'Vikas Basantani',
     title: 'P&L Leader - ANZ',
-    image: '/mpc-leadership/vikas-basantani.png',
+    image: '/mpc-leadership/vikas-basantani-mpc.png',
     linkedin: 'https://www.linkedin.com/in/vikas-basantani-7432365/',
   },
   {
     name: 'Vikas Chaudhary',
     title: 'Head of ERP',
-    image: '/mpc-leadership/vikas-chaudhary.png',
+    image: '/mpc-leadership/vikas-chaudhary-mpc.png',
     linkedin: 'https://www.linkedin.com/in/vikas-chaudhary-6a034126/',
   },
   {
     name: 'Aditya Tiruveedhula',
     title: 'Head of Tech',
-    image: '/mpc-leadership/aditya-tiruveedhula.png',
+    image: '/mpc-leadership/aditya-tiruveedhula-mpc.png',
     linkedin: 'https://www.linkedin.com/in/tadityachandra/',
+  },
+  {
+    name: 'Arun Koushik',
+    title: 'Chief Architect',
+    image: '/mpc-leadership/arun-koushik-mpc.png',
+    linkedin: 'https://www.linkedin.com/in/arun-koushik-mallela-ba9332a0/',
   },
   {
     name: 'Arup Das',
     title: 'Program Director',
-    image: '/mpc-leadership/arup-das.png',
+    image: '/mpc-leadership/arup-das-mpc.png',
     linkedin: 'https://www.linkedin.com/in/arup-das-9a84b884/',
   },
 ];
@@ -84,7 +96,7 @@ export function Leadership() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="MPC Leadership | Oracle Cloud & AI Transformation Leaders"
-        description="Meet MPC's leadership team, 11 leaders and 700+ Oracle Cloud experts united across India, UAE, Singapore, Australia, and the UK."
+        description="Meet MPC's leadership team, 13 leaders and 700+ Oracle Cloud experts united across India, UAE, Singapore, Australia, and the UK."
         canonicalPath="/leadership/"
         schema={[ORGANIZATION_SCHEMA, buildBreadcrumbSchema(BREADCRUMB)]}
       />
@@ -106,7 +118,7 @@ export function Leadership() {
               <h1 className="type-h1 text-text-inverse">MPC Leadership</h1>
 
               <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-                11 leaders. 700+ Oracle Cloud experts. One unified team across
+                13 leaders. 700+ Oracle Cloud experts. One unified team across
                 India, UAE, Singapore, Australia, and the UK.
               </p>
             </div>

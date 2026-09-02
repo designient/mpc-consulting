@@ -42,6 +42,8 @@ import { TreasuryManagement } from './pages/services/TreasuryManagement';
 import { Industries } from './pages/Industries';
 import { Resources } from './pages/Resources';
 import { CaseStudies } from './pages/CaseStudies';
+import { Events } from './pages/Events';
+import { EventDetail } from './pages/EventDetail';
 import { Careers } from './pages/Careers';
 import { Leadership } from './pages/Leadership';
 import { Values } from './pages/Values';
@@ -182,6 +184,8 @@ export function App() {
           } />
         
         <Route path="/resources/case-studies/" element={<CaseStudies />} />
+        <Route path="/resources/events/:slug/" element={<EventDetail />} />
+        <Route path="/resources/events/" element={<Events />} />
 
         <Route
           path="/resources/blog/"

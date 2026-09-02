@@ -30,6 +30,15 @@ const FORMAT_ITEMS = [
   'Real Oracle Cloud transformation stories, outcomes, metrics, and lessons from 87+ engagements across five regions.',
   ctaText: 'Explore case studies',
   href: '/resources/case-studies/'
+},
+{
+  imageSrc:
+  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80',
+  title: 'Events',
+  description:
+  'Webinars, roundtables, and in-person sessions where MPC practitioners share Oracle Cloud and AI insights with enterprise leaders.',
+  ctaText: 'Explore events',
+  href: '/resources/events/'
 }];
 
 const FILTERS = [

@@ -15,6 +15,7 @@ const SERVICES = [
 const RESOURCES = [
   { label: 'Resources Hub', to: '/resources/' },
   { label: 'Case Studies', to: '/resources/case-studies/' },
+  { label: 'Events', to: '/resources/events/' },
   { label: 'Blog', to: '/resources/blog/' },
 ];
 

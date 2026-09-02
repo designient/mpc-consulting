@@ -7,9 +7,9 @@ export interface ServiceHeroProps {
   headline: string;
   /** Optional italic-serif phrase appended to the headline on its own line */
   headlineAccent?: string;
-  subhead: string;
-  primaryCtaText: string;
-  primaryCtaTo: string;
+  subhead?: string;
+  primaryCtaText?: string;
+  primaryCtaTo?: string;
   secondaryCtaText?: string;
   secondaryCtaTo?: string;
   imageSrc: string;
@@ -27,6 +27,9 @@ export function ServiceHero({
   imageSrc,
   imageAlt = '',
 }: ServiceHeroProps) {
+  const showPrimaryCta = Boolean(primaryCtaText && primaryCtaTo);
+  const showSecondaryCta = Boolean(secondaryCtaText && secondaryCtaTo);
+
   return (
     <section className="relative w-full min-h-[min(58svh,600px)] max-h-[600px] overflow-hidden flex items-center">
       <img
@@ -48,25 +51,31 @@ export function ServiceHero({
             )}
           </h1>
 
-          <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
-            {subhead}
-          </p>
+          {subhead && (
+            <p className="font-body text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] text-text-inverse/90 mt-4 md:mt-5 max-w-[640px] lg:max-w-[720px]">
+              {subhead}
+            </p>
+          )}
 
-          <div className={`flex items-center justify-center lg:justify-start mt-6 md:mt-8${secondaryCtaText && secondaryCtaTo ? ' flex-col sm:flex-row gap-3' : ''}`}>
+          {(showPrimaryCta || showSecondaryCta) && (
+          <div className={`flex items-center justify-center lg:justify-start mt-6 md:mt-8${showSecondaryCta ? ' flex-col sm:flex-row gap-3' : ''}`}>
+            {showPrimaryCta && (
             <Link
-              to={primaryCtaTo}
+              to={primaryCtaTo!}
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-primary rounded-full font-body text-[15px] font-medium hover:bg-white/90 transition-colors group">
               {primaryCtaText}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            {secondaryCtaText && secondaryCtaTo && (
+            )}
+            {showSecondaryCta && (
               <Link
-                to={secondaryCtaTo}
+                to={secondaryCtaTo!}
                 className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent text-white border border-white/40 rounded-full font-body text-[14px] font-medium hover:border-white/70 hover:bg-white/10 transition-colors">
                 {secondaryCtaText}
               </Link>
             )}
           </div>
+          )}
         </div>
       </div>
     </section>
