@@ -79,7 +79,7 @@ const BREADCRUMB = [
   label: 'Services'
 },
 {
-  label: 'Oracle (Fusion & EBS)',
+  label: 'Oracle',
   to: SERVICE_ORACLE
 },
 {

@@ -36,7 +36,7 @@ const OVERVIEW_IMAGE =
 
 const BREADCRUMB = [
   { label: 'Services' },
-  { label: 'Oracle (Fusion & EBS)' },
+  { label: 'Oracle' },
 ];
 
 const CAPABILITIES = [
@@ -46,7 +46,7 @@ const CAPABILITIES = [
     to: SOLUTION_HCM,
   },
   {
-    title: 'Oracle Fusion ERP',
+    title: 'Oracle ERP',
     body: 'Cloud-native Financials, Projects, Procurement, Risk & Compliance, and Treasury, designed for modern enterprise operations.',
     to: SOLUTION_ERP,
   },
@@ -175,7 +175,7 @@ const FAQS = [
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Oracle Fusion & EBS Consulting',
+  serviceType: 'Oracle Consulting',
   provider: {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting',
@@ -190,8 +190,8 @@ export function OracleFusionEBS() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Oracle Fusion & EBS Consulting | HCM, ERP & Cloud Services | MPC"
-        description="MPC delivers end-to-end Oracle Fusion & EBS across HCM, ERP, SCM, Unifier, EPM, and cloud services. 65+ clients across India, UAE, Singapore, UK & Australia."
+        title="Oracle Consulting | HCM, ERP & Cloud Services | MPC"
+        description="MPC delivers end-to-end Oracle consulting across HCM, ERP, SCM, Unifier, EPM, and cloud services. 65+ clients across India, UAE, Singapore, UK & Australia."
         canonicalPath={SERVICE_ORACLE}
         schema={[
           ORGANIZATION_SCHEMA,
@@ -204,9 +204,9 @@ export function OracleFusionEBS() {
       <StickyNav />
       <main className="flex-grow w-full">
         <ServiceHero
-          eyebrow="Oracle Cloud · Fusion & EBS"
-          headline="One Oracle Partner for"
-          headlineAccent="Fusion & EBS"
+          eyebrow="Oracle Cloud"
+          headline="One Partner for Your"
+          headlineAccent="Oracle Estate"
           subhead="HCM, ERP, SCM, Unifier, EPM, and technology services across Oracle Fusion Cloud and E-Business Suite, delivered by specialists who know the platform at depth."
           primaryCtaText="Talk to Our Oracle Team"
           primaryCtaTo="/contact/"
@@ -218,7 +218,7 @@ export function OracleFusionEBS() {
         <TableOfContents items={TOC} variant="inline" />
 
         <ServiceWhatIs
-          title="What is MPC's Oracle (Fusion & EBS) practice?"
+          title="What is MPC's Oracle practice?"
           body="MPC's Oracle practice is an end-to-end capability spanning Oracle Fusion Cloud and E-Business Suite. With HCM and ERP as our two primary pillars, we deliver implementation, migration, extension, and managed service across the full Oracle portfolio, from Core HR and Global Payroll to Financials, Projects, and EPM."
           imageSrc={OVERVIEW_IMAGE}
           imageAlt="Enterprise team reviewing Oracle Cloud strategy"
@@ -258,7 +258,7 @@ export function OracleFusionEBS() {
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion
             eyebrow="FAQs"
-            title="Oracle (Fusion & EBS). Frequently Asked Questions"
+            title="Oracle. Frequently Asked Questions"
             items={FAQS}
             layout="full"
             bg="white"
@@ -268,7 +268,7 @@ export function OracleFusionEBS() {
         <CTABand
           title="Start your Oracle"
           titleAccent="Transformation"
-          body="Tell us about your current Oracle setup and your goals. We'll show you exactly where our Fusion & EBS practice can help."
+          body="Tell us about your current Oracle setup and your goals. We'll show you exactly where our Oracle practice can help."
           ctaText="Get in Touch"
           ctaTo="/contact/"
           variant="split"

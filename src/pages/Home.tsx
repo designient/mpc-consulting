@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Database,
@@ -28,17 +28,15 @@ import {
   FAQAccordion,
   buildFAQSchema } from
 '../components/sections/FAQAccordion';
-import { LogoCloud } from '../components/sections/LogoCloud';
-import { ERP_CLIENT_LOGOS, HCM_CLIENT_LOGOS } from '../data/clientLogos';
 
 const HERO_BG = '/home-hero.png';
 
 const SERVICES = [
   {
     icon: Database,
-    title: 'Oracle (Fusion & EBS)',
+    title: 'Oracle',
     desc: 'HCM, ERP, SCM, Unifier, EPM, and technology services across Fusion and EBS.',
-    to: '/services/oracle-fusion-ebs/',
+    to: '/services/oracle/',
   },
   {
     icon: Sparkles,
@@ -187,8 +185,6 @@ const FAQS = [
 }];
 
 export function Home() {
-  const [logoTab, setLogoTab] = useState<'hcm' | 'erp'>('hcm');
-
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
@@ -354,7 +350,7 @@ export function Home() {
 
         {/* CLIENT LOGO WALL */}
         <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="text-center mb-8">
+          <div className="text-center">
             <p className="section-eyebrow mb-3">
               Our Clients
             </p>
@@ -366,32 +362,6 @@ export function Home() {
               professional services.
             </p>
           </div>
-
-          <div className="flex justify-center gap-2 mb-8">
-            {(
-            [
-            ['hcm', 'HCM Clients'],
-            ['erp', 'ERP Clients']] as
-            const).
-            map(([key, label]) =>
-            <button
-              key={key}
-              onClick={() => setLogoTab(key)}
-              className={`px-4 py-2 rounded-full font-body text-[13px] font-medium transition-colors ${logoTab === key ? 'bg-cta text-text-inverse' : 'bg-bg-light text-text-primary hover:bg-divider/10'}`}>
-              
-                {label}
-              </button>
-            )}
-          </div>
-
-          <LogoCloud
-            key={logoTab}
-            items={logoTab === 'hcm' ? HCM_CLIENT_LOGOS : ERP_CLIENT_LOGOS}
-            bg="transparent"
-            scrollable
-            autoScroll
-          />
-          
         </section>
 
         {/* TESTIMONIALS */}

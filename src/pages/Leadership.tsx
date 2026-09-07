@@ -31,7 +31,7 @@ const MANAGEMENT_TEAM = [
   },
   {
     name: 'Abhay Singh',
-    title: 'Chief Business Office',
+    title: 'Chief Business Officer',
     image: '/mpc-leadership/abhay-singh-mpc.png',
     linkedin: 'https://www.linkedin.com/in/abhay-singh-05982910/',
   },
@@ -55,7 +55,7 @@ const MANAGEMENT_TEAM = [
   },
   {
     name: 'Papiya Sarkhel',
-    title: 'Assistant Vice President - HR',
+    title: 'Head of Human Resources',
     image: '/mpc-leadership/papiya-sarkhel-mpc.png',
     linkedin: 'https://www.linkedin.com/in/papiyasarkhel123/',
   },

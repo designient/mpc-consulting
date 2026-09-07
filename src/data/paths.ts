@@ -1,5 +1,5 @@
 /** Top-level service offerings */
-export const SERVICE_ORACLE = '/services/oracle-fusion-ebs/';
+export const SERVICE_ORACLE = '/services/oracle/';
 export const SERVICE_AI_COE = '/services/ai-coe/';
 export const SERVICE_CLOUD_DT = '/services/cloud-digital-transformation/';
 export const SERVICE_CX_ANALYTICS = '/services/cx-analytics/';

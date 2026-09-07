@@ -20,7 +20,7 @@ const HERO_BG =
 
 const COUNTRIES = ['India', 'UAE', 'Singapore', 'Australia', 'UK', 'Other'];
 const SERVICES = [
-  'Oracle (Fusion & EBS)',
+  'Oracle',
   'AI CoE',
   'Cloud & Digital Transformation',
   'CX & Analytics',

@@ -12,7 +12,7 @@ import {
 } from '../../data/paths';
 
 const SERVICES_LINKS = [
-  { label: 'Oracle (Fusion & EBS)', to: SERVICE_ORACLE },
+  { label: 'Oracle', to: SERVICE_ORACLE },
   { label: 'AI CoE', to: SERVICE_AI_COE },
   { label: 'Cloud & Digital Transformation', to: SERVICE_CLOUD_DT },
   { label: 'CX & Analytics', to: SERVICE_CX_ANALYTICS },

@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 
 const SERVICES = [
-  { label: 'Oracle (Fusion & EBS)', to: '/services/oracle-fusion-ebs/' },
+  { label: 'Oracle', to: '/services/oracle/' },
   { label: 'AI CoE', to: '/services/ai-coe/' },
   { label: 'Cloud & Digital Transformation', to: '/services/cloud-digital-transformation/' },
   { label: 'CX & Analytics', to: '/services/cx-analytics/' },

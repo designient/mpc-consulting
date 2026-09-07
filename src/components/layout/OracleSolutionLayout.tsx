@@ -74,7 +74,7 @@ type CaseStudyConfig = {
 export type OracleSolutionPageConfig = {
   canonicalPath: string;
   breadcrumbLabel: string;
-  /** Parent service in breadcrumb trail; defaults to Oracle (Fusion & EBS) */
+  /** Parent service in breadcrumb trail; defaults to Oracle */
   parentService?: { label: string; to: string };
   seoTitle: string;
   seoDescription: string;
@@ -120,7 +120,7 @@ export type OracleSolutionPageConfig = {
 function buildBreadcrumb(
   label: string,
   parent: { label: string; to: string } = {
-    label: 'Oracle (Fusion & EBS)',
+    label: 'Oracle',
     to: SERVICE_ORACLE,
   },
 ): BreadcrumbItem[] {

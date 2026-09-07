@@ -47,7 +47,7 @@ const BREADCRUMB = [
   label: 'Services'
 },
 {
-  label: 'Oracle (Fusion & EBS)',
+  label: 'Oracle',
   to: SERVICE_ORACLE
 },
 {
@@ -226,7 +226,7 @@ const RELATED = [
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Oracle ERP Cloud (Fusion & EBS) Consulting',
+  serviceType: 'Oracle ERP Cloud Consulting',
   provider: {
     '@type': 'Organization',
     name: 'MPC Cloud Consulting'
@@ -240,8 +240,8 @@ export function ERP() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Oracle ERP Cloud (Fusion & EBS) Consulting | MPC Cloud"
-        description="MPC specialises in Oracle Fusion & EBS ERP. Financials, Projects, Risk & Compliance. End-to-end implementation globally."
+        title="Oracle ERP Cloud Consulting | MPC Cloud"
+        description="MPC specialises in Oracle ERP. Financials, Projects, Risk & Compliance. End-to-end implementation globally."
         canonicalPath={SOLUTION_ERP}
         schema={[
         ORGANIZATION_SCHEMA,

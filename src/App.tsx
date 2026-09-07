@@ -67,7 +67,11 @@ export function App() {
 
         {/* Services */}
         <Route path="/services/" element={<Navigate to="/" replace />} />
-        <Route path="/services/oracle-fusion-ebs/" element={<OracleFusionEBS />} />
+        <Route path="/services/oracle/" element={<OracleFusionEBS />} />
+        <Route
+          path="/services/oracle-fusion-ebs/"
+          element={<Navigate to="/services/oracle/" replace />}
+        />
         <Route path="/services/ai-coe/" element={<TechHub />} />
         <Route
           path="/services/cloud-digital-transformation/"
