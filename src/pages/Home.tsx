@@ -348,22 +348,6 @@ export function Home() {
           </div>
         </section>
 
-        {/* CLIENT LOGO WALL */}
-        <section className="w-full bg-white px-4 py-14 md:px-10 md:py-16 lg:px-[60px] lg:py-[80px]">
-          <div className="text-center">
-            <p className="section-eyebrow mb-3">
-              Our Clients
-            </p>
-            <div className="flex justify-center">
-              <Heading level={2}>Trusted by 65+ Organisations</Heading>
-            </div>
-            <p className="font-body text-[16px] leading-[1.6] text-text-primary opacity-75 mt-4 max-w-[600px] mx-auto">
-              Across industries from BFSI and manufacturing to energy and
-              professional services.
-            </p>
-          </div>
-        </section>
-
         {/* TESTIMONIALS */}
         <TestimonialGrid
           eyebrow="Client Voices"
