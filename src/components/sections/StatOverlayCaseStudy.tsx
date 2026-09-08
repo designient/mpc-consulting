@@ -43,7 +43,7 @@ export function StatOverlayCaseStudy({
   statLabel,
   statContext,
   ctaText = 'Read case study',
-  ctaTo = '/resources/case-studies/',
+  ctaTo = '/contact/',
   ctaVariant = 'link',
   showStatOverlay = true,
   imagePosition = 'left',

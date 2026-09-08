@@ -40,8 +40,6 @@ import { CxAnalytics } from './pages/services/CxAnalytics';
 import { SecurityZeroTrust } from './pages/services/SecurityZeroTrust';
 import { TreasuryManagement } from './pages/services/TreasuryManagement';
 import { Industries } from './pages/Industries';
-import { Resources } from './pages/Resources';
-import { CaseStudies } from './pages/CaseStudies';
 import { Events } from './pages/Events';
 import { EventDetail } from './pages/EventDetail';
 import { Careers } from './pages/Careers';
@@ -167,7 +165,11 @@ export function App() {
         <Route path="/industries/" element={<Industries />} />
 
         {/* Resources */}
-        <Route path="/resources/" element={<Resources />} />
+        <Route path="/resources/" element={<Navigate to="/" replace />} />
+        <Route
+          path="/resources/case-studies/"
+          element={<Navigate to="/" replace />}
+        />
         <Route
           path="/resources/thought-leadership/"
           element={
@@ -177,17 +179,12 @@ export function App() {
             canonicalPath="/resources/thought-leadership/"
             breadcrumb={[
             {
-              label: 'Resources',
-              to: '/resources/'
-            },
-            {
               label: 'Thought Leadership'
             }]
             } />
 
           } />
         
-        <Route path="/resources/case-studies/" element={<CaseStudies />} />
         <Route path="/resources/events/:slug/" element={<EventDetail />} />
         <Route path="/resources/events/" element={<Events />} />
 
@@ -199,10 +196,6 @@ export function App() {
             description="Practical thinking on Oracle Cloud, AI, DevOps, and enterprise technology written by consultants who build these systems."
             canonicalPath="/resources/blog/"
             breadcrumb={[
-            {
-              label: 'Resources',
-              to: '/resources/'
-            },
             {
               label: 'Blog'
             }]

@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'AR PayThread reads every inbound payment email, matches it to the right open invoice, and sends a branded PDF receipt back to the customer, in seconds.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-ar-paythread.png',
   whatIsTitle: 'What is MPC AR PayThread?',
   whatIsBody:
     'MPC AR PayThread is an intelligent accounts receivable agent that closes the loop from payment email to branded receipt. It reads inbound mail in natural language, PDFs, and structured tables, scores open invoices on invoice number, amount, currency, and payment date, then auto-issues a branded PDF receipt and emails it back. High-confidence matches run without a human in the loop. Ambiguous or unmatched payments trigger a clarification or diagnostic reply instead.',

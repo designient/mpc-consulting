@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for HR Specialists, Payroll Managers, and Payroll Administrators, detect critical data gaps before the payroll run, not after.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-payroll-issue-analyzer-agent.png',
   whatIsTitle: 'What is the MPC Payroll Issue Analyzer?',
   whatIsBody:
     'The MPC Payroll Issue Analyzer identifies missing critical employee data such as Date of Birth, bank account details, national ID, and payroll-related information, helping teams quickly detect gaps before payroll processing. It can be extended to support any payroll, any legislation, and tailored to specific business requirements.',

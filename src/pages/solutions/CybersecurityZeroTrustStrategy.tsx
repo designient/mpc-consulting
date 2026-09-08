@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Identity-centric Zero Trust architecture, IAM and SASE integration, advanced threat protection, and AI-enabled cybersecurity, designed for modern enterprise risk.',
   heroCtaText: 'Talk to Our Security Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-cybersecurity-zero-trust-strategy.png',
   whatIsTitle: 'What is MPC Cybersecurity & Zero Trust Strategy?',
   whatIsBody:
     'MPC helps enterprises move from perimeter-based security to identity-centric Zero Trust models. We design architectures where every user, device, and connection is verified continuously, integrating IAM, SASE, and AI-enabled threat detection into a cohesive security strategy.',

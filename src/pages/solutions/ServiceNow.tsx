@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'ServiceNow implementation across HRSD, ITAM, ITOM, and ITSM to deliver responsive service experiences and operational control.',
   heroCtaText: 'Talk to Our ServiceNow Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-servicenow.png',
   whatIsTitle: 'What is MPC ServiceNow consulting?',
   whatIsBody:
     'MPC helps enterprises deploy ServiceNow as a unified service management platform. We streamline employee and IT service workflows, improve asset visibility, and reduce operational friction through process-led implementation.',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Activity, Workflow, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO } from '../../components/seo/SEO';
@@ -9,8 +9,6 @@ import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -22,17 +20,8 @@ import {
 import { ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
 import {
   SERVICE_ORACLE,
-  SOLUTION_AAAS,
-  SOLUTION_BPC,
-  SOLUTION_HCAAS,
   SOLUTION_HCM,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
-
-const CASE_STUDY = getCaseStudyForSolution(SOLUTION_HCM);
 
 const FAQS = [
 {
@@ -52,7 +41,7 @@ const FAQS = [
   a: "Yes. We've implemented Oracle Global Payroll across UAE, Singapore, Australia, and the UK, with full local compliance configuration."
 }];
 
-const TOC_ITEMS = withCaseStudyToc([
+const TOC_ITEMS = [
 {
   label: 'Overview',
   hash: 'overview'
@@ -72,7 +61,7 @@ const TOC_ITEMS = withCaseStudyToc([
 {
   label: 'FAQ',
   hash: 'faq'
-}]);
+}];
 
 const BREADCRUMB = [
 {
@@ -86,8 +75,7 @@ const BREADCRUMB = [
   label: 'HCM'
 }];
 
-const HERO_BG =
-  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=2400&q=80';
+const HERO_BG = '/banner-images/banner-background-solutions-hcm.png';
 
 const MODULE_CHIPS = [
 'Core HR',
@@ -225,29 +213,6 @@ const COMPARISON_ROWS = [
   'High, rework, escalations, attrition risk',
   'Lower, accelerator packs, certified delivery, fewer reworks']
 
-}];
-
-const RELATED = [
-{
-  icon: Users,
-  title: 'Adoption as a Service',
-  description:
-  'Maximise HCM ROI through change management, training, and user enablement.',
-  to: SOLUTION_AAAS
-},
-{
-  icon: Activity,
-  title: 'Health Check as a Service',
-  description:
-  'Independent audit of your live Oracle HCM environment with a remediation roadmap.',
-  to: SOLUTION_HCAAS
-},
-{
-  icon: Workflow,
-  title: 'Business Process Consulting',
-  description:
-  'Optimise HR workflows before, during, and after your Oracle HCM implementation.',
-  to: SOLUTION_BPC
 }];
 
 const SERVICE_SCHEMA = {
@@ -468,39 +433,6 @@ export function HCM() {
           headers={['Criterion', 'DIY / Generic SI', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-        
-
-        {/* Case Study */}
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={CASE_STUDY.config.tag}
-          headline={CASE_STUDY.config.headline}
-          description={CASE_STUDY.config.description}
-          metadata={CASE_STUDY.config.metadata}
-          imageSrc={CASE_STUDY.config.imageSrc}
-          imageAlt={CASE_STUDY.config.imageAlt}
-          stat={CASE_STUDY.config.stat}
-          statLabel={CASE_STUDY.config.statLabel}
-          statContext={CASE_STUDY.config.statContext}
-          ctaText="Read the full case study"
-          ctaTo={CASE_STUDY.ctaTo}
-          bg="soft" />
-        
-
-        {/* Spacer to allow stat card overlap to breathe */}
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        {/* Related Services */}
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />

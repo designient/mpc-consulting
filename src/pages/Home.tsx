@@ -23,7 +23,6 @@ import { SEO, ORGANIZATION_SCHEMA, WEB_SITE_SCHEMA } from '../components/seo/SEO
 import { Heading } from '../components/ui/Heading';
 import { Card } from '../components/ui/Card';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
-import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -356,24 +355,7 @@ export function Home() {
           variant="light"
           carousel
         />
-        
 
-        {/* FEATURED CASE STUDY */}
-        <StatOverlayCaseStudy
-          eyebrow="Featured Case Study"
-          tag="Global BFSI · 2024"
-          headline="$48M saved across an Oracle Cloud consolidation programme"
-          description="A leading multinational BFSI institution operating across three countries needed to consolidate four legacy HR systems and modernise their Oracle ERP. MPC delivered phased Core HR → Talent → Payroll alongside an ERP optimisation programme."
-          metadata="BFSI · India, UAE, Singapore, UK · HCM + ERP"
-          imageSrc="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop"
-          imageAlt="Enterprise team reviewing transformation outcomes"
-          stat="$48M"
-          statLabel="Delivered savings"
-          statContext="Across 18 months of phased Oracle consolidation and optimisation."
-          ctaText="Read the case study"
-          ctaTo="/resources/case-studies/"
-          bg="soft" />
-        
         {/* FAQ */}
         <FAQAccordion
           eyebrow="FAQ"

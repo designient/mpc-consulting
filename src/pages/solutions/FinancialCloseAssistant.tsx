@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for Financial Managers and Controllers, an AI agent that orchestrates Oracle Fusion period close across six critical finance modules, not just reports status.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-financial-close-assistant.png',
   whatIsTitle: 'What is the MPC Financial Close Assistant?',
   whatIsBody:
     'The MPC Financial Close Assistant actively orchestrates the Oracle Fusion period close, not just reports status. It detects pending transactions, triggers corrective actions, revalidates completion, and drives the period close to execution with required approvals. Built for Financial Managers and Financial Controllers who need predictable, milestone-driven close cycles.',

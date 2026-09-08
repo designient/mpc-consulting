@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Cash and liquidity, payments, investments, currency and commodity risk, trade finance, debt, and supply chain finance, unified on IBS Fintech.',
   heroCtaText: 'Talk to Our Treasury Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-treasury-operations.png',
   whatIsTitle: 'What are all aspects of treasury management?',
   whatIsBody:
     'Enterprise treasury spans far beyond cash balances, it includes liquidity forecasting, payment operations, investment portfolios, FX and commodity hedging, trade finance instruments, debt facilities, and supply chain finance. MPC delivers all eight capability areas on the IBS Fintech platform.',

@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for Buyers and Procurement Managers, a virtual procurement assistant with unified visibility across approvals, fulfillment, receipts, and supplier performance.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-purchase-order-lifecycle-analyzer.png',
   whatIsTitle: 'What is the MPC Purchase Order Lifecycle Analyzer?',
   whatIsBody:
     'The Purchase Order Lifecycle Analyzer AI Agent acts as a virtual procurement assistant, delivering unified visibility across approvals, fulfillment, receipts, and supplier performance. It proactively monitors pending approvals, escalates bottlenecks, tracks GRNs and mismatches, and automates follow-ups to ensure faster, insight-driven procurement decisions.',

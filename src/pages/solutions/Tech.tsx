@@ -26,8 +26,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Post-go-live support, health checks, upgrades, and ongoing Oracle optimisation, so your Fusion and EBS estate stays current, compliant, and performant.',
   heroCtaText: 'Talk to Our Tech Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-tech.png',
   whatIsTitle: 'What is MPC Tech?',
   whatIsBody:
     'MPC Tech is our Oracle managed services and optimisation practice, the team that keeps your Oracle environment healthy after go-live. From health checks and quarterly release readiness to incident response, upgrades, and continuous improvement, we treat your Oracle estate as if it were our own.',

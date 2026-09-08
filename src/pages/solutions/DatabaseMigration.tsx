@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Database upgrades, migrations, and data engineering. Oracle, SQL Server, MySQL, PostgreSQL, NoSQL, data lakes, and DWH built for analytics and AI.',
   heroCtaText: 'Talk to Our Data Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-database-migration.png',
   whatIsTitle: 'What is MPC Database Migration?',
   whatIsBody:
     'MPC\'s database migration practice moves enterprise data from legacy platforms to cloud-native and modern on-prem estates, with schema conversion, data validation, and cutover planning that protects business continuity. We work across Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, and cloud data platforms.',

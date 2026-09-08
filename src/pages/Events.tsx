@@ -19,7 +19,6 @@ import {
 } from '../data/events';
 
 const BREADCRUMB = [
-  { label: 'Resources', to: '/resources/' },
   { label: 'Events' },
 ];
 

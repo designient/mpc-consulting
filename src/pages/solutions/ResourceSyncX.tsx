@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'ResourceSyncX replaces manual, bias-prone screening with AI parsing, 0 to 100 scoring, a reusable talent pool, and one-click sync to Oracle Cloud HCM.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-resourcesyncx.png',
   whatIsTitle: 'What is MPC ResourceSyncX?',
   whatIsBody:
     'MPC ResourceSyncX is a custom AI agent for high-volume resume screening with actionables, built to integrate with Oracle ecosystems so talent is instantly actionable. It parses and structures candidate data, scores fit against the job description, tracks every screening run live, stores results in a searchable talent pool, and pushes shortlisted candidates to Oracle Cloud HCM. Recruiters work in role-based workspaces with granular controls on sync and export.',

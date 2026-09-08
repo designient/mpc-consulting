@@ -27,8 +27,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Demand planning, procurement, logistics, and inventory management on Oracle Fusion and EBS, implemented by specialists who understand manufacturing and distribution at scale.',
   heroCtaText: 'Schedule an SCM Discovery Call',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-scm.png',
   whatIsTitle: 'What is Oracle SCM?',
   whatIsBody:
     'Oracle SCM Cloud unifies planning, procurement, manufacturing, logistics, and order management on a single platform. MPC implements Oracle SCM for enterprises that need end-to-end visibility from demand signal to fulfilment, on Fusion Cloud or EBS, with integrations to finance and manufacturing operations.',

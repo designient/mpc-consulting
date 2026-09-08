@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for Recruiters, automatically analyze resumes against the job description, categorize applicants by fitment, and shortlist with a clear screening summary.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-cv-screening-agent.png',
   whatIsTitle: 'What is the MPC CV Screening Agent?',
   whatIsBody:
     'MPC’s CV Screening Agent automatically analyzes candidate resumes against the job description, categorizes applicants by fitment, and provides a summarized screening view to support faster recruiter decisions. Recruiters spend less time on high-volume manual review and more time on meaningful candidate engagement.',

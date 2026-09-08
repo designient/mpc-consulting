@@ -1,5 +1,4 @@
 import React from 'react';
-import { Users, Code2, Activity } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
@@ -11,8 +10,6 @@ import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { StatCalloutGrid } from '../../components/sections/StatCalloutGrid';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -22,22 +19,14 @@ import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_ORACLE,
   SOLUTION_ERP,
-  SOLUTION_HCM,
-  SOLUTION_HCAAS,
-  SOLUTION_JAVA,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
 
-const CASE_STUDY = getCaseStudyForSolution(SOLUTION_ERP);
-const TOC_ITEMS = withCaseStudyToc([
+const TOC_ITEMS = [
   { label: 'Overview', hash: 'overview' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
-]);
+];
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop';
@@ -200,29 +189,6 @@ const FAQS = [
   a: 'Yes. Our Oracle ERP practice supports global enterprises with complex multi-entity, multi-currency, multi-GAAP requirements across India, UAE, Singapore, Australia, and the UK.'
 }];
 
-const RELATED = [
-{
-  icon: Code2,
-  title: 'Java Technologies',
-  description:
-  'Custom Java applications and APIs that integrate with Oracle ERP.',
-  to: SOLUTION_JAVA
-},
-{
-  icon: Users,
-  title: 'HCM',
-  description:
-  'Oracle HCM Cloud, pairs naturally with Oracle ERP for unified back office.',
-  to: SOLUTION_HCM
-},
-{
-  icon: Activity,
-  title: 'Health Check as a Service',
-  description:
-  'Independent audit of your live Oracle ERP environment with a fix roadmap.',
-  to: SOLUTION_HCAAS
-}];
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -259,7 +225,7 @@ export function ERP() {
           subhead="Oracle Fusion and EBS implementation, migration, and managed service, for enterprises that need ERP that performs at the pace of their business."
           primaryCtaText="Talk to Our ERP Team"
           primaryCtaTo="/contact/"
-          imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
+          imageSrc="/banner-images/banner-background-solutions-erp-oracle-cloud.png"
           imageAlt="Finance team reviewing ERP dashboards"
           breadcrumb={BREADCRUMB} />
 
@@ -366,35 +332,6 @@ export function ERP() {
           headers={['Criterion', 'DIY / Generic SI', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={CASE_STUDY.config.tag}
-          headline={CASE_STUDY.config.headline}
-          description={CASE_STUDY.config.description}
-          metadata={CASE_STUDY.config.metadata}
-          imageSrc={CASE_STUDY.config.imageSrc}
-          imageAlt={CASE_STUDY.config.imageAlt}
-          stat={CASE_STUDY.config.stat}
-          statLabel={CASE_STUDY.config.statLabel}
-          statContext={CASE_STUDY.config.statContext}
-          ctaText="Read the full case study"
-          ctaTo={CASE_STUDY.ctaTo}
-          bg="soft"
-        />
-
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />

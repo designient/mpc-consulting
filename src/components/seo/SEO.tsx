@@ -121,7 +121,7 @@ export const WEB_SITE_SCHEMA = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: `${ORIGIN}/resources/?q={search_term_string}`
+      urlTemplate: `${ORIGIN}/?q={search_term_string}`
     },
     'query-input': 'required name=search_term_string'
   }

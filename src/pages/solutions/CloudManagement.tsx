@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'OCI, AWS, Azure, and GCP, cloud migration, platform management, backup and disaster recovery, and DevOps woven into how your estate runs day to day.',
   heroCtaText: 'Talk to Our Cloud Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-cloud-management.png',
   whatIsTitle: 'What is MPC Cloud Management?',
   whatIsBody:
     'MPC Cloud Management is our practice for designing, migrating, and operating workloads across Oracle Cloud Infrastructure, AWS, Azure, and Google Cloud. We deliver multi-cloud strategy, infrastructure as code, observability, backup and disaster recovery, and DevOps pipelines, so your cloud estate is secure, cost-aware, and operable.',

@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'End-to-end Salesforce delivery across B2C, B2B, OMS, Sales, Service, and Marketing, integrated with your enterprise systems.',
   heroCtaText: 'Talk to Our Salesforce Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-salesforce.png',
   whatIsTitle: 'What is MPC Salesforce implementation?',
   whatIsBody:
     'MPC helps organizations design and deploy Salesforce ecosystems that improve conversion, service quality, and operational visibility. We cover strategy, implementation, integration, rollout, and managed support across the customer lifecycle.',

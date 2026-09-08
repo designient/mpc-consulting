@@ -26,7 +26,6 @@ export function EventDetail() {
   }
 
   const breadcrumb = [
-    { label: 'Resources', to: '/resources/' },
     { label: 'Events', to: '/resources/events/' },
     { label: event.title },
   ];

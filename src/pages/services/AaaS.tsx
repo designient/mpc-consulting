@@ -1,5 +1,4 @@
 import React from 'react';
-import { Workflow, Users, Sparkles } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
@@ -9,8 +8,6 @@ import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -18,23 +15,15 @@ import {
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
-  SERVICE_AI_COE,
   SERVICE_ORACLE,
   SOLUTION_AAAS,
-  SOLUTION_BPC,
-  SOLUTION_HCM,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
 
-const CASE_STUDY = getCaseStudyForSolution(SOLUTION_AAAS);
-const TOC_ITEMS = withCaseStudyToc([
+const TOC_ITEMS = [
   { label: 'Overview', hash: 'overview' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
-]);
+];
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop';
@@ -116,27 +105,6 @@ const FAQS = [
 {
   q: 'Can AaaS run on existing Oracle environments?',
   a: 'Yes. Many enterprises engage AaaS post-go-live when adoption has stalled, we run a diagnostic, then build a recovery programme.'
-}];
-
-const RELATED = [
-{
-  icon: Workflow,
-  title: 'Business Process Consulting',
-  description: 'Optimise the processes that adoption is enabling.',
-  to: SOLUTION_BPC
-},
-{
-  icon: Users,
-  title: 'HCM',
-  description: 'Pair AaaS with HCM go-live for maximum HR adoption.',
-  to: SOLUTION_HCM
-},
-{
-  icon: Sparkles,
-  title: 'AI CoE',
-  description:
-  'AI training programmes that future-proof your workforce skills.',
-  to: SERVICE_AI_COE
 }];
 
 const SERVICE_SCHEMA = {
@@ -247,35 +215,6 @@ export function AaaS() {
           headers={['Criterion', 'Training-only vendor', 'With MPC AaaS']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={CASE_STUDY.config.tag}
-          headline={CASE_STUDY.config.headline}
-          description={CASE_STUDY.config.description}
-          metadata={CASE_STUDY.config.metadata}
-          imageSrc={CASE_STUDY.config.imageSrc}
-          imageAlt={CASE_STUDY.config.imageAlt}
-          stat={CASE_STUDY.config.stat}
-          statLabel={CASE_STUDY.config.statLabel}
-          statContext={CASE_STUDY.config.statContext}
-          ctaText="Read the full case study"
-          ctaTo={CASE_STUDY.ctaTo}
-          bg="soft"
-        />
-
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />

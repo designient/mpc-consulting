@@ -9,8 +9,6 @@ import { Heading } from '../ui/Heading';
 import { Card } from '../ui/Card';
 import { ProcessSteps } from '../sections/ProcessSteps';
 import { ComparisonTable } from '../sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema,
@@ -24,10 +22,6 @@ import {
   SERVICE_AI_COE,
   SERVICE_ORACLE,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
 
 type ModuleItem = {
   title: string;
@@ -105,10 +99,11 @@ export type OracleSolutionPageConfig = {
   comparisonTitle: string;
   comparisonIntro: string;
   comparisonRows: ComparisonRow[];
-  /** Override mapped case study slug from solutionCaseStudies */
+  /** @deprecated Case study sections removed; kept optional for existing configs */
   caseStudySlug?: string;
   caseStudy?: CaseStudyConfig;
-  related: RelatedItem[];
+  /** @deprecated Related sections removed; kept optional for existing configs */
+  related?: RelatedItem[];
   faqs: FAQItem[];
   faqTitle: string;
   ctaTitle: string;
@@ -137,17 +132,12 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
     config.parentService,
   );
   const isAiCoeAgent = config.parentService?.to === SERVICE_AI_COE;
-  const caseStudyResolved = getCaseStudyForSolution(
-    config.canonicalPath,
-    config.caseStudySlug,
-  );
-  const caseStudy = config.caseStudy ?? caseStudyResolved.config;
-  const caseStudyCtaTo = caseStudyResolved.ctaTo;
-  const tocItems = withCaseStudyToc(
+  const tocItems = (
     isAiCoeAgent
       ? config.toc.filter((item) => item.hash !== 'process' && item.hash !== 'related')
-      : config.toc,
-  );
+      : config.toc
+  ).filter((item) => item.hash !== 'case-study' && item.hash !== 'related');
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -351,36 +341,6 @@ export function OracleSolutionLayout({ config }: { config: OracleSolutionPageCon
           bg="white"
           centerHeader
         />
-
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={caseStudy.tag}
-          headline={caseStudy.headline}
-          description={caseStudy.description}
-          metadata={caseStudy.metadata}
-          imageSrc={caseStudy.imageSrc}
-          imageAlt={caseStudy.imageAlt}
-          stat={caseStudy.stat}
-          statLabel={caseStudy.statLabel}
-          statContext={caseStudy.statContext}
-          ctaText="Read the full case study"
-          ctaTo={caseStudyCtaTo}
-          bg="soft"
-        />
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        {!isAiCoeAgent && (
-          <RelatedServices
-            id="related"
-            eyebrow="Related Solutions"
-            title="Continue exploring"
-            items={config.related}
-            bg="white"
-            centerHeader
-          />
-        )}
 
         <div id="faq" className="scroll-mt-[140px]">
           <FAQAccordion

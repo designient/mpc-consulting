@@ -84,11 +84,8 @@ const LIFE_AT_MPC = [
 
 const ROLE_FILTERS = [
   { id: 'all', label: 'All teams' },
-  { id: 'engineering', label: 'Engineering' },
   { id: 'consulting', label: 'Consulting' },
-  { id: 'design', label: 'Design' },
-  { id: 'operations', label: 'Operations' },
-  { id: 'sales', label: 'Sales' }
+  { id: 'engineering', label: 'Engineering' },
 ];
 
 type Role = {
@@ -97,100 +94,92 @@ type Role = {
   team: string;
   teamId: string;
   location: string;
-  blurb: string;
+  experience: string;
+  applyUrl: string;
 };
 
 const ROLES: Role[] = [
   {
     id: 'r1',
-    title: 'Senior Oracle HCM Consultant',
+    title: 'Oracle HCM Technical',
     team: 'Consulting',
     teamId: 'consulting',
-    location: 'Dubai',
-    blurb:
-      'Lead Oracle HCM Cloud rollouts for enterprise clients across the GCC. 8+ years of Oracle HCM experience.'
+    location: 'Remote',
+    experience: '4+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4199236324',
   },
   {
     id: 'r2',
-    title: 'Oracle Cloud ERP Functional Lead',
+    title: 'Oracle Fusion HCM Functional',
     team: 'Consulting',
     teamId: 'consulting',
-    location: 'Gurugram',
-    blurb:
-      'Anchor finance and projects rollouts for our largest India clients. Strong functional + transformation lens required.'
+    location: 'Remote',
+    experience: '4+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4152255717',
   },
   {
     id: 'r3',
-    title: 'Java Engineering Lead',
-    team: 'Engineering',
-    teamId: 'engineering',
-    location: 'Bengaluru',
-    blurb:
-      'Lead a team building Oracle Cloud extensions and integrations. Spring Boot, microservices, and clean architecture.'
+    title: 'Oracle HCM Techno Functional Consultant',
+    team: 'Consulting',
+    teamId: 'consulting',
+    location: 'Remote',
+    experience: '6 to 15 Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4199959245',
   },
   {
     id: 'r4',
-    title: 'DevOps Engineer',
-    team: 'Engineering',
-    teamId: 'engineering',
-    location: 'Remote · India',
-    blurb:
-      'Kubernetes, CI/CD, observability, and multi-cloud infra for client environments. We’ll teach you Oracle Cloud.'
+    title: 'Oracle Fusion OIC Consultant',
+    team: 'Consulting',
+    teamId: 'consulting',
+    location: 'Remote',
+    experience: '4 to 8 Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4187870479',
   },
   {
     id: 'r5',
-    title: 'AI Engineer, AI CoE',
-    team: 'Engineering',
-    teamId: 'engineering',
-    location: 'Hyderabad',
-    blurb:
-      'Build AI agents and automation layered on top of Oracle Cloud. LLMs, RAG, and production-grade evals.'
+    title: 'Oracle Fusion Finance Consultant',
+    team: 'Consulting',
+    teamId: 'consulting',
+    location: 'Remote',
+    experience: '4+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4140584469',
   },
   {
     id: 'r6',
-    title: 'Senior Product Designer',
-    team: 'Design',
-    teamId: 'design',
-    location: 'Remote · UK',
-    blurb:
-      'Design internal tools and client-facing dashboards on top of Oracle Cloud. Systems thinker.'
+    title: 'Oracle Fusion SCM Consultant',
+    team: 'Consulting',
+    teamId: 'consulting',
+    location: 'Remote',
+    experience: '6+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4199955431',
   },
   {
     id: 'r7',
-    title: 'Change & Adoption Lead (AaaS)',
+    title: 'Oracle SCM Consultant',
     team: 'Consulting',
     teamId: 'consulting',
-    location: 'Melbourne',
-    blurb:
-      'Drive change management and adoption programmes for Oracle Cloud rollouts. Prosci or equivalent preferred.'
+    location: 'Melbourne, Australia',
+    experience: '7+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4182964338',
   },
   {
     id: 'r8',
-    title: 'Engagement Manager',
-    team: 'Operations',
-    teamId: 'operations',
-    location: 'London',
-    blurb:
-      'Own delivery for a portfolio of Oracle Cloud clients. Senior, ex-Big Four or boutique consulting backgrounds welcome.'
+    title: 'Oracle Fusion ERP Consultant',
+    team: 'Consulting',
+    teamId: 'consulting',
+    location: 'Melbourne, Australia',
+    experience: '7+ Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4182965145',
   },
   {
     id: 'r9',
-    title: 'Account Director. BFSI',
-    team: 'Sales',
-    teamId: 'sales',
-    location: 'Mumbai',
-    blurb:
-      'Build long-term relationships with banks and insurers. Sell outcomes, not headcount.'
+    title: 'ServiceNow Developer',
+    team: 'Engineering',
+    teamId: 'engineering',
+    location: 'Gurugram / Hyderabad',
+    experience: '8 to 10 Years',
+    applyUrl: 'https://www.linkedin.com/jobs/view/4187443769',
   },
-  {
-    id: 'r10',
-    title: 'People Operations Partner',
-    team: 'Operations',
-    teamId: 'operations',
-    location: 'Gurugram',
-    blurb:
-      'Be the HR business partner for our consulting practice, hiring, retention, and growth conversations.'
-  }
 ];
 
 const PROCESS = [
@@ -282,7 +271,7 @@ export function Careers() {
         !q ||
         r.title.toLowerCase().includes(q) ||
         r.location.toLowerCase().includes(q) ||
-        r.blurb.toLowerCase().includes(q);
+        r.experience.toLowerCase().includes(q);
       return teamMatch && searchMatch;
     });
   }, [activeFilter, searchValue]);
@@ -358,12 +347,14 @@ export function Careers() {
                     {role.location}
                   </p>
                   <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 flex-grow">
-                    {role.blurb}
+                    {role.experience} experience
                   </p>
                   <a
-                    href="#roles"
+                    href={role.applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center mt-6 px-6 py-3 bg-cta text-white rounded-button font-body text-[14px] font-semibold hover:opacity-90 transition-opacity w-fit">
-                    Apply
+                    Apply Now
                   </a>
                 </article>
               ))}
@@ -470,7 +461,9 @@ export function Careers() {
                 {filteredRoles.map((role) => (
                   <a
                     key={role.id}
-                    href={`mailto:careers@mpccloudconsulting.com?subject=Application: ${encodeURIComponent(role.title)}`}
+                    href={role.applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group bg-white rounded-card p-6 md:p-7 shadow-subtle hover:shadow-medium transition-all hover:-translate-y-0.5 flex flex-col">
                     <p className="font-body text-[14px] uppercase tracking-[1.2px] text-divider font-medium mb-2">
                       {role.team}
@@ -479,7 +472,7 @@ export function Careers() {
                       {role.title}
                     </h3>
                     <p className="font-body text-[14px] leading-[1.6] text-text-primary opacity-75 mb-5 flex-1">
-                      {role.blurb}
+                      {role.experience} experience
                     </p>
                     <div className="flex items-center justify-between pt-4 border-t border-text-primary/10">
                       <span className="inline-flex items-center gap-1.5 font-body text-[13px] text-stat">
@@ -487,7 +480,7 @@ export function Careers() {
                         {role.location}
                       </span>
                       <span className="inline-flex items-center gap-1.5 font-body text-[14px] font-medium text-cta">
-                        Apply
+                        Apply Now
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>

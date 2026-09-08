@@ -5,7 +5,6 @@ import { ServiceHero } from '../components/sections/heroes/ServiceHero';
 import { IndustryTabSwitcher } from '../components/sections/IndustryTabSwitcher';
 import { PillarsSection } from '../components/sections/PillarsSection';
 import { ComparisonTable } from '../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../components/sections/StatOverlayCaseStudy';
 import { TestimonialGrid } from '../components/sections/TestimonialGrid';
 import {
   FAQAccordion,
@@ -279,22 +278,6 @@ export function Industries() {
         highlightIndex={3}
         centerHeader
       />
-      
-
-      <StatOverlayCaseStudy
-        eyebrow="Featured Case Study"
-        tag="Manufacturing"
-        headline="38% faster month-end close for a global auto components leader"
-        description="A unified Oracle Cloud ERP and HCM rollout across 14 plants, designed around the realities of multi-entity manufacturing, with industry-specific reporting from day one."
-        metadata="14 plants · 4 countries · 9 months"
-        imageSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Manufacturing operations dashboard"
-        stat="38%"
-        statLabel="Faster month-end close"
-        statContext="Closing the books dropped from 11 days to under 7."
-        ctaText="Read case study"
-        ctaTo="/resources/case-studies/" />
-      
 
       <TestimonialGrid
         eyebrow="In their words"

@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Mobile, web, full stack, and API development, from greenfield builds to legacy modernization, delivered with enterprise-grade engineering discipline.',
   heroCtaText: 'Talk to Our App Dev Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-application-development.png',
   whatIsTitle: 'What is MPC Application Development?',
   whatIsBody:
     'MPC\'s application development practice delivers modern software across mobile, web, and backend tiers, using React, Angular, Node.js, .NET Core, Java Spring Boot, Flutter, and React Native. We build applications that integrate with Oracle, cloud platforms, and enterprise APIs without compromising security or maintainability.',

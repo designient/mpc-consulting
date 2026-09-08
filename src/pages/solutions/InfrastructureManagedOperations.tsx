@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Network and endpoint security, MSP and systems integration, SOC/NOC 24×7 monitoring, onsite engineering, and PMO, keeping your infrastructure secure and resilient.',
   heroCtaText: 'Talk to Our Security Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-infrastructure-managed-operations.png',
   whatIsTitle: 'What is MPC Infrastructure & Managed Operations?',
   whatIsBody:
     'MPC runs and secures enterprise infrastructure through managed security services, SOC/NOC operations, and resident engineering support. From network and endpoint protection to war room setup and PMO governance, we keep security operations running 24×7.',

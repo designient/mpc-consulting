@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'AppSec assessments, CSPM, penetration testing, and compliance readiness, with AI-driven insights to protect your application and cloud estate.',
   heroCtaText: 'Talk to Our Security Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-application-cloud-security.png',
   whatIsTitle: 'What is MPC Application & Cloud Security?',
   whatIsBody:
     'MPC secures enterprise applications and cloud environments through structured AppSec programmes, continuous posture management, and compliance-ready testing. We combine manual expertise with AI-driven analytics to find vulnerabilities before attackers do.',

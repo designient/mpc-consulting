@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { UserCheck, Workflow, Users, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
@@ -11,8 +11,6 @@ import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -21,24 +19,15 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_ORACLE,
-  SOLUTION_AAAS,
-  SOLUTION_BPC,
   SOLUTION_HCAAS,
-  SOLUTION_HCM,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
-import { CheckCircle } from 'lucide-react';
 
-const CASE_STUDY = getCaseStudyForSolution(SOLUTION_HCAAS);
-const TOC_ITEMS = withCaseStudyToc([
+const TOC_ITEMS = [
   { label: 'Overview', hash: 'overview' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
-]);
+];
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop';
@@ -181,28 +170,6 @@ const FAQS = [
 {
   q: 'Can MPC fix what we find?',
   a: 'Yes. After delivery, you can engage MPC for remediation work, but the audit itself is independent and not contingent on remediation engagement.'
-}];
-
-const RELATED = [
-{
-  icon: UserCheck,
-  title: 'Adoption as a Service',
-  description:
-  'If user adoption is the issue, AaaS programmes can dramatically lift ROI.',
-  to: SOLUTION_AAAS
-},
-{
-  icon: Workflow,
-  title: 'Business Process Consulting',
-  description:
-  'If process issues underlie technical problems, BPC addresses the root cause.',
-  to: SOLUTION_BPC
-},
-{
-  icon: Users,
-  title: 'HCM',
-  description: 'For HCM-specific health checks and remediation.',
-  to: SOLUTION_HCM
 }];
 
 const SERVICE_SCHEMA = {
@@ -363,35 +330,6 @@ export function HCaaS() {
           headers={['Criterion', 'Vendor self-audit', 'With MPC HCaaS']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={CASE_STUDY.config.tag}
-          headline={CASE_STUDY.config.headline}
-          description={CASE_STUDY.config.description}
-          metadata={CASE_STUDY.config.metadata}
-          imageSrc={CASE_STUDY.config.imageSrc}
-          imageAlt={CASE_STUDY.config.imageAlt}
-          stat={CASE_STUDY.config.stat}
-          statLabel={CASE_STUDY.config.statLabel}
-          statContext={CASE_STUDY.config.statContext}
-          ctaText="Read the full case study"
-          ctaTo={CASE_STUDY.ctaTo}
-          bg="soft"
-        />
-
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />

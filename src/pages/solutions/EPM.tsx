@@ -26,8 +26,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Budgeting, forecasting, and financial consolidation on Oracle EPM Cloud, for finance teams that need one version of the truth across entities and currencies.',
   heroCtaText: 'Schedule an EPM Discovery Call',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-epm.png',
   whatIsTitle: 'What is Oracle EPM?',
   whatIsBody:
     'Oracle EPM Cloud is Oracle\'s enterprise performance management platform, covering planning, budgeting, forecasting, financial consolidation, account reconciliation, and narrative reporting. MPC helps CFO teams replace spreadsheet chaos with governed, auditable planning and close processes on Oracle EPM.',

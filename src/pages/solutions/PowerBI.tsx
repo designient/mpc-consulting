@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Power BI consulting, data modelling, and enterprise dashboards built for speed, adoption, and measurable business outcomes.',
   heroCtaText: 'Talk to Our Power BI Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-power-bi.png',
   whatIsTitle: 'What is MPC Power BI Consulting?',
   whatIsBody:
     'MPC helps enterprises build modern analytics foundations with Power BI. We design semantic models, integrate data from Oracle and non-Oracle systems, and develop self-service dashboards that leadership and operations teams can trust daily.',

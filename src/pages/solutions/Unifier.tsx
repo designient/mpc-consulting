@@ -26,8 +26,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Project lifecycle management for capital programmes, document control, cost management, and portfolio visibility on Oracle Unifier.',
   heroCtaText: 'Schedule an Unifier Discovery Call',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-unifier.png',
   whatIsTitle: 'What is Oracle Unifier?',
   whatIsBody:
     'Oracle Unifier is Oracle\'s project lifecycle management platform for capital construction and infrastructure programmes. It manages documents, costs, schedules, and contracts across the project lifecycle, giving owners and contractors a single system of record from feasibility through handover.',

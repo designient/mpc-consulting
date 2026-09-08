@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for HR Specialists, HR Coordinators, and Shared Services Administrators, built-in on Oracle Fusion Cloud HCM, not bolted on.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-hr-onboarding-assistant.png',
   whatIsTitle: 'What is the MPC HR Onboarding Assistant?',
   whatIsBody:
     'The MPC HR Onboarding Assistant is an intelligent agent that identifies relevant journey tasks requiring manual confirmation and performs status updates based on verified criteria. It runs natively on Oracle AI Agent Studio atop Oracle Fusion Cloud HCM infrastructure, inheriting HR Specialist RBAC, with real-time access to new hire and journey data on a single data model.',

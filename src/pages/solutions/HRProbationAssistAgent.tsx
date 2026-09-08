@@ -33,8 +33,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'Built for HR Specialists, HR Coordinators, and Shared Services Administrators, from probation check-in to confirmation or extension, without the manual chase.',
   heroCtaText: 'Talk to Our AI CoE Team',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-hr-probation-assist-agent.png',
   whatIsTitle: 'What is the MPC HR Probation Assist Agent?',
   whatIsBody:
     'The MPC HR Probation Assistant is an intelligent agent designed to automate status updates, letter generation, and employee communication across the probation lifecycle. It enables seamless, instant execution of key actions. Confirm probation or Extend probation, as the natural continuation from onboarding through final assessment to confirmation.',

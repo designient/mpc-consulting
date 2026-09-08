@@ -32,8 +32,7 @@ const CONFIG: OracleSolutionPageConfig = {
   heroSubhead:
     'IBS Fintech unifies treasury operations on one platform, multi-company, multi-location, multi-currency, and multi-asset class, with seamless ERP and market data connectivity.',
   heroCtaText: 'Request a Demo',
-  heroImageSrc:
-    'https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2400&auto=format&fit=crop',
+  heroImageSrc: '/banner-images/banner-background-solutions-ibs-fintech.png',
   whatIsTitle: 'What is IBS Fintech?',
   whatIsBody:
     'IBS Fintech is MPC\'s treasury technology platform, an all-in-one product that replaces spreadsheets and point solutions with a unified treasury operating environment. Built for complex enterprises that need real-time visibility across cash, risk, investments, and trade finance.',

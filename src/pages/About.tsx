@@ -171,6 +171,11 @@ const CERTIFICATIONS = [
     title: 'SOC 2 Processes',
     body: 'Operational controls aligned to SOC 2 trust principles.',
   },
+  {
+    icon: ShieldCheck,
+    title: 'ISO 9001 Certified',
+    body: 'Quality management system certified to the ISO 9001 international standard.',
+  },
 ];
 
 export function About() {
@@ -399,7 +404,7 @@ export function About() {
               autoScroll
             />
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-[900px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-[1280px] mx-auto">
               {CERTIFICATIONS.map((c) => {
                 const Icon = c.icon;
                 return (

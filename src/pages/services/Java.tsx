@@ -1,5 +1,4 @@
 import React from 'react';
-import { Cloud, Database, Sparkles } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
@@ -10,8 +9,6 @@ import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ProcessSteps } from '../../components/sections/ProcessSteps';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { StatOverlayCaseStudy } from '../../components/sections/StatOverlayCaseStudy';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import {
   FAQAccordion,
   buildFAQSchema } from
@@ -19,24 +16,16 @@ import {
 import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
-  SERVICE_AI_COE,
   SERVICE_CLOUD_DT,
-  SOLUTION_DEVOPS,
-  SOLUTION_ERP,
   SOLUTION_JAVA,
 } from '../../data/paths';
-import {
-  getCaseStudyForSolution,
-  withCaseStudyToc,
-} from '../../data/solutionCaseStudies';
 
-const CASE_STUDY = getCaseStudyForSolution(SOLUTION_JAVA);
-const TOC_ITEMS = withCaseStudyToc([
+const TOC_ITEMS = [
   { label: 'Overview', hash: 'overview' },
   { label: 'Process', hash: 'process' },
   { label: 'Comparison', hash: 'comparison' },
   { label: 'FAQ', hash: 'faq' }
-]);
+];
 
 const OVERVIEW_IMAGE =
   'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop';
@@ -167,28 +156,6 @@ const FAQS = [
   a: 'React.js, Angular, and Node.js. We build full-stack Java + JavaScript applications end-to-end.'
 }];
 
-const RELATED = [
-{
-  icon: Cloud,
-  title: 'DevOps Services',
-  description:
-  'CI/CD pipelines and infrastructure that ship Java microservices reliably.',
-  to: SOLUTION_DEVOPS
-},
-{
-  icon: Database,
-  title: 'ERP (Oracle Cloud)',
-  description: 'Custom Java extensions that integrate with Oracle ERP.',
-  to: SOLUTION_ERP
-},
-{
-  icon: Sparkles,
-  title: 'AI CoE',
-  description:
-  'AI agents and custom Oracle extensions built with Java and APEX.',
-  to: SERVICE_AI_COE
-}];
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -310,35 +277,6 @@ export function Java() {
           headers={['Criterion', 'Generic dev shop', 'With MPC']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-
-        <StatOverlayCaseStudy
-          id="case-study"
-          className="scroll-mt-[140px]"
-          eyebrow="Featured Case Study"
-          tag={CASE_STUDY.config.tag}
-          headline={CASE_STUDY.config.headline}
-          description={CASE_STUDY.config.description}
-          metadata={CASE_STUDY.config.metadata}
-          imageSrc={CASE_STUDY.config.imageSrc}
-          imageAlt={CASE_STUDY.config.imageAlt}
-          stat={CASE_STUDY.config.stat}
-          statLabel={CASE_STUDY.config.statLabel}
-          statContext={CASE_STUDY.config.statContext}
-          ctaText="Read the full case study"
-          ctaTo={CASE_STUDY.ctaTo}
-          bg="soft"
-        />
-
-        <div className="w-full bg-bg-light h-[80px] lg:h-[120px]" />
-
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />

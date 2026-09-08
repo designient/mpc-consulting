@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Workflow, Database, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { StickyNav } from '../../components/layout/StickyNav';
 import { FooterDark } from '../../components/sections/FooterDark';
 import { SEO, ORGANIZATION_SCHEMA } from '../../components/seo/SEO';
@@ -10,7 +10,6 @@ import { TableOfContents } from '../../components/sections/TableOfContents';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { ComparisonTable } from '../../components/sections/ComparisonTable';
-import { RelatedServices } from '../../components/sections/RelatedServices';
 import { ServiceCapabilities } from '../../components/sections/ServiceCapabilities';
 import {
   FAQAccordion,
@@ -20,10 +19,7 @@ import { CTABand } from '../../components/sections/CTABand';
 import { buildBreadcrumbSchema } from '../../components/sections/Breadcrumb';
 import {
   SERVICE_AI_COE,
-  SOLUTION_BPC,
-  SOLUTION_ERP,
   SOLUTION_FINANCIAL_CLOSE_ASSISTANT,
-  SOLUTION_HCM,
   SOLUTION_PO_LIFECYCLE_ANALYZER,
   SOLUTION_CV_SCREENING_AGENT,
   SOLUTION_HR_ONBOARDING_ASSISTANT,
@@ -207,29 +203,6 @@ const FAQS = [
   },
 ];
 
-const RELATED = [
-  {
-    icon: Users,
-    title: 'HCM',
-    description:
-      'AI agents that augment Oracle HCM workflows and employee experience.',
-    to: SOLUTION_HCM,
-  },
-  {
-    icon: Database,
-    title: 'ERP (Oracle Cloud)',
-    description:
-      'AI extensions for Oracle Fusion and EBS, including predictive analytics and automation.',
-    to: SOLUTION_ERP,
-  },
-  {
-    icon: Workflow,
-    title: 'Business Process Consulting',
-    description: 'Identify where AI augmentation transforms your processes.',
-    to: SOLUTION_BPC,
-  },
-];
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -363,15 +336,6 @@ export function TechHub() {
           headers={['What Matters', 'Typical AI Approach', 'With MPC AI CoE']}
           highlightIndex={2}
           rows={COMPARISON_ROWS}
-          bg="white"
-          centerHeader
-        />
-
-        <RelatedServices
-          id="related"
-          eyebrow="Related Services"
-          title="Continue exploring"
-          items={RELATED}
           bg="white"
           centerHeader
         />
